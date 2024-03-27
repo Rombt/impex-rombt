@@ -1,25 +1,17 @@
 /*!
-Theme Name: my_theme-name
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme Name: impex-rombt
+Theme URI: http://rombt.free.nf/
+Author: rombt
+Author URI: http://rombt.free.nf/
 Description: Description
 Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
-License: GNU General Public License v2 or later
+Tested up to: 6.4.3
+Requires PHP: 8.2.12
+License: Proprietary
 License URI: LICENSE
-Text Domain: my_theme-name
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain: rmbt_impex
+Tags: 
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-my_theme-name is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------

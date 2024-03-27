@@ -28,8 +28,9 @@ export const path = {
     srcPluginName: 'core-plugin', // set name your plugin for development version 
     RootPath: ROOT_PATH,
     proxy: [
-        `http://ms/`,
-        `http://web/rombt/gulp-assembly`,
+        `http://impexmash/`,
+        `http://web/impexmash/`,
+        // `http://web/rombt/gulp-assembly`,
     ],
 
     get src() {
