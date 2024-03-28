@@ -4,14 +4,14 @@
 
 /* ограничивающий (самый наружный) контейнер*/
 .main-wrap {
-    max-width: @width_main-wraper;
+    max-width: @width_main-wrapper;
     min-height: 100vh;
     margin: 0px auto;
     position: relative;
 }
 
 /*центрующий контейнер*/
-.conteiner {
+.container {
     .wrapper();
 }
 
@@ -31,7 +31,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        // height: 100%;
+        height: auto; // тестировать 
         object-fit: cover;
         object-position: center;
     }
@@ -46,7 +47,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        // height: 100%;
+        height: auto; // тестировать 
         object-fit: contain;
         object-position: center;
     }
