@@ -1,10 +1,10 @@
 <?php
 
 
-// require_once get_template_directory() . '/inc/functions/class-tgm-plugin-activation.php';
-// require_once get_template_directory() . '/inc/functions/Redux/redux-options.php';
+require_once get_template_directory() . '/inc/functions/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/Redux/redux-options.php';
+require_once get_template_directory() . '/inc/functions/general-front.php';
 
-// require_once get_template_directory() . '/inc/functions/general-front.php';
 // require_once get_template_directory() . '/inc/functions/comment_default.php';
 // require_once get_template_directory() . '/inc/functions/ajax.php';
 
@@ -47,14 +47,12 @@ function rmbt_site_setup()
 
 	register_nav_menus(
 		array(
-			'header_nav' => esc_html__('Header Navigation', 'restaurant-site'),
-			'footer_nav' => esc_html__('Footer Navigation', 'restaurant-site'),
-			'food_menu' => esc_html__('Food Menu', 'restaurant-site'),
-			'brows_recipes' => esc_html__('Brows Recipes', 'restaurant-site'),
+			'header_nav' => esc_html__('Header Navigation', 'rmbt_impex'),
+			'footer_nav' => esc_html__('Footer Navigation', 'rmbt_impex'),
 		)
 	);
 
-	load_theme_textdomain('restaurant-site', get_template_directory() . '/languages');
+	load_theme_textdomain('rmbt_impex', get_template_directory() . '/languages');
 	add_theme_support('automatic-feed-links');
 }
 add_action('after_setup_theme', 'rmbt_site_setup');
@@ -69,11 +67,11 @@ function rmbt_impex_register_required_plugins()
 {
 	$plugins = array(
 		array(
-			'name' => 'Restaurant site core',
+			'name' => 'Impex core',
 			// The plugin name.
-			'slug' => 'restaurant-site-core',
+			'slug' => 'rmbt_impex-core',
 			// The plugin slug (typically the folder name).
-			'source' => get_template_directory() . '/plugins/restaurant-site-core.zip',
+			'source' => get_template_directory() . '/plugins/rmbt_impex-core.zip',
 			// The plugin source.
 			'required' => true,
 			// If false, the plugin is only 'recommended' instead of required.
@@ -85,11 +83,11 @@ function rmbt_impex_register_required_plugins()
 			// If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 		),
 
-		array(
-			'name' => 'Advanced Custom Fields',
-			'slug' => 'advanced-custom-fields',
-			'required' => true,
-		),
+		// array(
+		// 	'name' => 'Advanced Custom Fields',
+		// 	'slug' => 'advanced-custom-fields',
+		// 	'required' => true,
+		// ),
 
 		array(
 			'name' => 'Redux Framework',
@@ -100,7 +98,7 @@ function rmbt_impex_register_required_plugins()
 	);
 
 	$config = array(
-		'id' => 'restaurant-site',
+		'id' => 'rmbt_impex',
 		// Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',
 		// Default absolute path to bundled plugins.
@@ -118,7 +116,7 @@ function rmbt_impex_register_required_plugins()
 
 	);
 
-	// tgmpa($plugins, $config);
+	tgmpa($plugins, $config);
 }
 add_action('tgmpa_register', 'rmbt_impex_register_required_plugins');
 
@@ -126,9 +124,9 @@ function rmbt_widgets_init()
 {
 	register_sidebar(
 		array(
-			'name' => esc_html__('Sidebar For Blog page', 'restaurant-site'),
+			'name' => esc_html__('Sidebar For Blog page', 'rmbt_impex'),
 			'id' => 'rmbt_blog_sidebar',
-			'description' => esc_html__('Add widgets here', 'restaurant-site'),
+			'description' => esc_html__('Add widgets here', 'rmbt_impex'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '<h2 class="widget-title">',
@@ -137,9 +135,9 @@ function rmbt_widgets_init()
 	);
 	register_sidebar(
 		array(
-			'name' => esc_html__('Sidebar For Shop page', 'restaurant-site'),
+			'name' => esc_html__('Sidebar For Shop page', 'rmbt_impex'),
 			'id' => 'rmbt_shop_sidebar',
-			'description' => esc_html__('Add widgets here', 'restaurant-site'),
+			'description' => esc_html__('Add widgets here', 'rmbt_impex'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '<h2 class="widget-title">',

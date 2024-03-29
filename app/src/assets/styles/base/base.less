@@ -3,7 +3,7 @@
 */
 
 /* ограничивающий (самый наружный) контейнер*/
-.main-wrap {
+.rmbt-main-wrap {
     max-width: @width_main-wrapper;
     min-height: 100vh;
     margin: 0px auto;
@@ -11,8 +11,11 @@
 }
 
 /*центрующий контейнер*/
-.container {
+.rmbt-container {
     .wrapper();
+}
+.rmbt-full-width{
+    .wrapper-full();
 }
 
 .debug-grid {
@@ -54,7 +57,7 @@
     }
 }
 
-.close-window {
+.rmbt-close-window {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -89,7 +92,7 @@
 
 }
 
-.menu-horizontal {
+.rmbt-menu-horizontal {
 
     width: 100%;
     height: 70px;
@@ -147,6 +150,6 @@
 
 
 }
-body.lock {
+body.rmbt-lock {
     overflow: hidden;
 }
