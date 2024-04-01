@@ -140,10 +140,13 @@ Redux::set_args($opt_name, $args);
  * ---> START SECTIONS
  */
 
+require_once dirname(__FILE__) . '/sections/front_page.php';
 require_once dirname(__FILE__) . '/sections/contacts.php';
 require_once dirname(__FILE__) . '/sections/social_networks.php';
 
-// require_once dirname(__FILE__) . '/sections/home_page.php';
+
+
+
 // require_once dirname(__FILE__) . '/sections/menu_page.php';
 // require_once dirname(__FILE__) . '/sections/blog_page.php';
 // require_once dirname(__FILE__) . '/sections/about_us_page.php';

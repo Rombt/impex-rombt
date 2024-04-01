@@ -47,7 +47,6 @@
 }
 
 .rmbt-bottom-row-bg {
-  border: 1px solid #0515fd;
 }
 
 .rmbt-bottom-row {
@@ -71,10 +70,29 @@
 
   .cont-horizont-menu {
     .col();
-    .size(6);
-    .shift-left(2);
+    .size(8);
+    .shift-left(1);
 
-    border: 1px solid #0515fd;
+    .toggle-overflow-menu {
+      height: 50%;
+      span,
+      &:after,
+      &:before {
+        height: 6px;
+        width: 6px;
+      }
+    }
+
+    .icon-dropdown {
+      width: 10px;
+      height: 15px;
+      border: none;
+
+      &:after,
+      &:before {
+        background-color: rgb(63, 62, 62);
+      }
+    }
   }
 
   // }

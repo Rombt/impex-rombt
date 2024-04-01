@@ -58,9 +58,6 @@
 
   .to(767px, {
 
-        /* for test */
-        .toggle-burge-menu,
-        /* for work */
         .toggle-burge {
             height: 30px;
             width: 40px;
@@ -171,18 +168,16 @@
                 }
             }
 
-            /* for test */
-            .icon-dropdown-menu,
-            /* for work */
             .icon-dropdown {
-                height: 30px;
-                width: 30px;
+                height: 15px;
+                width: 15px;
                 display: block;
-                border: 1px solid blue;
+                border: 1px solid rgb(255, 0, 21);
                 border-radius: 50%;
                 position: absolute;
                 right: 5px;
                 top: 5px;
+                display: inline-block;
                 z-index: 2;
                 transition: all ease 0.5s;
 
@@ -223,21 +218,18 @@
 
     );
 
-  /* for test */
-  .newToggle,
-    .icon-dropdown-menu,
-    /* for work */
-    .icon-dropdown {
-    height: 30px;
-    width: 30px;
+  .icon-dropdown {
+    height: 15px;
+    width: 15px;
     display: block;
     border: 1px solid blue;
     border-radius: 50%;
-    position: absolute;
-    right: 5px;
-    top: 5px;
+    position: relative;
+    display: inline-block;
     z-index: 2;
     transition: all ease 0.5s;
+
+    margin-left: 10px;
 
     &:after,
     &:before {
@@ -278,10 +270,7 @@
     background-color: #c8fbda;
   }
 
-  /* for test */
-  .show-hide-menu,
-    /* for work */
-    .toggle-overflow-menu {
+  .toggle-overflow-menu {
     display: block;
     position: absolute;
     right: 15px;
