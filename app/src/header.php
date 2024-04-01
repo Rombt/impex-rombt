@@ -47,22 +47,18 @@
 					<?php if (has_custom_logo()) : ?>
 						<?php the_custom_logo(); ?>
 					<?php endif ?>
-
 					<?php if (has_nav_menu('header_nav')) { ?>
-						<div class="heder-menu__burger">
-							<span></span>
-						</div>
+						<div class="wrap-burger-menu">
+							<div class="menu-icon"><span></span></div>
 
-					<?php wp_nav_menu(
+						<?php wp_nav_menu(
 							array(
 								'theme_location' => 'header_nav',
 								'container' => 'nav',
-								'container_class' => 'heder-menu',
-								'container_id' => 'heder-menu',
 							)
 						);
 					} ?>
-
+						</div>
 				</div>
 			</div>
 		</div>

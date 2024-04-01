@@ -1,67 +1,62 @@
 .wrap-burger-menu {
-    padding: 10px 10px 10px 10px;
-    height: 70px;
-    display: flex;
+  padding: 10px 10px 10px 10px;
+  height: 70px;
+  display: flex;
+  position: relative;
+
+  nav {
+    width: 100%;
     position: relative;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+    color: #000;
 
-
-
-    nav {
-        width: 100%;
-        position: relative;
-        padding: 0 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 15px;
-        color: #000;
-
-        ul,
-        li {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-decoration: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        >ul {
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            flex-grow: 1;
-
-            li {
-                position: relative;
-                width: max-content;
-                cursor: pointer;
-                padding: 5px 55px 5px 5px;
-
-                ul {
-                    position: absolute;
-                    left: 20px;
-                    top: 100%;
-                    padding: 10px 10px 10px 10px;
-                    z-index: 2;
-                    height: 0px;
-                    overflow: hidden;
-                    opacity: 0;
-                    pointer-events: none;
-                    width: 0;
-                }
-            }
-
-        }
-
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
     }
 
-    .to(767px, {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    > ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      flex-grow: 1;
+
+      li {
+        position: relative;
+        width: max-content;
+        cursor: pointer;
+        padding: 5px 55px 5px 5px;
+
+        ul {
+          position: absolute;
+          left: 20px;
+          top: 100%;
+          padding: 10px 10px 10px 10px;
+          z-index: 2;
+          height: 0px;
+          overflow: hidden;
+          opacity: 0;
+          pointer-events: none;
+          width: 0;
+        }
+      }
+    }
+  }
+
+  .to(767px, {
 
         .menu-icon {
             height: 30px;
@@ -70,6 +65,7 @@
             right: 15px;
             top: 50%;
             transform: translate(0, -50%);
+            cursor: pointer;
 
             span,
             &:after,
@@ -221,9 +217,4 @@
     }
 
     );
-
-
-
-
-
 }
