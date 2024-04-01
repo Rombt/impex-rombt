@@ -48,7 +48,7 @@
 						<?php the_custom_logo(); ?>
 					<?php endif ?>
 					<?php if (has_nav_menu('header_nav')) { ?>
-						<div class="wrap-burger-menu">
+						<div class="cont-horizont-menu">
 							<div class="menu-icon"><span></span></div>
 
 						<?php wp_nav_menu(
