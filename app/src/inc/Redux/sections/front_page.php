@@ -22,11 +22,54 @@ Redux::set_section(
 			// 	'position' => 'start',
 			// ),
 
+
 			array(
 				'id' => 'main_slider_screen-gallery',
 				'type' => 'gallery',
 				'title' => esc_html__('Add/Edit Gallery on the main screen ', 'rmbt_impex'),
 			),
+
+			array(
+				'id' => 'front_page_title',
+				'type' => 'text',
+				'title' => esc_html__('Front page title', 'rmbt_impex'),
+				'default' => __(wp_kses('<span>Український виробник</span> хлібопекарського і кондитерського обладнання', 'post'), 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_sub_title',
+				'type' => 'text',
+				'title' => esc_html__('Front page subtitle', 'rmbt_impex'),
+				'default' => esc_html__('Завжди надійний постачальник', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'button_title',
+				'type' => 'text',
+				'title' => esc_html__('Title of Main Screen Button', 'rmbt_impex'),
+				'default' => esc_html__('Зв`язатись з нами', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'button_href',
+				'type' => 'text',
+				'title' => esc_html__('Link for button', 'rmbt_impex'),
+				'default' => esc_html__('#', 'rmbt_impex'),
+			),
+
+
+			array(
+				'id' => 'background_picture',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('Picture for Background', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					// 'url' => '/assets/img/prapor-ukrainy_4.jpg'
+					'url' => '/assets/img/prapor-ukrainy_6.jpg'
+					// 'url' => '/assets/img/prapor-ukrainy_7.jpg'
+				),
+			),
+
+
 
 			// array(
 			// 	'id' => 'title-accordion-end',
@@ -37,18 +80,6 @@ Redux::set_section(
 
 
 
-			// array(
-			// 	'id' => 'front_page_title',
-			// 	'type' => 'text',
-			// 	'title' => esc_html__('Front page title', 'rmbt_impex'),
-			// 	'default' => __(wp_kses('Teast your fav dish', 'post'), 'rmbt_impex'),
-			// ),
-			// array(
-			// 	'id' => 'front_page_sub_title',
-			// 	'type' => 'text',
-			// 	'title' => esc_html__('Front page subtitle', 'rmbt_impex'),
-			// 	'default' => __(wp_kses('from <span>luxury restaurent.</span>', 'post'), 'rmbt_impex'),
-			// ),
 
 			// array(
 			// 	'id' => 'front_page_slogan',

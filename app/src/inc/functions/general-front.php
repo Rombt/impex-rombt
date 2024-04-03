@@ -320,8 +320,6 @@ function rmbt_trim_excerpt($length, $text = '')
 	return $text;
 }
 
-
-
 /**
  * Sometimes Redux provides an incorrect URL. I haven't figured out why yet
  *	gets 
@@ -351,11 +349,14 @@ function rmbt_get_pic_url($id_field_pic, $custom_default_url = '')
 	}
 }
 
-function rmbt_redux_img($id_field_pic, $id_svg)
+function rmbt_redux_img($id_field_pic, $id_svg = '')
 {
 	if (rmbt_get_pic_url($id_field_pic)) { ?>
 		<img src="<?php echo rmbt_get_pic_url($id_field_pic); ?>" alt="">
-	<?php  } else { ?>
+	<?php  } else {
+		if ($id_svg == '') {
+			return;
+		} ?>
 		<svg>
 			<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#<?php echo $id_svg; ?>">
 			</use>
@@ -363,8 +364,13 @@ function rmbt_redux_img($id_field_pic, $id_svg)
 <?php 	}
 }
 
-function rmbt_get_redux_field($id_field)
+function rmbt_get_redux_field($id_field, $kses = false)
 {
 	global $rmbt_impex_options;
+
+	if ($kses) {
+		return class_exists('ReduxFramework') ? wp_kses($rmbt_impex_options[$id_field], 'post') : "";
+	}
+
 	return class_exists('ReduxFramework') ? esc_html__($rmbt_impex_options[$id_field]) : "";
 }

@@ -2,8 +2,10 @@
 *   Basic styles for blocks intended for use in every project
 */
 
-/* ограничивающий (самый наружный) контейнер*/
-.rmbt-main-wrap {
+/* ограничивающий контейнер для всей страницы 
+    нужен для организации вертикальных отношений между основными блоками
+*/
+.rmbt-page-wrap {
   max-width: @width_main-wrapper;
   min-height: 100vh;
   margin: 0px auto;
@@ -14,7 +16,7 @@
 .rmbt-container {
   .wrapper();
 }
-/*центрующий контейнер фоновой ширины*/
+/*центрующий контейнер для блоков фоновой ширины*/
 .rmbt-full-width {
   max-width: @width_main-wrapper;
   .wrapper-full();

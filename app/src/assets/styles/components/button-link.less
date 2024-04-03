@@ -1,0 +1,57 @@
+.rmbt-impex-button {
+  min-height: 50px;
+  width: 220px;
+  border-radius: 10px;
+  background-color: @color_logo_background;
+  color: @color_font_light;
+  text-decoration: none;
+
+  border: 2px solid @color_logo_background;
+
+  // font-size: 24px;
+  font-family: OpenSans;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+  z-index: 7;
+
+  &:before {
+    // content: '';
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(255, 255, 255, 0.1),
+    //   rgba(255, 255, 255, 0.5)
+    // );
+    // height: 60px;
+    // // width: 50px;
+    // width: 0px;
+    // position: absolute;
+    // top: 0px;
+    // left: -80px;
+    // transform: skewX(-45deg);
+  }
+
+  &:hover:before {
+    left: 100%;
+    width: 50px;
+    transition: 0.5s ease-in-out;
+  }
+
+  &:focus {
+    // background: #83bec5;
+    color: #fff !important;
+    outline: none;
+  }
+
+  &:hover {
+    scale: 1.04;
+    transition: 0.5s ease-in-out;
+  }
+}
