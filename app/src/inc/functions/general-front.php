@@ -349,10 +349,10 @@ function rmbt_get_pic_url($id_field_pic, $custom_default_url = '')
 	}
 }
 
-function rmbt_redux_img($id_field_pic, $id_svg = '')
+function rmbt_redux_img($id_field_pic, $alt = "", $id_svg = '')
 {
 	if (rmbt_get_pic_url($id_field_pic)) { ?>
-		<img src="<?php echo rmbt_get_pic_url($id_field_pic); ?>" alt="">
+		<img src="<?php echo rmbt_get_pic_url($id_field_pic); ?>" alt="<?php $alt; ?>">
 	<?php  } else {
 		if ($id_svg == '') {
 			return;

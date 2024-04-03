@@ -14,21 +14,19 @@ Redux::set_section(
 		// 'subsection' => true,
 		// 'icon'             => 'el el-front',
 		'fields' => array(
-			// array(
-			// 	'id' => 'title-accordion-start',
-			// 	'type' => 'accordion',
-			// 	'title' => esc_html__('Title Section', 'rmbt_impex'),
-			// 	'subtitle' => 'Add your content to the section \'Title\'',
-			// 	'position' => 'start',
-			// ),
-
-
+			/*------------------ main_slider_screen accordion ------------------*/
+			array(
+				'id' => 'main_slider_screen-start',
+				'type' => 'accordion',
+				'title' => esc_html__('Title Section', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'Title\'',
+				'position' => 'start',
+			),
 			array(
 				'id' => 'main_slider_screen-gallery',
 				'type' => 'gallery',
 				'title' => esc_html__('Add/Edit Gallery on the main screen ', 'rmbt_impex'),
 			),
-
 			array(
 				'id' => 'front_page_title',
 				'type' => 'text',
@@ -53,8 +51,6 @@ Redux::set_section(
 				'title' => esc_html__('Link for button', 'rmbt_impex'),
 				'default' => esc_html__('#', 'rmbt_impex'),
 			),
-
-
 			array(
 				'id' => 'background_picture',
 				'type' => 'media',
@@ -63,22 +59,81 @@ Redux::set_section(
 				'compiler' => 'true',
 				'preview_size' => 'full',
 				'default' => array(
-					// 'url' => '/assets/img/prapor-ukrainy_4.jpg'
-					'url' => '/assets/img/prapor-ukrainy_6.jpg'
-					// 'url' => '/assets/img/prapor-ukrainy_7.jpg'
+					'url' => '/assets/img/prapor-ukrainy.jpg'
 				),
 			),
+			array(
+				'id' => 'main_slider_screen-end',
+				'type' => 'accordion',
+				'position' => 'end'
+			),
+			/*------------------ /main_slider_screen accordion ------------------*/
 
+			/*------------------ Introduction accordion ------------------*/
+			array(
+				'id' => 'introduction-start',
+				'type' => 'accordion',
+				'title' => esc_html__('Introduction Section', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'Introduction\'',
+				'position' => 'start',
+			),
+			array(
+				'id' => 'introduction_section-title',
+				'type' => 'text',
+				'title' => esc_html__('Introduction Section title', 'rmbt_impex'),
+				'default' => esc_html__('Запрошуємо до нас', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'introduction_section-text',
+				'type' => 'textarea',
+				'title' => esc_html__('Introduction Section Text', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'introduction_first_block-title',
+				'type' => 'text',
+				'title' => esc_html__('Front page title', 'rmbt_impex'),
+				'default' => esc_html__('Виробляємо', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'introduction_first_block-text',
+				'type' => 'textarea',
+				'title' => esc_html__('Introduction First Block Text', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'introduction_second_block-title',
+				'type' => 'text',
+				'title' => esc_html__('Front page title', 'rmbt_impex'),
+				'default' => esc_html__('Ремонтуємо', 'rmbt_impex'),
+			),
 
+			array(
+				'id' => 'introduction_second_block-text',
+				'type' => 'textarea',
+				'title' => esc_html__('Introduction Second Block Text', 'rmbt_impex'),
+			),
 
-			// array(
-			// 	'id' => 'title-accordion-end',
-			// 	'type' => 'accordion',
-			// 	'position' => 'end'
-			// ),
-
-
-
+			array(
+				'id' => 'introduction_image',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('Picture for Introduction Block', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					'url' => '/assets/img/no-image.jpg'
+				),
+			),
+			array(
+				'id' => 'introduction_image_alt',
+				'type' => 'text',
+				'title' => esc_html__('Front page title', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'introduction-end',
+				'type' => 'accordion',
+				'position' => 'end'
+			),
+			/*------------------ /Introduction accordion ------------------*/
 
 
 			// array(
