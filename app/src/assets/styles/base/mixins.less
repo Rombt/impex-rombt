@@ -1,24 +1,10 @@
-   // Адаптивное CSS свойство источник    
-   .adaptive-prop(@property, @max_val, @min_val) {
+// Адаптивное CSS свойство источник
+.adaptive-prop(@property, @max_val, @min_val) {
+  @addSize: @max_val - @min_val;
+  @maxWidth: @_width_main-wrapper - @_width_min_viewport;
+  @{property}: ~'calc(@{min_val}px + @{addSize} * ((100vw - @{_width_min_viewport}px)/@{maxWidth}))';
 
-      @addSize: @max_val - @min_val;
-      @maxWidth: @_width_wraper - @_width_min_viewport;
-      @{property}:~"calc(@{min_val}px + @{addSize} * ((100vw - @{_width_min_viewport}px)/@{maxWidth}))";
-
-      @media (min-width: ~"@{_width_wraper}px") {
-         @{property}:~"@{max_val}px"
-      }
-
-   }
-
-   // //  Адаптивный шрифт 
-   .adaptive-font(@pcSize, @mobSize) {
-      // !!! везде!  заменить на .adaptive-prop(@property, @max_val, @min_val) 
-      @addSize: @pcSize - @mobSize;
-      @maxWidth: @_width_wraper - @_width_min_viewport;
-      font-size: calc(~"@{mobSize}px" + @addSize * ((100vw - ~"@{_width_min_viewport}px") / @maxWidth));
-
-      @media (min-width: ~"@{_width_wraper}px") {
-         font-size:~"@{pcSize}px"
-      }
-   }
+  @media (min-width: ~'@{_width_main-wrapper}px') {
+    @{property}: ~'@{max_val}px';
+  }
+}
