@@ -128,5 +128,6 @@ export const fontStyle = done => {
 export const copyFonts = () => {
   return app.gulp
     .src(app.path.selectSrcPath(app.path.fonts.src, '/*.{woff,woff2}'), {})
+    .pipe(app.plugins.changed(file => app.path.selectDestPath(file, app.path.fonts.dest)))
     .pipe(app.gulp.dest(file => app.path.selectDestPath(file, app.path.fonts.dest)));
 };

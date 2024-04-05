@@ -1,8 +1,7 @@
 /*
 *   Basic styles for blocks intended for use in every project
 */
-
-/* ограничивающий контейнер для всей страницы 
+@note /* ограничивающий контейнер для всей страницы 
     нужен для организации вертикальных отношений между основными блоками
 */
 .rmbt-page-wrap {
@@ -10,6 +9,15 @@
   min-height: 100vh;
   margin: 0px auto;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: @margin_bottom_section / 2;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: @margin_bottom_section;
 }
 
 /*центрующий контейнер контентной ширины*/

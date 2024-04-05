@@ -3,6 +3,12 @@
 
 .rmbt-top-row-bg {
   background-color: #10252e;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -0);
+  z-index: 10;
+  width: 100%;
 }
 .rmbt-top-row {
   .row-flex();
@@ -49,6 +55,7 @@
 }
 
 .rmbt-bottom-row-bg {
+  margin-top: 50px;
 }
 
 .rmbt-bottom-row {
@@ -98,4 +105,14 @@
   }
 
   // }
+}
+
+.rmbt-bottom-row-bg,
+.rmbt-top-row-bg {
+  a {
+    &:hover {
+      scale: 1.02;
+      transition: 0.3s ease-in-out;
+    }
+  }
 }

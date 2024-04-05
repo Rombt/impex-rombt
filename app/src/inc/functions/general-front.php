@@ -320,6 +320,7 @@ function rmbt_trim_excerpt($length, $text = '')
 	return $text;
 }
 
+//@note
 /**
  * Sometimes Redux provides an incorrect URL. I haven't figured out why yet
  *	gets 

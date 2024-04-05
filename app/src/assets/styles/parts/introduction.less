@@ -1,7 +1,4 @@
 .rmbt-introduction {
-  //   border: 1px solid #0515fd;
-  height: 500px;
-
   &__row {
     .row-flex();
   }
@@ -22,6 +19,9 @@
     .col();
     .size(6);
     height: auto;
+    min-height: 400px;
+
+    margin-bottom: 0px;
   }
   article {
     font-size: 14px;
@@ -49,22 +49,5 @@
   article:first-child {
     width: 100%;
     height: min-content;
-
-    h2 {
-      font-size: 34px;
-
-      position: relative;
-      padding-bottom: 20px;
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        width: 25%;
-        height: 2px;
-        background-color: @color_logo_text_green;
-      }
-    }
   }
 }

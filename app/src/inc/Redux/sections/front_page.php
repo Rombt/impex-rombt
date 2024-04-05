@@ -126,7 +126,7 @@ Redux::set_section(
 			array(
 				'id' => 'introduction_image_alt',
 				'type' => 'text',
-				'title' => esc_html__('Front page title', 'rmbt_impex'),
+				'title' => esc_html__('Description of introduction image', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'introduction-end',
@@ -136,6 +136,117 @@ Redux::set_section(
 			/*------------------ /Introduction accordion ------------------*/
 
 
+			/*------------------ Best Sellers accordion ------------------*/
+			array(
+				'id' => 'best-sellers_start',
+				'type' => 'accordion',
+				'title' => esc_html__('Best Sellers', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'Best Sellers\'',
+				'position' => 'start',
+			),
+			array(
+				'id' => 'best-sellers_section-title',
+				'type' => 'text',
+				'title' => esc_html__(
+					'Best Sellers Section title',
+					'rmbt_impex'
+				),
+				'default' => esc_html__('Хіти продажу', 'rmbt_impex'),
+			),
+			/*------------------  the start of image block -----------------*/
+			array(
+				'id' => 'best-sellers-goods-one_title',
+				'type' => 'text',
+				'title' => esc_html__(
+					'Best Sellers of Goods number one',
+					'rmbt_impex'
+				),
+				'default' => esc_html__('Ротаційна піч Impex Rotor (на пелетах)', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'best-sellers_image-one',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('Picture of Best Sellers of Goods number one', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					'url' => '/assets/img/no-image.jpg'
+				),
+			),
+			array(
+				'id' => 'best-sellers_image-one_alt',
+				'type' => 'text',
+				'title' => esc_html__('Description of image', 'rmbt_impex'),
+			),
+
+			/*------------------  the end of image block -----------------*/
+			/*------------------  the start of image block -----------------*/
+
+			array(
+				'id' => 'best-sellers-goods-two_title',
+				'type' => 'text',
+				'title' => esc_html__(
+					'Best Sellers of Goods number two',
+					'rmbt_impex'
+				),
+				'default' => esc_html__('Відсадочна машина Impex Drop-600', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'best-sellers_image-two',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('Picture of Best Sellers of Goods number two', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					'url' => '/assets/img/no-image.jpg'
+				),
+			),
+
+			array(
+				'id' => 'best-sellers_image-two_alt',
+				'type' => 'text',
+				'title' => esc_html__('Description of image', 'rmbt_impex'),
+			),
+			/*------------------  the end of image block -----------------*/
+			/*------------------  the start of image block -----------------*/
+
+			array(
+				'id' => 'best-sellers-goods-three_title',
+				'type' => 'text',
+				'title' => esc_html__(
+					'Best Sellers of Goods number three',
+					'rmbt_impex'
+				),
+				'default' => esc_html__('Глазурувальна машина Impex EM-300', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'best-sellers_image-three',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('Picture of Best Sellers of Goods number three', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					'url' => '/assets/img/no-image.jpg'
+				),
+			),
+			array(
+				'id' => 'best-sellers_image-three_alt',
+				'type' => 'text',
+				'title' => esc_html__('Description of image', 'rmbt_impex'),
+			),
+			/*------------------  the end of image block -----------------*/
+
+			array(
+				'id' => 'best-sellers_end',
+				'type' => 'accordion',
+				'position' => 'end'
+			),
+			/*------------------ /Best Sellers accordion ------------------*/
 			// array(
 			// 	'id' => 'front_page_slogan',
 			// 	'type' => 'text',

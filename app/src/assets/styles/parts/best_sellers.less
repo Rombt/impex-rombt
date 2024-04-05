@@ -1,0 +1,31 @@
+.rmbt-best-sellers {
+  h2 {
+    margin-top: 0px;
+  }
+
+  &__row {
+    .row-flex();
+  }
+
+  &__col {
+    .col();
+    .size(10);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    // flex-wrap: wrap;
+  }
+
+  .section-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    &::after {
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 75%;
+    }
+  }
+}
