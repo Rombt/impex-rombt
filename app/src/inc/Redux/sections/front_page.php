@@ -153,6 +153,11 @@ Redux::set_section(
 				),
 				'default' => esc_html__('Хіти продажу', 'rmbt_impex'),
 			),
+			array(
+				'id' => 'best-sellers_section_text',
+				'type' => 'textarea',
+				'title' => esc_html__('best-sellers Section Text', 'rmbt_impex'),
+			),
 			/*------------------  the start of image block -----------------*/
 			array(
 				'id' => 'best-sellers-goods-one_title',
@@ -247,6 +252,141 @@ Redux::set_section(
 				'position' => 'end'
 			),
 			/*------------------ /Best Sellers accordion ------------------*/
+
+
+			/*------------------ the start why-choosing-us accordion ------------------*/
+			array(
+				'id' => 'why-choosing-us_start',
+				'type' => 'accordion',
+				'title' => esc_html__('why-choosing-us section', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'why-choosing-us\'',
+				'position' => 'start',
+			),
+			array(
+				'id' => 'rmbt-why-choosing-us_section-title',
+				'type' => 'text',
+				'title' => esc_html__('why-choosing-us Section Title', 'rmbt_impex'),
+				'default' => esc_html__('', 'rmbt_impex'),
+			),
+			/*------------------  the start of first article block-----------------*/
+			array(
+				'id' => 'rmbt-why-choosing-us_article-title-1',
+				'type' => 'text',
+				'title' => esc_html__('Title of first article', 'rmbt_impex'),
+				'default' => esc_html__('', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-why-choosing-us_article-text-1',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+			),
+			/*------------------  the end of first article block -----------------*/
+			/*------------------  the start of second article block-----------------*/
+			array(
+				'id' => 'rmbt-why-choosing-us_article-title-2',
+				'type' => 'text',
+				'title' => esc_html__('Title of second article', 'rmbt_impex'),
+				'default' => esc_html__('', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-why-choosing-us_article-text-2',
+				'type' => 'text',
+				'title' => esc_html__('Text of second article', 'rmbt_impex'),
+			),
+			/*------------------  the end of second article block -----------------*/
+			/*------------------  the start of third article block-----------------*/
+			array(
+				'id' => 'rmbt-why-choosing-us_article-title-3',
+				'type' => 'text',
+				'title' => esc_html__('Title of third article', 'rmbt_impex'),
+				'default' => esc_html__('', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-why-choosing-us_article-text-3',
+				'type' => 'text',
+				'title' => esc_html__('Text of third article', 'rmbt_impex'),
+			),
+			/*------------------  the end of third article block -----------------*/
+			/*------------------  the start of fourth article block-----------------*/
+			array(
+				'id' => 'rmbt-why-choosing-us_article-title-4',
+				'type' => 'text',
+				'title' => esc_html__('Title of fourth article', 'rmbt_impex'),
+				'default' => esc_html__('', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-why-choosing-us_article-text-4',
+				'type' => 'text',
+				'title' => esc_html__('Text of fourth article', 'rmbt_impex'),
+			),
+			/*------------------  the end of fourth article block -----------------*/
+			array(
+				'id' => 'why-choosing-us_end',
+				'type' => 'accordion',
+				'position' => 'end'
+			),
+			/*------------------ the end why-choosing-us accordion ------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			// /*------------------ the start why-choosing-us accordion ------------------*/
+			// array(
+			// 	'id' => 'why-choosing-us_start',
+			// 	'type' => 'accordion',
+			// 	'title' => esc_html__('why-choosing-us section', 'rmbt_impex'),
+			// 	'subtitle' => 'Add your content to the section \'why-choosing-us\'',
+			// 	'position' => 'start',
+			// ),
+			// array(
+			// 	'id' => 'rmbt-why-choosing-us_section-title',
+			// 	'type' => 'text',
+			// 	'title' => esc_html__('why-choosing-us Section Title', 'rmbt_impex'),
+			// 	'default' => esc_html__('', 'rmbt_impex'),
+			// ),
+			// /*------------------  the start of first article block-----------------*/
+			// array(
+			// 	'id' => 'rmbt-why-choosing-us_article-title-1',
+			// 	'type' => 'text',
+			// 	'title' => esc_html__('Title of first article', 'rmbt_impex'),
+			// 	'default' => esc_html__('', 'rmbt_impex'),
+			// ),
+			// array(
+			// 	'id' => 'rmbt-why-choosing-us_article-text',
+			// 	'type' => 'text',
+			// 	'title' => esc_html__('Text of first article', 'rmbt_impex'),
+			// ),
+			// /*------------------  the end of first article block -----------------*/
+			// array(
+			// 	'id' => 'why-choosing-us_end',
+			// 	'type' => 'accordion',
+			// 	'position' => 'end'
+			// ),
+			// /*------------------ the end why-choosing-us accordion ------------------*/
+
+
+
+
+
+
+
+
 			// array(
 			// 	'id' => 'front_page_slogan',
 			// 	'type' => 'text',
@@ -602,5 +742,5 @@ Redux::set_section(
 			// 	'position' => 'end'
 			// ),
 		),
-	)
+	),
 );
