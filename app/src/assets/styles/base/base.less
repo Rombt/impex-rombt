@@ -1,8 +1,8 @@
 /*
 *   Basic styles for blocks intended for use in every project
 */
-@note /* ограничивающий контейнер для всей страницы 
-    нужен для организации вертикальных отношений между основными блоками
+//@note
+/* ограничивающий контейнер для всей страницы   нужен для организации вертикальных отношений между основными блоками
 */
 .rmbt-page-wrap {
   max-width: @width_main-wrapper;
@@ -12,7 +12,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  row-gap: @margin_bottom_section / 2;
+  row-gap: (@margin_bottom_section / 2);
 }
 main {
   display: flex;
@@ -29,6 +29,7 @@ main {
   max-width: @width_main-wrapper;
   .wrapper-full();
   margin: 0 auto;
+  position: relative;
 }
 
 .debug-grid {

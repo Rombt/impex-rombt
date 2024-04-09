@@ -254,78 +254,100 @@ Redux::set_section(
 			/*------------------ /Best Sellers accordion ------------------*/
 
 
-			/*------------------ the start why-choosing-us accordion ------------------*/
+			/*------------------ the start benefits-block accordion ------------------*/
 			array(
-				'id' => 'why-choosing-us_start',
+				'id' => 'benefits-block_start',
 				'type' => 'accordion',
-				'title' => esc_html__('why-choosing-us section', 'rmbt_impex'),
-				'subtitle' => 'Add your content to the section \'why-choosing-us\'',
+				'title' => esc_html__('Benefit first section', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'benefits-block\'',
 				'position' => 'start',
 			),
 			array(
-				'id' => 'rmbt-why-choosing-us_section-title',
+				'id' => 'rmbt-benefits-block_section-title',
 				'type' => 'text',
-				'title' => esc_html__('why-choosing-us Section Title', 'rmbt_impex'),
+				'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
 				'default' => esc_html__('', 'rmbt_impex'),
 			),
 			/*------------------  the start of first article block-----------------*/
 			array(
-				'id' => 'rmbt-why-choosing-us_article-title-1',
+				'id' => 'rmbt-benefits-block_article-title-1',
 				'type' => 'text',
 				'title' => esc_html__('Title of first article', 'rmbt_impex'),
 				'default' => esc_html__('', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-why-choosing-us_article-text-1',
+				'id' => 'rmbt-benefits-block_article-text-1',
 				'type' => 'text',
 				'title' => esc_html__('Text of first article', 'rmbt_impex'),
 			),
 			/*------------------  the end of first article block -----------------*/
 			/*------------------  the start of second article block-----------------*/
 			array(
-				'id' => 'rmbt-why-choosing-us_article-title-2',
+				'id' => 'rmbt-benefits-block_article-title-2',
 				'type' => 'text',
 				'title' => esc_html__('Title of second article', 'rmbt_impex'),
 				'default' => esc_html__('', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-why-choosing-us_article-text-2',
+				'id' => 'rmbt-benefits-block_article-text-2',
 				'type' => 'text',
 				'title' => esc_html__('Text of second article', 'rmbt_impex'),
 			),
 			/*------------------  the end of second article block -----------------*/
 			/*------------------  the start of third article block-----------------*/
 			array(
-				'id' => 'rmbt-why-choosing-us_article-title-3',
+				'id' => 'rmbt-benefits-block_article-title-3',
 				'type' => 'text',
 				'title' => esc_html__('Title of third article', 'rmbt_impex'),
 				'default' => esc_html__('', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-why-choosing-us_article-text-3',
+				'id' => 'rmbt-benefits-block_article-text-3',
 				'type' => 'text',
 				'title' => esc_html__('Text of third article', 'rmbt_impex'),
 			),
 			/*------------------  the end of third article block -----------------*/
 			/*------------------  the start of fourth article block-----------------*/
 			array(
-				'id' => 'rmbt-why-choosing-us_article-title-4',
+				'id' => 'rmbt-benefits-block_article-title-4',
 				'type' => 'text',
 				'title' => esc_html__('Title of fourth article', 'rmbt_impex'),
 				'default' => esc_html__('', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-why-choosing-us_article-text-4',
+				'id' => 'rmbt-benefits-block_article-text-4',
 				'type' => 'text',
 				'title' => esc_html__('Text of fourth article', 'rmbt_impex'),
 			),
 			/*------------------  the end of fourth article block -----------------*/
+
+
 			array(
-				'id' => 'why-choosing-us_end',
+				'id' => 'rmbt-benefits-bg-picture_img-id',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('Picture for benefits-bg-picture article', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					'url' => '/assets/img/no-image.jpg'
+				),
+			),
+			array(
+				'id' => 'rmbt-benefits-bg-picture_img-alt',
+				'type' => 'text',
+				'title' => esc_html__('Image description for benefits-bg-picture', 'rmbt_impex'),
+				'default' => esc_html__('', 'rmbt_impex'),
+			),
+
+
+			array(
+				'id' => 'benefits-block_end',
 				'type' => 'accordion',
 				'position' => 'end'
 			),
-			/*------------------ the end why-choosing-us accordion ------------------*/
+
+			/*------------------ the end benefits-block accordion ------------------*/
 
 
 
@@ -346,39 +368,39 @@ Redux::set_section(
 
 
 
-			// /*------------------ the start why-choosing-us accordion ------------------*/
+			// /*------------------ the start benefits-block accordion ------------------*/
 			// array(
-			// 	'id' => 'why-choosing-us_start',
+			// 	'id' => 'benefits-block_start',
 			// 	'type' => 'accordion',
-			// 	'title' => esc_html__('why-choosing-us section', 'rmbt_impex'),
-			// 	'subtitle' => 'Add your content to the section \'why-choosing-us\'',
+			// 	'title' => esc_html__('benefits-block section', 'rmbt_impex'),
+			// 	'subtitle' => 'Add your content to the section \'benefits-block\'',
 			// 	'position' => 'start',
 			// ),
 			// array(
-			// 	'id' => 'rmbt-why-choosing-us_section-title',
+			// 	'id' => 'rmbt-benefits-block_section-title',
 			// 	'type' => 'text',
-			// 	'title' => esc_html__('why-choosing-us Section Title', 'rmbt_impex'),
+			// 	'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
 			// 	'default' => esc_html__('', 'rmbt_impex'),
 			// ),
 			// /*------------------  the start of first article block-----------------*/
 			// array(
-			// 	'id' => 'rmbt-why-choosing-us_article-title-1',
+			// 	'id' => 'rmbt-benefits-block_article-title-1',
 			// 	'type' => 'text',
 			// 	'title' => esc_html__('Title of first article', 'rmbt_impex'),
 			// 	'default' => esc_html__('', 'rmbt_impex'),
 			// ),
 			// array(
-			// 	'id' => 'rmbt-why-choosing-us_article-text',
+			// 	'id' => 'rmbt-benefits-block_article-text',
 			// 	'type' => 'text',
 			// 	'title' => esc_html__('Text of first article', 'rmbt_impex'),
 			// ),
 			// /*------------------  the end of first article block -----------------*/
 			// array(
-			// 	'id' => 'why-choosing-us_end',
+			// 	'id' => 'benefits-block_end',
 			// 	'type' => 'accordion',
 			// 	'position' => 'end'
 			// ),
-			// /*------------------ the end why-choosing-us accordion ------------------*/
+			// /*------------------ the end benefits-block accordion ------------------*/
 
 
 
