@@ -7,9 +7,26 @@ import './modules/arrowsInputNumberStyle.js';
 import './modules/classHorizontalMenu.js';
 import './modules/sliders.js';
 
-// let tl = gsap.timeline();
+/* Start the video when it is scrolled into view to the viewport */
+// Function to check element visibility
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-// tl.to('.test-box__green', { duration: 2, x: 800, ease: 'elastic' });
-// tl.to('.test-box__green', { duration: 2, y: 200, ease: 'elastic' });
-// tl.to('.test-box__green', { duration: 2, x: 0, ease: 'elastic' });
-// tl.to('.test-box__green', { duration: 2, y: 0, ease: 'elastic' });
+// Function to start video
+function playVideoWhenVisible() {
+  var videoBlock = document.getElementById('rmbt-promo-video'); // замените 'video-block' на id вашего блока с видео
+  if (isElementInViewport(videoBlock)) {
+    var video = videoBlock.querySelector('iframe');
+    video.src = video.src.replace('&autoplay=0', '&autoplay=1'); // замените 'autoplay=0' на 'autoplay=1'
+    window.removeEventListener('scroll', playVideoWhenVisible);
+  }
+}
+
+window.addEventListener('scroll', playVideoWhenVisible);

@@ -1,0 +1,33 @@
+.rmbt-video-block-full-width {
+  height: 420px;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  position: relative;
+  ::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  iframe {
+    max-width: 1000%;
+    margin-left: 0px;
+    margin-top: -337px;
+    width: @width_main-wrapper;
+    height: 1070.44px;
+  }
+
+  .rmbt-video-block {
+    //  width: 200%;
+    //  height: 200%;
+    //  scale: 1.5;
+  }
+}
+.rmbt-container {
+}
