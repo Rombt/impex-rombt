@@ -39,12 +39,14 @@ function rmbt_get_images_sizes()
 				'crop' => true,
 			),
 
-			// array(
-			// 	'name' => 'rmbt_post-img',
-			// 	'width' => 845,
-			// 	'height' => 400,
-			// 	'crop' => true,
-			// ),
+			array(
+				'name' => 'rmbt_clients_logo_img',
+				// 'width' => 246,
+				// 'height' => 124,
+				'width' => 200,
+				'height' => 100,
+				'crop' => true,
+			),
 			// array(
 			// 	'name' => 'rmbt_small-img',
 			// 	'width' => 70,

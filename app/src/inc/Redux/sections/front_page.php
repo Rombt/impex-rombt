@@ -320,8 +320,6 @@ Redux::set_section(
 				'title' => esc_html__('Text of fourth article', 'rmbt_impex'),
 			),
 			/*------------------  the end of fourth article block -----------------*/
-
-
 			array(
 				'id' => 'rmbt-benefits-bg-picture_img-id',
 				'type' => 'media',
@@ -339,14 +337,11 @@ Redux::set_section(
 				'title' => esc_html__('Image description for benefits-bg-picture', 'rmbt_impex'),
 				'default' => esc_html__('', 'rmbt_impex'),
 			),
-
-
 			array(
 				'id' => 'benefits-block_end',
 				'type' => 'accordion',
 				'position' => 'end'
 			),
-
 			/*------------------ the end benefits-block accordion ------------------*/
 
 
@@ -405,7 +400,27 @@ Redux::set_section(
 			/*------------------ the end facts-block accordion ------------------*/
 
 
+			/*------------------ the start  accordion ------------------*/
+			array(
+				'id' => 'clients-portfolio_start',
+				'type' => 'accordion',
+				'title' => esc_html__('Clients Portfolio Section', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'Clients Portfolio\'',
+				'position' => 'start',
+			),
 
+			array(
+				'id' => 'clients-portfolio_gallery',
+				'type' => 'gallery',
+				'title' => esc_html__('Add/Edit Gallery on the main screen ', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'clients-portfolio_end',
+				'type' => 'accordion',
+				'position' => 'end'
+			),
+			/*------------------ the end  accordion ------------------*/
 
 
 

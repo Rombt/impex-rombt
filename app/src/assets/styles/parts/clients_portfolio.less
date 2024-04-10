@@ -1,0 +1,38 @@
+.rmbt-clients-portfolio {
+  &__row {
+    .row-flex();
+  }
+
+  &__col {
+    .col();
+    .size(10);
+    margin: 0px auto;
+  }
+}
+.rmbt-clients-portfolio-swiper {
+  height: 130px;
+
+  position: relative;
+
+  .swiper-slide {
+    width: max-content !important;
+  }
+  &__wrap-img {
+    width: 300px !important;
+    height: 100% !important;
+
+    img {
+      object-fit: none !important;
+    }
+  }
+
+  //   &__pagination {
+  //     position: absolute;
+  //     left: 50% !important;
+  //     bottom: 0 !important;
+  //     transform: translate(-50%, 0);
+  //     width: max-content !important;
+  //     height: 30px !important;
+  //     z-index: 1;
+  //   }
+}

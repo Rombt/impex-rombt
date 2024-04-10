@@ -13,3 +13,21 @@ if (document.querySelector('.main-slider-screen')) {
     },
   });
 }
+if (document.querySelector('.rmbt-clients-portfolio-swiper')) {
+  swiperParam = new Swiper('.rmbt-clients-portfolio-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    // pagination: {
+    //   el: '.rmbt-clients-portfolio-swiper__pagination',
+    //   clickable: true,
+    // },
+
+    speed: 1400,
+    autoplay: {
+      delay: 1000,
+    },
+
+    slidesPerView: 4,
+    spaceBetween: 60,
+  });
+}
