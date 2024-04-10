@@ -350,7 +350,59 @@ Redux::set_section(
 			/*------------------ the end benefits-block accordion ------------------*/
 
 
-
+			/*------------------ the start facts-block accordion ------------------*/
+			array(
+				'id' => 'facts-block_start',
+				'type' => 'accordion',
+				'title' => esc_html__('Facts Block Section', 'rmbt_impex'),
+				'subtitle' => 'Add your content to the section \'Facts Block\'',
+				'position' => 'start',
+			),
+			/*------------------  the start of first article block-----------------*/
+			array(
+				'id' => 'rmbt-facts-block_article-title-1',
+				'type' => 'text',
+				'title' => esc_html__('Title of first article', 'rmbt_impex'),
+				'default' => esc_html__('партнерів', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-1',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+			),
+			/*------------------  the end of first article block -----------------*/
+			/*------------------  the start of first article block-----------------*/
+			array(
+				'id' => 'rmbt-facts-block_article-title-2',
+				'type' => 'text',
+				'title' => esc_html__('Title of first article', 'rmbt_impex'),
+				'default' => esc_html__('проектів', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-2',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+			),
+			/*------------------  the end of first article block -----------------*/
+			/*------------------  the start of first article block-----------------*/
+			array(
+				'id' => 'rmbt-facts-block_article-title-3',
+				'type' => 'text',
+				'title' => esc_html__('Title of first article', 'rmbt_impex'),
+				'default' => esc_html__('співробітників', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-3',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+			),
+			/*------------------  the end of first article block -----------------*/
+			array(
+				'id' => 'facts-block_end',
+				'type' => 'accordion',
+				'position' => 'end'
+			),
+			/*------------------ the end facts-block accordion ------------------*/
 
 
 

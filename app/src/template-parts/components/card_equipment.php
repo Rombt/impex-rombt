@@ -1,4 +1,4 @@
-<article class="card-equipment">
+<article class="card-equipment rmbt-shadow">
    <div class="card-equipment__body">
       <div class="wrap-img card-equipment__img">
          <?php rmbt_redux_img($args['id-img'], $args['alt-img']) ?>

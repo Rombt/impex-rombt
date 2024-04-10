@@ -65,8 +65,6 @@ function watcher() {
     });
 }
 
-console.log('**path.watch.fonts = ', path.watch.fonts);
-
 const procImages = gulp.series(images, moveSvgSprite);
 
 const mainTask = gulp.series(copyFonts, gulp.parallel(procImages, styles, js, php));
