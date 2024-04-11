@@ -14,6 +14,31 @@ Redux::set_section(
 		// 'subsection' => true,
 		// 'icon'             => 'el el-front',
 		'fields' => array(
+
+			array(
+				'id' => 'rmbt-no-img',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__('This picture will show if main picture is absent', 'rmbt_impex'),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+				'default' => array(
+					'url' => '/assets/img/no-image.jpg'
+				),
+			),
+			array(
+				'id' => 'rmbt-no-img_alt',
+				'type' => 'text',
+				'title' => esc_html__('Description for picture than is absent', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'rmbt-news-block_section-title',
+				'type' => 'text',
+				'title' => esc_html__('Title of News Block', 'rmbt_impex'),
+				'default' => esc_html__('Останні новини', 'rmbt_impex'),
+			),
+
 			/*------------------ main_slider_screen accordion ------------------*/
 			array(
 				'id' => 'main_slider_screen-start',

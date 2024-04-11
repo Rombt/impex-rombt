@@ -8,15 +8,6 @@
          <h3><?php echo rmbt_get_redux_field($args['title']) ?></h3>
       </div>
    </div>
-   <footer>
-      <a href="#">
-         read more
-         <svg>
-            <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#arrow-right_1">
-            </use>
-         </svg>
-      </a>
+   <?php get_template_part('template-parts/components/footer_card'); ?>
 
-
-   </footer>
 </article>

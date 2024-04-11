@@ -1,19 +1,19 @@
 <?php
 
 
-function rmbt_custom_WPquery($rst_post_type, $rst_posts_per_page, $rst_current = '', $tax_query = [])
+function rmbt_custom_WPquery($rmbt_post_type, $rmbt_posts_per_page, $rmbt_current = '', $tax_query = [])
 {
 
-	if (empty($rst_current)) {
-		$rst_current = absint(max(1, get_query_var('paged') ? get_query_var('paged') : get_query_var('page')));
+	if (empty($rmbt_current)) {
+		$rmbt_current = absint(max(1, get_query_var('paged') ? get_query_var('paged') : get_query_var('page')));
 	}
 
 	if (count($tax_query) == 0) {
 		$params = [
-			'post_type' => $rst_post_type,
+			'post_type' => $rmbt_post_type,
 			'post_status' => 'publish',
-			'posts_per_page' => $rst_posts_per_page,
-			'paged' => $rst_current,
+			'posts_per_page' => $rmbt_posts_per_page,
+			'paged' => $rmbt_current,
 		];
 	} else {
 		$params = $tax_query;
