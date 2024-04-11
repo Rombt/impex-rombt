@@ -41,8 +41,6 @@ function rmbt_get_images_sizes()
 
 			array(
 				'name' => 'rmbt_clients_logo_img',
-				// 'width' => 246,
-				// 'height' => 124,
 				'width' => 200,
 				'height' => 100,
 				'crop' => true,

@@ -21,10 +21,10 @@ function isElementInViewport(el) {
 
 // Function to start video
 function playVideoWhenVisible() {
-  var videoBlock = document.getElementById('rmbt-promo-video'); // замените 'video-block' на id вашего блока с видео
+  const videoBlock = document.getElementById('rmbt-promo-video');
   if (isElementInViewport(videoBlock)) {
-    var video = videoBlock.querySelector('iframe');
-    video.src = video.src.replace('&autoplay=0', '&autoplay=1'); // замените 'autoplay=0' на 'autoplay=1'
+    const video = videoBlock.querySelector('iframe');
+    video.src = video.src.replace('autoplay=0', 'autoplay=1');
     window.removeEventListener('scroll', playVideoWhenVisible);
   }
 }
