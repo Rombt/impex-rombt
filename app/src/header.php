@@ -12,7 +12,7 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<?php get_template_part('template-parts/components/debug-grid');
+	<?php //get_template_part('template-parts/components/debug-grid');
 	?>
 
 	<div class="rmbt-page-wrap">
@@ -25,20 +25,20 @@
 								<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
 								</use>
 							</svg>
-							<span><?php echo rmbt_get_redux_field('name-phone-1') ?></span>
-							<a href="tel:<?php echo preg_replace('/[\)|\(| |-]/', '', rmbt_get_redux_field('number-phone-1')) ?>"><?php echo rmbt_get_redux_field('number-phone-1') ?>,</a>
-							<a href="tel:<?php echo preg_replace('/[\)|\(| |-]/', '', rmbt_get_redux_field('number-phone-2')) ?>"><?php echo rmbt_get_redux_field('number-phone-2') ?>,</a>
-							<a href="tel:<?php echo preg_replace('/[\)|\(| |-]/', '', rmbt_get_redux_field('number-phone-3')) ?>"><?php echo rmbt_get_redux_field('number-phone-3') ?></a>
+							<span>Відділ продажу:</span>
+							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-1'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-1') ?>,</a>
+							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-2'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-2') ?>,</a>
+							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-3'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-3') ?></a>
 						</div>
 						<div class="rmbt-service-department-phones">
 							<svg>
 								<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
 								</use>
 							</svg>
-							<span><?php echo rmbt_get_redux_field('name-phone-4') ?></span>
-							<a href="tel:<?php echo preg_replace('/[\)|\(| |-]/', '', rmbt_get_redux_field('number-phone-4')) ?>"><?php echo rmbt_get_redux_field('number-phone-4') ?>,</a>
-							<span><?php echo rmbt_get_redux_field('name-phone-5') ?></span>
-							<a href="tel:<?php echo preg_replace('/[\)|\(| |-]/', '', rmbt_get_redux_field('number-phone-5')) ?>"><?php echo rmbt_get_redux_field('number-phone-5') ?></a>
+							<span>Технічна підтримка:</span>
+							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-5'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-5') ?>,</a>
+							<span>Відділ запчастин</span>
+							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-6'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-6') ?></a>
 						</div>
 					</div>
 				</div>

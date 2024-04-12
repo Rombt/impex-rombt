@@ -47,8 +47,8 @@ function rmbt_site_setup()
 
 	register_nav_menus(
 		array(
-			'header_nav' => esc_html__('Header Navigation', 'rmbt_impex'),
-			'footer_nav' => esc_html__('Footer Navigation', 'rmbt_impex'),
+			'header_nav' => esc_html__('rmbt_Header Navigation', 'rmbt_impex'),
+			'footer_nav' => esc_html__('rmbt_Footer Navigation', 'rmbt_impex'),
 		)
 	);
 

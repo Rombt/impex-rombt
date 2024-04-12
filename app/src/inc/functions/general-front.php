@@ -375,3 +375,9 @@ function rmbt_get_redux_field($id_field, $kses = false)
 
 	return class_exists('ReduxFramework') ? esc_html__($rmbt_impex_options[$id_field]) : "";
 }
+
+function rmbt_phone_number_clear_redux($id_field)
+{
+	$pattern = '/[\)|\(| |-]/';
+	return preg_replace($pattern, '', rmbt_get_redux_field($id_field));
+}

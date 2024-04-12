@@ -2,26 +2,124 @@ footer {
   margin-top: auto;
 }
 .rmbt-full-width-footer {
-  background-color: rgb(214, 214, 214);
-}
-.rmbt-container {
+  background-color: @color_header_background_light;
+  min-height: 150px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .rmbt-footer {
-  height: 200px;
+  height: 100%;
 
-  /* .rmbt-footer__row */
-
+  color: @color_font_footer_light;
+  a {
+    color: @color_font_footer_light;
+    text-transform: none;
+  }
   &__row {
     .row-flex();
+    padding: 20px 0px 20px 0px;
   }
 
-  /* .rmbt-footer__col */
+  &__about {
+    .col();
+    .size(4);
+    // border: 1px solid #f75858;
+    display: flex;
+    column-gap: 20px;
 
-  &__col {
+    a.custom-logo-link {
+      display: block;
+      margin-left: 0px;
+      min-width: 80px;
+      min-height: 80px;
+      max-width: 100px;
+      max-height: 100px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .text {
+      // color: @color_font_footer_light;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+
+      // border: 1px solid #0515fd;
+
+      span {
+        // display: block;
+        // width: 80%;
+        text-align: left;
+      }
+    }
   }
 
-  /* .rmbt-footer__body */
+  &__nav {
+    .col();
+    .size(4);
 
-  &__body {
+    .rmbt-cont-vertical-menu {
+      nav {
+        ul {
+          list-style: none;
+          padding: 0px 20px 0px 20px;
+
+          li {
+          }
+          a {
+            font-size: 14px;
+            font-family: OpenSans;
+            font-weight: 400;
+            // color: @color_font_footer_light;
+            justify-content: center;
+            margin-left: 0;
+            max-width: 100%;
+            width: auto;
+            text-transform: none;
+            text-align: center;
+          }
+        }
+      }
+    }
   }
+
+  &__contacts {
+    .col();
+    .size(4);
+
+    .text {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+      width: 80%;
+
+      a {
+        margin-left: 0px;
+      }
+      span {
+        display: block;
+        width: max-content;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+.rmbt-social-net-icons {
+}
+.rmbt-copyright {
+  height: 30px;
+
+  font-size: 13px;
+  font-family: Montserrat;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(143, 149, 161);
+  line-height: 30px;
+  background-color: @color_header_background_dark;
 }
