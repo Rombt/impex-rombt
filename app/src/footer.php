@@ -12,6 +12,7 @@
                   <h3>ІМПЕКСМАШ</h3>
                   <span>Український виробник хлібопекарського і кондитерського обладнання</span>
                </div>
+               <?php get_template_part('template-parts/components/social_networks'); ?>
 
             </div>
             <div class="rmbt-footer__nav">
@@ -28,7 +29,6 @@
                   </div>
             </div>
             <div class="rmbt-footer__contacts">
-               <!-- <h3>Контакти</h3> -->
                <div class="text">
                   <span><?php echo rmbt_get_redux_field('rmbt-address', 1) ?></span>
                   <a href="mailto:<?php echo rmbt_get_redux_field('rmbt-email-1') ?>"><?php echo rmbt_get_redux_field('rmbt-email-1') ?></a>
@@ -37,7 +37,6 @@
                </div>
 
             </div>
-            <div class="rmbt-social-net-icons"></div>
          </div>
       </section>
       <div class="rmbt-copyright">Copyright © Виробничо-технологічний центр “Імпексмаш” 2005–2023</div>
