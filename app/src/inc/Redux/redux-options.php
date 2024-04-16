@@ -143,6 +143,7 @@ Redux::set_args($opt_name, $args);
 require_once dirname(__FILE__) . '/sections/front_page.php';
 require_once dirname(__FILE__) . '/sections/contacts.php';
 require_once dirname(__FILE__) . '/sections/social_networks.php';
+require_once dirname(__FILE__) . '/sections/equipment-categories.php';
 
 
 

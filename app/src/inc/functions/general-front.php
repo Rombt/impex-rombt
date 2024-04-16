@@ -372,7 +372,6 @@ function rmbt_get_redux_field($id_field, $kses = false)
 	if ($kses) {
 		return class_exists('ReduxFramework') ? wp_kses($rmbt_impex_options[$id_field], 'post') : "";
 	}
-
 	return class_exists('ReduxFramework') ? esc_html__($rmbt_impex_options[$id_field]) : "";
 }
 
