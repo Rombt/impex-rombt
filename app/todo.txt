@@ -1,5 +1,7 @@
       источник: https://themeforest.net/item/elizah-business-and-corporate-responsive-website/22032574
 
+      для всех заголовков
+            скрипт который будет уменьшать размер шрифта так чтобы одно слово не разрывалось на несколько строк
 
       video_block
             обработка ошибок при загрузке promo video ролика
