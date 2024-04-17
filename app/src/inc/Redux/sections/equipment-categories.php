@@ -17,13 +17,13 @@ Redux::set_section(
 
 
          array(
-            'id' => 'rmbt-equipment-categories_page-title',
+            'id' => 'equipCatPage-equipment-categories_page-title',
             'type' => 'text',
             'title' => esc_html__('Title of Equipment Categories Page', 'rmbt_impex'),
             'default' => esc_html__('Equipments', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-equipment-categories_page-text',
+            'id' => 'equipCatPage-equipment-categories_page-text',
             'type' => 'textarea',
             'title' => esc_html__('Ovens Section Text', 'rmbt_impex'),
          ),
@@ -40,18 +40,18 @@ Redux::set_section(
          ),
          /*------------------  the start of ovens article block-----------------*/
          array(
-            'id' => 'rmbt-ovens_article-title',
+            'id' => 'equipCatPage-ovens_article-title',
             'type' => 'text',
             'title' => esc_html__('Title of ovens article', 'rmbt_impex'),
             'default' => esc_html__('ovens', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-ovens_article-text',
+            'id' => 'equipCatPage-ovens_article-text',
             'type' => 'textarea',
             'title' => esc_html__('Text of ovens article', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-ovens_article-img-id',
+            'id' => 'equipCatPage-ovens_article-img-id',
             'type' => 'media',
             'url' => true,
             'title' => esc_html__('Picture of ovens article', 'rmbt_impex'),
@@ -62,7 +62,7 @@ Redux::set_section(
             ),
          ),
          array(
-            'id' => 'rmbt-ovens_article-img-alt',
+            'id' => 'equipCatPage-ovens_article-img-alt',
             'type' => 'text',
             'title' => esc_html__('Image description of ovens article', 'rmbt_impex'),
             'default' => esc_html__('ovens', 'rmbt_impex'),
@@ -75,7 +75,8 @@ Redux::set_section(
          ),
          /*------------------ the end ovens accordion ------------------*/
 
-         /*------------------ the start ovens accordion ------------------*/
+
+         /*------------------ the start dropping-machines accordion ------------------*/
          array(
             'id' => 'dropping-machines_start',
             'type' => 'accordion',
@@ -83,20 +84,20 @@ Redux::set_section(
             'subtitle' => 'Add your content to the section \'ovens\'',
             'position' => 'start',
          ),
-         /*------------------  the start of ovens article block-----------------*/
+         /*------------------  the start of dropping-machines article block-----------------*/
          array(
-            'id' => 'rmbt-dropping-machines_article-title',
+            'id' => 'equipCatPage-dropping-machines_article-title',
             'type' => 'text',
             'title' => esc_html__('Title of Dropping Machines  Article', 'rmbt_impex'),
             'default' => esc_html__('Dropping Machines ', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-dropping-machines_article-text',
+            'id' => 'equipCatPage-dropping-machines_article-text',
             'type' => 'textarea',
             'title' => esc_html__('Text of Dropping Machines article', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-dropping-machines_article-img-id',
+            'id' => 'equipCatPage-dropping-machines_article-img-id',
             'type' => 'media',
             'url' => true,
             'title' => esc_html__('Picture of Dropping Machines article', 'rmbt_impex'),
@@ -107,22 +108,21 @@ Redux::set_section(
             ),
          ),
          array(
-            'id' => 'rmbt-dropping-machines_article-img-alt',
+            'id' => 'equipCatPage-dropping-machines_article-img-alt',
             'type' => 'text',
             'title' => esc_html__('Image Description Of Dropping Machines  Article', 'rmbt_impex'),
             'default' => esc_html__('dropping machines image', 'rmbt_impex'),
          ),
-         /*------------------  the end of ovens article block -----------------*/
+         /*------------------  the end of dropping-machines article block -----------------*/
          array(
             'id' => 'dropping-machines_end',
             'type' => 'accordion',
             'position' => 'end'
          ),
-         /*------------------ the end ovens accordion ------------------*/
+         /*------------------ the end dropping-machines accordion ------------------*/
 
 
-
-         /*------------------ the start ovens accordion ------------------*/
+         /*------------------ the start enrobing-machine accordion ------------------*/
          array(
             'id' => 'enrobing-machine_start',
             'type' => 'accordion',
@@ -130,20 +130,20 @@ Redux::set_section(
             'subtitle' => 'Add your content to the section \'Enrobing Machine\'',
             'position' => 'start',
          ),
-         /*------------------  the start of ovens article block-----------------*/
+         /*------------------  the start of enrobing-machine article block-----------------*/
          array(
-            'id' => 'rmbt-enrobing-machine_article-title',
+            'id' => 'equipCatPage-enrobing-machine_article-title',
             'type' => 'text',
             'title' => esc_html__('Title of Enrobing Machine  Article', 'rmbt_impex'),
             'default' => esc_html__('Enrobing Machine ', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-enrobing-machine_article-text',
+            'id' => 'equipCatPage-enrobing-machine_article-text',
             'type' => 'textarea',
             'title' => esc_html__('Text of Enrobing Machine', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-enrobing-machine_article-img-id',
+            'id' => 'equipCatPage-enrobing-machine_article-img-id',
             'type' => 'media',
             'url' => true,
             'title' => esc_html__('Picture of Enrobing Machine article', 'rmbt_impex'),
@@ -154,20 +154,21 @@ Redux::set_section(
             ),
          ),
          array(
-            'id' => 'rmbt-enrobing-machine_article-img-alt',
+            'id' => 'equipCatPage-enrobing-machine_article-img-alt',
             'type' => 'text',
             'title' => esc_html__('Image Description Of Enrobing Machine  Article', 'rmbt_impex'),
             'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
          ),
-         /*------------------  the end of ovens article block -----------------*/
+         /*------------------  the end of enrobing-machine article block -----------------*/
          array(
             'id' => 'enrobing-machine_end',
             'type' => 'accordion',
             'position' => 'end'
          ),
-         /*------------------ the end ovens accordion ------------------*/
+         /*------------------ the end enrobing-machine accordion ------------------*/
 
-         /*------------------ the start ovens accordion ------------------*/
+
+         /*------------------ the start electric-proofer accordion ------------------*/
          array(
             'id' => 'electric-proofer_start',
             'type' => 'accordion',
@@ -175,20 +176,20 @@ Redux::set_section(
             'subtitle' => 'Add your content to the section \'Electric Proofer\'',
             'position' => 'start',
          ),
-         /*------------------  the start of ovens article block-----------------*/
+         /*------------------  the start of electric-proofer article block-----------------*/
          array(
-            'id' => 'rmbt-electric-proofer_article-title',
+            'id' => 'equipCatPage-electric-proofer_article-title',
             'type' => 'text',
             'title' => esc_html__('Title of Electric Proofer  Article', 'rmbt_impex'),
             'default' => esc_html__('Electric Proofer ', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-electric-proofer_article-text',
+            'id' => 'equipCatPage-electric-proofer_article-text',
             'type' => 'textarea',
             'title' => esc_html__('Text of Electric Proofer', 'rmbt_impex'),
          ),
          array(
-            'id' => 'rmbt-electric-proofer_article-img-id',
+            'id' => 'equipCatPage-electric-proofer_article-img-id',
             'type' => 'media',
             'url' => true,
             'title' => esc_html__('Picture of Electric Proofer article', 'rmbt_impex'),
@@ -199,855 +200,713 @@ Redux::set_section(
             ),
          ),
          array(
-            'id' => 'rmbt-electric-proofer_article-img-alt',
+            'id' => 'equipCatPage-electric-proofer_article-img-alt',
             'type' => 'text',
             'title' => esc_html__('Image Description Of Electric Proofer  Article', 'rmbt_impex'),
             'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
          ),
-         /*------------------  the end of ovens article block -----------------*/
+         /*------------------  the end of electric-proofer article block -----------------*/
          array(
             'id' => 'electric-proofer_end',
             'type' => 'accordion',
             'position' => 'end'
          ),
-         /*------------------ the end ovens accordion ------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         //==================================================================================
-
-
-
-
-         // /*------------------ main_slider_screen accordion ------------------*/
-         // array(
-         //    'id' => 'main_slider_screen-start',
-         //    'type' => 'accordion',
-         //    'title' => esc_html__('Title Section', 'rmbt_impex'),
-         //    'subtitle' => 'Add your content to the section \'Title\'',
-         //    'position' => 'start',
-         // ),
-         // array(
-         //    'id' => 'main_slider_screen-gallery',
-         //    'type' => 'gallery',
-         //    'title' => esc_html__('Add/Edit Gallery on the main screen ', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'front_page_title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Front page title', 'rmbt_impex'),
-         //    'default' => __(wp_kses('<span>Український виробник</span> хлібопекарського і кондитерського обладнання', 'post'), 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'front_page_sub_title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Front page subtitle', 'rmbt_impex'),
-         //    'default' => esc_html__('Завжди надійний постачальник', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'button_title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of Main Screen Button', 'rmbt_impex'),
-         //    'default' => esc_html__('Зв`язатись з нами', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'button_href',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Link for button', 'rmbt_impex'),
-         //    'default' => esc_html__('#', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'background_picture',
-         //    'type' => 'media',
-         //    'url' => true,
-         //    'title' => esc_html__('Picture for Background', 'rmbt_impex'),
-         //    'compiler' => 'true',
-         //    'preview_size' => 'full',
-         //    'default' => array(
-         //       'url' => '/assets/img/prapor-ukrainy.jpg'
-         //    ),
-         // ),
-         // array(
-         //    'id' => 'main_slider_screen-end',
-         //    'type' => 'accordion',
-         //    'position' => 'end'
-         // ),
-         // /*------------------ /main_slider_screen accordion ------------------*/
-
-         // /*------------------ Introduction accordion ------------------*/
-         // array(
-         //    'id' => 'introduction-start',
-         //    'type' => 'accordion',
-         //    'title' => esc_html__('Introduction Section', 'rmbt_impex'),
-         //    'subtitle' => 'Add your content to the section \'Introduction\'',
-         //    'position' => 'start',
-         // ),
-         // array(
-         //    'id' => 'introduction_section-title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Introduction Section title', 'rmbt_impex'),
-         //    'default' => esc_html__('Запрошуємо до нас', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'introduction_section-text',
-         //    'type' => 'textarea',
-         //    'title' => esc_html__('Introduction Section Text', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'introduction_first_block-title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Front page title', 'rmbt_impex'),
-         //    'default' => esc_html__('Виробляємо', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'introduction_first_block-text',
-         //    'type' => 'textarea',
-         //    'title' => esc_html__('Introduction First Block Text', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'introduction_second_block-title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Front page title', 'rmbt_impex'),
-         //    'default' => esc_html__('Ремонтуємо', 'rmbt_impex'),
-         // ),
-
-         // array(
-         //    'id' => 'introduction_second_block-text',
-         //    'type' => 'textarea',
-         //    'title' => esc_html__('Introduction Second Block Text', 'rmbt_impex'),
-         // ),
-
-         // array(
-         //    'id' => 'introduction_image',
-         //    'type' => 'media',
-         //    'url' => true,
-         //    'title' => esc_html__('Picture for Introduction Block', 'rmbt_impex'),
-         //    'compiler' => 'true',
-         //    'preview_size' => 'full',
-         //    'default' => array(
-         //       'url' => '/assets/img/no-image.jpg'
-         //    ),
-         // ),
-         // array(
-         //    'id' => 'introduction_image_alt',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Description of introduction image', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'introduction-end',
-         //    'type' => 'accordion',
-         //    'position' => 'end'
-         // ),
-         // /*------------------ /Introduction accordion ------------------*/
-
-
-         // /*------------------ Best Sellers accordion ------------------*/
-         // array(
-         //    'id' => 'best-sellers_start',
-         //    'type' => 'accordion',
-         //    'title' => esc_html__('Best Sellers', 'rmbt_impex'),
-         //    'subtitle' => 'Add your content to the section \'Best Sellers\'',
-         //    'position' => 'start',
-         // ),
-         // array(
-         //    'id' => 'best-sellers_section-title',
-         //    'type' => 'text',
-         //    'title' => esc_html__(
-         //       'Best Sellers Section title',
-         //       'rmbt_impex'
-         //    ),
-         //    'default' => esc_html__('Хіти продажу', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'best-sellers_section_text',
-         //    'type' => 'textarea',
-         //    'title' => esc_html__('best-sellers Section Text', 'rmbt_impex'),
-         // ),
-         // /*------------------  the start of image block -----------------*/
-         // array(
-         //    'id' => 'best-sellers-goods-one_title',
-         //    'type' => 'text',
-         //    'title' => esc_html__(
-         //       'Best Sellers of Goods number one',
-         //       'rmbt_impex'
-         //    ),
-         //    'default' => esc_html__('Ротаційна піч Impex Rotor (на пелетах)', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'best-sellers_image-one',
-         //    'type' => 'media',
-         //    'url' => true,
-         //    'title' => esc_html__('Picture of Best Sellers of Goods number one', 'rmbt_impex'),
-         //    'compiler' => 'true',
-         //    'preview_size' => 'full',
-         //    'default' => array(
-         //       'url' => '/assets/img/no-image.jpg'
-         //    ),
-         // ),
-         // array(
-         //    'id' => 'best-sellers_image-one_alt',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Description of image', 'rmbt_impex'),
-         // ),
-
-         // /*------------------  the end of image block -----------------*/
-         // /*------------------  the start of image block -----------------*/
-
-         // array(
-         //    'id' => 'best-sellers-goods-two_title',
-         //    'type' => 'text',
-         //    'title' => esc_html__(
-         //       'Best Sellers of Goods number two',
-         //       'rmbt_impex'
-         //    ),
-         //    'default' => esc_html__('Відсадочна машина Impex Drop-600', 'rmbt_impex'),
-         // ),
-
-         // array(
-         //    'id' => 'best-sellers_image-two',
-         //    'type' => 'media',
-         //    'url' => true,
-         //    'title' => esc_html__('Picture of Best Sellers of Goods number two', 'rmbt_impex'),
-         //    'compiler' => 'true',
-         //    'preview_size' => 'full',
-         //    'default' => array(
-         //       'url' => '/assets/img/no-image.jpg'
-         //    ),
-         // ),
-
-         // array(
-         //    'id' => 'best-sellers_image-two_alt',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Description of image', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of image block -----------------*/
-         // /*------------------  the start of image block -----------------*/
-
-         // array(
-         //    'id' => 'best-sellers-goods-three_title',
-         //    'type' => 'text',
-         //    'title' => esc_html__(
-         //       'Best Sellers of Goods number three',
-         //       'rmbt_impex'
-         //    ),
-         //    'default' => esc_html__('Глазурувальна машина Impex EM-300', 'rmbt_impex'),
-         // ),
-
-         // array(
-         //    'id' => 'best-sellers_image-three',
-         //    'type' => 'media',
-         //    'url' => true,
-         //    'title' => esc_html__('Picture of Best Sellers of Goods number three', 'rmbt_impex'),
-         //    'compiler' => 'true',
-         //    'preview_size' => 'full',
-         //    'default' => array(
-         //       'url' => '/assets/img/no-image.jpg'
-         //    ),
-         // ),
-         // array(
-         //    'id' => 'best-sellers_image-three_alt',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Description of image', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of image block -----------------*/
-
-         // array(
-         //    'id' => 'best-sellers_end',
-         //    'type' => 'accordion',
-         //    'position' => 'end'
-         // ),
-         // /*------------------ /Best Sellers accordion ------------------*/
-
-
-         // /*------------------ the start benefits-block accordion ------------------*/
-         // array(
-         //    'id' => 'benefits-block_start',
-         //    'type' => 'accordion',
-         //    'title' => esc_html__('Benefit first section', 'rmbt_impex'),
-         //    'subtitle' => 'Add your content to the section \'benefits-block\'',
-         //    'position' => 'start',
-         // ),
-         // array(
-         //    'id' => 'rmbt-benefits-block_section-title',
-         //    'type' => 'text',
-         //    'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
-         //    'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // /*------------------  the start of first article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-title-1',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of first article', 'rmbt_impex'),
-         //    'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-text-1',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of first article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of first article block -----------------*/
-         // /*------------------  the start of second article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-title-2',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of second article', 'rmbt_impex'),
-         //    'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-text-2',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of second article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of second article block -----------------*/
-         // /*------------------  the start of third article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-title-3',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of third article', 'rmbt_impex'),
-         //    'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-text-3',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of third article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of third article block -----------------*/
-         // /*------------------  the start of fourth article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-title-4',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of fourth article', 'rmbt_impex'),
-         //    'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-benefits-block_article-text-4',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of fourth article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of fourth article block -----------------*/
-         // array(
-         //    'id' => 'rmbt-benefits-bg-picture_img-id',
-         //    'type' => 'media',
-         //    'url' => true,
-         //    'title' => esc_html__('Picture for benefits-bg-picture article', 'rmbt_impex'),
-         //    'compiler' => 'true',
-         //    'preview_size' => 'full',
-         //    'default' => array(
-         //       'url' => '/assets/img/no-image.jpg'
-         //    ),
-         // ),
-         // array(
-         //    'id' => 'rmbt-benefits-bg-picture_img-alt',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Image description for benefits-bg-picture', 'rmbt_impex'),
-         //    'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'benefits-block_end',
-         //    'type' => 'accordion',
-         //    'position' => 'end'
-         // ),
-         // /*------------------ the end benefits-block accordion ------------------*/
-
-
-         // /*------------------ the start facts-block accordion ------------------*/
-         // array(
-         //    'id' => 'facts-block_start',
-         //    'type' => 'accordion',
-         //    'title' => esc_html__('Facts Block Section', 'rmbt_impex'),
-         //    'subtitle' => 'Add your content to the section \'Facts Block\'',
-         //    'position' => 'start',
-         // ),
-         // /*------------------  the start of first article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-facts-block_article-title-1',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of first article', 'rmbt_impex'),
-         //    'default' => esc_html__('партнерів', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-facts-block_article-text-1',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of first article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of first article block -----------------*/
-         // /*------------------  the start of first article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-facts-block_article-title-2',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of first article', 'rmbt_impex'),
-         //    'default' => esc_html__('проектів', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-facts-block_article-text-2',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of first article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of first article block -----------------*/
-         // /*------------------  the start of first article block-----------------*/
-         // array(
-         //    'id' => 'rmbt-facts-block_article-title-3',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Title of first article', 'rmbt_impex'),
-         //    'default' => esc_html__('співробітників', 'rmbt_impex'),
-         // ),
-         // array(
-         //    'id' => 'rmbt-facts-block_article-text-3',
-         //    'type' => 'text',
-         //    'title' => esc_html__('Text of first article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of first article block -----------------*/
-         // array(
-         //    'id' => 'facts-block_end',
-         //    'type' => 'accordion',
-         //    'position' => 'end'
-         // ),
-         // /*------------------ the end facts-block accordion ------------------*/
-
-
-         // /*------------------ the start  accordion ------------------*/
-         // array(
-         //    'id' => 'clients-portfolio_start',
-         //    'type' => 'accordion',
-         //    'title' => esc_html__('Clients Portfolio Section', 'rmbt_impex'),
-         //    'subtitle' => 'Add your content to the section \'Clients Portfolio\'',
-         //    'position' => 'start',
-         // ),
-
-         // array(
-         //    'id' => 'clients-portfolio_gallery',
-         //    'type' => 'gallery',
-         //    'title' => esc_html__('Add/Edit Gallery on the main screen ', 'rmbt_impex'),
-         // ),
-
-         // array(
-         //    'id' => 'clients-portfolio_end',
-         //    'type' => 'accordion',
-         //    'position' => 'end'
-         // ),
-         // /*------------------ the end  accordion ------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         // /*------------------ the start benefits-block accordion ------------------*/
-         // array(
-         // 	'id' => 'benefits-block_start',
-         // 	'type' => 'accordion',
-         // 	'title' => esc_html__('benefits-block section', 'rmbt_impex'),
-         // 	'subtitle' => 'Add your content to the section \'benefits-block\'',
-         // 	'position' => 'start',
-         // ),
-         // array(
-         // 	'id' => 'rmbt-benefits-block_section-title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
-         // 	'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // /*------------------  the start of first article block-----------------*/
-         // array(
-         // 	'id' => 'rmbt-benefits-block_article-title-1',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Title of first article', 'rmbt_impex'),
-         // 	'default' => esc_html__('', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'rmbt-benefits-block_article-text',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Text of first article', 'rmbt_impex'),
-         // ),
-         // /*------------------  the end of first article block -----------------*/
-         // array(
-         // 	'id' => 'benefits-block_end',
-         // 	'type' => 'accordion',
-         // 	'position' => 'end'
-         // ),
-         // /*------------------ the end benefits-block accordion ------------------*/
-
-
-
-
-
-
-
-
-         // array(
-         // 	'id' => 'front_page_slogan',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Front page slogan', 'rmbt_impex'),
-         // 	'default' => esc_html__('Explore food Menu'),
-         // ),
-         // array(
-         // 	'id' => 'front_page_slogan_label',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Front Page label', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/exlore-food-menu.png'
-         // 	),
-         // ),
-
-
-
-         // array(
-         // 	'id' => 'about-section-start',
-         // 	'type' => 'accordion',
-         // 	'title' => esc_html__('About Section', 'rmbt_impex'),
-         // 	'subtitle' => 'Add your content to the section \'About\'',
-         // 	'position' => 'start',
-         // ),
-         // array(
-         // 	'id' => 'about_section_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('About Section Title', 'rmbt_impex'),
-         // 	'default' => esc_html__('About Restaurant ', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'about_section_text',
-         // 	'type' => 'textarea',
-         // 	'title' => esc_html__('About Section Text', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'about_section_button_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('About Button Title', 'rmbt_impex'),
-         // 	'default' => esc_html__('READ MORE', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'about_section_button_href',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('About Button link', 'rmbt_impex'),
-         // 	'default' => get_front_url() . "/about/",
-         // ),
-         // array(
-         // 	'id' => 'about_section_img_1',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag 1', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/about-row-bg.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'about_section_img_2',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag 2', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/about-row-bg.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'about_section_img_3',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag 3', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/about-row-bg.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'about_section_img_4',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag 4', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/about-row-bg.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'read_revie_button',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Read Revie Button', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/orang-sercle.png'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'read_revie_icon',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Read Revie Icon', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/icon_reviews.png'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'read_revie_text',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Read Revie Text', 'rmbt_impex'),
-         // 	'default' => __(wp_kses('READ <p>REVIEWS</p>', array('p' => array())), 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'front_delivery_icon',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Front Delivery Icon', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/icon_phone.png'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'front_delivery_text',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Front Delivery Text', 'rmbt_impex'),
-         // 	'default' => __(wp_kses('CALL US NOW FOR <p>FRONT DELIVERY</p>', array('p' => array())), 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'about-accordion-end',
-         // 	'type' => 'accordion',
-         // 	'position' => 'end'
-         // ),
-
-         // array(
-         // 	'id' => 'today-accordion-start',
-         // 	'type' => 'accordion',
-         // 	'title' => esc_html__('Today Section', 'rmbt_impex'),
-         // 	'subtitle' => 'Add your content to the section \'Today\'',
-         // 	'position' => 'start',
-         // ),
-
-         // array(
-         // 	'id' => 'today_section_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Front page title', 'rmbt_impex'),
-         // 	'default' => esc_html__('Today Special', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'today-gallery',
-         // 	'type' => 'gallery',
-         // 	'title' => esc_html__('Add/Edit Today Gallery', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'today_section_footer_text',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Footer Text', 'rmbt_impex'),
-         // 	'default' => __(wp_kses('front <p> delivery </p>', array('p' => array())), 'rmbt_impex'),
-         // ),
-
-         // array(
-         // 	'id' => 'today-accordion-end',
-         // 	'type' => 'accordion',
-         // 	'position' => 'end'
-         // ),
-
-         // array(
-         // 	'id' => 'restaurant_menu-accordion-start',
-         // 	'type' => 'accordion',
-         // 	'title' => esc_html__('Restaurant Menu', 'rmbt_impex'),
-         // 	'subtitle' => 'Add your content to the section \'Restaurant Menu\'',
-         // 	'position' => 'start',
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Restaurant Menu Section Title', 'rmbt_impex'),
-         // 	'default' => esc_html__('Food Menu', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_button_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Restaurant Menu Button Title', 'rmbt_impex'),
-         // 	'default' => esc_html__('Explor food menu', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_button_href',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Restaurant Menu Button link', 'rmbt_impex'),
-         // 	'default' => get_front_url() . "/food-menu-items/",
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_img_1',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag right', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/Image_311x311.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_img_2',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag left', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/Image_267x414.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_img_3',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Imag down', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/Image_241x241.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'restaurant_menu-section_icon_first_item_menu',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Icon of the first menu item', 'rmbt_impex'),
-         // 	'subtitle' => esc_html__('Set if this item is for all food categories', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/icon_all.png'
-         // 	),
-         // ),
-
-         // array(
-         // 	'id' => 'restaurant_menu-accordion-end',
-         // 	'type' => 'accordion',
-         // 	'position' => 'end'
-         // ),
-
-
-         // array(
-         // 	'id' => 'clients-accordion-start',
-         // 	'type' => 'accordion',
-         // 	'title' => esc_html__('Clients section', 'rmbt_impex'),
-         // 	'subtitle' => 'Add your content to the section \'Clients Menu\'',
-         // 	'position' => 'start',
-         // ),
-
-         // array(
-         // 	'id' => 'clients-section_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Clients menu section title', 'rmbt_impex'),
-         // 	'default' => esc_html__('Happy Clients', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'clients-section_background_img',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Background Img', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/background-clients-block.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'clients-section_avatar_default',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Default avatar of client', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'thumbnail',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/icons/sprite.svg#avatar_default'
-         // 	),
-         // ),
-
-         // array(
-         // 	'id' => 'clients-accordion-end',
-         // 	'type' => 'accordion',
-         // 	'position' => 'end'
-         // ),
-
-         // array(
-         // 	'id' => 'reserve-accordion-start',
-         // 	'type' => 'accordion',
-         // 	'title' => esc_html__('Reserve section', 'rmbt_impex'),
-         // 	'subtitle' => 'Add your content to the section \'Reserve Menu\'',
-         // 	'position' => 'start',
-         // ),
-
-         // array(
-         // 	'id' => 'reserve-section_title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Reserve section title', 'rmbt_impex'),
-         // 	'default' => esc_html__('Reserve your table', 'rmbt_impex'),
-         // ),
-
-         // array(
-         // 	'id' => 'reserve-section_background_img',
-         // 	'type' => 'media',
-         // 	'url' => true,
-         // 	'title' => esc_html__('Reserve Section Img', 'rmbt_impex'),
-         // 	'compiler' => 'true',
-         // 	'preview_size' => 'full',
-         // 	'default' => array(
-         // 		'url' => '/assets/img/Image_559x334.jpg'
-         // 	),
-         // ),
-         // array(
-         // 	'id' => 'reserve-section_text',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Reserve section title', 'rmbt_impex'),
-         // 	'default' => esc_html__(wp_kses('<span>for a reservation</span>', 'rmbt_impex')),
-         // ),
-         // array(
-         // 	'id' => 'reserve-section_text',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Reserve section text', 'rmbt_impex'),
-         // 	'default' => esc_html__(wp_kses('You can also call <span>for a reservation</span>', 'rmbt_impex')),
-         // ),
-         // array(
-         // 	'id' => 'reserve-section_button-title',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Reserve section button title', 'rmbt_impex'),
-         // 	'default' => esc_html__('Make reservation', 'rmbt_impex'),
-         // ),
-         // array(
-         // 	'id' => 'reserve-section_button-href',
-         // 	'type' => 'text',
-         // 	'title' => esc_html__('Reserve section button href', 'rmbt_impex'),
-         // 	'default' => esc_url('#'),
-         // ),
-
-         // array(
-         // 	'id' => 'reserve-accordion-end',
-         // 	'type' => 'accordion',
-         // 	'position' => 'end'
-         // ),
+         /*------------------ the end electric-proofer accordion ------------------*/
+
+
+
+         /*------------------ the start planetary-mixers accordion ------------------*/
+         array(
+            'id' => 'planetary-mixers_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Planetary Mixers Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Planetary Mixers\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of planetary-mixers article block-----------------*/
+         array(
+            'id' => 'equipCatPage-planetary-mixers_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Planetary Mixers  Article', 'rmbt_impex'),
+            'default' => esc_html__('Planetary Mixers ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-planetary-mixers_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Planetary Mixers', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-planetary-mixers_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Planetary Mixers article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-planetary-mixers_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Planetary Mixers  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of planetary-mixers article block -----------------*/
+         array(
+            'id' => 'planetary-mixers_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end planetary-mixers accordion ------------------*/
+
+
+
+
+         /*------------------ the start dough-dividers accordion ------------------*/
+         array(
+            'id' => 'dough-dividers_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Dough Dividers Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Dough Dividers\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of dough-dividers article block-----------------*/
+         array(
+            'id' => 'equipCatPage-dough-dividers_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Dough Dividers  Article', 'rmbt_impex'),
+            'default' => esc_html__('Dough Dividers ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-dividers_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Dough Dividers', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-dividers_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Dough Dividers article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-dividers_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Dough Dividers  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of dough-dividers article block -----------------*/
+         array(
+            'id' => 'dough-dividers_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end dough-dividers accordion ------------------*/
+
+
+
+
+         /*------------------ the start dough-rounders accordion ------------------*/
+         array(
+            'id' => 'dough-rounders_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Dough Rounders Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Dough Rounders\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of dough-rounders article block-----------------*/
+         array(
+            'id' => 'equipCatPage-dough-rounders_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Dough Rounders  Article', 'rmbt_impex'),
+            'default' => esc_html__('Dough Rounders ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-rounders_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Dough Rounders', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-rounders_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Dough Rounders article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-rounders_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Dough Rounders  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of dough-rounders article block -----------------*/
+         array(
+            'id' => 'dough-rounders_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end dough-rounders accordion ------------------*/
+
+
+         /*------------------ the start dough-mixers accordion ------------------*/
+         array(
+            'id' => 'dough-mixers_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Dough Mixers Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Dough Mixers\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of dough-mixers article block-----------------*/
+         array(
+            'id' => 'equipCatPage-dough-mixers_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Dough Mixers  Article', 'rmbt_impex'),
+            'default' => esc_html__('Dough Mixers ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-mixers_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Dough Mixers', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-mixers_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Dough Mixers article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-mixers_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Dough Mixers  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of dough-mixers article block -----------------*/
+         array(
+            'id' => 'dough-mixers_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end dough-mixers accordion ------------------*/
+
+
+         /*------------------ the start moulding-machine accordion ------------------*/
+         array(
+            'id' => 'moulding-machine_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Moulding Machine Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Moulding Machine\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of moulding-machine article block-----------------*/
+         array(
+            'id' => 'equipCatPage-moulding-machine_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Moulding Machine  Article', 'rmbt_impex'),
+            'default' => esc_html__('Moulding Machine ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-moulding-machine_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Moulding Machine', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-moulding-machine_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Moulding Machine article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-moulding-machine_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Moulding Machine  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of moulding-machine article block -----------------*/
+         array(
+            'id' => 'moulding-machine_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end moulding-machine accordion ------------------*/
+
+
+         /*------------------ the start dough-sheeting-machines accordion ------------------*/
+         array(
+            'id' => 'dough-sheeting-machines_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Dough Sheeting Machines Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Dough Sheeting Machines\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of dough-sheeting-machines article block-----------------*/
+         array(
+            'id' => 'equipCatPage-dough-sheeting-machines_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Dough Sheeting Machines  Article', 'rmbt_impex'),
+            'default' => esc_html__('Dough Sheeting Machines ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-sheeting-machines_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Dough Sheeting Machines', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-sheeting-machines_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Dough Sheeting Machines article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-dough-sheeting-machines_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Dough Sheeting Machines  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of dough-sheeting-machines article block -----------------*/
+         array(
+            'id' => 'dough-sheeting-machines_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end dough-sheeting-machines accordion ------------------*/
+
+
+         /*------------------ the start confectionery-dispensers accordion ------------------*/
+         array(
+            'id' => 'confectionery-dispensers_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Confectionery Dispensers Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Confectionery Dispensers\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of confectionery-dispensers article block-----------------*/
+         array(
+            'id' => 'equipCatPage-confectionery-dispensers_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Confectionery Dispensers  Article', 'rmbt_impex'),
+            'default' => esc_html__('Confectionery Dispensers ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-confectionery-dispensers_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Confectionery Dispensers', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-confectionery-dispensers_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Confectionery Dispensers article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-confectionery-dispensers_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Confectionery Dispensers  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of confectionery-dispensers article block -----------------*/
+         array(
+            'id' => 'confectionery-dispensers_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end confectionery-dispensers accordion ------------------*/
+
+
+         /*------------------ the start slicing-machines accordion ------------------*/
+         array(
+            'id' => 'slicing-machines_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Slicing Machines Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Slicing Machines\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of slicing-machines article block-----------------*/
+         array(
+            'id' => 'equipCatPage-slicing-machines_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Slicing Machines  Article', 'rmbt_impex'),
+            'default' => esc_html__('Slicing Machines ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-slicing-machines_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Slicing Machines', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-slicing-machines_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Slicing Machines article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-slicing-machines_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Slicing Machines  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of slicing-machines article block -----------------*/
+         array(
+            'id' => 'slicing-machines_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end slicing-machines accordion ------------------*/
+
+
+         /*------------------ the start cooking-boilers accordion ------------------*/
+         array(
+            'id' => 'cooking-boilers_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Cooking Boilers Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Cooking Boilers\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of cooking-boilers article block-----------------*/
+         array(
+            'id' => 'equipCatPage-cooking-boilers_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Cooking Boilers  Article', 'rmbt_impex'),
+            'default' => esc_html__('Cooking Boilers ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-cooking-boilers_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Cooking Boilers', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-cooking-boilers_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Cooking Boilers article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-cooking-boilers_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Cooking Boilers  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of cooking-boilers article block -----------------*/
+         array(
+            'id' => 'cooking-boilers_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end cooking-boilers accordion ------------------*/
+
+
+         /*------------------ the start dispensers-water-mixers accordion ------------------*/
+         array(
+            'id' => 'dispensers-water-mixers_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Dispensers Water Mixers Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Dispensers Water Mixers\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of dispensers-water-mixers article block-----------------*/
+         array(
+            'id' => 'equipCatPage-dispensers-water-mixers_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Dispensers Water Mixers  Article', 'rmbt_impex'),
+            'default' => esc_html__('Dispensers Water Mixers ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dispensers-water-mixers_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Dispensers Water Mixers', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-dispensers-water-mixers_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Dispensers Water Mixers article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-dispensers-water-mixers_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Dispensers Water Mixers  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of dispensers-water-mixers article block -----------------*/
+         array(
+            'id' => 'dispensers-water-mixers_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end dispensers-water-mixers accordion ------------------*/
+
+
+         /*------------------ the start packaging-equipment accordion ------------------*/
+         array(
+            'id' => 'packaging-equipment_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Packaging Equipment Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Packaging Equipment\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of packaging-equipment article block-----------------*/
+         array(
+            'id' => 'equipCatPage-packaging-equipment_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Packaging Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('Packaging Equipment ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-packaging-equipment_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Packaging Equipment', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-packaging-equipment_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Packaging Equipment article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-packaging-equipment_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Packaging Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of packaging-equipment article block -----------------*/
+         array(
+            'id' => 'packaging-equipment_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end packaging-equipment accordion ------------------*/
+
+
+         /*------------------ the start spare-parts accordion ------------------*/
+         array(
+            'id' => 'spare-parts_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Spare Parts Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Spare Parts\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of spare-parts article block-----------------*/
+         array(
+            'id' => 'equipCatPage-spare-parts_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Spare Parts  Article', 'rmbt_impex'),
+            'default' => esc_html__('Spare Parts ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-spare-parts_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Spare Parts', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-spare-parts_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Spare Parts article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-spare-parts_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Spare Parts  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of spare-parts article block -----------------*/
+         array(
+            'id' => 'spare-parts_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end spare-parts accordion ------------------*/
+
+
+         /*------------------ the start supporting-equipment accordion ------------------*/
+         array(
+            'id' => 'supporting-equipment_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Supporting Equipment Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Supporting Equipment\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of supporting-equipment article block-----------------*/
+         array(
+            'id' => 'equipCatPage-supporting-equipment_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Supporting Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('Supporting Equipment ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-supporting-equipment_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Supporting Equipment', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-supporting-equipment_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Supporting Equipment article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-supporting-equipment_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Supporting Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of supporting-equipment article block -----------------*/
+         array(
+            'id' => 'supporting-equipment_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end supporting-equipment accordion ------------------*/
+
+
+         /*------------------ the start pizza-production-equipment accordion ------------------*/
+         array(
+            'id' => 'pizza-production-equipment_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Pizza Production Equipment Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Pizza Production Equipment\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of pizza-production-equipment article block-----------------*/
+         array(
+            'id' => 'equipCatPage-pizza-production-equipment_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Pizza Production Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('Pizza Production Equipment ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-pizza-production-equipment_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Pizza Production Equipment', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-pizza-production-equipment_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Pizza Production Equipment article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-pizza-production-equipment_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Pizza Production Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of pizza-production-equipment article block -----------------*/
+         array(
+            'id' => 'pizza-production-equipment_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end pizza-production-equipment accordion ------------------*/
+
+
+         /*------------------ the start reconditioned-equipment accordion ------------------*/
+         array(
+            'id' => 'reconditioned-equipment_start',
+            'type' => 'accordion',
+            'title' => esc_html__('Reconditioned Equipment Section', 'rmbt_impex'),
+            'subtitle' => 'Add your content to the section \'Reconditioned Equipment\'',
+            'position' => 'start',
+         ),
+         /*------------------  the start of reconditioned-equipment article block-----------------*/
+         array(
+            'id' => 'equipCatPage-reconditioned-equipment_article-title',
+            'type' => 'text',
+            'title' => esc_html__('Title of Reconditioned Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('Reconditioned Equipment ', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-reconditioned-equipment_article-text',
+            'type' => 'textarea',
+            'title' => esc_html__('Text of Reconditioned Equipment', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'equipCatPage-reconditioned-equipment_article-img-id',
+            'type' => 'media',
+            'url' => true,
+            'title' => esc_html__('Picture of Reconditioned Equipment article', 'rmbt_impex'),
+            'compiler' => 'true',
+            'preview_size' => 'full',
+            'default' => array(
+               'url' => '/assets/img/no-image.jpg'
+            ),
+         ),
+         array(
+            'id' => 'equipCatPage-reconditioned-equipment_article-img-alt',
+            'type' => 'text',
+            'title' => esc_html__('Image Description Of Reconditioned Equipment  Article', 'rmbt_impex'),
+            'default' => esc_html__('enrobing machine image', 'rmbt_impex'),
+         ),
+         /*------------------  the end of reconditioned-equipment article block -----------------*/
+         array(
+            'id' => 'reconditioned-equipment_end',
+            'type' => 'accordion',
+            'position' => 'end'
+         ),
+         /*------------------ the end reconditioned-equipment accordion ------------------*/
       ),
    ),
 );

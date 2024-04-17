@@ -9,7 +9,7 @@
       </div>
 
       <section class="rmbt-container rmbt-benefits-block">
-         <?php get_template_part('template-parts/components/section-title', null, ['title' => rmbt_get_redux_field('rmbt-benefits-block_section-title')]); ?>
+         <?php get_template_part('template-parts/components/title', 'section', ['title' => 'rmbt-benefits-block_section-title']); ?>
          <div class="rmbt-benefits-block__row">
             <div class="rmbt-benefits-block__col">
                <?php get_template_part('template-parts/components/card_benefit', null, [
