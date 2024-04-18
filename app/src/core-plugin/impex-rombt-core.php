@@ -15,15 +15,25 @@ if (!function_exists('add_action')) {
 	exit;
 }
 
+
+
 function rmbt_impex_scripts_admin()
 {
-	wp_enqueue_style('rmbt_impex-admin_main', plugins_url() . '/core-plugin/assets/styles/main-style.min.css', array(), '1.0', 'all');
-	wp_enqueue_script('rmbt_impex-admin_core_jq', plugins_url() . '/core-plugin/assets/js/admin.main.min.js', array('jquery'), '1.0', true);
+	wp_enqueue_style('rmbt_impex-admin_main', plugins_url() . '/impex-rombt-core/assets/styles/main-style.min.css', array(), '1.0', 'all');
+	wp_enqueue_script('rmbt_impex-admin_core', plugins_url() . '/impex-rombt-core/assets/js/admin.main.min.js', array('jquery'), '1.0', true);
+
+
+	wp_add_inline_script('rmbt_impex-admin_core', 'const rmbtCategoriesGrouping = ' . json_encode([
+		'ajaxUrl' => admin_url('admin-ajax.php'),
+		// 'rmbtArrCategories' => $categories,		// your data if you need it
+	]), 'before');
 }
 add_action('admin_enqueue_scripts', 'rmbt_impex_scripts_admin');
 
 require_once plugin_dir_path(__FILE__) . 'inc/general-admin.php';
-// require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
+require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
+require_once plugin_dir_path(__FILE__) . 'parts/categories_grouping.php';
+require_once plugin_dir_path(__FILE__) . 'fetch.php';
 // require_once plugin_dir_path(__FILE__) . 'inc/acf.php';
 
 function rmbt_get_images_sizes()

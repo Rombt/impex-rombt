@@ -16,8 +16,6 @@ if (class_exists('WooCommerce')) {
 define('rmbt_PATH_THEME', get_template_directory());
 define('rmbt_URL_THEME', esc_url(get_template_directory_uri()));
 
-
-
 function rmbt_impex_scripts()
 {
 
@@ -26,6 +24,16 @@ function rmbt_impex_scripts()
 
 	wp_enqueue_script('swiper-bundle', get_template_directory_uri() . '/assets/js/libs/swiper-bundle.min.js', array(), '', true);
 	wp_enqueue_script('rmbt_impex-app', get_template_directory_uri() . '/assets/js/app.main.min.js', array('jquery'), '1.0', true);
+
+
+	wp_add_inline_script(
+		'rmbt_impex-app',
+		'const rmbtImpexApp = ' . json_encode([
+			// 'ajaxUrl' => admin_url('ajax.php'),		// ????
+			// 'rmbtArrCategories' => $categories,		// your data if you need it
+		]),
+		'before'
+	);
 }
 add_action('wp_enqueue_scripts', 'rmbt_impex_scripts', 20);
 

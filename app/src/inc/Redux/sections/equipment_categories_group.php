@@ -16,7 +16,7 @@ Redux::set_section(
 
 
          array(
-            'id' => 'equipment-categories-group_page-title',
+            'id' => 'rmbt-equipment-categories-group_page-title',
             'type' => 'text',
             'title' => esc_html__('Title of Equipment Categories Page', 'rmbt_impex'),
             'default' => esc_html__('Equipments', 'rmbt_impex'),
