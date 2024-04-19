@@ -20,6 +20,7 @@ window.onload = async function () {
     category: {
       wrapCategory: document.createElement('div'),
       bodyCategory: document.createElement('div'),
+      quantityProducts: document.createElement('div'),
       titleCategory: document.createElement('h3'),
       descriptionCategory: document.createElement('p'),
       addToGroup: document.createElement('button'),
@@ -30,15 +31,17 @@ window.onload = async function () {
 
   blocksPage.category.addToGroup.textContent = 'add to group';
   blocksPage.category.bodyCategory.append(blocksPage.category.titleCategory);
-  blocksPage.category.bodyCategory.append(blocksPage.category.descriptionCategory);
-  blocksPage.category.bodyCategory.append(blocksPage.category.addToGroup);
   blocksPage.category.wrapCategory.append(blocksPage.category.bodyCategory);
+  blocksPage.category.bodyCategory.append(blocksPage.category.descriptionCategory);
+  blocksPage.category.wrapCategory.append(blocksPage.category.quantityProducts);
+  blocksPage.category.wrapCategory.append(blocksPage.category.addToGroup);
 
   arr_categories.forEach(objCategory => {
     console.log('objCategory = ', objCategory);
     let currentCat = blocksPage.category.wrapCategory.cloneNode(true);
     currentCat.querySelector('.title-category').textContent = objCategory.cat_name;
     currentCat.querySelector('.description-category').textContent = objCategory.category_description;
+    currentCat.querySelector('.quantity-products').textContent = objCategory.count;
     blocksPage.wrapDisplayCategories.append(currentCat);
   });
 
@@ -79,5 +82,8 @@ function genCssClassName(str) {
       result += char;
     }
   }
+
+  // console.log(result);
+
   return result;
 }

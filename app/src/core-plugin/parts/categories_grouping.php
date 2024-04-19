@@ -19,10 +19,10 @@ function register_categories_group_submenu_page()
 function rmbt_categories_group()
 {
 ?>
-   <div class="rmbt-categories-grouping-wrap">
+   <div class="wrap">
       <h1><?= get_admin_page_title() ?></h1>
-
-
+      <div class="rmbt-categories-grouping-wrap">
+      </div>
    </div>
 <?php
 }
