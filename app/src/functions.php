@@ -79,15 +79,15 @@ function rmbt_impex_register_required_plugins()
 {
 	$plugins = array(
 		array(
-			'name' => 'Impex core',
+			'name' => 'Impex rombt core',
 			// The plugin name.
-			'slug' => 'rmbt_impex-core',
+			'slug' => 'rmbt-impex-core',
 			// The plugin slug (typically the folder name).
-			'source' => get_template_directory() . '/plugins/rmbt_impex-core.zip',
+			'source' => get_template_directory() . '/plugins/impex-rombt-core.zip',
 			// The plugin source.
 			'required' => true,
 			// If false, the plugin is only 'recommended' instead of required.
-			'version' => '1.0',
+			// 'version' => '1.0',
 			// E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation' => false,
 			// If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.

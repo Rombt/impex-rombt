@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Impex rombt core
+Plugin Name: Impex rombt core 
 Plugin URI: #
-Description: A plugin that implements Restaurant-site theme functionality
+Description: A plugin that implements Impex rombt theme functionality
 Version: 1.0
 Author: Automattic - Rombt
 Author URI: #
