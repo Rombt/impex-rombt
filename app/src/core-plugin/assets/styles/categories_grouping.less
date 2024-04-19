@@ -16,10 +16,7 @@
     margin: 20px 0px 20px 0px;
   }
 
-  .wrap-group-categories {
-  }
-  .wrap-display-categories {
-  }
+  .wrap-group,
   .wrap-category {
     display: flex;
     justify-content: space-between;
@@ -31,37 +28,20 @@
     border: 1px solid #c6c6c7;
     background-color: #ecedf0;
   }
+
+  .body-group,
   .body-category {
     flex: 0 0 70%;
     max-height: 90px;
     min-height: 30px;
     overflow-y: auto;
     padding: 10px 10px 10px 10px;
+  }
 
-    //  border: 1px solid #fd6005;
-  }
-  .title-category {
-  }
-  .description-category {
-  }
-  .quantity-products {
-    width: 40px;
-    padding: 10px 10px 10px 10px;
-
-    font-size: 17px;
-    font-weight: 600;
-    color: #67676d;
-    text-align: center;
-    vertical-align: middle;
-
-    //  border-radius: 10px;
-    //  border: 1px solid #67676d;
-  }
+  .publish-group,
   .add-to-group {
     width: 130px;
     padding: 10px 10px 10px 10px;
-
-    //  font-size: 17px;
     font-weight: 600;
     color: #67676d;
     text-align: center;
@@ -70,4 +50,62 @@
     border-radius: 10px;
     border: 1px solid #67676d;
   }
+
+  .wrap-display-categories {
+    .wrap-category {
+      .body-category {
+        .title-category {
+        }
+        .description-category {
+        }
+      }
+
+      .quantity-products {
+        width: 40px;
+        padding: 10px 10px 10px 10px;
+
+        font-size: 17px;
+        font-weight: 600;
+        color: #67676d;
+        text-align: center;
+        vertical-align: middle;
+
+        //  border-radius: 10px;
+        //  border: 1px solid #67676d;
+      }
+      .add-to-group {
+      }
+    }
+  }
+
+  .wrap-groups-categories {
+    .wrap-group {
+      flex-direction: column;
+      row-gap: 10px;
+
+      border: 1px solid #0515fd;
+
+      .body-group {
+        width: 95%;
+        border: 1px solid #fd05d4;
+        .title-group {
+          border: 1px solid #8d05fd;
+        }
+        .title-group-input {
+        }
+        .description-group {
+        }
+        .publish-group {
+        }
+      }
+
+      .categories-field {
+        min-height: 100px;
+        width: 95%;
+        border: 1px solid #05a367;
+      }
+    }
+  }
 }
+
+/*---------------------------------------------*/

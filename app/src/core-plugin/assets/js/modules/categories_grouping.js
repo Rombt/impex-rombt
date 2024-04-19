@@ -14,8 +14,6 @@ window.onload = async function () {
   arr_categories = await getAllCategories();
   const mainWrapPage = document.querySelector('.rmbt-categories-grouping-wrap');
   const blocksPage = {
-    wrapGroupsCategories: document.createElement('div'),
-    wrapGroupCategories: document.createElement('div'),
     wrapDisplayCategories: document.createElement('div'),
     category: {
       wrapCategory: document.createElement('div'),
@@ -24,6 +22,18 @@ window.onload = async function () {
       titleCategory: document.createElement('h3'),
       descriptionCategory: document.createElement('p'),
       addToGroup: document.createElement('button'),
+    },
+    wrapGroupsCategories: document.createElement('div'),
+    group: {
+      wrapGroup: document.createElement('div'),
+      bodyGroup: document.createElement('div'),
+      textGroup: document.createElement('div'),
+      inputGroup: document.createElement('div'),
+      categoriesField: document.createElement('div'),
+      titleGroup: document.createElement('lible'),
+      titleGroupInput: document.createElement('input'),
+      descriptionGroup: document.createElement('textarea'),
+      publishGroup: document.createElement('button'),
     },
   };
 
@@ -37,13 +47,29 @@ window.onload = async function () {
   blocksPage.category.wrapCategory.append(blocksPage.category.addToGroup);
 
   arr_categories.forEach(objCategory => {
-    console.log('objCategory = ', objCategory);
+    // console.log('objCategory = ', objCategory);
     let currentCat = blocksPage.category.wrapCategory.cloneNode(true);
     currentCat.querySelector('.title-category').textContent = objCategory.cat_name;
     currentCat.querySelector('.description-category').textContent = objCategory.category_description;
     currentCat.querySelector('.quantity-products').textContent = objCategory.count;
     blocksPage.wrapDisplayCategories.append(currentCat);
   });
+
+  blocksPage.group.titleGroup.textContent = 'Input name your group';
+  blocksPage.group.descriptionGroup.textContent = 'Input description your group';
+  blocksPage.group.publishGroup.textContent = 'publish this group';
+
+  blocksPage.group.textGroup.append(blocksPage.group.titleGroup);
+  blocksPage.group.textGroup.append(blocksPage.group.descriptionGroup);
+  blocksPage.group.bodyGroup.append(blocksPage.group.textGroup);
+
+  blocksPage.group.inputGroup.append(blocksPage.group.titleGroupInput);
+  blocksPage.group.inputGroup.append(blocksPage.group.publishGroup);
+  blocksPage.group.bodyGroup.append(blocksPage.group.inputGroup);
+
+  blocksPage.group.wrapGroup.append(blocksPage.group.bodyGroup);
+  blocksPage.group.wrapGroup.append(blocksPage.group.categoriesField);
+  blocksPage.wrapGroupsCategories.append(blocksPage.group.wrapGroup);
 
   mainWrapPage.append(blocksPage.wrapGroupsCategories);
   mainWrapPage.append(blocksPage.wrapDisplayCategories);
@@ -83,7 +109,7 @@ function genCssClassName(str) {
     }
   }
 
-  // console.log(result);
+  console.log(result);
 
   return result;
 }
