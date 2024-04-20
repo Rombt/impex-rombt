@@ -32,10 +32,10 @@ window.onload = async function() {
             controlsGroup: document.createElement('div'),
             publishGroup: document.createElement('button'),
             deleteGroup: document.createElement('button'),
-            bodyGroupPGroupName: document.createElement('p'), //todo в имя свойства добавить ключевое слово Tag и в genCssClassName(str) и в addClassToBlocks(objBlocks) пропускать имена свойств с этим ключём
-            bodyGroupInputGroupName: document.createElement('input'), //todo в имя свойства добавить ключевое слово Tag и в genCssClassName(str) и в addClassToBlocks(objBlocks) пропускать имена свойств с этим ключём
-            bodyGroupPGroupDescription: document.createElement('p'), //todo в имя свойства добавить ключевое слово Tag и в genCssClassName(str) и в addClassToBlocks(objBlocks) пропускать имена свойств с этим ключём
-            bodyGroupInputGroupDescription: document.createElement('textarea'), //todo в имя свойства добавить ключевое слово Tag и в genCssClassName(str) и в addClassToBlocks(objBlocks) пропускать имена свойств с этим ключём
+            bodyGroupPGroupName: document.createElement('p'),
+            bodyGroupInputGroupName: document.createElement('input'),
+            bodyGroupPGroupDescription: document.createElement('p'), 
+            bodyGroupInputGroupDescription: document.createElement('textarea'), 
             categoriesField: document.createElement('div'),
 
 

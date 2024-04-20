@@ -1,5 +1,9 @@
       источник: https://themeforest.net/item/elizah-business-and-corporate-responsive-website/22032574
 
+      categories_grouping.js
+            в имя свойства добавить ключевое слово Tag и в genCssClassName(str) и в addClassToBlocks(objBlocks) пропускать имена свойств с этим ключём
+
+
       для всех заголовков
             скрипт который будет уменьшать размер шрифта так чтобы одно слово не разрывалось на несколько строк
       
