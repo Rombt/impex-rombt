@@ -11,7 +11,28 @@ async function getAllCategories() {
 }
 
 window.onload = async function() {
+
+    let arr_Groups = [];
+
+
+    /*
+
+        arr_Groups = [
+            Group,
+        ];
+
+        Group = {
+            id: rmbt-gc-1,
+        }
+
+    */
+
+
+    /*---------- data ----------*/
     arr_categories = await getAllCategories();
+
+    /*---------- structure ----------*/
+
     const mainWrapPage = document.querySelector('.rmbt-categories-grouping-wrap');
     const blocksPage = {
         wrapDisplayCategories: document.createElement('div'),
@@ -34,8 +55,8 @@ window.onload = async function() {
             deleteGroup: document.createElement('button'),
             bodyGroupPGroupName: document.createElement('p'),
             bodyGroupInputGroupName: document.createElement('input'),
-            bodyGroupPGroupDescription: document.createElement('p'), 
-            bodyGroupInputGroupDescription: document.createElement('textarea'), 
+            bodyGroupPGroupDescription: document.createElement('p'),
+            bodyGroupInputGroupDescription: document.createElement('textarea'),
             categoriesField: document.createElement('div'),
 
 
@@ -64,26 +85,53 @@ window.onload = async function() {
     blocksPage.group.bodyGroupPGroupDescription.textContent = 'Enter group description';
     blocksPage.group.publishGroup.textContent = 'publish this group';
     blocksPage.group.deleteGroup.textContent = 'delete this group';
-
     blocksPage.group.bodyGroupName.append(blocksPage.group.bodyGroupPGroupName);
     blocksPage.group.bodyGroupName.append(blocksPage.group.bodyGroupInputGroupName);
     blocksPage.group.bodyGroupDescription.append(blocksPage.group.bodyGroupPGroupDescription);
     blocksPage.group.bodyGroupDescription.append(blocksPage.group.bodyGroupInputGroupDescription);
     blocksPage.group.bodyGroup.append(blocksPage.group.bodyGroupName);
     blocksPage.group.bodyGroup.append(blocksPage.group.bodyGroupDescription);
-
     blocksPage.group.controlsGroup.append(blocksPage.group.deleteGroup);
     blocksPage.group.controlsGroup.append(blocksPage.group.publishGroup);
     blocksPage.group.bodyGroup.append(blocksPage.group.controlsGroup);
-
-
     blocksPage.group.wrapGroup.append(blocksPage.group.bodyGroup);
     blocksPage.group.wrapGroup.append(blocksPage.group.categoriesField);
-    blocksPage.wrapGroupsCategories.append(blocksPage.group.wrapGroup);
+
+
 
     mainWrapPage.append(blocksPage.wrapGroupsCategories);
     mainWrapPage.append(blocksPage.wrapDisplayCategories);
+
+    /*---------- functionality ----------*/
+
+    const but_addNewGroup = document.querySelector('#add_new_group');
+    but_addNewGroup.addEventListener('click', e => { addNewGroup(blocksPage); })
+
+
+
+
+
+
 };
+
+function genGroupID() {
+
+}
+
+function addNewGroup(blocksPage) {
+    let newGroup = blocksPage.group.wrapGroup.cloneNode(true);
+    blocksPage.wrapGroupsCategories.append(newGroup);
+
+    delGroup(newGroup);
+}
+
+function delGroup(group) {
+    const deleteGroup = group.querySelector('.delete-group');
+    deleteGroup.addEventListener('click', e => {
+        const currentGroup = e.target.closest('.wrap-group');
+        currentGroup.remove();
+    })
+}
 
 function addClassToBlocks(objBlocks) {
     Object.entries(objBlocks).forEach(([name, node]) => {
@@ -119,7 +167,7 @@ function genCssClassName(str) {
         }
     }
 
-    console.log(result);
+    // console.log(result);
 
     return result;
 }
