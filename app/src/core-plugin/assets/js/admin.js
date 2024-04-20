@@ -1,1 +1,1 @@
-import './modules/categories_grouping.js';
+import './modules/categories-grouping/index.js';
