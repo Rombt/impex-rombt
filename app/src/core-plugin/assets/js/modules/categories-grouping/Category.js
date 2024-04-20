@@ -1,4 +1,7 @@
-export class Category {
+import { Root } from './Root.js';
+
+
+export class Category extends Root {
 
     html = {
         wrapCategory: document.createElement('div'),
@@ -9,7 +12,11 @@ export class Category {
         addToGroup: document.createElement('button'),
     }
 
-    constructor() {
+    constructor(data) {
+
+        super();
+
+        this.data = data;
 
         this.addClassToBlocks(this.html);
 
@@ -21,6 +28,7 @@ export class Category {
         this.html.wrapCategory.append(this.html.addToGroup);
 
         this.category = this.createCategory(this.html);
+        this.dataInput(this.data);
 
         return this.category;
     }
@@ -33,42 +41,11 @@ export class Category {
     }
 
 
-    addClassToBlocks(objBlocks) {
-        Object.entries(objBlocks).forEach(([name, node]) => {
-            processNode.call(this, name, node);
-        });
-
-        function processNode(name, node) {
-            if (node instanceof Element) {
-                node.classList.add(this.genCssClassName(name));
-            } else if (typeof node === 'object' && node !== null) {
-                Object.entries(node).forEach(([childName, childNode]) => {
-                    processNode(childName, childNode);
-                });
-            }
-        }
+    dataInput(data) {
+        this.category.querySelector('.title-category').textContent = data.cat_name;
+        this.category.querySelector('.description-category').textContent = data.category_description;
+        this.category.querySelector('.quantity-products').textContent = data.count;
     }
 
 
-
-    /**
-     * преобразует строку формат в CSS класса
-     *
-     */
-    genCssClassName(str) {
-        let result = '';
-
-        for (let i = 0; i < str.length; i++) {
-            const char = str[i];
-            if (char.toUpperCase() === char) {
-                result += `-${char.toLowerCase()}`;
-            } else {
-                result += char;
-            }
-        }
-
-        // console.log(result);
-
-        return result;
-    }
 }

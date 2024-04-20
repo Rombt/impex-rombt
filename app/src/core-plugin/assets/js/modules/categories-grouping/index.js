@@ -1,6 +1,5 @@
-import {Category} from './Category.js';
-import {Group} from './Group.js';
-// import './categories_grouping.js';
+import { Category } from './Category.js';
+import { Group } from './Group.js';
 
 
 
@@ -47,13 +46,8 @@ window.onload = async function() {
     wrapDisplayCategories.classList.add('wrap-display-categories');
 
 
-
     arr_categories.forEach(objCategory => {
-        let currentCat = new Category();
-
-        currentCat.querySelector('.title-category').textContent = objCategory.cat_name;
-        currentCat.querySelector('.description-category').textContent = objCategory.category_description;
-        currentCat.querySelector('.quantity-products').textContent = objCategory.count;
+        let currentCat = new Category(objCategory);
         wrapDisplayCategories.append(currentCat);
     });
 
@@ -65,7 +59,7 @@ window.onload = async function() {
 
     const but_addNewGroup = document.querySelector('#add_new_group');
     but_addNewGroup.addEventListener('click', e => {
-        let group = new Group(mainWrapPage);
+        let group = new Group();
         wrapGroupsCategories.append(group);
 
         arr_Groups.push(group);
