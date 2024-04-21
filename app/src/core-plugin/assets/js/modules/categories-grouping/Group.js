@@ -42,20 +42,21 @@ export class Group extends Root {
         this.html.wrapGroup.append(this.html.bodyGroup);
         this.html.wrapGroup.append(this.html.categoriesField);
 
-        this.group = this.createGroup(this.html);
-        this.listenClick();
+        // this.group = this.createGroup(this.html);
 
 
-        return this.group;
+
+        return this;
 
     }
 
 
-    createGroup(html) {
-        let group = html.wrapGroup.cloneNode(true);
-        this.delGroup(group);
+    createGroup() {
+        this.group = this.html.wrapGroup.cloneNode(true);
 
-        return group;
+        // this.listenClick();
+
+        return this.group;
     }
 
     delGroup(group) {
@@ -66,17 +67,32 @@ export class Group extends Root {
         })
     }
 
-    listenClick() {
-        this.group.addEventListener('click', e => {
-            const target = e.target;
-            this.activeGroup = target.closest('.wrap-group');
-            this.procActiveGroup.call(this);
-        })
-    }
+    // listenClick() {
+    //     this.group.addEventListener('click', e => {
+    //         const target = e.target;
+    //         this.activeGroup = target.closest('.wrap-group');
 
-    procActiveGroup() {
-        this.activeGroup.classList.add('rmbt-active-group')
+    //         // console.log("this.activeGroup = ", this.activeGroup);
+    //         if (this.activeGroup.classList.contains('rmbt-active-group')) {
 
-    }
+    //             this.procDeactivationGroup.call(this);
+    //         } else {
+    //             this.procActiveGroup.call(this);
+    //         }
+
+
+
+    //     })
+    // }
+
+    // activateGroup() {
+    //     this.activeGroup.classList.add('rmbt-active-group')
+
+    // }
+
+    // deactivateGroup() {
+    //     this.activeGroup.classList.remove('rmbt-active-group')
+    // }
+
 
 }
