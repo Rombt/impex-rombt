@@ -51,58 +51,35 @@ window.onload = async function() {
         wrapDisplayCategories.append(currentCat);
     });
 
-
     mainWrapPage.append(wrapGroupsCategories);
     mainWrapPage.append(wrapDisplayCategories);
 
     /*---------- functionality ----------*/
 
-    const but_addNewGroup = document.querySelector('#add_new_group');
-    but_addNewGroup.addEventListener('click', e => {
-        let group = new Group();
-        wrapGroupsCategories.append(group);
+    document.addEventListener('click', e => {
+        const target = e.target;
 
-        arr_Groups.push(group);
+        switch (target) {
+
+            case document.querySelector('#add_new_group'):
+                let group = new Group();
+                wrapGroupsCategories.append(group);
+                arr_Groups.push(group);
+
+                break
+
+                // case :
+                //     break
+
+                // defoult:
+
+        }
     })
 
+
+
+
+
+
+
 };
-
-
-function addClassToBlocks(objBlocks) {
-    Object.entries(objBlocks).forEach(([name, node]) => {
-        processNode(name, node);
-    });
-
-    function processNode(name, node) {
-        if (node instanceof Element) {
-            node.classList.add(genCssClassName(name));
-        } else if (typeof node === 'object' && node !== null) {
-            Object.entries(node).forEach(([childName, childNode]) => {
-                processNode(childName, childNode);
-            });
-        }
-    }
-}
-
-// -------------  helpers ---------------
-
-/**
- * преобразует строку формат в CSS класса
- *
- */
-function genCssClassName(str) {
-    let result = '';
-
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
-        if (char.toUpperCase() === char) {
-            result += `-${char.toLowerCase()}`;
-        } else {
-            result += char;
-        }
-    }
-
-    // console.log(result);
-
-    return result;
-}

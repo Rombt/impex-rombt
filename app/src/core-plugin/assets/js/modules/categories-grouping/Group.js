@@ -43,6 +43,7 @@ export class Group extends Root {
         this.html.wrapGroup.append(this.html.categoriesField);
 
         this.group = this.createGroup(this.html);
+        this.listenClick();
 
 
         return this.group;
@@ -52,7 +53,6 @@ export class Group extends Root {
 
     createGroup(html) {
         let group = html.wrapGroup.cloneNode(true);
-
         this.delGroup(group);
 
         return group;
@@ -66,5 +66,17 @@ export class Group extends Root {
         })
     }
 
+    listenClick() {
+        this.group.addEventListener('click', e => {
+            const target = e.target;
+            this.activeGroup = target.closest('.wrap-group');
+            this.procActiveGroup.call(this);
+        })
+    }
+
+    procActiveGroup() {
+        this.activeGroup.classList.add('rmbt-active-group')
+
+    }
 
 }
