@@ -27,24 +27,48 @@ export class Category extends Root {
         this.html.wrapCategory.append(this.html.quantityProducts);
         this.html.wrapCategory.append(this.html.addToGroup);
 
-        this.category = this.createCategory(this.html);
+        return this;
+
+    }
+
+
+    createCategory() {
+        this.category = this.html.wrapCategory.cloneNode(true);
         this.dataInput(this.data);
 
         return this.category;
     }
 
 
-    createCategory(html) {
-        let group = html.wrapCategory.cloneNode(true);
-
-        return group;
-    }
-
-
     dataInput(data) {
+        this.category.id = data.term_id;
         this.category.querySelector('.title-category').textContent = data.cat_name;
         this.category.querySelector('.description-category').textContent = data.category_description;
         this.category.querySelector('.quantity-products').textContent = data.count;
+    }
+
+
+    listenerClick(e) {
+        let target = e.target;
+
+        if (target.classList.contains('add-to-group')) {
+            // arr_Groups.forEach(objGroup => {
+            //     if (objGroup.group.classList.contains('rmbt-active-group')) {
+            //         activeGroup = objGroup.group;
+            //         return;
+            //     }
+            // })
+
+            if (!activeGroup) alert("Active group is absent");
+            else {
+                activeGroup.querySelector('.categories-field').append(activeCategory);
+                let but = activeCategory.querySelector('.add-to-group');
+                but.classList.remove('add-to-group')
+                but.classList.add('remove-from-group');
+                but.textContent = '';
+            }
+        }
+
     }
 
 

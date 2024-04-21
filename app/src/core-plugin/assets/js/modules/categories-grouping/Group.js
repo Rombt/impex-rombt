@@ -54,45 +54,17 @@ export class Group extends Root {
     createGroup() {
         this.group = this.html.wrapGroup.cloneNode(true);
 
-        // this.listenClick();
+
 
         return this.group;
     }
 
-    delGroup(group) {
-        const deleteGroup = group.querySelector('.delete-group');
-        deleteGroup.addEventListener('click', e => {
-            const currentGroup = e.target.closest('.wrap-group');
-            currentGroup.remove();
-        })
+
+    listenerClick(e) {
+
+
+        console.log("e.target", e.target);
+
     }
-
-    // listenClick() {
-    //     this.group.addEventListener('click', e => {
-    //         const target = e.target;
-    //         this.activeGroup = target.closest('.wrap-group');
-
-    //         // console.log("this.activeGroup = ", this.activeGroup);
-    //         if (this.activeGroup.classList.contains('rmbt-active-group')) {
-
-    //             this.procDeactivationGroup.call(this);
-    //         } else {
-    //             this.procActiveGroup.call(this);
-    //         }
-
-
-
-    //     })
-    // }
-
-    // activateGroup() {
-    //     this.activeGroup.classList.add('rmbt-active-group')
-
-    // }
-
-    // deactivateGroup() {
-    //     this.activeGroup.classList.remove('rmbt-active-group')
-    // }
-
 
 }

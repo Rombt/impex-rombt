@@ -16,6 +16,21 @@ async function getAllCategories() {
     }
 }
 
+
+/*
+
+    при нажатии на кнопку "publish this group" на сервер должен быть отправлен объект вида:
+        group = {
+            id_group,
+            gategories:[
+                id_categiry-1,
+                id_categiry-2,
+            ]
+        }
+
+*/
+
+
 window.onload = async function() {
 
     let arr_Groups = [];
@@ -37,9 +52,16 @@ window.onload = async function() {
     mainWrapPage.prepend(wrapQuantityCategories);
     wrapQuantityCategories.textContent = 'Total categories:  ' + arr_categories.length;
 
-    arr_categories.forEach(objCategory => {
-        let currentCat = new Category(objCategory);
-        wrapDisplayCategories.append(currentCat);
+    arr_categories.forEach(el => {
+        let objCategory = new Category(el);
+
+        let category = objCategory.createCategory();
+        category.addEventListener('click', e => {
+
+            objCategory.listenerClick(e)
+        })
+
+        wrapDisplayCategories.append(category);
     });
 
     mainWrapPage.append(wrapGroupsCategories);
@@ -47,52 +69,28 @@ window.onload = async function() {
 
     /*---------- functionality ----------*/
 
-    document.addEventListener('click', e => {
-        let target = e.target;
-        let activeGroup = target.closest('.wrap-group') || false;
-        let activeCategory = target.closest('.wrap-category');
 
 
 
-        if (target === document.querySelector('#add_new_group')) {
+    document.querySelector('#add_new_group')
+        .addEventListener('click', e => {
             let obj_group = new Group();
             let group = obj_group.createGroup();
             wrapGroupsCategories.append(group);
             arr_Groups.push(obj_group)
 
-        } else if (target.classList.contains('add-to-group')) {
-            arr_Groups.forEach(objGroup => {
-                if (objGroup.group.classList.contains('rmbt-active-group')) {
-                    activeGroup = objGroup.group;
-                    return;
-                }
+
+
+            arr_Groups.forEach(obj_group => {
+                obj_group.group.addEventListener('click', e => {
+                    obj_group.listenerClick(e);
+                })
             })
 
-            if (!activeGroup) alert("Active group is absent");
-            else {
-                activeGroup.querySelector('.categories-field').append(activeCategory);
-                let but = activeCategory.querySelector('.add-to-group');
-                but.classList.remove('add-to-group')
-                but.classList.add('remove-from-group');
-                but.textContent = '';
-            }
-        } else if (target.classList.contains('remove-from-group')) {
-            wrapDisplayCategories.prepend(activeCategory);
-            let but = activeCategory.querySelector('.remove-from-group');
-            but.classList.remove('remove-from-group')
-            but.classList.add('add-to-group');
-            but.textContent = 'add to group'
 
-        } else if (activeGroup) {
-            let nl_activeGpoups = document.querySelectorAll('.rmbt-active-group');
-            if (nl_activeGpoups.length > 0) {
-                nl_activeGpoups.forEach(el => el.classList.remove('rmbt-active-group'))
-            }
-            if (activeGroup.classList.contains('rmbt-active-group')) {
-                activeGroup.classList.remove('rmbt-active-group');
-            } else {
-                activeGroup.classList.add('rmbt-active-group');
-            }
-        }
-    })
+        })
+
+
+
+
 };
