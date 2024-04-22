@@ -3,7 +3,7 @@
 function get_all_categories()
 {
 
-   log_in_file($_GET);
+   // log_in_file($_GET);
    $args = array(
       'taxonomy' => 'product_cat',
       'hide_empty' => false,

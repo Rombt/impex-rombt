@@ -122,61 +122,95 @@
                 width: 100%;
                 box-sizing: border-box;
                 margin-bottom: 20px;
+                column-gap: 20px;
 
-                .body-group-description,
-                .body-group-name {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    column-gap: 20px;
-
-                    p {
-                        margin: 0;
-                        font-size: 18px;
-                    }
-                }
-
-                .body-group-name {
-                    margin-bottom: 20px;
-
-                    input {
-                        flex-basis: 55%;
-                    }
-                }
-
-                .body-group-description {
-                    textarea {
-                        flex-basis: 55%;
-                        resize: vertical;
-                        min-height: 70px;
-                        max-height: 200px;
-                    }
-                }
+                display: flex;
+                // border: 1px solid #ED1010;
 
 
-                .controls-group {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-top: 20px;
-                    padding: 5px;
+                .body-group-text {
 
-                    .delete-group,
-                    .publish-group {}
+                    flex-grow: 1;
+                    // border: 1px solid #000;
 
-                    .delete-group {
-                        border-color: #FE8A8A;
-                        background-color: #FCD0D0;
-                        color: #FF5252;
+                    .body-group-description,
+                    .body-group-name {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        column-gap: 20px;
 
-                        &:hover {
-                            border-color: #FC8585;
-                            background-color: #F6AEAE;
-                            color: #F22525;
-
-                            scale: 1.02;
-                            transition: all 0.5s linear;
+                        p {
+                            margin: 0;
+                            font-size: 18px;
                         }
+                    }
+
+                    .body-group-name {
+                        margin-bottom: 20px;
+
+                        input {
+                            flex-basis: 65%;
+                        }
+                    }
+
+                    .body-group-description {
+                        textarea {
+                            flex-basis: 65%;
+                            resize: vertical;
+                            min-height: 70px;
+                            max-height: 200px;
+                        }
+                    }
+
+
+                    .controls-group {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 20px;
+                        padding: 5px;
+
+                        .delete-group,
+                        .publish-group {}
+
+                        .delete-group {
+                            border-color: #FE8A8A;
+                            background-color: #FCD0D0;
+                            color: #FF5252;
+
+                            &:hover {
+                                border-color: #FC8585;
+                                background-color: #F6AEAE;
+                                color: #F22525;
+
+                                scale: 1.02;
+                                transition: all 0.5s linear;
+                            }
+                        }
+                    }
+
+                }
+
+                .body-group-wrap-img {
+                    width: 160px;
+                    height: auto;
+                    padding: 2px;
+
+
+                    .body-group-img {
+                        width: 100%;
+                        height: 75%;
+
+
+                    }
+
+                    .body-group-add-img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 100px;
+
+                        margin-top: 5px;
                     }
                 }
             }

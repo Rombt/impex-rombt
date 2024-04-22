@@ -5,6 +5,12 @@ export class Group extends Root {
     html = {
         wrapGroup: document.createElement('div'),
         bodyGroup: document.createElement('div'),
+        bodyGroupText: document.createElement('div'),
+
+        bodyGroupWrapImg: document.createElement('div'),
+        bodyGroupImg: document.createElement('img'),
+        bodyGroupAddImg: document.createElement('button'),
+
         bodyGroupName: document.createElement('div'),
         bodyGroupDescription: document.createElement('div'),
         controlsGroup: document.createElement('div'),
@@ -30,15 +36,39 @@ export class Group extends Root {
         this.html.bodyGroupPGroupDescription.textContent = 'Enter group description';
         this.html.publishGroup.textContent = 'publish this group';
         this.html.deleteGroup.textContent = 'delete this group';
+
+        this.html.bodyGroupImg.id = 'selected-image';
+        this.html.bodyGroupImg.src = '';
+
+        this.html.bodyGroupAddImg.id = 'choose-image-button'
+        this.html.bodyGroupAddImg.textContent = 'Выбрать картинку';
+
+
+
         this.html.bodyGroupName.append(this.html.bodyGroupPGroupName);
         this.html.bodyGroupName.append(this.html.bodyGroupInputGroupName);
+
         this.html.bodyGroupDescription.append(this.html.bodyGroupPGroupDescription);
         this.html.bodyGroupDescription.append(this.html.bodyGroupInputGroupDescription);
-        this.html.bodyGroup.append(this.html.bodyGroupName);
-        this.html.bodyGroup.append(this.html.bodyGroupDescription);
+
+
+        this.html.bodyGroupText.append(this.html.bodyGroupName);
+        this.html.bodyGroupText.append(this.html.bodyGroupDescription);
+
         this.html.controlsGroup.append(this.html.deleteGroup);
         this.html.controlsGroup.append(this.html.publishGroup);
-        this.html.bodyGroup.append(this.html.controlsGroup);
+        this.html.bodyGroupText.append(this.html.controlsGroup);
+
+
+        this.html.bodyGroupWrapImg.append(this.html.bodyGroupImg);
+        this.html.bodyGroupWrapImg.append(this.html.bodyGroupAddImg);
+
+
+        this.html.bodyGroup.append(this.html.bodyGroupText);
+        this.html.bodyGroup.append(this.html.bodyGroupWrapImg);
+
+
+
         this.html.wrapGroup.append(this.html.bodyGroup);
         this.html.wrapGroup.append(this.html.categoriesField);
 
@@ -54,7 +84,30 @@ export class Group extends Root {
     createGroup() {
         this.group = this.html.wrapGroup.cloneNode(true);
 
-        // this.listenClick();
+        // jQuery(document).ready(function($) {
+        //     $('#choose-image-button').click(function(event) {
+        //         event.preventDefault();
+
+        //         // Открыть медиабиблиотеку WordPress
+        //         var media_frame = wp.media({
+        //             title: 'Выберите картинку',
+        //             multiple: false,
+        //             library: {
+        //                 type: 'image'
+        //             }
+        //         });
+
+        //         media_frame.on('select', function() {
+        //             var attachment = media_frame.state().get('selection').first().toJSON();
+        //             var imageUrl = attachment.url;
+
+        //             $('#selected-image').attr('src', imageUrl);
+        //             $('#selected-image').show();
+        //         });
+
+        //         media_frame.open();
+        //     });
+        // });
 
         return this.group;
     }
