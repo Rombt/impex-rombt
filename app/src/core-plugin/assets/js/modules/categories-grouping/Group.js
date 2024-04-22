@@ -37,11 +37,11 @@ export class Group extends Root {
         this.html.publishGroup.textContent = 'publish this group';
         this.html.deleteGroup.textContent = 'delete this group';
 
-        this.html.bodyGroupImg.id = 'selected-image';
         this.html.bodyGroupImg.src = '';
 
-        this.html.bodyGroupAddImg.id = 'choose-image-button'
+        // this.html.bodyGroupAddImg.id = 'choose-image-button'
         this.html.bodyGroupAddImg.textContent = 'Выбрать картинку';
+        this.html.bodyGroupAddImg.classList.add('rmbt-add-media');
 
 
 
@@ -84,30 +84,6 @@ export class Group extends Root {
     createGroup() {
         this.group = this.html.wrapGroup.cloneNode(true);
 
-        // jQuery(document).ready(function($) {
-        //     $('#choose-image-button').click(function(event) {
-        //         event.preventDefault();
-
-        //         // Открыть медиабиблиотеку WordPress
-        //         var media_frame = wp.media({
-        //             title: 'Выберите картинку',
-        //             multiple: false,
-        //             library: {
-        //                 type: 'image'
-        //             }
-        //         });
-
-        //         media_frame.on('select', function() {
-        //             var attachment = media_frame.state().get('selection').first().toJSON();
-        //             var imageUrl = attachment.url;
-
-        //             $('#selected-image').attr('src', imageUrl);
-        //             $('#selected-image').show();
-        //         });
-
-        //         media_frame.open();
-        //     });
-        // });
 
         return this.group;
     }

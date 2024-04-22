@@ -26,10 +26,10 @@ function rmbt_categories_group()
       <button id="add_new_group" class="page-title-action">Add new group</button>
       <div class="rmbt-categories-grouping-wrap">
 
-<!--          <button id="choose-image-button">Выбрать картинку</button>
-        <img id="selected-image" src="" width="200" height="200" style="display: none;"> -->
+         <!-- <button id="choose-image-button" class="rmbt-add-media">Выбрать картинку</button> -->
+        <!-- <img id="selected-image" src="" width="200" height="200" style="display: none;"> -->
 
-        <script>
+<!--         <script>
             jQuery(document).ready(function($) {
                 $('#choose-image-button').click(function(event) {
                     event.preventDefault();
@@ -54,8 +54,8 @@ function rmbt_categories_group()
                     media_frame.open();
                 });
             });
-        </script>
-        
+        </script> -->
+
    </div>
 <?php
 }
