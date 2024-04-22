@@ -106,11 +106,12 @@ window.onload = async function () {
 
         console.log('group = ', group);
 
-        // let response = await fetch(ajaxurl + '?action=get_all_categories');
-
         let response = fetch(ajaxurl + '?action=get_obj_category', {
           method: 'POST',
-          // credentials: 'same-origin', // include, *same-origin, omit
+          credentials: 'same-origin', // include, *same-origin, omit
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify(group), // body data type must match "Content-Type" header
         });
       }
