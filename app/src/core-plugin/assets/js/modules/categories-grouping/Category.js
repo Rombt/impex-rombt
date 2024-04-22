@@ -1,51 +1,45 @@
 import { Root } from './Root.js';
 
-
 export class Category extends Root {
+  html = {
+    wrapCategory: document.createElement('div'),
+    bodyCategory: document.createElement('div'),
+    quantityProducts: document.createElement('div'),
+    titleCategory: document.createElement('h3'),
+    descriptionCategory: document.createElement('p'),
+    addToGroup: document.createElement('button'),
+  };
 
-    html = {
-        wrapCategory: document.createElement('div'),
-        bodyCategory: document.createElement('div'),
-        quantityProducts: document.createElement('div'),
-        titleCategory: document.createElement('h3'),
-        descriptionCategory: document.createElement('p'),
-        addToGroup: document.createElement('button'),
-    }
+  constructor(data) {
+    super();
 
-    constructor(data) {
+    this.data = data;
 
-        super();
+    this.addClassToBlocks(this.html);
 
-        this.data = data;
+    this.html.addToGroup.textContent = 'add to group';
+    this.html.bodyCategory.append(this.html.titleCategory);
+    this.html.wrapCategory.append(this.html.bodyCategory);
+    this.html.bodyCategory.append(this.html.descriptionCategory);
+    this.html.wrapCategory.append(this.html.quantityProducts);
+    this.html.wrapCategory.append(this.html.addToGroup);
 
-        this.addClassToBlocks(this.html);
+    this.category = this.createCategory(this.html);
+    this.dataInput(this.data);
 
-        this.html.addToGroup.textContent = 'add to group';
-        this.html.bodyCategory.append(this.html.titleCategory);
-        this.html.wrapCategory.append(this.html.bodyCategory);
-        this.html.bodyCategory.append(this.html.descriptionCategory);
-        this.html.wrapCategory.append(this.html.quantityProducts);
-        this.html.wrapCategory.append(this.html.addToGroup);
+    return this.category;
+  }
 
-        this.category = this.createCategory(this.html);
-        this.dataInput(this.data);
+  createCategory(html) {
+    let group = html.wrapCategory.cloneNode(true);
 
-        return this.category;
-    }
+    return group;
+  }
 
-
-    createCategory(html) {
-        let group = html.wrapCategory.cloneNode(true);
-
-        return group;
-    }
-
-
-    dataInput(data) {
-        this.category.querySelector('.title-category').textContent = data.cat_name;
-        this.category.querySelector('.description-category').textContent = data.category_description;
-        this.category.querySelector('.quantity-products').textContent = data.count;
-    }
-
-
+  dataInput(data) {
+    this.category.id = data.term_id;
+    this.category.querySelector('.title-category').textContent = data.cat_name;
+    this.category.querySelector('.description-category').textContent = data.category_description;
+    this.category.querySelector('.quantity-products').textContent = data.count;
+  }
 }
