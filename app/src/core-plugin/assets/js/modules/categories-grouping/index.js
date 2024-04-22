@@ -43,6 +43,7 @@ window.onload = async function () {
 
   document.addEventListener('click', e => {
     let target = e.target;
+
     let activeGroup = target.closest('.wrap-group') || false;
     let activeCategory = target.closest('.wrap-category');
 
@@ -82,6 +83,28 @@ window.onload = async function () {
         activeGroup.classList.remove('rmbt-active-group');
       } else {
         activeGroup.classList.add('rmbt-active-group');
+      }
+
+      if (target.classList.contains('publish-group')) {
+        /*
+          let group = {
+            id,
+            name,
+            img,
+            description,
+            categories: [],
+          };
+        */
+        let group = {};
+
+        group.name = activeGroup.querySelector('.body-group-input-group-name').value;
+        group.description = activeGroup.querySelector('.body-group-input-group-description').value;
+        let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
+        group.categories = arr_categories.map(cat => {
+          return cat.id;
+        });
+
+        console.log('group = ', group);
       }
     }
   });
