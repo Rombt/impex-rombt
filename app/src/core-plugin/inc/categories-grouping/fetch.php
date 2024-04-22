@@ -16,3 +16,12 @@ function get_all_categories()
    wp_die();
 }
 add_action('wp_ajax_get_all_categories', 'get_all_categories');
+
+function get_obj_category()
+{
+
+   global $rmbt_GROUP;
+
+   $rmbt_GROUP = $_POST;
+}
+add_action('wp_ajax_get_obj_category', 'get_obj_category');

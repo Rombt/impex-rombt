@@ -32,8 +32,8 @@ add_action('admin_enqueue_scripts', 'rmbt_impex_scripts_admin');
 
 require_once plugin_dir_path(__FILE__) . 'inc/general-admin.php';
 require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
-require_once plugin_dir_path(__FILE__) . 'parts/categories_grouping.php';
-require_once plugin_dir_path(__FILE__) . 'fetch.php';
+require_once plugin_dir_path(__FILE__) . 'inc/categories-grouping/categories_grouping.php';
+require_once plugin_dir_path(__FILE__) . 'inc/categories-grouping/fetch.php';
 // require_once plugin_dir_path(__FILE__) . 'inc/acf.php';
 
 function rmbt_get_images_sizes()

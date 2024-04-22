@@ -26,12 +26,10 @@ $arr_products = wc_get_products($args);
             <div class="rmbt-equipment-categories__text"><?php echo rmbt_get_redux_field('equipCatPage-equipment-categories_page-text') ?></div>
             <div class="rmbt-equipment-categories__row">
                <?php
-
-
-               echo '<pre> $categories_id = ';
-               print_r($arr_products);
+               global $rmbt_GROUP;
+               echo '<pre> $rmbt_GROUP = ';
+               print_r($rmbt_GROUP);
                echo "</pre>";
-
 
                ?>
             </div>

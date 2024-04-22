@@ -90,7 +90,7 @@ window.onload = async function () {
           let group = {
             id,
             name,
-            img,
+            img_id,
             description,
             categories: [],
           };
@@ -105,6 +105,14 @@ window.onload = async function () {
         });
 
         console.log('group = ', group);
+
+        // let response = await fetch(ajaxurl + '?action=get_all_categories');
+
+        let response = fetch(ajaxurl + '?action=get_obj_category', {
+          method: 'POST',
+          // credentials: 'same-origin', // include, *same-origin, omit
+          body: JSON.stringify(group), // body data type must match "Content-Type" header
+        });
       }
     }
   });
