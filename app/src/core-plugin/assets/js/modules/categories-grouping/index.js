@@ -67,8 +67,10 @@ window.onload = async function () {
       arr_categories.forEach(obj_Cat => {
         if (obj_Cat.cat_ID == idCat) {
           let obj_currentCat = new Category();
-          let currentCat = obj_currentCat.createCategory(obj_Cat);
+          let currentCat = obj_currentCat.createCategory(obj_Cat, 'group');
           currentGroup.querySelector('.categories-field').append(currentCat);
+
+          // addCatToGroup(activeGroup, activeCategory);
         }
       });
     });

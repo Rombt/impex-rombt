@@ -25,8 +25,14 @@ export class Category extends Root {
     return this;
   }
 
-  createCategory(data) {
+  createCategory(data, dest) {
+    if (dest === 'group') {
+      this.html.addToGroup.classList.remove('add-to-group');
+      this.html.addToGroup.classList.add('remove-from-group');
+      this.html.addToGroup.textContent = '';
+    }
     this.category = this.html.wrapCategory.cloneNode(true);
+
     this.dataInput(data);
 
     return this.category;
