@@ -28,6 +28,10 @@ $table_structure = array(
       'data_type' => 'INT',
       'not_null' => true,
    ),
+   'img_url' => array(
+      'data_type' => 'VARCHAR(255)',
+      'not_null' => true,
+   ),
    'categories' => array(
       'data_type' => 'JSON',
    ),

@@ -13,8 +13,6 @@ export class Category extends Root {
   constructor(data) {
     super();
 
-    this.data = data;
-
     this.addClassToBlocks(this.html);
 
     this.html.addToGroup.textContent = 'add to group';
@@ -24,16 +22,14 @@ export class Category extends Root {
     this.html.wrapCategory.append(this.html.quantityProducts);
     this.html.wrapCategory.append(this.html.addToGroup);
 
-    this.category = this.createCategory(this.html);
-    this.dataInput(this.data);
-
-    return this.category;
+    return this;
   }
 
-  createCategory(html) {
-    let group = html.wrapCategory.cloneNode(true);
+  createCategory(data) {
+    this.category = this.html.wrapCategory.cloneNode(true);
+    this.dataInput(data);
 
-    return group;
+    return this.category;
   }
 
   dataInput(data) {
