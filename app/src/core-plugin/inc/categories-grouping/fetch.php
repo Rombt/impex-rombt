@@ -80,7 +80,7 @@ function get_obj_category()
    // Подготовить данные для вставки
    $data = array(
       'name' => $group['name'],
-      // 'img_id' => $group['img_id'],
+      'img_id' => $group['img_id'],
       'description' => $group['description'],
       'categories' => json_encode($group['categories']), // Преобразовать массив в JSON
    );

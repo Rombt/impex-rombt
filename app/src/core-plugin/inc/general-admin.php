@@ -32,7 +32,7 @@ function log_in_file($date, $mod = 'a')
    // Если файл успешно открыт для записи
    if ($file_handle) {
       // Получаем текущую дату и время
-      $timestamp = date('Y-m-d H:i:s');
+      $timestamp = date('d-m-y H:i:s');
 
       // Формируем строку с данными из $_POST
       $log_entry = $timestamp . ': ' . json_encode($date) . PHP_EOL;

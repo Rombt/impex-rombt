@@ -41,6 +41,8 @@ window.onload = async function () {
 
   /*---------- functionality ----------*/
 
+  let idImgGroup;
+
   document.addEventListener('click', e => {
     let target = e.target;
 
@@ -85,36 +87,6 @@ window.onload = async function () {
         activeGroup.classList.add('rmbt-active-group');
       }
 
-      if (target.classList.contains('publish-group')) {
-        /*
-                  let group = {
-                    id,
-                    name,
-                    img_id,
-                    description,
-                    categories: [],
-                  };
-                */
-        let group = {};
-
-        group.name = activeGroup.querySelector('.body-group-input-group-name').value;
-        group.description = activeGroup.querySelector('.body-group-input-group-description').value;
-        let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
-        group.categories = arr_categories.map(cat => {
-          return cat.id;
-        });
-
-        console.log('group = ', group);
-
-        let response = fetch(ajaxurl + '?action=get_obj_category', {
-          method: 'POST',
-          credentials: 'same-origin', // include, *same-origin, omit
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(group), // body data type must match "Content-Type" header
-        });
-      }
       if (target.classList.contains('rmbt-add-media')) {
         var media_frame = wp.media({
           title: 'Select image',
@@ -128,10 +100,40 @@ window.onload = async function () {
           var attachment = media_frame.state().get('selection').first().toJSON();
           var imageUrl = attachment.url;
           var $_imgGroup = jQuery(activeGroup).find('.body-group-img');
+          idImgGroup = attachment.id;
           $_imgGroup.attr('src', imageUrl);
           $_imgGroup.show();
         });
         media_frame.open();
+      }
+
+      if (target.classList.contains('publish-group')) {
+        /*
+            let group = {
+                id,
+                name,
+                img_id,
+                description,
+                categories: [],
+            };
+        */
+        let group = {};
+
+        group.name = activeGroup.querySelector('.body-group-input-group-name').value;
+        group.description = activeGroup.querySelector('.body-group-input-group-description').value;
+        group.img_id = idImgGroup;
+        let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
+        group.categories = arr_categories.map(cat => {
+          return cat.id;
+        });
+        let response = fetch(ajaxurl + '?action=get_obj_category', {
+          method: 'POST',
+          credentials: 'same-origin', // include, *same-origin, omit
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(group), // body data type must match "Content-Type" header
+        });
       }
     }
   });
