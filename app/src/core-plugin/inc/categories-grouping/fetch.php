@@ -1,6 +1,6 @@
 <?php
 
-function get_all_categories()
+function get_data_categories()
 {
 
    // log_in_file($_GET);
@@ -42,7 +42,7 @@ function get_all_categories()
 
    wp_die();
 }
-add_action('wp_ajax_get_all_categories', 'get_all_categories');
+add_action('wp_ajax_get_data_categories', 'get_data_categories');
 
 function get_obj_category()
 {

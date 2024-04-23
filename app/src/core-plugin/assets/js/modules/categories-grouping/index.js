@@ -4,7 +4,7 @@ import { Group } from './Group.js';
 // let arr_categories = [];
 
 async function getData() {
-  let response = await fetch(ajaxurl + '?action=get_all_categories');
+  let response = await fetch(ajaxurl + '?action=get_data_categories');
   const result = await response.json();
   if (result.success) {
     return result.data;
@@ -69,8 +69,6 @@ window.onload = async function () {
           let obj_currentCat = new Category();
           let currentCat = obj_currentCat.createCategory(obj_Cat, 'group');
           currentGroup.querySelector('.categories-field').append(currentCat);
-
-          // addCatToGroup(activeGroup, activeCategory);
         }
       });
     });
@@ -169,6 +167,8 @@ window.onload = async function () {
           },
           body: JSON.stringify(group), // body data type must match "Content-Type" header
         });
+      }
+      if (target.classList.contains('delete-group')) {
       }
     }
   });
