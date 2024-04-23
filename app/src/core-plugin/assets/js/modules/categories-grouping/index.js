@@ -169,6 +169,20 @@ window.onload = async function () {
         });
       }
       if (target.classList.contains('delete-group')) {
+        console.log('activeGroup = ', activeGroup);
+
+        activeGroup.remove();
+        let data = {
+          group_id: activeGroup.id,
+        };
+        let response = fetch(ajaxurl + '?action=rmbt_del_group', {
+          method: 'POST',
+          credentials: 'same-origin', // include, *same-origin, omit
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data), // body data type must match "Content-Type" header
+        });
       }
     }
   });

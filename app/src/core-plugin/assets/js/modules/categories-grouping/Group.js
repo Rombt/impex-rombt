@@ -67,13 +67,6 @@ export class Group extends Root {
     this.group.querySelector('input.body-group-input-group-name').value = data.name;
     this.group.querySelector('textarea.body-group-input-group-description').value = data.description;
     this.group.querySelector('img.body-group-img').src = data.img_url;
-  }
-
-  delGroup(group) {
-    const deleteGroup = group.querySelector('.delete-group');
-    deleteGroup.addEventListener('click', e => {
-      const currentGroup = e.target.closest('.wrap-group');
-      currentGroup.remove();
-    });
+    this.group.id = data.id;
   }
 }

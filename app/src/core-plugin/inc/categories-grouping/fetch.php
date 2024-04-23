@@ -3,7 +3,6 @@
 function get_data_categories()
 {
 
-   // log_in_file($_GET);
    $args = array(
       'taxonomy' => 'product_cat',
       'hide_empty' => false,
@@ -28,9 +27,6 @@ function get_data_categories()
       $groups[] = $group; // Добавить объект в массив
    }
 
-
-
-
    if (count($categories) > 0) {
       $data = new stdClass();
       $data->categories = $categories;
@@ -46,6 +42,9 @@ add_action('wp_ajax_get_data_categories', 'get_data_categories');
 
 function get_obj_category()
 {
+
+   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!группы задваиваются при добавлениии
+
    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
       wp_die('Данная конечная точка принимает только POST-запросы');
    }
@@ -79,3 +78,35 @@ function get_obj_category()
    wp_send_json_success(['message' => 'Данные успешно обработаны']);
 }
 add_action('wp_ajax_get_obj_category', 'get_obj_category');
+
+function rmbt_del_group()
+{
+
+
+   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      wp_die('Данная конечная точка принимает только POST-запросы');
+   }
+
+   $data = json_decode(file_get_contents('php://input'), true);
+
+   if (!$data || json_last_error() !== JSON_ERROR_NONE) {
+      wp_die('Неверный формат JSON-данных');
+   }
+
+
+   global $wpdb;
+
+   $table_name = $wpdb->prefix . 'rmbt_categories_group';
+   $record_id = $data['group_id']; // Замените 123 на ID записи, которую хотите удалить
+
+   $result = $wpdb->delete($table_name, array('id' => $record_id));
+
+   if ($result === false) {
+      wp_send_json_error('Failed to delete record.');
+   } else {
+      wp_send_json_success('Record deleted successfully.');
+   }
+
+   wp_die();
+}
+add_action('wp_ajax_rmbt_del_group', 'rmbt_del_group');
