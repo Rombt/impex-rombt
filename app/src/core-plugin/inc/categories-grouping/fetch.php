@@ -43,8 +43,6 @@ add_action('wp_ajax_get_data_categories', 'get_data_categories');
 function get_obj_category()
 {
 
-   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!группы задваиваются при добавлениии
-
    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
       wp_die('Данная конечная точка принимает только POST-запросы');
    }
@@ -59,20 +57,37 @@ function get_obj_category()
    $table_name = $wpdb->prefix . 'rmbt_categories_group';
 
    $data = array(
+      'id' => $group['id'], // Добавьте ID группы в массив данных
       'name' => $group['name'],
       'img_id' => $group['img_id'],
       'img_url' => $group['img_url'],
       'description' => $group['description'],
       'categories' => json_encode($group['categories']), // Преобразовать массив в JSON
    );
-   $result = $wpdb->insert($table_name, $data);
 
-   if ($result !== false) {
-      log_in_file("Success");
+   // Проверка существования записи
+   $existing_record = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $group['id']));
+
+   if ($existing_record) {
+      // Запись уже существует, обновить ее
+      $result = $wpdb->update($table_name, $data, array('id' => $group['id']));
+      if ($result !== false) {
+         log_in_file("Record updated successfully.");
+      } else {
+         log_in_file($wpdb->last_error);
+      }
    } else {
-      log_in_file($wpdb->last_error);
+      // Запись не существует, добавить новую
+      $result = $wpdb->insert(
+         $table_name,
+         $data
+      );
+      if ($result !== false) {
+         log_in_file("Record added successfully.");
+      } else {
+         log_in_file($wpdb->last_error);
+      }
    }
-
 
    // Отправка успешного ответа (замените на желаемые данные ответа)
    wp_send_json_success(['message' => 'Данные успешно обработаны']);

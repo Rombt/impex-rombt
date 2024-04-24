@@ -150,6 +150,7 @@ window.onload = async function () {
         */
         let group = {};
 
+        group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
         group.img_url = urlImgGroup;
@@ -158,6 +159,8 @@ window.onload = async function () {
         group.categories = arr_categories.map(cat => {
           return cat.id;
         });
+
+        console.log(' group = ', group);
 
         let response = fetch(ajaxurl + '?action=get_obj_category', {
           method: 'POST',
