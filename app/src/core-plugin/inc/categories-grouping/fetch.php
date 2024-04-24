@@ -40,6 +40,38 @@ function get_data_categories()
 }
 add_action('wp_ajax_get_data_categories', 'get_data_categories');
 
+
+function get_last_category_id()
+{
+
+
+
+
+   global $wpdb;
+
+   $table_name = $wpdb->prefix . 'rmbt_categories_group';
+
+   $sql = "SELECT MAX(id) AS last_id FROM $table_name";
+   $result = $wpdb->get_var($sql);
+
+   if (
+      $result !== false
+   ) {
+      // echo $result;
+
+      wp_send_json_success($result);
+   } else {
+      echo "Error getting last ID: " . $wpdb->last_error;
+   }
+
+   wp_die();
+}
+add_action('wp_ajax_get_last_category_id', 'get_last_category_id');
+
+
+
+
+
 function get_obj_category()
 {
 
@@ -52,6 +84,11 @@ function get_obj_category()
    if (!$group || json_last_error() !== JSON_ERROR_NONE) {
       wp_die('Неверный формат JSON-данных');
    }
+
+   // if (!wp_verify_nonce($_POST['nonce'], 'rstr-ajax-nonce-view')) {                    //!!!!
+   //    die;
+   // }
+
 
    global $wpdb;
    $table_name = $wpdb->prefix . 'rmbt_categories_group';
@@ -108,6 +145,9 @@ function rmbt_del_group()
       wp_die('Неверный формат JSON-данных');
    }
 
+   // if (!wp_verify_nonce($_POST['nonce'], 'rstr-ajax-nonce-view')) {                    //!!!!
+   //    die;
+   // }
 
    global $wpdb;
 

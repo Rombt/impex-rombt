@@ -56,7 +56,9 @@ export class Group extends Root {
   createGroup(data) {
     this.group = this.html.wrapGroup.cloneNode(true);
 
-    if (data) {
+    if (typeof data === 'number') {
+      this.group.id = data;
+    } else if (typeof data === 'object') {
       this.dataInput(data);
     }
 

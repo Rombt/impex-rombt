@@ -1,8 +1,6 @@
 import { Category } from './Category.js';
 import { Group } from './Group.js';
 
-// let arr_categories = [];
-
 async function getData() {
   let response = await fetch(ajaxurl + '?action=get_data_categories');
   const result = await response.json();
@@ -14,12 +12,8 @@ async function getData() {
 }
 
 window.onload = async function () {
-  let arr_Groups = [];
-
   /*---------- data ----------*/
   const Data = await getData();
-
-  console.log('Data = ', Data);
 
   const arr_categories = Data.categories;
   const arr_groups = Data.groups;
@@ -89,11 +83,28 @@ window.onload = async function () {
     let activeCategory = target.closest('.wrap-category');
 
     if (target === document.querySelector('#add_new_group')) {
-      let obj_currentGroup = new Group();
-      let currentGroup = obj_currentGroup.createGroup();
-      wrapGroupsCategories.append(currentGroup);
-
-      arr_Groups.push(obj_currentGroup);
+      fetch(ajaxurl + '?action=get_last_category_id', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: '',
+      })
+        .then(result => {
+          return result.json();
+        })
+        .then(body => {
+          let lastCategoryId = body.data;
+          if (!lastCategoryId) {
+            lastCategoryId = 1;
+          } else {
+            lastCategoryId++;
+          }
+          let obj_currentGroup = new Group();
+          let currentGroup = obj_currentGroup.createGroup(lastCategoryId);
+          wrapGroupsCategories.append(currentGroup);
+        });
     } else if (target.classList.contains('add-to-group')) {
       let activeGroup = document.querySelector('.rmbt-active-group');
       if (!activeGroup) alert('Active group is absent');
@@ -160,18 +171,25 @@ window.onload = async function () {
           return cat.id;
         });
 
+        console.log('group = ', group);
+
         let response = fetch(ajaxurl + '?action=get_obj_category', {
           method: 'POST',
-          credentials: 'same-origin', // include, *same-origin, omit
+          credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(group), // body data type must match "Content-Type" header
+          body: JSON.stringify(group),
         });
       }
       if (target.classList.contains('delete-group')) {
         let arr_categories = activeGroup.querySelectorAll('.wrap-category');
         arr_categories.forEach(cat => {
+          let but = cat.querySelector('.remove-from-group');
+          but.classList.remove('remove-from-group');
+          but.classList.add('add-to-group');
+          but.textContent = 'add to group';
+
           wrapDisplayCategories.prepend(cat);
         });
         activeGroup.remove();
@@ -180,11 +198,11 @@ window.onload = async function () {
         };
         let response = fetch(ajaxurl + '?action=rmbt_del_group', {
           method: 'POST',
-          credentials: 'same-origin', // include, *same-origin, omit
+          credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(data), // body data type must match "Content-Type" header
+          body: JSON.stringify(data),
         });
       }
     }
