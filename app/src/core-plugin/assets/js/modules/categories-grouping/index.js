@@ -148,7 +148,6 @@ window.onload = async function () {
         });
         media_frame.open();
       }
-
       if (target.classList.contains('publish-group')) {
         /*
             let group = {
@@ -164,8 +163,15 @@ window.onload = async function () {
         group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
-        group.img_url = urlImgGroup;
-        group.img_id = idImgGroup;
+
+        if (!urlImgGroup || !idImgGroup) {
+          group.img_url = 0;
+          group.img_id = 0;
+        } else {
+          group.img_url = urlImgGroup;
+          group.img_id = idImgGroup;
+        }
+
         let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
         group.categories = arr_categories.map(cat => {
           return cat.id;
