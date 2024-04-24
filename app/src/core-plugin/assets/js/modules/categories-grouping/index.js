@@ -160,8 +160,6 @@ window.onload = async function () {
           return cat.id;
         });
 
-        console.log(' group = ', group);
-
         let response = fetch(ajaxurl + '?action=get_obj_category', {
           method: 'POST',
           credentials: 'same-origin', // include, *same-origin, omit
@@ -172,8 +170,10 @@ window.onload = async function () {
         });
       }
       if (target.classList.contains('delete-group')) {
-        console.log('activeGroup = ', activeGroup);
-
+        let arr_categories = activeGroup.querySelectorAll('.wrap-category');
+        arr_categories.forEach(cat => {
+          wrapDisplayCategories.prepend(cat);
+        });
         activeGroup.remove();
         let data = {
           group_id: activeGroup.id,
