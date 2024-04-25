@@ -84,12 +84,12 @@ function publish_group()
       die;
    }
 
-
    global $wpdb;
    $table_name = $wpdb->prefix . 'rmbt_categories_group';
 
    $data = array(
-      'id' => $group['id'], // Добавьте ID группы в массив данных
+      'page_id' => $group['page_id'] || 0,
+      'id' => $group['id'],
       'name' => $group['name'],
       'img_id' => $group['img_id'],
       'img_url' => $group['img_url'],
@@ -97,32 +97,36 @@ function publish_group()
       'categories' => json_encode($group['categories']), // Преобразовать массив в JSON
    );
 
-   // Проверка существования записи
+   $group_page_id =  createGroupPage($data);
+
+   // if ($group_page_id === null) {
+   //    log_in_file('Error creating page group');
+   //    return;
+   // }
+   // log_in_file('Page group id = ' . $group_page_id);
+
    $existing_record = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $group['id']));
 
    if ($existing_record) {
-      // Запись уже существует, обновить ее
       $result = $wpdb->update($table_name, $data, array('id' => $group['id']));
       if ($result !== false) {
-         //log_in_file("Record updated successfully.");
       } else {
          //log_in_file($wpdb->last_error);
       }
    } else {
-      // Запись не существует, добавить новую
       $result = $wpdb->insert(
          $table_name,
          $data
       );
       if ($result !== false) {
-         //log_in_file("Record added successfully.");
       } else {
          //log_in_file($wpdb->last_error);
       }
    }
 
    // Отправка успешного ответа (замените на желаемые данные ответа)
-   wp_send_json_success(['message' => 'Данные успешно обработаны']);
+   // wp_send_json_success(['message' => 'Данные успешно обработаны']);
+   wp_send_json_success($data);
 }
 add_action('wp_ajax_publish_group', 'publish_group');
 
@@ -160,3 +164,51 @@ function rmbt_del_group()
    wp_die();
 }
 add_action('wp_ajax_rmbt_del_group', 'rmbt_del_group');
+
+
+function createGroupPage($data)
+{
+
+   $page_data = array(
+      'post_title'    => 'Группа категорий ' . $data['name'],
+      'post_name'     => 'группа категорий ' . $data['name'],  // slug
+      'post_content'  => '',
+      'post_status'   => 'publish',
+      'post_type'     => 'page',
+      'page_template' => 'equipment_group.php', // Путь к шаблону страницы
+   );
+
+
+   // log_in_file($page_data['post_title']);
+
+   // $existing_page = get_page_by_title($page_data['post_title']);
+
+   // $page = get_posts([
+
+   //    'post_type' => 'page',
+   //    'title' => $page_data['post_title'],
+
+   // ]);
+   // $page = get_post();
+
+
+   //    if ($data['page_id'] != 0) {
+   //       # code...
+   //    }
+
+
+
+
+
+   log_in_file('$data["page_id"] = ' . $data['page_id']);
+
+   if ($data['page_id'] != 0) {
+      log_in_file('11');
+      wp_update_post($page_data);
+   } else {
+      log_in_file('00');
+      $page_id = wp_insert_post($page_data);
+   }
+
+   return $page_id;
+}

@@ -71,13 +71,6 @@ window.onload = async function () {
   });
 
   mainWrapPage.append(wrapGroupsCategories);
-
-  if (wrapGroupsCategories.clientHeight < document.body.clientHeight) {
-    // wrapDisplayCategories.style.maxHeight = 100 + 'hv';
-  } else {
-    // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
-  }
-
   mainWrapPage.append(wrapDisplayCategories);
 
   /*---------- functionality ----------*/
@@ -164,7 +157,7 @@ window.onload = async function () {
             };
         */
         let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
-
+        group.pageId = activeGroup.dataset.pageId;
         group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
@@ -185,7 +178,20 @@ window.onload = async function () {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(group),
-        });
+        })
+          .then(result => {
+            return result.json();
+          })
+          .then(body => {
+            let update_group = body.data;
+            if (update_group.page_id) {
+              activeGroup.dataset.pageId = update_group.page_id;
+            } else {
+              activeGroup.dataset.pageId = 0;
+            }
+
+            console.log('!!!group  = ', update_group);
+          });
       }
       if (target.classList.contains('delete-group')) {
         let arr_categories = activeGroup.querySelectorAll('.wrap-category');
