@@ -82,8 +82,6 @@ window.onload = async function () {
 
   /*---------- functionality ----------*/
 
-  let Groups = [];
-
   document.addEventListener('click', e => {
     let target = e.target;
     let activeGroup = target.closest('.wrap-group') || false;
@@ -149,29 +147,8 @@ window.onload = async function () {
           var attachment = media_frame.state().get('selection').first().toJSON();
           var $_imgGroup = jQuery(activeGroup).find('.body-group-img');
           $_imgGroup.attr('src', attachment.url);
+          $_imgGroup.attr('id', attachment.id);
           $_imgGroup.show();
-
-          let obj_imgGroup = {
-            id: activeGroup.id,
-            urlImgGroup: attachment.url,
-            idImgGroup: attachment.id,
-          };
-          let flag = 0;
-
-          if (Groups.length === 0) {
-            Groups.push(obj_imgGroup);
-          } else {
-            Groups.forEach((el, index, arr) => {
-              if (el.id == activeGroup.id) {
-                arr.splice(index, 1, obj_imgGroup);
-                flag = 1;
-                return;
-              }
-            });
-            if (flag === 0) {
-              Groups.push(obj_imgGroup);
-            }
-          }
         });
 
         media_frame.open();
@@ -187,30 +164,19 @@ window.onload = async function () {
             };
         */
         let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
-        let urlImgGroup;
-        let idImgGroup;
 
         group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
-
-        Groups.forEach((el, index, arr) => {
-          if (el.id == activeGroup.id) {
-            group.img_url = el.urlImgGroup;
-            group.img_id = el.idImgGroup;
-            arr.splice(index, 1);
-          }
-        });
-
-        if (!urlImgGroup || !idImgGroup) {
-          group.img_url = activeGroup.querySelector('.body-group-img').src || '#';
-          group.img_id = activeGroup.querySelector('.body-group-img').id || 0;
-        }
+        group.img_url = activeGroup.querySelector('.body-group-img').src || '#';
+        group.img_id = activeGroup.querySelector('.body-group-img').id || 0;
 
         let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
         group.categories = arr_categories.map(cat => {
           return cat.id;
         });
+
+        console.log('group = ', group);
 
         let response = fetch(ajaxurl + '?action=publish_group', {
           method: 'POST',
