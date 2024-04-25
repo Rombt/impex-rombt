@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Equipment categories page */
+/* Template Name: redux Equipment  categories groups  page */
 ?>
 
 <?php get_header(); ?>
@@ -14,7 +14,7 @@
             <div class="rmbt-equipment-categories__text"><?php echo rmbt_get_redux_field('equipCatPage-equipment-categories_page-text') ?></div>
             <div class="rmbt-equipment-categories__row">
                <?php foreach ($arr_name_cat_equip as $value) {
-                  get_template_part('template-parts/components/equipment_categories_card', null, [
+                  get_template_part('template-parts/components/redux_equipment_categories_card', null, [
                      'title' => rmbt_get_redux_field('equipCatPage-' . $value . '_article-title'),
                      'text' => rmbt_get_redux_field('equipCatPage-' . $value . '_article-text'),
                      'id-img' => 'equipCatPage-' . $value . '_article-img-id',

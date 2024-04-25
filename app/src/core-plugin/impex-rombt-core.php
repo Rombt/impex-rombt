@@ -54,6 +54,13 @@ function rmbt_get_images_sizes()
 				'height' => 100,
 				'crop' => true,
 			),
+
+			array(
+				'name' => 'rmbt_equipment_group_img',
+				'width' => 340,
+				'height' => 450,
+				'crop' => true,
+			),
 			// array(
 			// 	'name' => 'rmbt_small-img',
 			// 	'width' => 70,
