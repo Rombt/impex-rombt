@@ -71,11 +71,18 @@ window.onload = async function () {
   });
 
   mainWrapPage.append(wrapGroupsCategories);
+
+  if (wrapGroupsCategories.clientHeight < document.body.clientHeight) {
+    // wrapDisplayCategories.style.maxHeight = 100 + 'hv';
+  } else {
+    // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
+  }
+
   mainWrapPage.append(wrapDisplayCategories);
 
   /*---------- functionality ----------*/
-  let urlImgGroup;
-  let idImgGroup;
+
+  let Groups = [];
 
   document.addEventListener('click', e => {
     let target = e.target;
@@ -104,6 +111,7 @@ window.onload = async function () {
           let obj_currentGroup = new Group();
           let currentGroup = obj_currentGroup.createGroup(lastCategoryId);
           wrapGroupsCategories.append(currentGroup);
+          // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
         });
     } else if (target.classList.contains('add-to-group')) {
       let activeGroup = document.querySelector('.rmbt-active-group');
@@ -139,13 +147,33 @@ window.onload = async function () {
 
         media_frame.on('select', function () {
           var attachment = media_frame.state().get('selection').first().toJSON();
-          var imageUrl = attachment.url;
           var $_imgGroup = jQuery(activeGroup).find('.body-group-img');
-          urlImgGroup = imageUrl;
-          idImgGroup = attachment.id;
-          $_imgGroup.attr('src', imageUrl);
+          $_imgGroup.attr('src', attachment.url);
           $_imgGroup.show();
+
+          let obj_imgGroup = {
+            id: activeGroup.id,
+            urlImgGroup: attachment.url,
+            idImgGroup: attachment.id,
+          };
+          let flag = 0;
+
+          if (Groups.length === 0) {
+            Groups.push(obj_imgGroup);
+          } else {
+            Groups.forEach((el, index, arr) => {
+              if (el.id == activeGroup.id) {
+                arr.splice(index, 1, obj_imgGroup);
+                flag = 1;
+                return;
+              }
+            });
+            if (flag === 0) {
+              Groups.push(obj_imgGroup);
+            }
+          }
         });
+
         media_frame.open();
       }
       if (target.classList.contains('publish-group')) {
@@ -158,18 +186,25 @@ window.onload = async function () {
                 categories: [],
             };
         */
-        let group = {};
+        let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
+        let urlImgGroup;
+        let idImgGroup;
 
         group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
 
+        Groups.forEach((el, index, arr) => {
+          if (el.id == activeGroup.id) {
+            group.img_url = el.urlImgGroup;
+            group.img_id = el.idImgGroup;
+            arr.splice(index, 1);
+          }
+        });
+
         if (!urlImgGroup || !idImgGroup) {
-          group.img_url = 0;
-          group.img_id = 0;
-        } else {
-          group.img_url = urlImgGroup;
-          group.img_id = idImgGroup;
+          group.img_url = activeGroup.querySelector('.body-group-img').src || '#';
+          group.img_id = activeGroup.querySelector('.body-group-img').id || 0;
         }
 
         let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
@@ -177,9 +212,7 @@ window.onload = async function () {
           return cat.id;
         });
 
-        console.log('group = ', group);
-
-        let response = fetch(ajaxurl + '?action=get_obj_category', {
+        let response = fetch(ajaxurl + '?action=publish_group', {
           method: 'POST',
           credentials: 'same-origin',
           headers: {
@@ -201,6 +234,7 @@ window.onload = async function () {
         activeGroup.remove();
         let data = {
           group_id: activeGroup.id,
+          nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce,
         };
         let response = fetch(ajaxurl + '?action=rmbt_del_group', {
           method: 'POST',

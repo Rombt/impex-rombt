@@ -24,8 +24,7 @@ function rmbt_impex_scripts_admin()
 
 
 	wp_add_inline_script('rmbt_impex-admin_core', 'const rmbtCategoriesGrouping = ' . json_encode([
-		'ajaxUrl' => admin_url('admin-ajax.php'),
-		// 'rmbtArrCategories' => $categories,		// your data if you need it
+		'rmbtCatGropingNonce' => wp_create_nonce('rmbt-cat-groping-nonce'),
 	]), 'before');
 }
 add_action('admin_enqueue_scripts', 'rmbt_impex_scripts_admin');

@@ -44,9 +44,6 @@ add_action('wp_ajax_get_data_categories', 'get_data_categories');
 function get_last_category_id()
 {
 
-
-
-
    global $wpdb;
 
    $table_name = $wpdb->prefix . 'rmbt_categories_group';
@@ -57,8 +54,6 @@ function get_last_category_id()
    if (
       $result !== false
    ) {
-      // echo $result;
-
       wp_send_json_success($result);
    } else {
       echo "Error getting last ID: " . $wpdb->last_error;
@@ -72,7 +67,7 @@ add_action('wp_ajax_get_last_category_id', 'get_last_category_id');
 
 
 
-function get_obj_category()
+function publish_group()
 {
 
    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -85,9 +80,9 @@ function get_obj_category()
       wp_die('Неверный формат JSON-данных');
    }
 
-   // if (!wp_verify_nonce($_POST['nonce'], 'rstr-ajax-nonce-view')) {                    //!!!!
-   //    die;
-   // }
+   if (!wp_verify_nonce($group['nonce'], 'rmbt-cat-groping-nonce')) {
+      die;
+   }
 
 
    global $wpdb;
@@ -109,9 +104,9 @@ function get_obj_category()
       // Запись уже существует, обновить ее
       $result = $wpdb->update($table_name, $data, array('id' => $group['id']));
       if ($result !== false) {
-         log_in_file("Record updated successfully.");
+         //log_in_file("Record updated successfully.");
       } else {
-         log_in_file($wpdb->last_error);
+         //log_in_file($wpdb->last_error);
       }
    } else {
       // Запись не существует, добавить новую
@@ -120,16 +115,16 @@ function get_obj_category()
          $data
       );
       if ($result !== false) {
-         log_in_file("Record added successfully.");
+         //log_in_file("Record added successfully.");
       } else {
-         log_in_file($wpdb->last_error);
+         //log_in_file($wpdb->last_error);
       }
    }
 
    // Отправка успешного ответа (замените на желаемые данные ответа)
    wp_send_json_success(['message' => 'Данные успешно обработаны']);
 }
-add_action('wp_ajax_get_obj_category', 'get_obj_category');
+add_action('wp_ajax_publish_group', 'publish_group');
 
 function rmbt_del_group()
 {
@@ -145,9 +140,9 @@ function rmbt_del_group()
       wp_die('Неверный формат JSON-данных');
    }
 
-   // if (!wp_verify_nonce($_POST['nonce'], 'rstr-ajax-nonce-view')) {                    //!!!!
-   //    die;
-   // }
+   if (!wp_verify_nonce($data['nonce'], 'rmbt-cat-groping-nonce')) {
+      die;
+   }
 
    global $wpdb;
 
