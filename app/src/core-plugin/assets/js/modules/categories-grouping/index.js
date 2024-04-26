@@ -80,6 +80,7 @@ window.onload = async function () {
     let target = e.target;
     let activeGroup = target.closest('.wrap-group') || false;
     let activeCategory = target.closest('.wrap-category');
+    let lastCategoryIdOnPage = 0;
 
     if (target === document.querySelector('#add_new_group')) {
       fetch(ajaxurl + '?action=get_last_category_id', {
@@ -94,14 +95,19 @@ window.onload = async function () {
           return result.json();
         })
         .then(body => {
-          let lastCategoryId = body.data;
-          if (!lastCategoryId) {
-            lastCategoryId = 1;
+          let lastCategoryIdOnBd = body.data;
+          if (!lastCategoryIdOnBd) {
+            lastCategoryIdOnPage = 1;
           } else {
-            lastCategoryId++;
+            if (lastCategoryIdOnPage != lastCategoryIdOnBd) {
+              let nl_Groups = wrapGroupsCategories.querySelectorAll('.wrap-group');
+              lastCategoryIdOnPage = nl_Groups.length + 1;
+            } else {
+              lastCategoryIdOnPage = lastCategoryIdOnBd++;
+            }
           }
           let obj_currentGroup = new Group();
-          let currentGroup = obj_currentGroup.createGroup(lastCategoryId);
+          let currentGroup = obj_currentGroup.createGroup(lastCategoryIdOnPage);
           wrapGroupsCategories.append(currentGroup);
           // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
         });

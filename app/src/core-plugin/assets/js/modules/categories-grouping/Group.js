@@ -66,8 +66,6 @@ export class Group extends Root {
   }
 
   dataInput(data) {
-    console.log('data = ', data);
-
     this.group.querySelector('input.body-group-input-group-name').value = data.name;
     this.group.querySelector('textarea.body-group-input-group-description').value = data.description;
     this.group.querySelector('img.body-group-img').src = data.img_url;

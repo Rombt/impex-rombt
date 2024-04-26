@@ -26,6 +26,7 @@ foreach ($results as $row) {
 }
 ?>
 
+
 <main>
    <div class="wrapper-section">
       <div class="rmbt-full-width rmbt-equipment-categories-full-width">
@@ -35,7 +36,7 @@ foreach ($results as $row) {
             <div class="rmbt-equipment-categories__row">
                <?php foreach ($arr_groups as $group) {
                   get_template_part('template-parts/components/equipment_categories_card', null, [
-                     'src' => get_post($arr_groups[0]->page_id)->guid . '?id_group=' . $group->id,
+                     'src' => get_permalink($group->page_id) . '?id_group=' . $group->id,
                      'title' => $group->name,
                      'text' => $group->description,
                      'id-img' => $group->img_id,

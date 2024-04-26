@@ -9,15 +9,57 @@
 $id_group = isset($_GET['id_group']) ? $_GET['id_group'] : false;
 $group = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id_group))[0];
 $arr_all_products = [];
-foreach (json_decode($group->categories) as $cat_id) {
-   $arr_cat_products = wc_get_products($cat_id);
-   foreach ($arr_cat_products as $product) {
-      $arr_all_products[] = $product;
-   }
-}
+$arr_cat_products = [];
+// foreach (json_decode($group->categories) as $cat_id) {
+//    $arr_cat_products = wc_get_products($cat_id);
+//    foreach ($arr_cat_products as $product) {
+//       $arr_all_products[] = $product;
+//    }
+// }
 ?>
 
+<div class="test-block">
 
+   <?php
+
+   echo '<pre> $group = ';
+   print_r($group->categories);
+   echo "</pre>";
+
+
+
+
+   foreach (json_decode($group->categories) as $cat_id) {
+
+      $args = array(
+         'status' => 'publish', // Только опубликованные товары
+         'limit' => -1, // Получить все товары, не ограничивая количество
+         'category' => array($cat_id), // Укажите ID категории
+      );
+      // 
+      // $WC_Report_Sales_By_Category = new WC_Report_Sales_By_Category();
+      // $WC_Report_Sales_By_Category->get_products_in_category($category_id);
+
+      // $arr_cat_products = wc_get_products($args);
+      $arr_cat_products = wc_get_products(array(
+         'category_id' => $cat_id
+      ));
+
+      echo '<pre> $arr_cat_products  = ';
+      print_r($arr_cat_products[0]);
+      echo "</pre>";
+
+      foreach ($arr_cat_products as $product) {
+         $arr_all_products[] = $product;
+      }
+   }
+
+
+
+   ?>
+
+
+</div>
 
 
 <main>
