@@ -170,8 +170,6 @@ window.onload = async function () {
           return cat.id;
         });
 
-        console.log('group = ', group);
-
         let response = fetch(ajaxurl + '?action=publish_group', {
           method: 'POST',
           credentials: 'same-origin',
@@ -190,8 +188,6 @@ window.onload = async function () {
             } else {
               activeGroup.dataset.pageId = 0;
             }
-
-            console.log('!!!group  = ', update_group);
           });
       }
       if (target.classList.contains('delete-group')) {
