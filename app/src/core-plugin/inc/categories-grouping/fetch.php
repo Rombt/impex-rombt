@@ -138,7 +138,7 @@ function publish_group()
       $result = $wpdb->update($table_name, $data, array('id' => $group['id']));
       if ($result !== false) {
       } else {
-         //log_in_file($wpdb->last_error);
+         log_in_file($wpdb->last_error);
       }
    } else {
       $result = $wpdb->insert(
@@ -147,7 +147,7 @@ function publish_group()
       );
       if ($result !== false) {
       } else {
-         //log_in_file($wpdb->last_error);
+         log_in_file($wpdb->last_error);
       }
    }
 

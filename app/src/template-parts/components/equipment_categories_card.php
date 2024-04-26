@@ -9,16 +9,8 @@
       <div class="rmbt-equipment-article__body">
 
          <div class="rmbt-equipment-article__text">
-            <!-- <p> -->
-            <?php echo $args['text'] ?>
-            <!-- </p> -->
+            <?php echo $args['text']; ?>
          </div>
       </div>
-      <!-- <footer> -->
-      <!-- <span>read more</span>
-         <svg>
-            <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#arrow-right_1"></use>
-         </svg> -->
-      <!-- </footer> -->
    </a>
 </article>
