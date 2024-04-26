@@ -57,6 +57,7 @@ window.onload = async function () {
   arr_groups.forEach(objGroup => {
     let obj_currentGroup = new Group();
     let currentGroup = obj_currentGroup.createGroup(objGroup);
+
     objGroup.categories.forEach(idCat => {
       arr_categories.forEach(obj_Cat => {
         if (obj_Cat.cat_ID == idCat) {
@@ -157,7 +158,7 @@ window.onload = async function () {
             };
         */
         let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
-        group.pageId = activeGroup.dataset.pageId;
+        group.page_id = activeGroup.dataset.pageId;
         group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
