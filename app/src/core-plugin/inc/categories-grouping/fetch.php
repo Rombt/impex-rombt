@@ -99,8 +99,6 @@ function rmbt_del_group()
 }
 add_action('wp_ajax_rmbt_del_group', 'rmbt_del_group');
 
-
-
 function publish_group()
 {
 
@@ -156,9 +154,6 @@ function publish_group()
    wp_send_json_success($data);
 }
 add_action('wp_ajax_publish_group', 'publish_group');
-
-
-
 
 function createGroupPage($data)
 {
