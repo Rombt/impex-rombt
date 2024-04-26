@@ -2,7 +2,7 @@
    <div class="wrap-img rmbt-equipment-article__img">
       <?php echo wp_get_attachment_image($args['id-img'], 'rmbt_equipment_group_img', ['alt' => $args['alt-img']]); ?>
    </div>
-   <a href="#" class="rmbt-equipment-article__hidden-container">
+   <a href=" <?php echo $args['src']; ?>  " class="rmbt-equipment-article__hidden-container">
       <header>
          <h3> <?php echo $args['title'] ?></h3>
       </header>
