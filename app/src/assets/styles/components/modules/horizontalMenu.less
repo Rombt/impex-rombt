@@ -1,6 +1,6 @@
 .cont-horizont-menu {
   padding: 10px 10px 10px 10px;
-  min-height: 70px;
+  height: 70px;
   display: flex;
   position: relative;
 
@@ -47,7 +47,8 @@
           padding: 10px 10px 10px 10px;
           z-index: 2;
 
-          background-color: #fff;
+          border: 1px solid #72ceae;
+          background-color: #89fbd4;
 
           // height: 0px;
           // overflow: hidden;
@@ -62,20 +63,18 @@
   .overflow-cont {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 
     position: absolute;
     height: max-content;
     width: max-content;
-    max-width: 250px;
     padding: 20px 10px 20px 10px;
     z-index: 5;
-    top: 100%;
-    left: 100%;
-    transform: translate(-95%, 0);
+    top: 0px;
+    right: 0px;
+    transform: translate(100%, 0);
 
-    border: 1px solid #dbdbdb;
-    background-color: #eeeeee;
+    border: 1px solid #72ceae;
+    background-color: #89fbd4;
 
     ul {
       left: 100%;
@@ -83,21 +82,10 @@
     }
 
     li {
-      max-width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      word-wrap: break-word;
-      a {
-        display: block;
-        text-align: left;
-      }
     }
   }
 
-  /* for test */
-  .newToggle,
-    /* for work */
-    .icon-dropdown {
+  .icon-drop {
     height: 20px;
     width: 20px;
     display: block;
@@ -139,12 +127,7 @@
 
   .to(767px, {
 
-        /* for test */
-        .toggle-drop-menu,
-        .toggle-burger,
-        .toggle-burger-menu,
-        /* for work */
-        .toggle-drop {
+        .icon-burger {
             height: 30px;
             width: 40px;
             position: absolute;
@@ -178,11 +161,13 @@
                 bottom: 0;
             }
 
-            &_close {
+            &_open {
 
                 position: absolute;
                 top: 15px;
                 right: 15px;
+                // left: 40vw;
+                // z-index: 2;
                 transform: translate(0, 0);
 
                 span,
@@ -295,14 +280,13 @@
 
 
             .icon-dropdown_open {
-
                 transform: rotate(180deg);
-
                 background-color: #FD0404;
             }
         }
 
-        .drop-menu-open {
+        // .drop-menu-open,
+        .rmbt-visible_burger {
             left: 0;
             transition: left 0.5s ease;
             z-index: 1;
@@ -311,12 +295,7 @@
 
     );
 
-  /* for test */
-  .show-hide-menu,
-    .toggle-overflow-menu,
-
-    /* for work */
-    .toggle-overflow-menu {
+  .icon-overflow {
     display: block;
     position: absolute;
     right: 15px;
@@ -354,7 +333,7 @@
     }
   }
 
-  visibility: hidden; // скрываю до окончания поного фармирования потом показываю js
+  visibility: hidden; // скрываю до окончания полного формирования потом показываю js
 
   .rmbt-hidden {
     height: 0px;

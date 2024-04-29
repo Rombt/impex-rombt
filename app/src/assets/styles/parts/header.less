@@ -93,7 +93,29 @@
       color: @color_title_light;
     }
 
-    .toggle-overflow-menu {
+    .drop-cont,
+    .overflow-cont {
+      top: 100%;
+      transform: translate(0, 0);
+      align-items: flex-start;
+
+      max-width: 200px;
+      background-color: #fff;
+      border: 1px solid #fff;
+
+      li {
+        max-width: 100%;
+
+        a {
+          word-wrap: break-word;
+          max-width: 100%;
+          text-align: left;
+          display: block;
+        }
+      }
+    }
+
+    .icon-overflow {
       height: 50%;
       span,
       &:after,
@@ -103,7 +125,7 @@
       }
     }
 
-    .icon-dropdown {
+    .icon-drop {
       width: 10px;
       height: 15px;
       border: none;
