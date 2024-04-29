@@ -71,5 +71,6 @@ export class Group extends Root {
     this.group.querySelector('img.body-group-img').src = data.img_url;
     this.group.querySelector('.body-group-img').id = data.img_id;
     this.group.id = data.id;
+    this.group.dataset.pageId = data.page_id;
   }
 }

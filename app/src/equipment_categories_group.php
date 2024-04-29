@@ -16,6 +16,7 @@ $results = $wpdb->get_results("SELECT * FROM $table_name");
 foreach ($results as $row) {
    $group = new stdClass();
    $group->id = $row->id;
+   $group->page_id = $row->page_id;
    $group->name = $row->name;
    $group->img_id = $row->img_id;
    $group->img_url = $row->img_url;
@@ -24,6 +25,7 @@ foreach ($results as $row) {
    $arr_groups[] = $group;
 }
 ?>
+
 
 <main>
    <div class="wrapper-section">
@@ -34,6 +36,7 @@ foreach ($results as $row) {
             <div class="rmbt-equipment-categories__row">
                <?php foreach ($arr_groups as $group) {
                   get_template_part('template-parts/components/equipment_categories_card', null, [
+                     'src' => get_permalink($group->page_id) . '?id_group=' . $group->id,
                      'title' => $group->name,
                      'text' => $group->description,
                      'id-img' => $group->img_id,

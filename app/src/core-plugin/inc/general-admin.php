@@ -29,18 +29,12 @@ function log_in_file($date, $mod = 'a')
    // Открываем файл для записи, 'a' означает, что будем добавлять данные в конец файла
    $file_handle = fopen($path, $mod);
 
-   // Если файл успешно открыт для записи
    if ($file_handle) {
-      // Получаем текущую дату и время
       $timestamp = date('d-m-y H:i:s');
 
-      // Формируем строку с данными из $_POST
       $log_entry = $timestamp . ': ' . json_encode($date) . PHP_EOL;
 
-      // Записываем строку в файл
       fwrite($file_handle, $log_entry);
-
-      // Закрываем файл
       fclose($file_handle);
    } else {
       // Если файл не удалось открыть для записи, вы можете обработать эту ситуацию соответственно

@@ -19,6 +19,7 @@ function get_data_categories()
    foreach ($results as $row) {
       $group = new stdClass(); // Создать новый объект
       $group->id = $row->id;
+      $group->page_id = $row->page_id;
       $group->name = $row->name;
       $group->img_id = $row->img_id;
       $group->img_url = $row->img_url;
@@ -63,69 +64,6 @@ function get_last_category_id()
 }
 add_action('wp_ajax_get_last_category_id', 'get_last_category_id');
 
-
-
-
-
-function publish_group()
-{
-
-   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-      wp_die('Данная конечная точка принимает только POST-запросы');
-   }
-
-   $group = json_decode(file_get_contents('php://input'), true);
-
-   if (!$group || json_last_error() !== JSON_ERROR_NONE) {
-      wp_die('Неверный формат JSON-данных');
-   }
-
-   if (!wp_verify_nonce($group['nonce'], 'rmbt-cat-groping-nonce')) {
-      die;
-   }
-
-
-   global $wpdb;
-   $table_name = $wpdb->prefix . 'rmbt_categories_group';
-
-   $data = array(
-      'id' => $group['id'], // Добавьте ID группы в массив данных
-      'name' => $group['name'],
-      'img_id' => $group['img_id'],
-      'img_url' => $group['img_url'],
-      'description' => $group['description'],
-      'categories' => json_encode($group['categories']), // Преобразовать массив в JSON
-   );
-
-   // Проверка существования записи
-   $existing_record = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $group['id']));
-
-   if ($existing_record) {
-      // Запись уже существует, обновить ее
-      $result = $wpdb->update($table_name, $data, array('id' => $group['id']));
-      if ($result !== false) {
-         //log_in_file("Record updated successfully.");
-      } else {
-         //log_in_file($wpdb->last_error);
-      }
-   } else {
-      // Запись не существует, добавить новую
-      $result = $wpdb->insert(
-         $table_name,
-         $data
-      );
-      if ($result !== false) {
-         //log_in_file("Record added successfully.");
-      } else {
-         //log_in_file($wpdb->last_error);
-      }
-   }
-
-   // Отправка успешного ответа (замените на желаемые данные ответа)
-   wp_send_json_success(['message' => 'Данные успешно обработаны']);
-}
-add_action('wp_ajax_publish_group', 'publish_group');
-
 function rmbt_del_group()
 {
 
@@ -160,3 +98,86 @@ function rmbt_del_group()
    wp_die();
 }
 add_action('wp_ajax_rmbt_del_group', 'rmbt_del_group');
+
+function publish_group()
+{
+
+   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      wp_die('Данная конечная точка принимает только POST-запросы');
+   }
+
+   $group = json_decode(file_get_contents('php://input'), true);
+
+   if (!$group || json_last_error() !== JSON_ERROR_NONE) {
+      wp_die('Неверный формат JSON-данных');
+   }
+
+   if (!wp_verify_nonce($group['nonce'], 'rmbt-cat-groping-nonce')) {
+      die;
+   }
+
+
+   global $wpdb;
+   $table_name = $wpdb->prefix . 'rmbt_categories_group';
+
+   $data = array(
+      'page_id' => $group['page_id'],
+      'id' => $group['id'],
+      'name' => $group['name'],
+      'img_id' => $group['img_id'],
+      'img_url' => $group['img_url'],
+      'description' => $group['description'],
+      'categories' => json_encode($group['categories']), // Преобразовать массив в JSON
+   );
+
+   $data['page_id'] = createGroupPage($data);
+
+   $existing_record = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $group['id']));
+
+   if ($existing_record) {
+      $result = $wpdb->update($table_name, $data, array('id' => $group['id']));
+      if ($result !== false) {
+      } else {
+         log_in_file($wpdb->last_error);
+      }
+   } else {
+      $result = $wpdb->insert(
+         $table_name,
+         $data
+      );
+      if ($result !== false) {
+      } else {
+         log_in_file($wpdb->last_error);
+      }
+   }
+
+   wp_send_json_success($data);
+}
+add_action('wp_ajax_publish_group', 'publish_group');
+
+function createGroupPage($data)
+{
+
+   $page_data = array(
+      'post_title'    => 'Группа категорий ' . $data['name'],
+      'post_name'     => 'группа категорий ' . $data['name'],  // slug
+      'post_content'  => '',
+      'post_status'   => 'publish',
+      'post_type'     => 'page',
+      'page_template' => 'equipment_group.php',
+   );
+
+   $page_id = $data['page_id'];
+   $page = get_post($page_id);
+
+   if ($page !== null) {
+      $page_data['ID'] = $page->ID;
+      if ($page->post_status == 'trash') {
+         $page_data['post_status'] = 'publish';
+      }
+      wp_update_post($page_data);
+   } else {
+      $page_id = wp_insert_post($page_data);
+   }
+   return $page_id;
+}

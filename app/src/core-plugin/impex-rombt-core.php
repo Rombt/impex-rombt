@@ -61,18 +61,12 @@ function rmbt_get_images_sizes()
 				'height' => 450,
 				'crop' => true,
 			),
-			// array(
-			// 	'name' => 'rmbt_small-img',
-			// 	'width' => 70,
-			// 	'height' => 70,
-			// 	'crop' => true,
-			// ),
-			// array(
-			// 	'name' => 'rmbt_header-img',
-			// 	'width' => 1970,
-			// 	'height' => 250,
-			// 	'crop' => true,
-			// ),
+			array(
+				'name' => 'rmbt_main_slider_img',
+				'width' => 590,
+				'height' => 590,
+				'crop' => true,
+			),
 		)
 	);
 }

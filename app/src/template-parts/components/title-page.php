@@ -1,1 +1,1 @@
-<h1 class="page-title"><?php echo rmbt_get_redux_field($args['title']) ?></h1>
+<h1 class="page-title"><?php echo $args['title'] ?></h1>

@@ -57,6 +57,7 @@ window.onload = async function () {
   arr_groups.forEach(objGroup => {
     let obj_currentGroup = new Group();
     let currentGroup = obj_currentGroup.createGroup(objGroup);
+
     objGroup.categories.forEach(idCat => {
       arr_categories.forEach(obj_Cat => {
         if (obj_Cat.cat_ID == idCat) {
@@ -71,13 +72,6 @@ window.onload = async function () {
   });
 
   mainWrapPage.append(wrapGroupsCategories);
-
-  if (wrapGroupsCategories.clientHeight < document.body.clientHeight) {
-    // wrapDisplayCategories.style.maxHeight = 100 + 'hv';
-  } else {
-    // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
-  }
-
   mainWrapPage.append(wrapDisplayCategories);
 
   /*---------- functionality ----------*/
@@ -86,6 +80,7 @@ window.onload = async function () {
     let target = e.target;
     let activeGroup = target.closest('.wrap-group') || false;
     let activeCategory = target.closest('.wrap-category');
+    let lastCategoryIdOnPage = 0;
 
     if (target === document.querySelector('#add_new_group')) {
       fetch(ajaxurl + '?action=get_last_category_id', {
@@ -100,14 +95,19 @@ window.onload = async function () {
           return result.json();
         })
         .then(body => {
-          let lastCategoryId = body.data;
-          if (!lastCategoryId) {
-            lastCategoryId = 1;
+          let lastCategoryIdOnBd = body.data;
+          if (!lastCategoryIdOnBd) {
+            lastCategoryIdOnPage = 1;
           } else {
-            lastCategoryId++;
+            if (lastCategoryIdOnPage != lastCategoryIdOnBd) {
+              let nl_Groups = wrapGroupsCategories.querySelectorAll('.wrap-group');
+              lastCategoryIdOnPage = nl_Groups.length + 1;
+            } else {
+              lastCategoryIdOnPage = lastCategoryIdOnBd++;
+            }
           }
           let obj_currentGroup = new Group();
-          let currentGroup = obj_currentGroup.createGroup(lastCategoryId);
+          let currentGroup = obj_currentGroup.createGroup(lastCategoryIdOnPage);
           wrapGroupsCategories.append(currentGroup);
           // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
         });
@@ -164,7 +164,7 @@ window.onload = async function () {
             };
         */
         let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
-
+        group.page_id = activeGroup.dataset.pageId;
         group.id = activeGroup.id;
         group.name = activeGroup.querySelector('.body-group-input-group-name').value;
         group.description = activeGroup.querySelector('.body-group-input-group-description').value;
@@ -173,10 +173,8 @@ window.onload = async function () {
 
         let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
         group.categories = arr_categories.map(cat => {
-          return cat.id;
+          return +cat.id;
         });
-
-        console.log('group = ', group);
 
         let response = fetch(ajaxurl + '?action=publish_group', {
           method: 'POST',
@@ -185,7 +183,18 @@ window.onload = async function () {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(group),
-        });
+        })
+          .then(result => {
+            return result.json();
+          })
+          .then(body => {
+            let update_group = body.data;
+            if (update_group.page_id) {
+              activeGroup.dataset.pageId = update_group.page_id;
+            } else {
+              activeGroup.dataset.pageId = 0;
+            }
+          });
       }
       if (target.classList.contains('delete-group')) {
         let arr_categories = activeGroup.querySelectorAll('.wrap-category');

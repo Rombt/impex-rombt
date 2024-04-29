@@ -17,6 +17,9 @@ $table_structure = array(
       'primary_key' => true,
       'auto_increment' => true,
    ),
+   'page_id' => array(
+      'data_type' => 'INT',
+   ),
    'name' => array(
       'data_type' => 'VARCHAR(255)',
       'not_null' => true,

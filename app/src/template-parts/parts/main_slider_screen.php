@@ -30,15 +30,10 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
       <div class="swiper-wrapper">
          <?php if (!empty($arr_main_slider_screen_gallery[0])) :
             foreach ($arr_main_slider_screen_gallery as $image_id) :
-               try {
-                  $image_data = wp_get_attachment_image_src($image_id, 'rmbt_largest-img');
-                  $image_url = $image_data[0];
-               } catch (\Throwable $th) {
-               }
          ?>
                <div class="swiper-slide">
                   <div class="wrap-img main-slider-screen__wrap-img">
-                     <img src=" <?php echo $image_url ?> " alt="">
+                     <?php echo wp_get_attachment_image($image_id, 'rmbt_main_slider_img', false, ['alt' => 'main slider img']) ?>
                   </div>
                </div>
          <?php
