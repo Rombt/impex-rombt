@@ -1,7 +1,7 @@
 <div class="wrapper-section">
    <div class="rmbt-full-width rmbt-news-block-full-width">
       <section class="rmbt-container rmbt-news-block">
-         <?php get_template_part('template-parts/components/title', 'section', ['title' => 'rmbt-news-block_section-title']); ?>
+         <?php get_template_part('template-parts/components/redux_title', 'section', ['title' => 'rmbt-news-block_section-title']); ?>
          <div class="rmbt-news-block__row">
             <div class="rmbt-news-block__col">
                <?php

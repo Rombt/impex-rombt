@@ -1,4 +1,4 @@
-<article class="card-equipment rmbt-shadow">
+<li class="card-equipment rmbt-shadow">
    <div class="card-equipment__body">
       <div class="wrap-img card-equipment__img">
          <?php rmbt_redux_img($args['id-img'], $args['alt-img']) ?>
@@ -8,6 +8,6 @@
          <h3><?php echo rmbt_get_redux_field($args['title']) ?></h3>
       </div>
    </div>
-   <?php get_template_part('template-parts/components/footer_card'); ?>
+   <?php get_template_part('template-parts/components/footer_card', null, $args['href']); ?>
 
-</article>
+</li>

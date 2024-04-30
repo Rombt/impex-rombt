@@ -23,7 +23,6 @@ if (!defined('ABSPATH')) {
 get_header('shop'); ?>
 
 
-*************************************
 
 <?php
 /**

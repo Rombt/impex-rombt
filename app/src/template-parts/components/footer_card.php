@@ -1,5 +1,5 @@
    <footer>
-      <a href="#">
+      <a href="<?php echo $args['href'] ?>">
          read more
          <svg>
             <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#arrow-right_1">

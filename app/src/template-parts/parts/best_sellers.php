@@ -1,9 +1,9 @@
 <div class="wrapper-section">
    <div class="rmbt-full-width">
       <section class="rmbt-container rmbt-best-sellers">
-         <?php get_template_part('template-parts/components/title', 'section', ['title' => 'best-sellers_section-title']); ?>
+         <?php get_template_part('template-parts/components/redux_title', 'section', ['title' => 'best-sellers_section-title']); ?>
          <div class="rmbt-best-sellers__row">
-            <div class="rmbt-best-sellers__col">
+            <ul class="rmbt-best-sellers__col">
                <?php get_template_part('template-parts/components/card_equipment', null, [
                   'title' => 'best-sellers-goods-one_title',
                   'id-img' => 'best-sellers_image-one',
@@ -19,7 +19,7 @@
                   'id-img' => 'best-sellers_image-three',
                   'alt-img' => 'best-sellers_image-three_alt',
                ]); ?>
-            </div>
+            </ul>
          </div>
       </section>
    </div>

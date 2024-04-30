@@ -89,8 +89,21 @@
     .size(9);
     .shift-left(1);
 
-    a {
-      color: @color_title_light;
+    .menu-impexmash-container {
+      padding-right: 40px;
+
+      > ul {
+        max-width: 100%;
+
+        li {
+          a {
+            color: @color_title_light;
+
+            display: inline-block;
+            width: max-content;
+          }
+        }
+      }
     }
 
     .drop-cont,
@@ -104,7 +117,8 @@
       border: 1px solid #fff;
 
       li {
-        max-width: 100%;
+        max-width: 250px;
+        padding-right: 10px;
 
         a {
           word-wrap: break-word;
@@ -117,6 +131,7 @@
 
     .icon-overflow {
       height: 50%;
+
       span,
       &:after,
       &:before {
