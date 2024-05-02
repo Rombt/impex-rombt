@@ -32,6 +32,7 @@ add_action('admin_enqueue_scripts', 'rmbt_impex_scripts_admin');
 require_once plugin_dir_path(__FILE__) . 'inc/general-admin.php';
 require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
 require_once plugin_dir_path(__FILE__) . 'inc/categories-grouping/index.php';
+require_once plugin_dir_path(__FILE__) . 'inc/bakery_meta_boxes.php';
 
 // require_once plugin_dir_path(__FILE__) . 'inc/acf.php';
 
