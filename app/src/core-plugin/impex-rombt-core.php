@@ -26,6 +26,14 @@ function rmbt_impex_scripts_admin()
 	wp_add_inline_script('rmbt_impex-admin_core', 'const rmbtCategoriesGrouping = ' . json_encode([
 		'rmbtCatGropingNonce' => wp_create_nonce('rmbt-cat-groping-nonce'),
 	]), 'before');
+
+	if (get_post_type() === 'bakery') {
+
+
+		wp_add_inline_script('rmbt_impex-admin_core', 'const rmbtBakery = ' . json_encode([
+			'rmbtBakery_nonce' => wp_create_nonce('rmbt_bakery_meta_box'),
+		]), 'before');
+	}
 }
 add_action('admin_enqueue_scripts', 'rmbt_impex_scripts_admin');
 
