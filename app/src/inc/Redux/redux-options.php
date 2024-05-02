@@ -145,6 +145,7 @@ require_once dirname(__FILE__) . '/sections/contacts.php';
 require_once dirname(__FILE__) . '/sections/social_networks.php';
 require_once dirname(__FILE__) . '/sections/equipment-categories.php';
 require_once dirname(__FILE__) . '/sections/equipment_categories_group.php';
+require_once dirname(__FILE__) . '/sections/archive-bakery.php';
 
 
 

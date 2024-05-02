@@ -10,10 +10,16 @@ $id_group = isset($_GET['id_group']) ? $_GET['id_group'] : false;
 $group = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id_group))[0];
 $categories = json_decode($group->categories);
 if (count($categories) > 0) {
-   $args = array('product_category_id' => $categories);
+   $args = array(
+      'post_status'    => 'publish',
+      'posts_per_page' => -1,
+      'product_category_id' => $categories
+   );
    $arr_all_products = wc_get_products($args);
 }
 ?>
+
+
 
 <main>
    <div class="wrapper-section">
@@ -26,6 +32,7 @@ if (count($categories) > 0) {
                <?php
                if (count($arr_all_products) > 0) {
                   foreach ($arr_all_products as $product) {
+
                      get_template_part('template-parts/components/equipment_categories_card', null, [
                         'src' => get_permalink($product->id),
                         'title' => rmbt_trim_excerpt(4, $product->name),

@@ -40,10 +40,8 @@
          </div>
       </section>
       <div class="rmbt-copyright">Copyright © Виробничо-технологічний центр “Імпексмаш” 2005–2023</div>
+   </div>
 </footer>
-
-
-
 
 </div> <!--  end rmbt-page-wrap  -->
 <?php wp_footer(); ?>

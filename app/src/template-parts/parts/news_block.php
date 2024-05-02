@@ -22,13 +22,12 @@
                            <?php else :
                               rmbt_redux_img('rmbt-no-img', 'rmbt-no-img_alt');
                            endif ?>
-
                         </div>
                      </div>
                      <header>
                         <h3><?php echo rmbt_trim_excerpt(8, get_the_title()); ?></h3>
                      </header>
-                     <?php get_template_part('template-parts/components/footer_card'); ?>
+                     <?php get_template_part('template-parts/components/footer_card', null, ['href' => esc_url(get_permalink())]); ?>
                   </article>
 
                <?php } ?>
