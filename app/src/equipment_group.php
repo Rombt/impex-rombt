@@ -5,6 +5,7 @@
 <?php get_header(); ?>
 
 <?php
+<<<<<<< HEAD
 
 $id_group = isset($_GET['id_group']) ? $_GET['id_group'] : false;
 $group = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id_group))[0];
@@ -16,6 +17,20 @@ $arr_cat_products = [];
 //       $arr_all_products[] = $product;
 //    }
 // }
+=======
+$arr_all_products = [];
+$id_group = isset($_GET['id_group']) ? $_GET['id_group'] : false;
+$group = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id_group))[0];
+$categories = json_decode($group->categories);
+if (count($categories) > 0) {
+   $args = array(
+      'post_status'    => 'publish',
+      'posts_per_page' => -1,
+      'product_category_id' => $categories
+   );
+   $arr_all_products = wc_get_products($args);
+}
+>>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
 ?>
 
 <div class="test-block">
@@ -27,6 +42,7 @@ $arr_cat_products = [];
    echo "</pre>";
 
 
+<<<<<<< HEAD
 
 
    foreach (json_decode($group->categories) as $cat_id) {
@@ -62,6 +78,8 @@ $arr_cat_products = [];
 </div>
 
 
+=======
+>>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
 <main>
    <div class="wrapper-section">
       <div class="rmbt-full-width rmbt-equipment-categories-full-width">
@@ -71,6 +89,7 @@ $arr_cat_products = [];
             <div class="rmbt-equipment-categories__row">
 
                <?php
+<<<<<<< HEAD
                foreach ($arr_all_products as $product) {
                   get_template_part('template-parts/components/equipment_categories_card', null, [
                      'src' => get_permalink($product->id),
@@ -88,6 +107,22 @@ $arr_cat_products = [];
 
 
 
+=======
+               if (count($arr_all_products) > 0) {
+                  foreach ($arr_all_products as $product) {
+
+                     get_template_part('template-parts/components/equipment_categories_card', null, [
+                        'src' => get_permalink($product->id),
+                        'title' => rmbt_trim_excerpt(4, $product->name),
+                        'text' => rmbt_trim_excerpt(10, $product->description),
+                        'id-img' => $product->image_id,
+                        'alt-img' =>  rmbt_trim_excerpt(4, $product->name),
+                     ]);
+                  }
+               }
+               ?>
+
+>>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
             </div>
          </section>
       </div>

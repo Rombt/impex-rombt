@@ -209,6 +209,11 @@ Redux::set_section(
 				'type' => 'text',
 				'title' => esc_html__('Description of image', 'rmbt_impex'),
 			),
+			array(
+				'id' => 'best-sellers_href-one',
+				'type' => 'text',
+				'title' => esc_html__('Link To Page Goods', 'rmbt_impex'),
+			),
 
 			/*------------------  the end of image block -----------------*/
 			/*------------------  the start of image block -----------------*/
@@ -240,6 +245,11 @@ Redux::set_section(
 				'type' => 'text',
 				'title' => esc_html__('Description of image', 'rmbt_impex'),
 			),
+			array(
+				'id' => 'best-sellers_href-two',
+				'type' => 'text',
+				'title' => esc_html__('Link To Page Goods', 'rmbt_impex'),
+			),
 			/*------------------  the end of image block -----------------*/
 			/*------------------  the start of image block -----------------*/
 
@@ -268,6 +278,11 @@ Redux::set_section(
 				'id' => 'best-sellers_image-three_alt',
 				'type' => 'text',
 				'title' => esc_html__('Description of image', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'best-sellers_href-three',
+				'type' => 'text',
+				'title' => esc_html__('Link To Page Goods', 'rmbt_impex'),
 			),
 			/*------------------  the end of image block -----------------*/
 

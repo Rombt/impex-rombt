@@ -320,7 +320,28 @@ function rmbt_trim_excerpt($length, $text = '')
 	return $text;
 }
 
+
+
 //@note
+
+function rmbt_redux_get_url($id_field, $custom_default_url = '')
+{
+	global $rmbt_impex_options;
+
+	if (!class_exists('Redux') || !isset($rmbt_impex_options[$id_field]) || $rmbt_impex_options[$id_field] === '') {
+		return esc_url($custom_default_url !== '' ? $custom_default_url : false);
+	}
+
+	if (isset($rmbt_impex_options[$id_field])) {
+		if (stripos($rmbt_impex_options[$id_field], get_site_url()) === 0) {
+			return $rmbt_impex_options[$id_field];
+		} else {
+			$clear_url = str_replace($_SERVER['SERVER_NAME'] . '/', '', $rmbt_impex_options[$id_field]);
+			return esc_url(get_template_directory_uri() . $clear_url);
+		}
+	}
+}
+
 /**
  * Sometimes Redux provides an incorrect URL. I haven't figured out why yet
  *	gets 
@@ -332,7 +353,7 @@ function rmbt_trim_excerpt($length, $text = '')
  * 		url default picture in Redux's field
  * 		
  */
-function rmbt_get_pic_url($id_field_pic, $custom_default_url = '')
+function rmbt_redux_get_pic_url($id_field_pic, $custom_default_url = '')
 {
 	global $rmbt_impex_options;
 
@@ -352,8 +373,8 @@ function rmbt_get_pic_url($id_field_pic, $custom_default_url = '')
 
 function rmbt_redux_img($id_field_pic, $alt = "", $id_svg = '')
 {
-	if (rmbt_get_pic_url($id_field_pic)) { ?>
-		<img src="<?php echo rmbt_get_pic_url($id_field_pic); ?>" alt="<?php $alt; ?>">
+	if (rmbt_redux_get_pic_url($id_field_pic)) { ?>
+		<img src="<?php echo rmbt_redux_get_pic_url($id_field_pic); ?>" alt="<?php $alt; ?>">
 	<?php  } else {
 		if ($id_svg == '') {
 			return;

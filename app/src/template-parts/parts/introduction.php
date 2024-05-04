@@ -4,7 +4,7 @@
          <div class="rmbt-introduction__row">
             <div class="rmbt-introduction__articles-col">
                <article>
-                  <?php get_template_part('template-parts/components/title', 'section', ['title' => 'introduction_section-title']); ?>
+                  <?php get_template_part('template-parts/components/redux_title', 'section', ['title' => 'introduction_section-title']); ?>
                   <p>
                      <?php echo rmbt_get_redux_field('introduction_section-text') ?>
                   </p>

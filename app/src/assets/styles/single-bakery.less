@@ -1,0 +1,50 @@
+.rmbt-single-bakery-full-width {
+}
+.rmbt-container {
+}
+.rmbt-single-bakery {
+  &__row {
+    .row-flex();
+    flex-direction: column;
+    row-gap: @row_gap_between_cards;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-family: OpenSans;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 22px;
+
+    .col();
+    .size(10);
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+  }
+}
+.rmbt-technology-card {
+  .col();
+  .size(8);
+  height: 450px;
+  margin: 0 auto;
+
+  border: 1px dashed @color_header_background_dark;
+
+  .wrap-img {
+  }
+}
+
+.wrap-bakery-equipment {
+  .col();
+  .size(12);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px dashed @color_header_background_dark;
+  .rmbt-equipment-article {
+    margin: 0px 0px 0px 0px;
+    .size(3);
+  }
+}

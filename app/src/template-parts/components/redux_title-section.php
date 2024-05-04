@@ -1,0 +1,1 @@
+<h2 class="section-title"><?php echo rmbt_get_redux_field($args['title']) ?></h2>

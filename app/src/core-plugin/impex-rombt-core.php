@@ -26,12 +26,21 @@ function rmbt_impex_scripts_admin()
 	wp_add_inline_script('rmbt_impex-admin_core', 'const rmbtCategoriesGrouping = ' . json_encode([
 		'rmbtCatGropingNonce' => wp_create_nonce('rmbt-cat-groping-nonce'),
 	]), 'before');
+
+	if (get_post_type() === 'bakery') {
+
+
+		wp_add_inline_script('rmbt_impex-admin_core', 'const rmbtBakery = ' . json_encode([
+			'rmbtBakery_nonce' => wp_create_nonce('rmbt_bakery_meta_box'),
+		]), 'before');
+	}
 }
 add_action('admin_enqueue_scripts', 'rmbt_impex_scripts_admin');
 
 require_once plugin_dir_path(__FILE__) . 'inc/general-admin.php';
 require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
 require_once plugin_dir_path(__FILE__) . 'inc/categories-grouping/index.php';
+require_once plugin_dir_path(__FILE__) . 'inc/bakery_meta_boxes.php';
 
 // require_once plugin_dir_path(__FILE__) . 'inc/acf.php';
 

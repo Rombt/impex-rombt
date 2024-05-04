@@ -1,0 +1,92 @@
+.woocommerce div.product .product_title {
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 40px;
+
+  margin-top: @row_gap_between_cards;
+  //   margin-bottom: @row_gap_between_cards;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  font-size: 15px;
+  font-family: OpenSans;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  span {
+    display: block;
+    font-weight: 700;
+  }
+
+  a {
+    color: @color_title_light;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      color: @color_logo_text_green;
+      font-weight: 500;
+    }
+  }
+}
+
+.woocommerce-product-gallery__image {
+  margin-right: @row_gap_between_cards * 0.4;
+  &:first-child {
+    margin-bottom: @row_gap_between_cards * 0.4;
+    margin-right: 0;
+    img {
+      max-width: 590px;
+      max-height: 590px;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  background-color: #fff;
+}
+
+.woocommerce .products ul,
+.woocommerce ul.products {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  padding: 20px 10px 40px 10px;
+  position: relative;
+
+  footer {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3 {
+  padding-top: 15px;
+}
+
+.woocommerce .products ul,
+.woocommerce ul.products {
+  column-gap: initial;
+}

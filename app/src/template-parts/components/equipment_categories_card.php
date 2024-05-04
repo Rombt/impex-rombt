@@ -1,4 +1,4 @@
-<article class="rmbt-equipment-article">
+<article class="rmbt-equipment-article rmbt-shadow ">
    <div class="wrap-img rmbt-equipment-article__img">
       <?php echo wp_get_attachment_image($args['id-img'], 'rmbt_equipment_group_img', ['alt' => $args['alt-img']]); ?>
    </div>
