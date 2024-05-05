@@ -4,14 +4,22 @@
 function get_data_bakery_equipments()
 {
 
-$query = new WC_Product_Query(array(
-    'limit' => -1,
-));
-$products = $query->get_products();
+   $args = array(
+  'post_type' => 'product',
+  'status' => 'publish',
+  'limit' => -1,
+);
 
+$query_products = wc_get_products($args);
 
-wp_send_json_success($products);
+$arr_products = [];
+foreach ($query_products as $key => $value) {
+   $product = $value->get_data();
+   $product['img'] = $value->get_image();
+   $arr_products[] = $product;
+}
 
+wp_send_json_success($arr_products);
 
    wp_die();
 }
