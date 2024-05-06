@@ -13,8 +13,9 @@ class CardEquipment {
         // console.log("data", data);
 
         this.html.cardEquipment.id = data.id;
-        this.html.imgEquipment.textContent = data.img;
+        this.html.imgEquipment.src = data.imgSrc;
         this.html.equipmentName.textContent = data.name;
+        this.html.buttAddEquipment.textContent = 'add';
 
         Helper.addClassToBlocks(this.html);
         return this.createCard();

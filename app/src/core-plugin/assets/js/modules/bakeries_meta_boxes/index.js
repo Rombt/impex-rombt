@@ -34,9 +34,11 @@ function bakeriesMetaBoxes() {
     };
 
 
-    window.onload = async function() {
+    window.onload = async function () {
 
         // const Data = await getData();
+        // console.log("Data = ", Data);
+
         const arrCards = new FactoryCards(await getData());
 
         if (arrCards.length == 0) return false;
@@ -58,7 +60,6 @@ function bakeriesMetaBoxes() {
             imgTechnologicalCard: document.createElement('img'),
         }
         Helper.addClassToBlocks(html);
-
 
         arrCards.forEach(card => html.listEquipmentsSrc.append(card.html.cardEquipment))
 

@@ -16,75 +16,15 @@ function categoriesGrouping() {
     } else {
       // here is the handling of the situation when there are no categories
     }
-<<<<<<< HEAD
-  });
-
-  arr_groups.forEach(objGroup => {
-    let obj_currentGroup = new Group();
-    let currentGroup = obj_currentGroup.createGroup(objGroup);
-
-    objGroup.categories.forEach(idCat => {
-      arr_categories.forEach(obj_Cat => {
-        if (obj_Cat.cat_ID == idCat) {
-          let obj_currentCat = new Category();
-          let currentCat = obj_currentCat.createCategory(obj_Cat, 'group');
-          currentGroup.querySelector('.categories-field').append(currentCat);
-        }
-      });
-    });
-
-    wrapGroupsCategories.append(currentGroup);
-  });
-
-  mainWrapPage.append(wrapGroupsCategories);
-  mainWrapPage.append(wrapDisplayCategories);
-=======
   }
 
   window.onload = async function () {
     /*---------- data ----------*/
     const Data = await getData();
->>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
 
     const arr_categories = Data.categories;
     const arr_groups = Data.groups;
 
-<<<<<<< HEAD
-  document.addEventListener('click', e => {
-    let target = e.target;
-    let activeGroup = target.closest('.wrap-group') || false;
-    let activeCategory = target.closest('.wrap-category');
-    let lastCategoryIdOnPage = 0;
-
-    if (target === document.querySelector('#add_new_group')) {
-      fetch(ajaxurl + '?action=get_last_category_id', {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: '',
-      })
-        .then(result => {
-          return result.json();
-        })
-        .then(body => {
-          let lastCategoryIdOnBd = body.data;
-          if (!lastCategoryIdOnBd) {
-            lastCategoryIdOnPage = 1;
-          } else {
-            if (lastCategoryIdOnPage != lastCategoryIdOnBd) {
-              let nl_Groups = wrapGroupsCategories.querySelectorAll('.wrap-group');
-              lastCategoryIdOnPage = nl_Groups.length + 1;
-            } else {
-              lastCategoryIdOnPage = lastCategoryIdOnBd++;
-            }
-          }
-          let obj_currentGroup = new Group();
-          let currentGroup = obj_currentGroup.createGroup(lastCategoryIdOnPage);
-          wrapGroupsCategories.append(currentGroup);
-          // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
-=======
     /*---------- structure ----------*/
 
     const mainWrapPage = document.querySelector('.rmbt-categories-grouping-wrap');
@@ -112,7 +52,6 @@ function categoriesGrouping() {
           } else {
             return;
           }
->>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
         });
       });
       if (exit === false) {
@@ -215,15 +154,6 @@ function categoriesGrouping() {
                 categories: [],
             };
         */
-<<<<<<< HEAD
-        let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
-        group.page_id = activeGroup.dataset.pageId;
-        group.id = activeGroup.id;
-        group.name = activeGroup.querySelector('.body-group-input-group-name').value;
-        group.description = activeGroup.querySelector('.body-group-input-group-description').value;
-        group.img_url = activeGroup.querySelector('.body-group-img').src || '#';
-        group.img_id = activeGroup.querySelector('.body-group-img').id || 0;
-=======
           let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
           group.page_id = activeGroup.dataset.pageId;
           group.id = activeGroup.id;
@@ -236,7 +166,6 @@ function categoriesGrouping() {
           group.categories = arr_categories.map(cat => {
             return +cat.id;
           });
->>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
 
           let response = fetch(ajaxurl + '?action=publish_group', {
             method: 'POST',
@@ -266,27 +195,6 @@ function categoriesGrouping() {
             but.classList.add('add-to-group');
             but.textContent = 'add to group';
 
-<<<<<<< HEAD
-        let response = fetch(ajaxurl + '?action=publish_group', {
-          method: 'POST',
-          credentials: 'same-origin',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(group),
-        })
-          .then(result => {
-            return result.json();
-          })
-          .then(body => {
-            let update_group = body.data;
-            if (update_group.page_id) {
-              activeGroup.dataset.pageId = update_group.page_id;
-            } else {
-              activeGroup.dataset.pageId = 0;
-            }
-          });
-=======
             wrapDisplayCategories.prepend(cat);
           });
           activeGroup.remove();
@@ -303,7 +211,6 @@ function categoriesGrouping() {
             body: JSON.stringify(data),
           });
         }
->>>>>>> de6f0d475e3409a86d1b502d922a9d724edb5a8c
       }
     });
   };
