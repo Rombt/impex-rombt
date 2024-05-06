@@ -45,11 +45,12 @@ function bakeriesMetaBoxes() {
 
         const html = {
             mainWrapListEquipmentsSrc: document.createElement('div'),
+            quantityCards: document.createElement('div'),
             listEquipmentsSrc: document.createElement('ul'),
             wrapSearchEquipment: document.createElement('div'),
             inputSearchEquipment: document.createElement('input'),
             wrapIconSearchEquipment: document.createElement('div'),
-            iconSearchEquipment: document.createElement('svg'),
+            iconSearchEquipment: document.createElement('img'),
 
             mainWrapListEquipmentsDist: document.createElement('div'),
             listEquipmentsDist: document.createElement('ul'),
@@ -63,15 +64,21 @@ function bakeriesMetaBoxes() {
 
         arrCards.forEach(card => html.listEquipmentsSrc.append(card.html.cardEquipment))
 
+        html.butonSelectImg.textContent = 'Select image';
         html.technologicalCard.append(html.butonSelectImg);
         html.technologicalCard.append(html.imgTechnologicalCard);
 
+        html.butonPublish.textContent = 'publish';
         html.mainWrapListEquipmentsDist.append(html.butonPublish);
         html.mainWrapListEquipmentsDist.append(html.listEquipmentsDist);
 
+
+        html.iconSearchEquipment.src = `${rmbtBakery.rmbtPluginUrl}/impex-rombt-core/assets/img/icons/search.png`
         html.wrapIconSearchEquipment.append(html.iconSearchEquipment);
         html.wrapSearchEquipment.append(html.wrapIconSearchEquipment);
         html.wrapSearchEquipment.append(html.inputSearchEquipment);
+        html.quantityCards.textContent = `total cards: ${arrCards.length}`;
+        html.mainWrapListEquipmentsSrc.append(html.quantityCards);
         html.mainWrapListEquipmentsSrc.append(html.wrapSearchEquipment);
         html.mainWrapListEquipmentsSrc.append(html.listEquipmentsSrc);
 

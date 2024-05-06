@@ -1,4 +1,5 @@
 .bakery-data-block {
+   @hightSearchBlock: 70px;
 
    display: flex;
    flex-wrap: wrap;
@@ -6,17 +7,26 @@
    column-gap: 30px;
    row-gap: 30px;
 
-
-   // border: 1px solid #0515fd;
-
-
-
    .technological-card {
       width: 100%;
       height: 300px;
-
       background-color: #E1E1E1;
+      position: relative;
 
+      .buton-select-img {
+
+         position: absolute;
+         right: 15px;
+         top: 15px;
+         width: 100px;
+         height: 30px;
+         cursor: pointer;
+         color: #8A8A8A;
+         border: 1px solid #fff;
+         border-radius: 10px;
+
+
+      }
    }
 
    .main-wrap-list-equipments-src,
@@ -25,11 +35,11 @@
       flex-basis: 40%;
       flex-grow: 1;
       position: relative;
-      padding-top: 100px;
+
+      padding-top: @hightSearchBlock;
 
       background-color: #E1E1E1;
-
-
+      box-sizing: border-box;
 
       .list-equipments-dist,
       .list-equipments-src {
@@ -37,66 +47,49 @@
          margin: 0 auto;
          height: 100vh;
          overflow-y: auto;
+         overflow-x: hidden;
          display: flex;
          flex-direction: column;
          align-items: center;
          row-gap: 10px;
-         padding: 10px 0px 10px 0px;
-
+         padding: 10px 20px 10px 20px;
          background-color: #EBEBEB;
+         border: 1px solid #d4d2d2;
+
+         box-sizing: border-box;
 
          .card-equipment {
-
             margin: 0px 0px 0px 0px;
             background-color: #E1E1E1;
-            width: 95%;
+            width: 100%;
             border-radius: 10px;
-
             display: flex;
             align-items: center;
             justify-content: space-around;
+            column-gap: 10px;
             min-height: 100px;
-
-            img,
-            button,
-            .wrap-equipment-name {
-
-
-               // height: 60%;
-               // display: inline-block;
-               // // height: auto;
-               // height: 100%;
-               // min-width: 60px;
-               // width: 80px;
-
-            }
+            padding: 15px 15px 15px 15px;
+            box-sizing: border-box;
+            height: max-content;
 
             img {
                width: 60px;
                height: 60px;
-
             }
 
             .wrap-equipment-name {
-               // border: 1px solid #4e484c;
+               flex-basis: 40%;
+               flex-grow: 1;
 
-
-               width: 40%;
 
                h4 {
-                  font-size: 10px;
-                  // font-family: Poppins;
-                  // font-weight: 600;
+                  font-size: 12px;
                   color: #5a5959;
-                  // text-align: center;
-                  // vertical-align: middle;
-                  // // display: block;
-                  // // max-height: 100%;
-                  // display: block;
-                  // margin: 0px 0px 0px 0px;
-                  // line-height: 100%;
-
-
+                  height: 100%;
+                  margin: 0px 0px 0px 0px;
+                  padding: 5px;
+                  // overflow: hidden;
+                  text-overflow: ellipsis;
 
                }
             }
@@ -104,20 +97,13 @@
             button {
                max-width: 110px;
                min-width: 80px;
-               // max-height: 60px;
                height: 30px;
                color: #8A8A8A;
                background-color: #B6DEB5;
                border-radius: 10px;
                border: 1px solid #fff;
                text-transform: uppercase;
-
-
-               // position: relative;
-               // top: 0%;
-               // transform: translate(0%, -50%);
-
-
+               cursor: pointer;
             }
 
          }
@@ -126,20 +112,81 @@
 
    }
 
-   .main-wrap-list-equipments-dist {}
+   .main-wrap-list-equipments-dist {
+
+
+      .buton-publish {
+         position: absolute;
+         right: 0%;
+         top: @hightSearchBlock*0.5;
+         transform: translate(-10%, -50%);
+         width: 120px;
+         height: 35px;
+         color: #8A8A8A;
+         text-transform: uppercase;
+         cursor: pointer;
+         border: 1px solid #fff;
+         border-radius: 10px;
+
+
+
+      }
+   }
+
+   .quantity-cards {
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(0%, -100%);
+
+      padding: 0px 10px 0px 10px;
+      color: #8A8A8A;
+      text-transform: capitalize;
+
+
+   }
 
    .main-wrap-list-equipments-src {
 
-
       .wrap-search-equipment {
          position: absolute;
-         left: 0;
-         top: 0;
-         transform: translate(0, 0);
-         width: 100%;
-         height: 100px;
+         left: 50%;
+         top: @hightSearchBlock*0.5;
+         transform: translate(-50%, -50%);
+         width: max-content;
+         width: 70%;
 
-         border: 1px solid #0515fd;
+         input {
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #F2F2F2;
+            border: 1px solid #fff;
+            padding-left: 35px;
+
+            font-size: 14px;
+         }
+
+         .wrap-icon-search-equipment {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 20px;
+            height: 20px;
+
+
+
+            // border: 1px solid #0515fd;
+
+            img {
+               width: 100%;
+               height: 100%;
+
+            }
+
+         }
 
       }
 
