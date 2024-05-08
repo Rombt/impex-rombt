@@ -73,14 +73,19 @@ function bakeriesMetaBoxes() {
       }
     });
 
-    html.buttonSelectImg.textContent = 'Select image';
+    console.log('data.technologicalCard.url = ', data.technologicalCard.url);
+    if (data.technologicalCard.url === false) {
+      html.buttonSelectImg.textContent = 'Select image';
+      html.hiddenInputTechnologicalCardId.value = false;
+    } else {
+      html.buttonSelectImg.textContent = 'dell image';
+      html.buttonSelectImg.classList.add('butt-del-equipment');
+      html.imgTechnologicalCard.src = data.technologicalCard.url;
+      html.technologicalCard.append(html.imgTechnologicalCard);
+      html.hiddenInputTechnologicalCardId.value = data.technologicalCard.id;
+    }
+
     html.technologicalCard.append(html.buttonSelectImg);
-
-    console.log('data.technologicalCard = ', data.technologicalCard);
-
-    html.imgTechnologicalCard.src = data.technologicalCard.url;
-    html.technologicalCard.append(html.imgTechnologicalCard);
-    html.hiddenInputTechnologicalCardId.value = data.technologicalCard.id;
 
     html.hiddenInputCardsIds.type = 'hidden';
     html.hiddenInputTechnologicalCardId.type = 'hidden';
@@ -113,9 +118,15 @@ function bakeriesMetaBoxes() {
       const target = e.target;
 
       if (target.classList.contains('button-select-img')) {
-        wpMedia(mainWrap.querySelector('.img-technological-card')).then(idImg => {
-          html.hiddenInputTechnologicalCardId.value = idImg;
-        });
+        if (target.classList.contains('butt-del-equipment')) {
+          delImgTechnologicalCard();
+        } else {
+          addImgTechnologicalCard();
+
+          wpMedia(mainWrap.querySelector('.img-technological-card')).then(idImg => {
+            html.hiddenInputTechnologicalCardId.value = idImg;
+          });
+        }
       } else if (target.classList.contains('butt-add-equipment')) {
         const id = target.closest('.card-equipment').id;
         const card = html.listEquipmentsSrc.querySelector(`#${id}`);
@@ -142,6 +153,19 @@ function bakeriesMetaBoxes() {
       '.wrap-equipment-name>h4',
       '.input-search-equipment'
     );
+
+    function delImgTechnologicalCard() {
+      html.imgTechnologicalCard.remove();
+      html.buttonSelectImg.classList.remove('butt-del-equipment');
+      html.buttonSelectImg.textContent = 'Select image';
+      html.hiddenInputTechnologicalCardId.value = false;
+    }
+
+    function addImgTechnologicalCard() {
+      html.technologicalCard.append(html.imgTechnologicalCard);
+      html.buttonSelectImg.classList.add('butt-del-equipment');
+      html.buttonSelectImg.textContent = 'dell image';
+    }
   };
 }
 
