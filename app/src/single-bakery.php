@@ -1,5 +1,21 @@
 <?php get_header(); ?>
 
+
+<?php
+$technological_card_id = get_post_meta($post->ID, 'technological_card_id', true);
+
+$arr_equipments_ids = array_filter(explode(',', get_post_meta($post->ID, 'cards_ids', true)), function ($value) {
+   return $value !== "";
+});
+$args = array(
+   'post_type' => 'product',
+   'status' => 'publish',
+   'include' => $arr_equipments_ids,
+);
+$query_products = wc_get_products($args);
+?>
+
+
 <main>
    <div class="wrapper-section">
       <div class="rmbt-full-width rmbt-single-bakery-full-width">
@@ -7,22 +23,21 @@
             <?php get_template_part('template-parts/components/title', 'page', ['title' => $post->post_title]); ?>
             <div class="rmbt-single-bakery__row">
                <div class="wrap-img rmbt-technology-card">
-                  <img src="#" alt="technology card">
+                  <img src="<?php echo wp_get_attachment_url(intval($technological_card_id)) ?>" alt="technology card">
                </div>
                <div class="rmbt-single-bakery__text"><?php echo strip_tags(get_the_content()) ?></div>
                <section class="wrap-bakery-equipment">
 
                   <?php
-                  // перебор массива оборудования
-                  get_template_part('template-parts/components/equipment_categories_card', null, [
-                     'src' => get_permalink($post->ID),
-                     'title' => rmbt_trim_excerpt(4, $post->post_title),
-                     'text' => rmbt_trim_excerpt(10, strip_tags(get_the_content())),
-                     'id-img' => get_post_thumbnail_id($post->ID),
-                     'alt-img' =>  rmbt_trim_excerpt(4, $post->post_title),
-                  ]);
-
-
+                  foreach ($query_products as $equipment) {
+                     get_template_part('template-parts/components/equipment_categories_card', null, [
+                        'src' => get_permalink($equipment->get_id()),
+                        'title' => rmbt_trim_excerpt(4, $equipment->get_name()),
+                        'text' => rmbt_trim_excerpt(10, strip_tags($equipment->get_short_description())),
+                        'id-img' => $equipment->get_image_id(),
+                        'alt-img' =>  rmbt_trim_excerpt(4, $equipment->get_name()),
+                     ]);
+                  }
                   ?>
 
                </section>

@@ -43,7 +43,7 @@ function get_files_list($path)
    $mod 'w'	Открывает файл для записи; помещает указатель в начало файла и обрезает файл до нулевой длины. Если файл не существует - пытается его создать.
 */
 
-function log_in_file($date, $mod = 'a')
+function log_in_file($data, $mod = 'a')
 {
    // Путь к файлу лога
    $path = plugin_dir_path(__FILE__) . 'log/log.txt';
@@ -54,7 +54,7 @@ function log_in_file($date, $mod = 'a')
    if ($file_handle) {
       $timestamp = date('d-m-y H:i:s');
 
-      $log_entry = $timestamp . ': ' . json_encode($date) . PHP_EOL;
+      $log_entry = $timestamp . ': ' . json_encode($data) . PHP_EOL;
 
       fwrite($file_handle, $log_entry);
       fclose($file_handle);

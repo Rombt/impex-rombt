@@ -1,7 +1,10 @@
 <?php
 
 
-$arr_blocks = [];
+$arr_fields = [
+	'cards_ids',
+	'technological_card_id',
+];
 
 
 add_action('add_meta_boxes', 'rmbt_bakeries_meta_box', 10, 2);
@@ -12,17 +15,16 @@ function rmbt_bakeries_meta_box($post_type, $post)
 
 function rmbt_bakery_mb_html($post)
 {
-?>
-
-	<div class="bakery-data-block">
-	</div>
-
-<?php
+	echo '<div class="bakery-data-block"></div>';
 }
 
 function rmbt_save_meta_box_bakeries($post_id, $post)
 {
-	global $arr_blocks;
+	global $arr_fields;
+
+	if (!wp_verify_nonce($_POST['_bakery_nonce'], 'rmbt_bakery_meta_box')) {
+		return $post_id;
+	}
 
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
 		return $post_id;
@@ -35,16 +37,12 @@ function rmbt_save_meta_box_bakeries($post_id, $post)
 		return $post_id;
 	}
 
-	foreach ($_POST as $field_name => $field_value) {
+	foreach ($arr_fields  as $field_value) {
 
-		if (!wp_verify_nonce($_POST['_bakery_meta_box'], 'rmbt_bakery_meta_box')) {
-			return $post_id;
-		}
-
-		if (isset($_POST[$field_name])) {
-			update_post_meta($post_id, $field_name, sanitize_text_field($_POST[$field_name]));
+		if (isset($_POST[$field_value])) {
+			update_post_meta($post_id, $field_value, sanitize_text_field($_POST[$field_value]));
 		} else {
-			delete_post_meta($post_id, $field_name);
+			delete_post_meta($post_id, $field_value);
 		}
 	}
 

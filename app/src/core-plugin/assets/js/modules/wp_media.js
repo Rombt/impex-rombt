@@ -1,21 +1,32 @@
-function wpMedia(distImg) {
-  var media_frame = wp.media({
-    title: 'Select image',
+async function wpMedia(distImg) {
+  const media_frame = wp.media({
+    title: 'Выберите изображение', // Переведено на русский
     multiple: false,
     library: {
       type: 'image',
     },
   });
 
-  media_frame.on('select', function () {
-    var attachment = media_frame.state().get('selection').first().toJSON();
-    var $_imgGroup = jQuery(distImg);
-    $_imgGroup.attr('src', attachment.url);
-    $_imgGroup.attr('id', attachment.id);
-    $_imgGroup.show();
-  });
+  return new Promise((resolve, reject) => {
+    media_frame.on('select', async () => {
+      try {
+        const attachment = await media_frame.state().get('selection').first().toJSON();
+        const $img = jQuery(distImg);
 
-  media_frame.open();
+        $img.attr('src', attachment.url);
+        $img.attr('id', attachment.id);
+        $img.show();
+
+        resolve(attachment.id);
+      } catch (error) {
+        reject(error);
+      }
+    });
+
+    media_frame.on('error', error => reject(error));
+
+    media_frame.open();
+  });
 }
 
 export default wpMedia;

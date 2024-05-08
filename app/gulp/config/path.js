@@ -24,8 +24,8 @@ export const path = {
   RootPath: ROOT_PATH,
   proxy: [
     `http://impex-rombt/`,
-    // `http://web/impexmash/`,
-    `http://web/impex-rombt/`,
+    `http://web/impexmash/`,
+    // `http://web/impex-rombt/`,
   ],
 
   get src() {
@@ -291,21 +291,21 @@ export const path = {
         app.isWP && app.forPlugin
           ? [...path.src.php, ...path.src.plug]
           : app.isWP
-            ? path.src.php
-            : app.forPlugin
-              ? path.src.plug
-              : path.src.html,
+          ? path.src.php
+          : app.forPlugin
+          ? path.src.plug
+          : path.src.html,
       ...(Object.keys(path.prod).length !== 0
         ? {
-          dest:
-            app.isWP && app.forPlugin
-              ? [path.prod.php, path.prod.plug]
-              : app.isWP
+            dest:
+              app.isWP && app.forPlugin
+                ? [path.prod.php, path.prod.plug]
+                : app.isWP
                 ? path.prod.php
                 : app.forPlugin
-                  ? path.prod.plug
-                  : path.prod.html,
-        }
+                ? path.prod.plug
+                : path.prod.html,
+          }
         : {}),
     };
   },
