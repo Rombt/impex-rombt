@@ -29,7 +29,7 @@ if (count($arr_equipments_ids) > 0) {
                      <img src="<?php echo wp_get_attachment_url(intval($technological_card_img_id)) ?>" alt="technology card">
                   </div>
                <?php endif; ?>
-               <div class="rmbt-single-bakery__text"><?php echo strip_tags(get_the_content()) ?></div>
+               <div class="rmbt-single-bakery__text"><?php the_content() ?></div>
                <section class="wrap-bakery-equipment">
 
                   <?php

@@ -7,7 +7,17 @@
  */
 
 function liveSearch(whereToLook, selLi, textCont, input) {
-  let nl_li = whereToLook.querySelectorAll(selLi);
+  let nl_li;
+
+  whereToLook.querySelector(input).addEventListener('focus', function (e) {
+    nl_li = whereToLook.querySelectorAll(selLi);
+  });
+  whereToLook.querySelector(input).addEventListener('blur', function (e) {
+    nl_li.forEach(li => {
+      let text = li.querySelector(textCont);
+      text.innerHTML = text.innerText;
+    });
+  });
 
   whereToLook.querySelector(input).addEventListener('input', function (e) {
     let val = this.value.trim();

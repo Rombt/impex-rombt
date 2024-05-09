@@ -73,7 +73,6 @@ function bakeriesMetaBoxes() {
       }
     });
 
-    console.log('data.technologicalCard.url = ', data.technologicalCard.url);
     if (data.technologicalCard.url === false) {
       html.buttonSelectImg.textContent = 'Select image';
       html.hiddenInputTechnologicalCardId.value = false;
@@ -103,7 +102,9 @@ function bakeriesMetaBoxes() {
     html.iconSearchEquipment.src = `${rmbtBakery.rmbtPluginUrl}/impex-rombt-core/assets/img/icons/search.png`;
     html.wrapIconSearchEquipment.append(html.iconSearchEquipment);
     html.wrapSearchEquipment.append(html.wrapIconSearchEquipment);
+
     html.wrapSearchEquipment.append(html.inputSearchEquipment);
+
     html.quantityCards.textContent = `total cards: ${arrCards.length}`;
     html.mainWrapListEquipmentsSrc.append(html.quantityCards);
     html.mainWrapListEquipmentsSrc.append(html.wrapSearchEquipment);

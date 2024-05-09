@@ -22,6 +22,9 @@ function isElementInViewport(el) {
 // Function to start video
 function playVideoWhenVisible() {
   const videoBlock = document.getElementById('rmbt-promo-video');
+  if (!videoBlock) {
+    return;
+  }
   if (isElementInViewport(videoBlock)) {
     const video = videoBlock.querySelector('iframe');
     video.src = video.src.replace('autoplay=0', 'autoplay=1');
