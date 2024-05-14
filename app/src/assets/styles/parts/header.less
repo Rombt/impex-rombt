@@ -102,6 +102,17 @@
             display: inline-block;
             width: max-content;
           }
+
+          &:first-child {
+            // временно для редактирования контента
+            a {
+              color: red;
+            }
+          }
+
+          &:hover a {
+            // color: @color_logo_background;
+          }
         }
       }
     }

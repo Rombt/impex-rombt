@@ -31,9 +31,8 @@
             <div class="rmbt-footer__contacts">
                <div class="text">
                   <span><?php echo rmbt_get_redux_field('rmbt-address', 1) ?></span>
-                  <a href="mailto:<?php echo rmbt_get_redux_field('rmbt-email-1') ?>"><?php echo rmbt_get_redux_field('rmbt-email-1') ?></a>
-                  <a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-3'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-3') ?></a>
-                  <a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-4'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-4') ?></a>
+                  <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-phone'); ?>
+                  <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-email', 'mailto'); ?>
                </div>
 
             </div>

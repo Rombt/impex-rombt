@@ -26,19 +26,18 @@
 								</use>
 							</svg>
 							<span>Відділ продажу:</span>
-							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-1'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-1') ?>,</a>
-							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-2'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-2') ?>,</a>
-							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-3'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-3') ?></a>
+							<?php echo rmbt_redux_field_to_ul('rmbt-manager-1-phone'); ?>,
+							<?php echo rmbt_redux_field_to_ul('rmbt-manager-2-phone'); ?>
 						</div>
 						<div class="rmbt-service-department-phones">
 							<svg>
 								<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
 								</use>
 							</svg>
-							<span>Технічна підтримка:</span>
-							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-5'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-5') ?>,</a>
-							<span>Відділ запчастин</span>
-							<a href="tel:<?php echo rmbt_phone_number_clear_redux('rmbt-number-phone-6'); ?>"><?php echo rmbt_get_redux_field('rmbt-number-phone-6') ?></a>
+							<span><?php echo rmbt_get_redux_field('rmbt-manager-5-name') ?>:</span>
+							<?php echo rmbt_redux_field_to_ul('rmbt-manager-5-phone'); ?>,
+							<span><?php echo rmbt_get_redux_field('rmbt-manager-6-name') ?>:</span>
+							<?php echo rmbt_redux_field_to_ul('rmbt-manager-6-phone'); ?>
 						</div>
 					</div>
 				</div>

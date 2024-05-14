@@ -10,7 +10,7 @@
          <?php echo $args['text'] ?>
       </div>
    </div>
-   <footer>
+   <footer class="card-footer">
       <a href="<?php echo $args['link_read_more_href'] ?>">
          read more
          <svg>

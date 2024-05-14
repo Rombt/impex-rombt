@@ -396,10 +396,10 @@ function rmbt_get_redux_field($id_field, $kses = false)
 	return class_exists('ReduxFramework') ? esc_html__($rmbt_impex_options[$id_field]) : "";
 }
 
-function rmbt_phone_number_clear_redux($id_field)
+function rmbt_phone_number_clear_redux($phone_number)
 {
 	$pattern = '/[\)|\(| |-]/';
-	return preg_replace($pattern, '', rmbt_get_redux_field($id_field));
+	return preg_replace($pattern, '', $phone_number);
 }
 
 /**
@@ -422,4 +422,33 @@ function get_arr_names_cat_equip()
 		$arr_name_cat_equip[] = $name_cat_equip[1];
 	}
 	return $arr_name_cat_equip;
+}
+
+function rmbt_redux_field_to_ul($id_field, $mod = 'tel')
+{
+
+	$arr_numbers =  explode(',', rmbt_get_redux_field($id_field));
+
+	if (count($arr_numbers) > 1) {
+		$html = '<ul>';
+		foreach ($arr_numbers as $value) {
+
+			if ($mod == 'tel') {
+				$html .= '<li><a href="' . $mod . ':' . rmbt_phone_number_clear_redux($value) . '">' . trim($value) . '</a></li>';
+			} elseif ($mod == 'mailto') {
+				$html .= '<li><a href="' . $mod . ':' . $value . '">' . trim($value) . '</a></li>';
+			}
+		}
+
+		$html .= '</ul>';
+		return $html;
+	} else {
+
+
+		if ($mod == 'tel') {
+			return '<a href="' . $mod . ':' . rmbt_phone_number_clear_redux($arr_numbers[0]) . '">' . trim($arr_numbers[0]) . '</a>';
+		} elseif ($mod == 'mailto') {
+			return '<a href="' . $mod . ':' . $arr_numbers[0] . '">' . trim($arr_numbers[0]) . '</a>';
+		}
+	}
 }

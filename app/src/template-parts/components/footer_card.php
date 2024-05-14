@@ -1,4 +1,4 @@
-<footer>
+<footer class="card-footer">
    <a href="<?php echo $args['href']  ?>">
       read more
       <svg>

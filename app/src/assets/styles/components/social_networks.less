@@ -17,10 +17,16 @@
       svg {
         width: 90%;
         height: 90%;
-
+        border-radius: 50%;
         fill: @color_font_footer_light;
         stroke: @color_font_footer_light;
         stroke-width: 1px;
+
+        &:hover {
+          transform: scale(1.05);
+          fill: #ecedee;
+          stroke: #ecedee;
+        }
       }
     }
   }
