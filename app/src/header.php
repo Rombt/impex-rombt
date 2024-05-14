@@ -36,8 +36,8 @@
 							</svg>
 							<span><?php echo rmbt_get_redux_field('rmbt-manager-5-name') ?>:</span>
 							<?php echo rmbt_redux_field_to_ul('rmbt-manager-5-phone'); ?>,
-							<span><?php echo rmbt_get_redux_field('rmbt-manager-6-name') ?>:</span>
-							<?php echo rmbt_redux_field_to_ul('rmbt-manager-6-phone'); ?>
+							<span><?php echo rmbt_get_redux_field('rmbt-manager-4-name') ?>:</span>
+							<?php echo rmbt_redux_field_to_ul('rmbt-manager-4-phone'); ?>
 						</div>
 					</div>
 				</div>
