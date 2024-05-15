@@ -7,7 +7,7 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
 
 
 
-<div class="wrapper-section">
+<div class="wrapper-section wrapper-section-main-slider-screen">
    <div class="main-slider-screen swiper rmbt-full-width">
       <div class="background-picture wrap-img">
          <?php rmbt_redux_img('background_picture') ?>
@@ -22,7 +22,7 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
             <?php echo rmbt_get_redux_field('front_page_sub_title') ?>
          </div>
          <?php
-         // get_template_part('template-parts/components/button');
+
          get_template_part('template-parts/components/button-link', null, ['href' => rmbt_get_redux_field('button_href'), 'title' => rmbt_get_redux_field('button_title')]);
          ?>
       </div>
@@ -42,5 +42,8 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
          ?>
       </div>
       <div class="main-slider-screen__pagination"></div>
+
+
    </div>
+   <?php get_template_part('template-parts/components/search_block'); ?>
 </div>
