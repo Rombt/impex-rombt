@@ -11,7 +11,8 @@
          <section class="rmbt-container rmbt-contacts text-content">
             <?php get_template_part('template-parts/components/title', 'page', ['title' => get_the_title()]);
             ?>
-            <!-- <p><?php echo rmbt_get_redux_field('rmbt-contacts_section-text') ?></p> -->
+            <!-- <p><?php // echo rmbt_get_redux_field('rmbt-contacts_section-text') 
+                     ?></p> -->
             <div class="rmbt-contacts__row">
                <div class="rmbt-contacts__col">
                   <ul class="rmbt-contacts__departments">
@@ -65,40 +66,8 @@
                   </ul>
                </div>
                <div class="rmbt-contacts__col">
-                  <form action="" class="rmbt-contacts__feedback-form">
-                     <!-- <form action=""> -->
-                     <div>
-                        <p class="input-wrap">
-                           <svg>
-                              <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#name_1">
-                              </use>
-                           </svg>
-                           <input type="text" name="name">
-                        </p>
-                        <p class="input-wrap">
-                           <svg>
-                              <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_1">
-                              </use>
-                           </svg>
-                           <input type="tel" name="number">
-                        </p>
-                        <p class="input-wrap">
-                           <svg>
-                              <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#email_1">
-                              </use>
-                           </svg>
-                           <input type="email" name="email">
-                        </p>
-                        <button type="submit" class="rmbt-impex-button">відправити</button>
-                     </div>
-                     <div>
-                        <svg>
-                           <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#chat-bubble_1">
-                           </use>
-                        </svg>
-                        <textarea name="massage" class="contact-form-field"></textarea>
-                     </div>
-                     <!-- </form> -->
+                  <form id="contact-feedback-form" action="" method="POST">
+                     <?php echo do_shortcode('[contact-form-7 id="912ba89" title="rmbt страница контактов"]') ?>
                   </form>
                   <div class="rmbt-contacts__post-address">
                      <?php echo rmbt_get_redux_field('rmbt-address', 1) ?>

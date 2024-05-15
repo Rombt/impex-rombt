@@ -31,5 +31,13 @@ function playVideoWhenVisible() {
     window.removeEventListener('scroll', playVideoWhenVisible);
   }
 }
-
 window.addEventListener('scroll', playVideoWhenVisible);
+
+const contactFeedbackForm = document.querySelector('#contact-feedback-form');
+if (contactFeedbackForm) {
+  document.addEventListener('click', e => {
+    if (e.target.id === 'contactFeedbackFormSubmit') {
+      // e.preventDefault();
+    }
+  });
+}
