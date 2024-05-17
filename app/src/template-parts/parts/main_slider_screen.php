@@ -10,7 +10,7 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
 <div class="wrapper-section wrapper-section-main-slider-screen">
    <div class="main-slider-screen swiper rmbt-full-width">
       <div class="background-picture wrap-img">
-         <?php rmbt_redux_img('background_picture') ?>
+         <?php echo rmbt_redux_img('background_picture') ?>
          <span></span>
       </div>
 
