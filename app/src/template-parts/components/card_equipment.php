@@ -1,7 +1,7 @@
 <li class="card-equipment rmbt-shadow">
    <div class="card-equipment__body">
       <div class="wrap-img card-equipment__img">
-         <?php rmbt_redux_img($args['id-img'], $args['alt-img']) ?>
+         <?php echo rmbt_redux_img($args['id-img'], $args['alt-img']) ?>
       </div>
 
       <div class="card-equipment__title">

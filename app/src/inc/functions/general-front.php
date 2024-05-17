@@ -373,17 +373,17 @@ function rmbt_redux_get_pic_url($id_field_pic, $custom_default_url = '')
 
 function rmbt_redux_img($id_field_pic, $alt = "", $id_svg = '')
 {
-	if (rmbt_redux_get_pic_url($id_field_pic)) { ?>
-		<img src="<?php echo rmbt_redux_get_pic_url($id_field_pic); ?>" alt="<?php $alt; ?>">
-	<?php  } else {
+	if (rmbt_redux_get_pic_url($id_field_pic)) {
+		return '<img src="' . rmbt_redux_get_pic_url($id_field_pic) . '" alt="' . $alt . '">';
+	} else {
 		if ($id_svg == '') {
 			return;
-		} ?>
-		<svg>
-			<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#<?php echo $id_svg; ?>">
-			</use>
-		</svg>
-<?php 	}
+		}
+
+		return '<svg>
+			<use xlink:href="' . get_template_directory_uri() . '/assets/img/icons/sprite.svg#' . $id_svg . '"></use>
+		</svg>';
+	}
 }
 
 function rmbt_get_redux_field($id_field, $kses = false)

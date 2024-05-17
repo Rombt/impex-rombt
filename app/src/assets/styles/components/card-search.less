@@ -2,7 +2,7 @@
   flex-basis: 40%;
   flex-grow: 1;
   box-sizing: border-box;
-  padding: 0px 0px 10px 0px;
+  padding: 0px 0px 20px 0px;
 
   * {
     box-sizing: border-box;
@@ -15,13 +15,18 @@
   &__img {
     width: 100%;
     height: 75%;
+
+    .wrap-img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__body {
     height: 25%;
 
     h3 {
-      margin: 0px 0px 0px 0px;
+      margin: 10px 0px 0px 10px;
       // line-height: 100%;
       height: 50%;
     }
@@ -47,6 +52,7 @@
       height: 20px;
       fill: #ff6600;
       stroke: #ff6600;
+      border-radius: 50%;
 
       position: absolute;
       right: 20px;
@@ -59,6 +65,4 @@
       text-decoration: none;
     }
   }
-}
-.wrap-img {
 }
