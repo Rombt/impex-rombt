@@ -9,41 +9,23 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
 
 <div class="wrapper-section wrapper-section-main-slider-screen">
    <div class="main-slider-screen swiper rmbt-full-width">
-      <div class="background-picture wrap-img">
-         <?php echo rmbt_redux_img('background_picture') ?>
-         <span></span>
-      </div>
 
       <div class="site-title">
+         <div class="site-title__slogan"> <?php echo rmbt_get_redux_field('front_page_slogan') ?> </div>
          <div class="site-title__title">
             <h1><?php _e(rmbt_get_redux_field('front_page_title', 1), 'rmbt_impex') ?></h1>
+            <p> <?php echo rmbt_get_redux_field('front_page_subtitle') ?> </p>
          </div>
-         <div class="site-title__subtitle">
-            <?php echo rmbt_get_redux_field('front_page_sub_title') ?>
-         </div>
-         <?php
-
-         get_template_part('template-parts/components/button-link', null, ['href' => rmbt_get_redux_field('button_href'), 'title' => rmbt_get_redux_field('button_title')]);
+         <?php get_template_part('template-parts/components/button-link', null, ['href' => rmbt_get_redux_field('button_href'), 'title' => rmbt_get_redux_field('button_title')]);
          ?>
       </div>
 
-      <div class="swiper-wrapper">
-         <?php if (!empty($arr_main_slider_screen_gallery[0])) :
-            foreach ($arr_main_slider_screen_gallery as $image_id) :
-         ?>
-               <div class="swiper-slide">
-                  <div class="wrap-img main-slider-screen__wrap-img">
-                     <?php echo wp_get_attachment_image($image_id, 'rmbt_main_slider_img', false, ['alt' => 'main slider img']) ?>
-                  </div>
-               </div>
-         <?php
-            endforeach;
-         endif;
-         ?>
+      <div class="main-slider-screen__video">
+         <iframe frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Impexmash-PROMO" src="https://www.youtube.com/embed/off7w3-tptA?playlist=off7w3-tptA&amp;iv_load_policy=3&amp;enablejsapi=1&amp;disablekb=1&amp;autoplay=1&amp;controls=0&amp;mute=1&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;wmode=transparent&amp;origin=<?php echo get_site_url(); ?>"></iframe>
       </div>
-      <div class="main-slider-screen__pagination"></div>
+
 
 
    </div>
-   <?php get_template_part('template-parts/components/search_block'); ?>
+   <?php get_template_part('template-parts/components/search_block', '3'); ?>
 </div>

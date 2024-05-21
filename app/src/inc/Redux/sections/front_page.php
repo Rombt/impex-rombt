@@ -56,13 +56,19 @@ Redux::set_section(
 				'id' => 'front_page_title',
 				'type' => 'text',
 				'title' => esc_html__('Front page title', 'rmbt_impex'),
-				'default' => __(wp_kses('<span>Український виробник</span> хлібопекарського і кондитерського обладнання', 'post'), 'rmbt_impex'),
+				'default' => __(wp_kses('Український виробник', 'post'), 'rmbt_impex'),
 			),
 			array(
-				'id' => 'front_page_sub_title',
+				'id' => 'front_page_subtitle',
+				'type' => 'text',
+				'title' => esc_html__('Front page title', 'rmbt_impex'),
+				'default' => __(wp_kses('хлібопекарського і кондитерського обладнання', 'post'), 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_slogan',
 				'type' => 'text',
 				'title' => esc_html__('Front page subtitle', 'rmbt_impex'),
-				'default' => esc_html__('Завжди надійний постачальник', 'rmbt_impex'),
+				'default' => esc_html__('Завжди надійний постачальник!', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'button_title',

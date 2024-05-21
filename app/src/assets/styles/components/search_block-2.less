@@ -1,0 +1,107 @@
+.rmbt-search-block-2 {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  // transform: translate(-78%, 50%);
+  z-index: 1;
+  // .size(2);
+  width: max-content;
+
+  // border: 1px solid #0515fd;
+
+  box-sizing: border-box;
+
+  &__row {
+  }
+
+  &__col {
+    display: flex;
+    column-gap: @col_gap_between_cards;
+    // height: 300px;
+  }
+}
+
+/*==============================================*/
+
+.card-search-2 {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: scale(1.04);
+    transition: all 0.5s ease-out;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  overflow: hidden;
+
+  // background-color: #fff;
+  // background-color: #ffa74b;
+  // background-color: @color_logo_text_green;
+  background-color: transparent;
+
+  // &__img {
+  //   width: 100%;
+  //   height: 75%;
+
+  //   .wrap-img {
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
+
+  &__body {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 95%;
+    height: 95%;
+
+    border-radius: 50%;
+    padding: 10px 50px 10px 15px;
+
+    // background-color: rgb(149, 170, 187);
+    // background-color: #ffffff;
+    background-color: transparent;
+
+    box-shadow: 0 -2px 0 3px darken(rgb(90, 95, 89), 10%) inset, 0 5px 5px rgba(darken(rgb(90, 95, 89), 40%), 0.17),
+      0 15px rgba(#fff, 0.25) inset;
+
+    // box-shadow: 0 -2px 0 3px darken(rgb(90, 95, 89), 10%) inset, 0 5px 5px rgba(darken(rgb(90, 95, 89), 40%), 0.17),
+    //   0 15px rgba(#fa972d, 0.25) inset;
+
+    h3 {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      margin: 0px 0px 0px 0px;
+
+      font-size: 16px;
+      font-weight: 600;
+      font-family: Montserrat;
+
+      // color: #646464;
+      color: #ffffff;
+      // color: #fa972d;
+      // color: @color_logo_text_green;
+      // color: #ff9d34;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 160%;
+    }
+  }
+}

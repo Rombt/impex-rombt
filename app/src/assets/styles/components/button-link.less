@@ -3,10 +3,15 @@
   width: 220px;
   border-radius: 10px;
   background-color: @color_logo_background;
-  color: @color_font_light;
+  color: #e8e8e8;
   text-decoration: none;
 
   border: 2px solid @color_logo_background;
+
+  // box-shadow: 0 -2px 0 3px darken(rgb(90, 95, 89), 10%) inset, 0 5px 5px rgba(darken(rgb(250, 7, 238), 40%), 0.17),
+  //   0 15px rgba(#fff, 0.25) inset;
+  box-shadow: 0 -2px 0 3px #c67825 inset, 0 5px 5px rgba(52, 1, 49, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset,
+    1px 2px 5px 0px #ccbbb0;
 
   // font-size: 24px;
   font-family: OpenSans;
@@ -20,22 +25,6 @@
   position: relative;
   transition: 0.2s ease-in-out;
   z-index: 7;
-
-  &:before {
-    // content: '';
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(255, 255, 255, 0.1),
-    //   rgba(255, 255, 255, 0.5)
-    // );
-    // height: 60px;
-    // // width: 50px;
-    // width: 0px;
-    // position: absolute;
-    // top: 0px;
-    // left: -80px;
-    // transform: skewX(-45deg);
-  }
 
   &:hover:before {
     left: 100%;
