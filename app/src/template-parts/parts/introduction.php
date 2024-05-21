@@ -23,7 +23,7 @@
 
             </ul>
             <figure class="rmbt-introduction__img-col wrap-img">
-               <?php rmbt_redux_img('introduction_image', rmbt_get_redux_field('introduction_image_alt')) ?>
+               <?php echo rmbt_redux_img('introduction_image', rmbt_get_redux_field('introduction_image_alt')) ?>
             </figure>
          </div>
       </section>

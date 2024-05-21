@@ -3,7 +3,7 @@
       <div class="rmbt-benefits-bg-picture">
 
          <div class="wrap-img">
-            <?php rmbt_redux_img('rmbt-benefits-bg-picture_img-id', 'rmbt-benefits-bg-picture_img-alt') ?>
+            <?php echo rmbt_redux_img('rmbt-benefits-bg-picture_img-id', 'rmbt-benefits-bg-picture_img-alt') ?>
          </div>
 
       </div>
