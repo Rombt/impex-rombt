@@ -14,7 +14,7 @@ if (rmbt_get_redux_field('button_href') === '' || rmbt_get_redux_field('button_h
 
 
 <div class="wrapper-section wrapper-section-main-slider-screen">
-   <div class="main-slider-screen swiper rmbt-full-width">
+   <div class="main-slider-screen rmbt-full-width">
 
       <div class="site-title">
          <div class="site-title__slogan"> <?php echo rmbt_get_redux_field('front_page_slogan') ?> </div>
