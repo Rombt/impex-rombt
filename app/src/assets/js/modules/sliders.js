@@ -1,4 +1,4 @@
-if (document.querySelector('.main-slider-screen')) {
+if (document.querySelector('.swiper-wrapper')) {
   swiperParam = new Swiper('.main-slider-screen', {
     direction: 'horizontal',
     loop: true,
