@@ -12,6 +12,7 @@
 }
 .rmbt-top-row {
   .row-flex();
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 
@@ -40,18 +41,23 @@
 }
 .rmbt-sales-department-phones {
   .col();
-  .size(7);
+  width: max-content;
   height: 40px;
   display: flex;
   align-items: center;
+
+  white-space: nowrap;
 }
 .rmbt-service-department-phones {
   .col();
-  .size(5);
+  width: max-content;
   height: 40px;
   display: flex;
-  justify-content: end;
   align-items: center;
+
+  // flex-wrap: nowrap;
+  // word-wrap: initial;
+  white-space: nowrap;
 }
 
 .rmbt-bottom-row-bg {
@@ -132,7 +138,7 @@
         padding-right: 10px;
 
         a {
-          word-wrap: break-word;
+          // word-wrap: break-word;
           max-width: 100%;
           text-align: left;
           display: block;

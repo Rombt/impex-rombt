@@ -41,3 +41,20 @@ if (contactFeedbackForm) {
     }
   });
 }
+
+/* =============  changing structure of blocks for different screens  ============= */
+window.addEventListener('resize', resizeScreen);
+
+function resizeScreen(e) {
+  /* ----------- header  ----------- */
+  // const topRow = document.querySelector('.rmbt-top-row');
+  // if (!document.querySelector('.rmbt-departments-phones-mobile-cont')) {
+  //   const serviceDepartmentPhones = document.querySelector('.rmbt-service-department-phones');
+  //   if (serviceDepartmentPhones.getBoundingClientRect().right > topRow.getBoundingClientRect().right) {
+  //     const departmentsPhonesMobileCont = document.createElement('div');
+  //     departmentsPhonesMobileCont.classList.add('rmbt-departments-phones-mobile-cont');
+  //     topRow.remove();
+  //     topRow.append(departmentsPhonesMobileCont);
+  //   }
+  // }
+}

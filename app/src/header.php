@@ -12,7 +12,7 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<?php // get_template_part('template-parts/components/debug-grid');
+	<?php get_template_part('template-parts/components/debug-grid');
 	?>
 
 	<div class="rmbt-page-wrap">
@@ -34,10 +34,14 @@
 								<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
 								</use>
 							</svg>
-							<span><?php echo rmbt_get_redux_field('rmbt-manager-5-name') ?>:</span>
-							<?php echo rmbt_redux_field_to_ul('rmbt-manager-5-phone'); ?>,
-							<span><?php echo rmbt_get_redux_field('rmbt-manager-4-name') ?>:</span>
-							<?php echo rmbt_redux_field_to_ul('rmbt-manager-4-phone'); ?>
+							<div class="rmbt-spare-parts-department" data-da=".rmbt-service-department, 930">
+								<span><?php echo rmbt_get_redux_field('rmbt-manager-5-name') ?>:</span>
+								<?php echo rmbt_redux_field_to_ul('rmbt-manager-5-phone'); ?>,
+							</div>
+							<div class="rmbt-service-department">
+								<span><?php echo rmbt_get_redux_field('rmbt-manager-4-name') ?>:</span>
+								<?php echo rmbt_redux_field_to_ul('rmbt-manager-4-phone'); ?>
+							</div>
 						</div>
 					</div>
 				</div>
