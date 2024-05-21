@@ -3,6 +3,12 @@ global $rmbt_impex_options;
 if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
    $arr_main_slider_screen_gallery = explode(",", $rmbt_impex_options['main_slider_screen-gallery']);
 }
+
+if (rmbt_get_redux_field('button_href') === '' || rmbt_get_redux_field('button_href') === '#') {
+   $contact_page_url = get_permalink('11702');
+} else {
+   $contact_page_url = rmbt_get_redux_field('button_href');
+}
 ?>
 
 
@@ -16,7 +22,7 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
             <h1><?php _e(rmbt_get_redux_field('front_page_title', 1), 'rmbt_impex') ?></h1>
             <p> <?php echo rmbt_get_redux_field('front_page_subtitle') ?> </p>
          </div>
-         <?php get_template_part('template-parts/components/button-link', null, ['href' => rmbt_get_redux_field('button_href'), 'title' => rmbt_get_redux_field('button_title')]);
+         <?php get_template_part('template-parts/components/button-link', null, ['href' => $contact_page_url, 'title' => rmbt_get_redux_field('button_title')]);
          ?>
       </div>
 
