@@ -227,17 +227,14 @@
   .to(960px,{
     margin-top: 75px;
   });
-
-  .to(550px,{
-    margin-top: 80px;
-  });
 }
 
 .rmbt-bottom-row {
   .row-flex();
   align-items: center;
   padding: 0px 0px 0px 0px;
-  min-height: 60px;
+  // min-height: 60px;
+  .adaptive-prop(min-height, 60, 20);
 
   flex-wrap: nowrap;
 
