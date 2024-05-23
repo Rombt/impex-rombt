@@ -424,7 +424,7 @@ function get_arr_names_cat_equip()
 	return $arr_name_cat_equip;
 }
 
-function rmbt_redux_field_to_ul($id_field, $mod = 'tel')
+function rmbt_redux_field_to_ul($id_field, $mod = 'tel', $before_str = '', $after_str = '')
 {
 
 	$arr_numbers =  explode(',', rmbt_get_redux_field($id_field));
@@ -434,9 +434,9 @@ function rmbt_redux_field_to_ul($id_field, $mod = 'tel')
 		foreach ($arr_numbers as $value) {
 
 			if ($mod == 'tel') {
-				$html .= '<li><a href="' . $mod . ':' . rmbt_phone_number_clear_redux($value) . '">' . trim($value) . '</a></li>';
+				$html .= '<li><a href="' . $mod . ':' . rmbt_phone_number_clear_redux($value) . '">' . $before_str . trim($value) . $after_str . '</a></li>';
 			} elseif ($mod == 'mailto') {
-				$html .= '<li><a href="' . $mod . ':' . $value . '">' . trim($value) . '</a></li>';
+				$html .= '<li><a href="' . $mod . ':' . $value . '">' . $before_str . trim($value) . $after_str . '</a></li>';
 			}
 		}
 
@@ -446,9 +446,9 @@ function rmbt_redux_field_to_ul($id_field, $mod = 'tel')
 
 
 		if ($mod == 'tel') {
-			return '<a href="' . $mod . ':' . rmbt_phone_number_clear_redux($arr_numbers[0]) . '">' . trim($arr_numbers[0]) . '</a>';
+			return '<a href="' . $mod . ':' . rmbt_phone_number_clear_redux($arr_numbers[0]) . '">' . $before_str . trim($arr_numbers[0]) . $after_str . '</a>';
 		} elseif ($mod == 'mailto') {
-			return '<a href="' . $mod . ':' . $arr_numbers[0] . '">' . trim($arr_numbers[0]) . '</a>';
+			return '<a href="' . $mod . ':' . $arr_numbers[0] . '">' . $before_str . trim($arr_numbers[0]) . $after_str . '</a>';
 		}
 	}
 }

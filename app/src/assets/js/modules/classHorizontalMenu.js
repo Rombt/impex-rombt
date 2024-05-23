@@ -420,7 +420,7 @@ class HorizontalMenu {
 }
 
 const param = {
-  containersMenu: ['.cont-horizont-menu', '.wrap-drop-menu', '#my-menu'],
+  containersMenu: ['.cont-horizont-menu'],
   contAdditionalClasses: {
     drop: ['rmbt-shadow'],
     overflow: ['rmbt-shadow'],

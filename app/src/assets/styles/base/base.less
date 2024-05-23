@@ -12,7 +12,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  row-gap: (@margin_bottom_section / 2);
+  // row-gap: (@margin_bottom_section / 2);
+  .adaptive-prop(row-gap, 30, 0);
 }
 main {
   display: flex;
