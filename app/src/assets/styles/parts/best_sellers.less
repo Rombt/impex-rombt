@@ -6,10 +6,26 @@
   &__col {
     .col();
     .size(10);
+
     margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+    overflow: hidden;
+
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
+
+    .to(1024px,{
+    .size(12);
+    });
+
+    .to(768px,{
+    
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      row-gap: 30px;
+    });
   }
 
   .section-title {
