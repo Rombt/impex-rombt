@@ -1,30 +1,28 @@
 .rmbt-benefit-article {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: center;
   column-gap: 10px;
-
   max-width: 350px;
   flex-basis: 40%;
   flex-grow: 1;
+
+  .to(480px,{
+  width: 100% !important;
+
+   .wrap-img{
+    display: none;
+   }
+   
+  });
 
   .wrap-img {
     flex: 42px 0 0;
     height: 42px;
 
-    // // flex-shrink: 0;
-    // .adaptive-prop(flex-basis, 42, 32);
-    // .adaptive-prop(height, 42, 32);
-
-    // // .adaptive-prop(width, 42, 42);
-    // // .adaptive-prop(height, 42, 42);
-
     svg {
       fill: @color_logo_background;
       stroke: @color_logo_background;
-
       border-radius: 50%;
-
       width: 100%;
       height: 100%;
     }
@@ -32,19 +30,20 @@
 
   h3 {
     font-family: Montserrat;
-    font-size: 20px;
+    .adaptive-prop(font-size, 20, 16);
     font-weight: 600;
     vertical-align: middle;
-
+    text-align: center;
     margin: 0px 0px 10px 0px;
   }
 
   &__wrap-content {
     flex-basis: 60%;
-    flex-grow: 0;
   }
   &__body {
-    font-size: 15px;
+    text-align: center;
+
+    .adaptive-prop(font-size, 15, 14);
     font-family: OpenSans;
     font-weight: 400;
     font-style: normal;

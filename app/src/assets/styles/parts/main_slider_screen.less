@@ -65,12 +65,19 @@
         margin: 0px 0px 0px 0px;
       }
       h1 {
-        .adaptive-prop(font-size, 80, 20);
+        .adaptive-prop(font-size, 80, 24);
 
         font-weight: 900;
         color: #ffffff;
         margin: 0px 0px 0px 0px;
         text-align: center;
+
+        .to(480px,{
+          font-weight: 800;
+        });
+        .to(320px,{
+          font-weight: 700;
+        });
       }
     }
 

@@ -5,7 +5,7 @@
       </svg>
    </div>
    <div class="rmbt-benefit-article__wrap-content">
-      <h3> <?php echo $args['title'] ?></h3>
+      <h3 class="rmbt-benefit-article__title"> <?php echo $args['title'] ?></h3>
       <div class="rmbt-benefit-article__body">
          <?php echo $args['text'] ?>
       </div>
