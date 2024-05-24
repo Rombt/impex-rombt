@@ -8,8 +8,19 @@ if (document.querySelector('.rmbt-clients-portfolio-swiper')) {
       delay: 1000,
     },
 
-    slidesPerView: 4,
+    // slidesPerView: 4,
+    slidesPerView: 'auto',
     spaceBetween: 60,
+
+    breakpoints: {
+      768: {
+        spaceBetween: 20,
+        centeredSlidesBounds: true,
+      },
+      640: {
+        spaceBetween: 10,
+      },
+    },
   });
 }
 
