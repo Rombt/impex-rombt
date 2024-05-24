@@ -4,37 +4,39 @@
          <h2><?php // echo rmbt_get_redux_field('') 
                ?></h2>
          <div class="rmbt-footer__row">
-            <div class="rmbt-footer__about">
-               <?php if (has_custom_logo()) : ?>
-                  <?php the_custom_logo(); ?>
-               <?php endif ?>
-               <div class="text">
-                  <h3>ІМПЕКСМАШ</h3>
-                  <span>Український виробник хлібопекарського і кондитерського обладнання</span>
-               </div>
-               <?php get_template_part('template-parts/components/social_networks'); ?>
-
-            </div>
-            <div class="rmbt-footer__nav">
-               <?php if (has_nav_menu('footer_nav')) { ?>
-                  <div class="rmbt-cont-vertical-menu">
-                     <div class="menu-icon"><span></span></div>
-                  <?php wp_nav_menu(
-                     array(
-                        'theme_location' => 'footer_nav',
-                        'container' => 'nav',
-                     )
-                  );
-               } ?>
+            <div class="rmbt-footer__col">
+               <div class="rmbt-footer__about">
+                  <?php if (has_custom_logo()) : ?>
+                     <?php the_custom_logo(); ?>
+                  <?php endif ?>
+                  <div class="text">
+                     <h3>ІМПЕКСМАШ</h3>
+                     <span>Український виробник хлібопекарського і кондитерського обладнання</span>
                   </div>
-            </div>
-            <div class="rmbt-footer__contacts">
-               <div class="text">
-                  <span><?php echo rmbt_get_redux_field('rmbt-address', 1) ?></span>
-                  <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-phone'); ?>
-                  <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-email', 'mailto'); ?>
-               </div>
+                  <?php get_template_part('template-parts/components/social_networks'); ?>
 
+               </div>
+               <div class="rmbt-footer__nav">
+                  <?php if (has_nav_menu('footer_nav')) { ?>
+                     <div class="rmbt-cont-vertical-menu">
+                        <div class="menu-icon"><span></span></div>
+                     <?php wp_nav_menu(
+                        array(
+                           'theme_location' => 'footer_nav',
+                           'container' => 'nav',
+                        )
+                     );
+                  } ?>
+                     </div>
+               </div>
+               <div class="rmbt-footer__contacts">
+                  <div class="text">
+                     <span><?php echo rmbt_get_redux_field('rmbt-address', 1) ?></span>
+                     <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-phone'); ?>
+                     <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-email', 'mailto'); ?>
+                  </div>
+
+               </div>
             </div>
          </div>
       </section>
