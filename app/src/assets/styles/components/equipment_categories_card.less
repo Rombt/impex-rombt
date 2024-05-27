@@ -1,9 +1,14 @@
 .rmbt-equipment-article {
   .col();
-  .size(3);
-  min-height: 450px;
-
   position: relative;
+  width: 360px;
+  height: 450px;
+  overflow: hidden;
+
+  .to(480px,{
+    width: 260px;
+  height: 450px;
+  });
 
   &__hidden-container {
     position: absolute;
@@ -57,6 +62,11 @@
       transform: translate(-50%, -50%);
       width: 90%;
       height: 90%;
+
+      .to(480px,{
+        width: 240px !important;
+        height: 350px !important;
+      });
     }
   }
 
