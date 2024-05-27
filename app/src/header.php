@@ -57,7 +57,7 @@
 						<?php endif ?>
 						<?php if (has_nav_menu('header_nav')) { ?>
 							<div class="cont-horizont-menu">
-								<div class="menu-icon"><span></span></div>
+								<!-- <div class="menu-icon"><span></span></div> -->
 
 							<?php wp_nav_menu(
 								array(
