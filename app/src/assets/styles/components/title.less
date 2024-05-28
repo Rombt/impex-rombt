@@ -1,18 +1,18 @@
 .page-title,
 .section-title {
-  .adaptive-prop(font-size, 34, 28);
+  .adaptive-prop(font-size, 34, 18) !important;
   font-family: Montserrat;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
-  line-height: 120%;
+  line-height: 120% !important;
   color: @color_title_light;
   position: relative;
   padding-bottom: 10px;
-  .size(9);
-
   margin: 0px auto 20px auto;
+  width: max-content !important;
+  max-width: 100%;
 
   &:after {
     content: '';
@@ -21,7 +21,7 @@
     bottom: 0%;
     transform: translate(-50%, -0%);
 
-    width: 25%;
+    width: 50%;
     height: 2px;
     background-color: @color_logo_text_green;
   }

@@ -1,10 +1,15 @@
+.woocommerce div.product {
+  font-family: OpenSans;
+  color: #5a5a5a;
+  line-height: 24px;
+}
+
 .woocommerce div.product .product_title {
   text-align: center;
   padding-bottom: 20px;
   line-height: 40px;
 
   margin-top: @row_gap_between_cards;
-  //   margin-bottom: @row_gap_between_cards;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -15,10 +20,8 @@
 .woocommerce-page #content div.product div.summary,
 .woocommerce-page div.product div.summary {
   font-size: 15px;
-  font-family: OpenSans;
   font-weight: 600;
   font-style: normal;
-  line-height: 24px;
 }
 
 .woocommerce #content div.product div.summary,
@@ -42,6 +45,16 @@
   }
 }
 
+.woocommerce div.product .woocommerce-product-rating {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+
+  a {
+    display: flex;
+  }
+}
+
 .woocommerce-product-gallery__image {
   margin-right: @row_gap_between_cards * 0.4;
   &:first-child {
@@ -57,21 +70,40 @@
   }
 }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs {
-  background-color: #fff;
-}
-
 .woocommerce .products ul,
 .woocommerce ul.products {
   display: flex;
-  justify-content: space-between;
-  column-gap: 30px;
+  flex-wrap: wrap;
+  list-style: none;
+
+  // justify-content: space-between;
+  justify-content: flex-start;
+
+  .to(1280px,{
+      justify-content: center;
+  
+  });
 }
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
   padding: 20px 10px 40px 10px;
   position: relative;
+
+  margin-right: @col_gap_between_cards !important;
+  margin-bottom: @row_gap_between_cards !important;
+
+  .adaptive-prop(width, 300, 160);
+
+  .to(1280px,{
+
+    .adaptive-prop(width, 335, 220)!important;
+  
+  });
+
+  &:last-child {
+    margin-right: 0px;
+  }
 
   footer {
     position: absolute;
@@ -86,7 +118,38 @@
   padding-top: 15px;
 }
 
-.woocommerce .products ul,
-.woocommerce ul.products {
-  column-gap: initial;
+.woocommerce-breadcrumb {
+  .to(768px,{
+  display:none;
+  });
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+  iframe {
+    .to(768px,{
+      width: 90% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+    });
+  }
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  background-color: #fff;
+  .to(480px,{
+  
+    text-align: center;
+    padding-left: 0px;
+  
+    li {
+      width: 90%;
+    }
+  });
+
+  .to(420px,{
+
+      li {
+      width: 80%;
+    }
+  });
 }

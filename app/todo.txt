@@ -1,5 +1,6 @@
       источник: https://themeforest.net/item/elizah-business-and-corporate-responsive-website/22032574
 
+      кнопка прокрутки к верху страницы
       ! поиск по оборудованию
       ! поиск по сайту 
             форма, страница результатов

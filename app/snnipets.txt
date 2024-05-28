@@ -57,7 +57,7 @@
 					    </nav>
 				    </div>
 				<!-- description: look  for styles  on the path app/src/assets/styles/components/burger.less  -->
-			spl -simple spoilep
+			spl -simple spoiler
 				<tabTrigger>spl</tabTrigger>
 				<div class="spoiler">
 	                <div class="spoiler__title">${1:Title}</div>
