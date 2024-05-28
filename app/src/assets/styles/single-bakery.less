@@ -11,12 +11,14 @@
 }
 .rmbt-technology-card {
   .col();
-  .size(8);
-  height: 450px;
+  .size(10);
+  aspect-ratio: 16/9;
   margin: 0 auto;
 
-  .wrap-img {
-  }
+  .to(480px,{
+  .size(12);
+
+});
 }
 
 .wrap-bakery-equipment {
@@ -30,8 +32,15 @@
   column-gap: 30px;
   row-gap: 30px;
 
+  .to(480px,{
+    justify-content: center;
+  
+  });
+
   .rmbt-equipment-article {
     margin: 0px 0px 0px 0px;
     .size(3);
+
+    min-width: 300px;
   }
 }

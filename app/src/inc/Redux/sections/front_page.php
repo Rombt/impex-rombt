@@ -304,7 +304,7 @@ Redux::set_section(
 			array(
 				'id' => 'benefits-block_start',
 				'type' => 'accordion',
-				'title' => esc_html__('Benefit first section', 'rmbt_impex'),
+				'title' => esc_html__('Benefit section', 'rmbt_impex'),
 				'subtitle' => 'Add your content to the section \'benefits-block\'',
 				'position' => 'start',
 			),
@@ -323,7 +323,7 @@ Redux::set_section(
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-1',
-				'type' => 'text',
+				'type' => 'textarea',
 				'title' => esc_html__('Text of first article', 'rmbt_impex'),
 			),
 			/*------------------  the end of first article block -----------------*/
@@ -336,7 +336,7 @@ Redux::set_section(
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-2',
-				'type' => 'text',
+				'type' => 'textarea',
 				'title' => esc_html__('Text of second article', 'rmbt_impex'),
 			),
 			/*------------------  the end of second article block -----------------*/
@@ -349,7 +349,7 @@ Redux::set_section(
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-3',
-				'type' => 'text',
+				'type' => 'textarea',
 				'title' => esc_html__('Text of third article', 'rmbt_impex'),
 			),
 			/*------------------  the end of third article block -----------------*/
@@ -362,7 +362,7 @@ Redux::set_section(
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-4',
-				'type' => 'text',
+				'type' => 'textarea',
 				'title' => esc_html__('Text of fourth article', 'rmbt_impex'),
 			),
 			/*------------------  the end of fourth article block -----------------*/
