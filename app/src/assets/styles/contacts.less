@@ -22,13 +22,56 @@
 
   &__row {
     .row-flex();
+
+    justify-content: center;
   }
 
   &__col {
     .col();
     .size(6);
-
     position: relative;
+
+    min-width: 280px;
+
+    .to(670px,{
+    width:100%
+    });
+
+    &:first-child {
+      // .size(5);
+    }
+
+    .rmbt-benefit-article {
+      min-width: 280px;
+      overflow: hidden;
+
+      h3 {
+        text-align: center !important;
+      }
+
+      .rmbt-benefit-article__wrap-content {
+        .to(480px,{
+          justify-content: center;
+          *{
+            text-align: center;
+          }
+      });
+
+        h3,
+        div {
+          text-align: left;
+        }
+        ul {
+          margin: 0px 0px 0px 0px;
+          padding: 0px 0px 0px 0px;
+          list-style-type: none;
+        }
+
+        p {
+          text-indent: 0px;
+        }
+      }
+    }
   }
 
   .rmbt-contacts-map {
@@ -45,11 +88,17 @@
     flex-direction: column;
     row-gap: @row_gap_between_cards;
 
+    .to(768px,{
+      padding: 0px 0px 0px 0px;
+    
+    });
+
     .selling-department,
     .service-department {
       display: flex;
       flex-wrap: wrap;
       column-gap: @col_gap_between_cards * 0.5;
+      row-gap: @col_gap_between_cards * 0.5;
 
       position: relative;
       padding-bottom: 20px;
@@ -76,10 +125,18 @@
 
   .rmbt-contacts-feedback-form {
     display: flex;
+    flex-wrap: wrap;
     column-gap: @col_gap_between_cards;
     margin-bottom: @row_gap_between_cards;
     width: 100%;
     box-sizing: border-box;
+
+    overflow: hidden;
+    row-gap: 20px;
+
+    .to(480px,{
+      flex-direction:column;
+    });
 
     &__input-wrap {
       display: flex;
@@ -89,6 +146,8 @@
       flex-basis: 40%;
       flex-grow: 1;
       border-radius: 10px;
+
+      .adaptive-prop(min-width, 270, 120);
 
       p {
         display: block;
@@ -142,14 +201,13 @@
       .submit-wrap {
         position: relative;
         margin-top: 20px;
-
-        .rmbt-impex-button {
-          position: absolute;
-          right: 0%;
-          top: 0%;
-          border: 1px solid #b3b3b3 !important;
-          box-shadow: 1px 5px 15px 0px #b5aeae;
-        }
+      }
+      .rmbt-impex-button {
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        border: 1px solid #b3b3b3 !important;
+        box-shadow: 1px 5px 15px 0px #b5aeae;
       }
     }
 
@@ -157,9 +215,12 @@
       flex-basis: 40%;
       flex-grow: 1;
 
+      .adaptive-prop(min-width, 270, 120);
+
       p {
         margin: 0px 0px 0px 0px;
         position: relative;
+        text-indent: 0px;
 
         svg {
           width: 20px;
@@ -176,15 +237,15 @@
         }
 
         span {
-          position: absolute;
-          left: 0%;
-          top: 0%;
+          // position: absolute;
+          // left: 0%;
+          // top: 0%;
           width: 100%;
 
           textarea {
-            position: absolute;
-            left: 0%;
-            top: 0%;
+            // position: absolute;
+            // left: 0%;
+            // top: 0%;
             width: 100%;
             height: 280px;
             max-height: 280px;
@@ -206,6 +267,16 @@
           }
         }
       }
+    }
+
+    .to(1180px,{
+      justify-content: flex-end;
+    });
+
+    .rmbt-impex-button {
+      .to(480px,{
+          margin: 0 auto;
+        });
     }
   }
 
