@@ -1,20 +1,17 @@
-.wrapper-section {
-}
-.rmbt-full-width {
-}
 .rmbt-blog-full-width {
 }
-.rmbt-container {
-}
 .rmbt-blog {
-  /* .rmbt-blog__row */
-
   &__row {
     .row-flex();
+    justify-content: center;
   }
 
-  /* .rmbt-blog__col */
-
   &__col {
+    .col();
+    .size(10);
+
+    .to(768px,{
+      .size(12);
+    });
   }
 }
