@@ -57,9 +57,26 @@ document.addEventListener('click', e => {
 
 const logo = document.querySelector('.custom-logo-link');
 const contHorizontMenu = document.querySelector('.cont-horizont-menu');
+
+const contactForm = document.querySelector('#contact-feedback-form');
+let buttonSubmitContactFeedbackForm;
+if (contactForm) {
+  buttonSubmitContactFeedbackForm = contactForm.querySelector('.submit-wrap');
+}
+
 if (window.innerWidth <= 767) {
   document.querySelector('.rmbt-top-row').prepend(logo);
   document.querySelector('.rmbt-top-row').append(contHorizontMenu);
+  if (window.innerWidth < 670) {
+    if (buttonSubmitContactFeedbackForm) {
+      contactForm.querySelector('.rmbt-contacts-feedback-form__input-wrap').append(buttonSubmitContactFeedbackForm);
+    }
+    if (window.innerWidth < 482) {
+      if (buttonSubmitContactFeedbackForm) {
+        contactForm.querySelector('.rmbt-contacts-feedback-form').append(buttonSubmitContactFeedbackForm);
+      }
+    }
+  }
 } else if (window.innerWidth > 767) {
   document.querySelector('.rmbt-bottom-row').prepend(logo);
   document.querySelector('.rmbt-bottom-row').append(contHorizontMenu);
@@ -67,12 +84,21 @@ if (window.innerWidth <= 767) {
 
 window.addEventListener('resize', resizeScreen);
 function resizeScreen(e) {
-  /* ----------- header  ----------- */
-
-  const logo = document.querySelector('.custom-logo-link');
   if (window.innerWidth <= 767) {
     document.querySelector('.rmbt-top-row').prepend(logo);
     document.querySelector('.rmbt-top-row').append(contHorizontMenu);
+
+    contactForm.querySelector('.rmbt-contacts-feedback-form').append(buttonSubmitContactFeedbackForm);
+    if (window.innerWidth < 670) {
+      if (buttonSubmitContactFeedbackForm) {
+        contactForm.querySelector('.rmbt-contacts-feedback-form__input-wrap').append(buttonSubmitContactFeedbackForm);
+      }
+      if (window.innerWidth < 482) {
+        if (buttonSubmitContactFeedbackForm) {
+          contactForm.querySelector('.rmbt-contacts-feedback-form').append(buttonSubmitContactFeedbackForm);
+        }
+      }
+    }
   } else if (window.innerWidth > 767) {
     document.querySelector('.rmbt-bottom-row').prepend(logo);
     document.querySelector('.rmbt-bottom-row').append(contHorizontMenu);
