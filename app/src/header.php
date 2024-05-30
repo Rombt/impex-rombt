@@ -46,6 +46,7 @@
 								<?php echo rmbt_redux_field_to_ul('rmbt-manager-4-phone'); ?>
 							</div>
 						</div>
+						<?php get_template_part('template-parts/parts/searchform'); ?>
 					</div>
 				</div>
 			</div>
