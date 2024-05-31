@@ -47,14 +47,7 @@ document.addEventListener('click', e => {
 
   if (target.classList.contains('.rmbt-phones-for-mobile') || target.closest('.rmbt-phones-for-mobile')) {
     target.closest('.rmbt-phones-for-mobile').querySelector('.rmbt-phones-for-mobile__body').classList.toggle('active');
-  }
-  // else if (
-  //   target.classList.contains('.rmbt-search-modal__trigger') ||
-  //   target.closest('.rmbt-search-modal__trigger')
-  // ) {
-  //   document.querySelector('.rmbt-search-modal').classList.toggle('active');
-  // }
-  else {
+  } else {
     // клик мимо
     document.querySelector('.rmbt-phones-for-mobile__body').classList.remove('active');
   }

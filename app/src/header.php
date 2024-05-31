@@ -23,8 +23,8 @@
 						<div class="rmbt-phones-for-mobile__body"></div>
 					</div>
 					<div class="rmbt-top-row">
-						<div class="rmbt-sales-department-phones" data-da=".rmbt-phones-for-mobile__body, 480">
-							<svg data-da=".rmbt-phones-for-mobile, 480">
+						<div class="rmbt-sales-department-phones" data-da=".rmbt-phones-for-mobile__body, 650">
+							<svg data-da=".rmbt-phones-for-mobile, 650">
 								<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
 								</use>
 							</svg>
@@ -32,7 +32,7 @@
 							<?php echo rmbt_redux_field_to_ul('rmbt-manager-1-phone', 'tel', '', ','); ?>
 							<?php echo rmbt_redux_field_to_ul('rmbt-manager-2-phone'); ?>
 						</div>
-						<div class="rmbt-service-department-phones" data-da=".rmbt-phones-for-mobile__body, 480">
+						<div class="rmbt-service-department-phones" data-da=".rmbt-phones-for-mobile__body, 650">
 							<svg>
 								<use xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
 								</use>
