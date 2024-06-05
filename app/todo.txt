@@ -1,5 +1,11 @@
       источник: https://themeforest.net/item/elizah-business-and-corporate-responsive-website/22032574
 
+
+      woocommerce-pagination  в соответствие с  rmbt-pagination  !!
+      Google PageSpeed!!!!
+
+      bakeries_meta_boxes и categories-grouping возможность изменения порядка следования перетаскиванием мышкой
+      слайдер картинок на странице товара woocommerce 
       кнопка прокрутки к верху страницы
       кнопка перезвонить мне
       не забыть обязательные страницы WP такие как 
@@ -18,11 +24,3 @@
       для всех заголовков
             скрипт который будет уменьшать размер шрифта так чтобы одно слово не разрывалось на несколько строк
       
-      поля для категорий оборудования
-            в плагине, получить перечень категорий 
-            динамически создавать поля REDUX для страниц
-                  equipment_categories.php
-                  equipment_categories_group.php
-
-      video_block
-            обработка ошибок при загрузке promo video ролика
