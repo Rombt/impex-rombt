@@ -1,6 +1,6 @@
 export let configFTP = {
-   host: " ",      // address of FTP server
-   user: " ",      // user name
-   password: " ",
-   parallel: 5    // количество одновременных потоков
-}
+  host: 'ftpupload.net', // address of FTP server
+  user: 'if0_36671360', // user name
+  password: 'd53qmhmpzjV',
+  parallel: 5, // количество одновременных потоков
+};

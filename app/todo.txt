@@ -1,11 +1,14 @@
       источник: https://themeforest.net/item/elizah-business-and-corporate-responsive-website/22032574
 
-      на новый сайт вставить блоки для google ADD Words и аналитику   !!!!!!!!!!!!!!!!
+
+      тестирование вёрстки
+            Google PageSpeed!!!!
+
+      добавить анимации       
+      настроить редиректы         https://youtu.be/VMdF85gC98Y?si=1hnH_-3QrzgEdHan
       robots.txt проверить существование и адекватность
 
       woocommerce-pagination  в соответствие с  rmbt-pagination  !!
-      Google PageSpeed!!!!
-
       bakeries_meta_boxes и categories-grouping возможность изменения порядка следования перетаскиванием мышкой
       слайдер картинок на странице товара woocommerce 
       кнопка прокрутки к верху страницы

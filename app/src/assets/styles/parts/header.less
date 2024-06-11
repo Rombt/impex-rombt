@@ -255,9 +255,7 @@
       padding-right: 40px;
 
       .to(767px, {
-
         width: 0px !important;
-
       });
 
       > ul {
@@ -361,18 +359,13 @@ a.custom-logo-link {
     });
 }
 
-// .rmbt-visible_burger {
-//   // width: 100vw !important;
-//   height: 100vh !important;
+.rmbt-visible_burger {
+  min-width: none !important;
 
-//   #menu-impexmash {
-//     display: flex !important;
-//     align-items: flex-end !important;
-
-//     border: 3px solid #0515fd;
-
-//     li {
-//       border: 1px solid #0515fd;
-//     }
-//   }
-// }
+  .icon-drop {
+    &:after,
+    &:before {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
