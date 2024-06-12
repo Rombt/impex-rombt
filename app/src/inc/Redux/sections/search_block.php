@@ -59,10 +59,14 @@ Redux::set_section(
          array(
             'id' => 'search-card-2_text',
             'type' => 'text',
-            'title' => esc_html__('Title of Search first card', 'rmbt_impex'),
+            'title' => esc_html__('Title of Search second card', 'rmbt_impex'),
             'default' => esc_html__('Дивитися', 'rmbt_impex'),
          ),
-
+         array(
+            'id' => 'search-card-2_link',
+            'type' => 'text',
+            'title' => esc_html__('Link for Search first card', 'rmbt_impex'),
+         ),
          array(
             'id' => 'rmbt-search-card_img-id-2',
             'type' => 'media',

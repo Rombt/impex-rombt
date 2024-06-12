@@ -12,12 +12,12 @@
                <?php get_template_part('template-parts/components/card', 'benefit', [
                   'title' => rmbt_get_redux_field('introduction_first_block-title'),
                   'text' => rmbt_get_redux_field('introduction_first_block-text'),
-                  'id-img' => 'worker-cap_1',
+                  'id-img' => 'gear-introduction_1',
                ]); ?>
                <?php get_template_part('template-parts/components/card', 'benefit', [
                   'title' => rmbt_get_redux_field('introduction_second_block-title'),
                   'text' => rmbt_get_redux_field('introduction_second_block-text'),
-                  'id-img' => 'worker-cap_1',
+                  'id-img' => 'bread-introduction_5',
                ]); ?>
 
 

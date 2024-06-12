@@ -269,13 +269,6 @@
             width: max-content;
           }
 
-          &:first-child {
-            // временно для редактирования контента
-            a {
-              color: red;
-            }
-          }
-
           &:hover a {
             // color: @color_logo_background;
           }
@@ -347,6 +340,11 @@ a.custom-logo-link {
   .shift-left(1);
   .size(1);
   min-width: 70px;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    scale: 1.08;
+  }
 
   img {
     width: 100%;
