@@ -1,6 +1,8 @@
 (function (blocks, editor, element) {
   var el = element.createElement;
 
+  console.log('editor = ', editor);
+
   blocks.registerBlockType('rmbt/history-card', {
     title: 'History card ',
     icon: 'index-card',
@@ -9,6 +11,10 @@
       title: {
         type: 'string',
         default: 'Block Title',
+      },
+      content: {
+        type: 'string',
+        default: 'Содержимое блока',
       },
     },
     edit: function (props) {
@@ -37,12 +43,12 @@
       return el(
         'div',
         { className: props.className },
-        el(editor.RichText.content, {
+        el(editor.RichText.Content, {
           tagName: 'h2',
           className: 'rmbt-history-card-title',
           value: props.attributes.title,
         }),
-        el(editor.RichText.content, {
+        el(editor.RichText.Content, {
           tagName: 'div',
           className: 'rmbt-history-card-text',
           value: props.attributes.content,
