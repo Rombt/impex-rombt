@@ -42,6 +42,7 @@ require_once plugin_dir_path(__FILE__) . 'inc/general-admin.php';
 require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
 require_once plugin_dir_path(__FILE__) . 'inc/categories-grouping/index.php';
 require_once plugin_dir_path(__FILE__) . 'inc/bakeries_meta_boxes/index.php';
+require_once plugin_dir_path(__FILE__) . 'inc/gutenberg/index.php';
 
 // require_once plugin_dir_path(__FILE__) . 'inc/acf.php';
 

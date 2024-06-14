@@ -50,12 +50,17 @@ export const path = {
         `${this.src.php}/assets/styles/**/*.less`,
         `${this.src.php}/assets/styles/**/*.scss`,
         `${this.src.php}/${this.srcPluginName}/assets/styles/**/*.less`,
+        `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.css`,
       ],
       images: [
         `${this.src.php}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
         `${this.src.php}/${this.srcPluginName}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
       ],
-      js: [`${this.src.php}/assets/js/**/*.js`, `${this.src.php}/${this.srcPluginName}/assets/js/**/*.js`],
+      js: [
+        `${this.src.php}/assets/js/**/*.js`,
+        `${this.src.php}/${this.srcPluginName}/assets/js/**/*.js`,
+        `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.js`,
+      ],
       php: [`${this.src.php}/**/*.{php,html}`, `${this.src.php}/${this.srcPluginName}/**/*.{php,html}`],
       fonts: [
         `${this.src.php}/assets/fonts/**/*.{woff,woff2}`,
@@ -198,7 +203,11 @@ export const path = {
           `${this.src.php}/assets/styles/libs/**/*.*`,
           `${this.src.php}/assets/js/libs/**/*.*`,
         ],
-        plug: [`${this.src.php}/${this.srcPluginName}/README.md`],
+        plug: [
+          `${this.src.php}/${this.srcPluginName}/README.md`,
+          `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.css`,
+          `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.js`,
+        ],
       },
       prod: {
         html: `${this.prod.html}`,
