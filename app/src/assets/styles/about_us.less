@@ -1,0 +1,52 @@
+.has-text-align-left {
+  .size(10);
+  .adaptive-prop(font-size, 17, 14);
+
+  font-weight: 500;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: @row_gap_between_cards;
+  .to(768px,{
+    .size(12);
+    });
+}
+
+.rmbt-about-us__col {
+  .wp-block-group {
+    margin-bottom: @row_gap_between_cards;
+    align-items: flex-start;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .to(768px,{
+      text-align: center;
+    });
+    }
+
+    .wp-block-image {
+      margin-right: 20px;
+
+      .to(768px,{
+          margin-right: 0px;
+    });
+
+      img {
+        width: 300px !important;
+        .adaptive-prop(min-width, 300, 200) !important;
+        height: auto;
+      }
+    }
+
+    .to(768px,{
+      flex-wrap: wrap !important;
+      justify-content: center;
+    });
+  }
+
+  & > div.wp-block-group:last-child {
+    margin-bottom: @row_gap_between_cards;
+  }
+}
