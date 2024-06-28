@@ -167,7 +167,7 @@ class HorizontalMenu {
   constructor(param) {
     this.containersMenu = param.containersMenu || '.cont-horizont-menu';
     this.nl_containersMenu = this._getArrNodeLists(this.containersMenu);
-    if (this.nl_containersMenu.length === null) throw new Error('Menus with given selectors  are absent on this page');
+    if (this.nl_containersMenu.length == 0) throw new Error('Menus with given selectors  are absent on this page');
     this.contAdditionalClasses = param.contAdditionalClasses;
     this.iconOverflow = this._clearClassName(param.iconOverflow || 'icon-overflow');
     this.iconBurger = this._clearClassName(param.iconBurger || 'icon-burger');
@@ -188,21 +188,13 @@ class HorizontalMenu {
   }
 
   forEachMenu() {
-    // console.log('this.nl_containersMenu = ', this.nl_containersMenu);
-
     for (let index = 0; index < this.nl_containersMenu.length; index++) {
       const arrNodeList = this.nl_containersMenu[index];
-
-      if (arrNodeList.length < 1) {
-        return;
-      }
 
       for (let i = 0; i <= arrNodeList.length - 1; i++) {
         let contCurrentMenu = arrNodeList[i];
         if (!contCurrentMenu.querySelector('nav')) continue;
-
         this.monitoringResize(contCurrentMenu);
-
         this.menuContainerDrop(contCurrentMenu);
         this.setSubMenuIcon(contCurrentMenu);
         this.setBurgerIcon(contCurrentMenu);
@@ -210,24 +202,8 @@ class HorizontalMenu {
     }
   }
 
-  // мenuВuilding(contCurrentMenu) {
-  //     /*
-  //         строит меню при загрузке страницы
-  //         перестраивает меню при resize окна
-  //             перемещая li из menuOverflow в ul основного меню
-  //             для того что бы в burger menu отображались все li
-
-  //         получает
-
-  //     */
-
-  // }
-
   clearNav(contCurrentMenu) {
-    if (
-      contCurrentMenu.querySelector('nav').classList.contains(this.hiddenClass) ||
-      contCurrentMenu.querySelector('nav').classList.contains(`${this.visibleClass}_${this.modifiers.burger}`)
-    ) {
+    if (contCurrentMenu.querySelector('nav').classList.contains(this.hiddenClass) || contCurrentMenu.querySelector('nav').classList.contains(`${this.visibleClass}_${this.modifiers.burger}`)) {
       contCurrentMenu.querySelector('nav').className = '';
       if (typeof gsap !== 'undefined') {
         Object.keys(this.animation.burger.close).forEach(prop => {
@@ -275,9 +251,7 @@ class HorizontalMenu {
 
   monitoringResize(contCurrentMenu) {
     const currentMenu = contCurrentMenu.querySelector('nav>ul:first-child');
-    const paddingRightCurrentMenu = +window
-      .getComputedStyle(contCurrentMenu.querySelector('nav'))
-      .paddingRight.replace(/px/g, '');
+    const paddingRightCurrentMenu = +window.getComputedStyle(contCurrentMenu.querySelector('nav')).paddingRight.replace(/px/g, '');
     const paddingRightcontCurrentMenu = +window.getComputedStyle(contCurrentMenu).paddingRight.replace(/px/g, '');
     let prevRightCont = contCurrentMenu.getBoundingClientRect().right;
 
@@ -309,27 +283,20 @@ class HorizontalMenu {
         prevRightlastLi = prevlastLi.getBoundingClientRect().right;
       }
 
-      const sumDistanceBetweenLi = [...contCurrentMenu.querySelectorAll('nav>ul:first-child>li')].reduce(
-        (accum, li, i, arr) => {
-          if (arr[i + 1]) accum += arr[i + 1].getBoundingClientRect().left - li.getBoundingClientRect().right;
-          return accum;
-        },
-        0
-      );
+      const sumDistanceBetweenLi = [...contCurrentMenu.querySelectorAll('nav>ul:first-child>li')].reduce((accum, li, i, arr) => {
+        if (arr[i + 1]) accum += arr[i + 1].getBoundingClientRect().left - li.getBoundingClientRect().right;
+        return accum;
+      }, 0);
 
       if (currentRightCont - prevRightCont < 0) {
         // окно уменьшается
         if (prevRightlastLi > currentRightMainUl) overflowCont.prepend(prevlastLi);
       } else {
         // окно увеличивается
-        if (
-          sumDistanceBetweenLi - widthPrevFirstOverflowLi >
-          (paddingRightCurrentMenu + paddingRightcontCurrentMenu) * 2
-        ) {
+        if (sumDistanceBetweenLi - widthPrevFirstOverflowLi > (paddingRightCurrentMenu + paddingRightcontCurrentMenu) * 2) {
           if (prevFirstOverflowLi) currentMenu.append(prevFirstOverflowLi);
           if (contCurrentMenu.querySelectorAll(`.${this.hiddenMenuCont.overflow}>li`).length == 0) {
-            if (contCurrentMenu.querySelector('.icon-overflow'))
-              contCurrentMenu.querySelector('.icon-overflow').remove();
+            if (contCurrentMenu.querySelector('.icon-overflow')) contCurrentMenu.querySelector('.icon-overflow').remove();
           }
         }
       }
@@ -612,9 +579,15 @@ class HorizontalMenu {
         */
   _getArrNodeLists(date) {
     if (Array.isArray(date)) {
-      return date.map(el => document.querySelectorAll(el));
-    } else {
-      return [document.querySelectorAll(date)];
+      let nl_menus = date
+        .map(el => document.querySelectorAll(el))
+        .filter((menu, index, nodeList) => {
+          if (menu.length > 0) {
+            return menu;
+          }
+        });
+
+      return nl_menus;
     }
   }
 
