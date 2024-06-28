@@ -18,6 +18,11 @@ function quantityProducts() {
   QuantityBlocks.forEach(element => {
     const quantityArrowMinus = element.querySelector('.quantity-arrow-minus');
     const quantityArrowPlus = element.querySelector('.quantity-arrow-plus');
+
+    if (!quantityArrowMinus || !quantityArrowPlus) {
+      return;
+    }
+
     const input = element.querySelector(`input`);
 
     quantityArrowMinus.addEventListener('click', quantityMinus);
@@ -36,6 +41,7 @@ function quantityProducts() {
 }
 
 quantityProducts();
-jQuery(document).ajaxComplete(function () { // as  after ajax loading form it elements are changed
+jQuery(document).ajaxComplete(function () {
+  // as  after ajax loading form it elements are changed
   quantityProducts();
 });
