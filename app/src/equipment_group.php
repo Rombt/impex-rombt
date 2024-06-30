@@ -9,7 +9,12 @@ $arr_all_products = [];
 $id_group = isset($_GET['id_group']) ? $_GET['id_group'] : false;
 $group = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id_group))[0];
 $categories = json_decode($group->categories);
-if (count($categories) > 0) {
+
+// if ($categories == null) {
+// 	# code...
+// }
+
+if ($categories != null && count($categories) > 0) {
 	$args = array(
 		'post_status' => 'publish',
 		'posts_per_page' => -1,
@@ -19,15 +24,18 @@ if (count($categories) > 0) {
 }
 ?>
 
-<main>
-	<div class="wrapper-section">
-		<div class="rmbt-full-width rmbt-equipment-categories-full-width">
-			<section class="rmbt-container rmbt-equipment-categories">
-				<?php get_template_part('template-parts/components/title', 'page', ['title' => $group->name]); ?>
-				<div class="rmbt-equipment-categories__text"><?php echo $group->description ?></div>
-				<div class="rmbt-equipment-categories__row">
 
-					<?php
+
+
+<main>
+   <div class="wrapper-section">
+      <div class="rmbt-full-width rmbt-equipment-categories-full-width">
+         <section class="rmbt-container rmbt-equipment-categories">
+            <?php get_template_part('template-parts/components/title', 'page', ['title' => $group->name]); ?>
+            <div class="rmbt-equipment-categories__text"><?php echo $group->description ?></div>
+            <div class="rmbt-equipment-categories__row">
+
+               <?php
 					if (count($arr_all_products) > 0) {
 						foreach ($arr_all_products as $product) {
 
@@ -42,10 +50,10 @@ if (count($categories) > 0) {
 					}
 					?>
 
-				</div>
-			</section>
-		</div>
-	</div>
+            </div>
+         </section>
+      </div>
+   </div>
 </main>
 
 

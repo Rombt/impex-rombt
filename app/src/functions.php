@@ -83,7 +83,8 @@ function rmbt_impex_register_required_plugins()
 			// The plugin name.
 			'slug' => 'rmbt-impex-core',
 			// The plugin slug (typically the folder name).
-			'source' => get_template_directory() . '/plugins/impex-rombt-core.zip',
+			// 'source' => get_template_directory() . '/plugins/impex-rombt-core.zip',
+			'source' => WP_PLUGIN_DIR . '/impex-rombt-core',
 			// The plugin source.
 			'required' => true,
 			// If false, the plugin is only 'recommended' instead of required.

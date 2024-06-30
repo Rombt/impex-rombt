@@ -52,20 +52,10 @@ export const path = {
         `${this.src.php}/${this.srcPluginName}/assets/styles/**/*.less`,
         `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.css`,
       ],
-      images: [
-        `${this.src.php}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
-        `${this.src.php}/${this.srcPluginName}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
-      ],
-      js: [
-        `${this.src.php}/assets/js/**/*.js`,
-        `${this.src.php}/${this.srcPluginName}/assets/js/**/*.js`,
-        `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.js`,
-      ],
+      images: [`${this.src.php}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`, `${this.src.php}/${this.srcPluginName}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`],
+      js: [`${this.src.php}/assets/js/**/*.js`, `${this.src.php}/${this.srcPluginName}/assets/js/**/*.js`, `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.js`],
       php: [`${this.src.php}/**/*.{php,html}`, `${this.src.php}/${this.srcPluginName}/**/*.{php,html}`],
-      fonts: [
-        `${this.src.php}/assets/fonts/**/*.{woff,woff2}`,
-        `${this.src.php}/${this.srcPluginName}/assets/fonts/**/*.{woff,woff2}`,
-      ],
+      fonts: [`${this.src.php}/assets/fonts/**/*.{woff,woff2}`, `${this.src.php}/${this.srcPluginName}/assets/fonts/**/*.{woff,woff2}`],
       copy: this.copy.src,
     };
   },
@@ -73,23 +63,14 @@ export const path = {
   get php() {
     const path = {
       src: {
-        html: [
-          `${this.src.html}/*.html`,
-          `!${this.src.html}/_*.html`,
-          `!${this.src.html}/-*.html`,
-          `${this.src.html}/test/*.html`,
-        ],
+        html: [`${this.src.html}/*.html`, `!${this.src.html}/_*.html`, `!${this.src.html}/-*.html`, `${this.src.html}/test/*.html`],
         php: [
           `${this.src.php}/**/*.php`,
           `!${this.src.php}/${this.srcPluginName}/**/*.php`,
           `!${this.src.php}/**/_*.php`, // these are drafts and files which marked for delete
           `!${this.src.php}/**/-*.php`, // these are files which queued up to develope
         ],
-        plug: [
-          `${this.src.php}/${this.srcPluginName}/**/*.php`,
-          `!${this.src.php}/${this.srcPluginName}/**/_*.php`,
-          `!${this.src.php}/${this.srcPluginName}/**/-*.php`,
-        ],
+        plug: [`${this.src.php}/${this.srcPluginName}/**/*.php`, `!${this.src.php}/${this.srcPluginName}/**/_*.php`, `!${this.src.php}/${this.srcPluginName}/**/-*.php`],
       },
       prod: {
         html: `${this.prod.html}`,
@@ -190,19 +171,8 @@ export const path = {
   get copy() {
     const path = {
       src: {
-        html: [
-          `${this.src.html}/for_test.txt`,
-          `${this.src.html}/*.txt`,
-          `${this.src.php}/assets/styles/libs/**/*.*`,
-          `${this.src.php}/assets/js/libs/**/*.*`,
-        ],
-        php: [
-          `${this.src.php}/README.md`,
-          `${this.src.php}/style.css`,
-          `${this.src.php}/screenshot.png`,
-          `${this.src.php}/assets/styles/libs/**/*.*`,
-          `${this.src.php}/assets/js/libs/**/*.*`,
-        ],
+        html: [`${this.src.html}/for_test.txt`, `${this.src.html}/*.txt`, `${this.src.php}/assets/styles/libs/**/*.*`, `${this.src.php}/assets/js/libs/**/*.*`],
+        php: [`${this.src.php}/README.md`, `${this.src.php}/style.css`, `${this.src.php}/screenshot.png`, `${this.src.php}/assets/styles/libs/**/*.*`, `${this.src.php}/assets/js/libs/**/*.*`],
         plug: [
           `${this.src.php}/${this.srcPluginName}/README.md`,
           `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.css`,
@@ -286,8 +256,7 @@ export const path = {
       } else {
         lastFolder = nodePath.basename(this.src.php);
       }
-      indexLastFolder =
-        Math.max(currentPath.lastIndexOf(`/${lastFolder}`), currentPath.lastIndexOf(`\\${lastFolder}`)) + 1; // для того что бы исключить возможные совподения имени папки и расширения
+      indexLastFolder = Math.max(currentPath.lastIndexOf(`/${lastFolder}`), currentPath.lastIndexOf(`\\${lastFolder}`)) + 1; // для того что бы исключить возможные совподения имени папки и расширения
     }
     let clearPath = nodePath.join(destPath, currentPath.substring(indexLastFolder + lastFolder.length));
 
@@ -296,24 +265,10 @@ export const path = {
 
   resolveDest(path) {
     return {
-      src:
-        app.isWP && app.forPlugin
-          ? [...path.src.php, ...path.src.plug]
-          : app.isWP
-          ? path.src.php
-          : app.forPlugin
-          ? path.src.plug
-          : path.src.html,
+      src: app.isWP && app.forPlugin ? [...path.src.php, ...path.src.plug] : app.isWP ? path.src.php : app.forPlugin ? path.src.plug : path.src.html,
       ...(Object.keys(path.prod).length !== 0
         ? {
-            dest:
-              app.isWP && app.forPlugin
-                ? [path.prod.php, path.prod.plug]
-                : app.isWP
-                ? path.prod.php
-                : app.forPlugin
-                ? path.prod.plug
-                : path.prod.html,
+            dest: app.isWP && app.forPlugin ? [path.prod.php, path.prod.plug] : app.isWP ? path.prod.php : app.forPlugin ? path.prod.plug : path.prod.html,
           }
         : {}),
     };
