@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rmbt_impex 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2024-07-01 13:36+0300\n"
-"PO-Revision-Date: 2024-07-01 13:36+0300\n"
+"POT-Creation-Date: 2024-07-01 13:47+0300\n"
+"PO-Revision-Date: 2024-07-01 14:02+0300\n"
 "Last-Translator: \n"
 "Language-Team: Rmbt\n"
 "Language: uk_UA\n"
@@ -44,356 +44,7 @@ msgstr ""
 
 #: inc/Redux/redux-options.php:30 inc/Redux/redux-options.php:32
 msgid "Опції теми"
-msgstr ""
-
-#: inc/Redux/sections/--404_page.php:9
-msgid "404 page"
-msgstr ""
-
-#: inc/Redux/sections/--404_page.php:11
-msgid "404 page settings"
-msgstr ""
-
-#: inc/Redux/sections/--404_page.php:20
-msgid "404 image"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:9
-msgid "About Us Page"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:11
-msgid "About us page settings"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:19
-msgid "About Us Title"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:20
-msgid "Our History"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:29
-msgid "About Us subtitle"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:30
-msgid ""
-"Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quam! Dolor "
-"dolores veniam natus doloribus ducimus doloremque iure odio dolore a quod! "
-"Qui aliquam cumque voluptatum accusamus ipsam numquam repudiandae dicta, ad "
-"est iste sit tempore debitis laboriosam exercitationem porro perspiciatis "
-"adipisci "
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:35
-msgid "Add Link to your video"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:45
-msgid "Description video"
-msgstr ""
-
-#: inc/Redux/sections/--about_us_page.php:46
-msgid "Our restaurant video"
-msgstr ""
-
-#: inc/Redux/sections/--app_buttons.php:9
-msgid "APP buttons"
-msgstr ""
-
-#: inc/Redux/sections/--app_buttons.php:11
-msgid "APP buttons settings"
-msgstr ""
-
-#: inc/Redux/sections/--app_buttons.php:20
-msgid "Apple APP Icon"
-msgstr ""
-
-#: inc/Redux/sections/--app_buttons.php:30
-msgid "Linck APP Apple"
-msgstr ""
-
-#: inc/Redux/sections/--app_buttons.php:38
-msgid "Google APP icon"
-msgstr ""
-
-#: inc/Redux/sections/--app_buttons.php:48
-msgid "Linck APP Google"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:8
-msgid "Blog Page"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:10
-msgid "Blog page settings"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:18 inc/Redux/sections/--menu_page.php:37
-msgid "Title into Background title image"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:19 inc/Redux/sections/--menu_page.php:38
-msgid "You need the Title into Background title image"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:26
-msgid "The Link Share "
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:33
-msgid "Share link icon"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:44
-#: inc/Redux/sections/social_networks.php:65
-msgid "Instagram link"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:51
-#: inc/Redux/sections/social_networks.php:72
-msgid "Instagram icon"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:62
-#: inc/Redux/sections/social_networks.php:24
-msgid "Facebook link"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:69
-#: inc/Redux/sections/social_networks.php:31
-msgid "Facebook icon"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:80
-msgid "Twitter link"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:87
-msgid "Twitter icon"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:99 inc/Redux/sections/--blog_page.php:112
-msgid "If post does`t have thumbnail"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:100
-msgid "For a large size thumbnail"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:113
-msgid "For a small size thumbnail"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:124
-msgid "Button title"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:125
-msgid "read more"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:131
-msgid "The Like  Icon"
-msgstr ""
-
-#: inc/Redux/sections/--blog_page.php:142
-msgid "The Active Like  Icon"
-msgstr ""
-
-#: inc/Redux/sections/--copyright.php:9
-msgid "Copyright settings"
-msgstr ""
-
-#: inc/Redux/sections/--copyright.php:10
-msgid "Add a description of your copyright ownership here"
-msgstr ""
-
-#: inc/Redux/sections/--copyright.php:22
-msgid "Copyright"
-msgstr ""
-
-#: inc/Redux/sections/--copyright.php:23
-msgid "2024 Cool RestaurantWebsite based for Luxury RestaurAnt"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:9
-msgid "Header settings"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:11
-msgid "Settings header site"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:20
-msgid "Site logo"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:31
-msgid "Background title image"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:42
-msgid "Search icon"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:50
-msgid "Icon cart"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:58
-msgid "Icon button book"
-msgstr ""
-
-#: inc/Redux/sections/--header.php:68
-msgid "Location for modal drop-down menu"
-msgstr ""
-
-#: inc/Redux/sections/--menu_page.php:9
-msgid "Menu Page"
-msgstr ""
-
-#: inc/Redux/sections/--menu_page.php:11
-msgid "Menu page settings"
-msgstr ""
-
-#: inc/Redux/sections/--menu_page.php:19
-msgid "Title of Menu page"
-msgstr ""
-
-#: inc/Redux/sections/--menu_page.php:20
-msgid "Menu Grid View"
-msgstr ""
-
-#: inc/Redux/sections/--menu_page.php:25
-msgid "Posts Per Page Grid"
-msgstr ""
-
-#: inc/Redux/sections/--menu_page.php:31
-msgid "Posts Per Page List"
-msgstr ""
-
-#: inc/Redux/sections/--search_page.php:9
-msgid "Search Page"
-msgstr ""
-
-#: inc/Redux/sections/--search_page.php:18
-msgid "Search Page Title"
-msgstr ""
-
-#: inc/Redux/sections/--search_page.php:19
-msgid "Search Results"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:10
-msgid "Home Page"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:12
-msgid "Typography settings"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:20
-msgid "\"Dish\" Section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:27
-msgid "Title"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:58
-msgid "Subtitle 1"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:89
-msgid "Subtitle 2"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:157
-msgid "\"About Us\" Section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:164
-msgid "Read revie 1 typography"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:194
-msgid "Read revie 2 typography"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:224
-msgid "call us 1 typography"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:254
-msgid "call us 2 typography"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:284
-msgid "Phone number typography"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:314
-msgid "Title of \"About\" section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:344
-msgid "Text of \"About\" section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:374
-msgid "Button of \"About\" section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:413
-msgid "\"Today\" Section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:457
-msgid "\"Clients\" Section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:464
-msgid "Clients Section Title"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:494
-msgid "Clients Section Text"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:524
-msgid "Client Name"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:562
-msgid "\"Reserve your table\" Section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:569
-msgid "Title of Section \"Reserve your table\""
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:599
-msgid "Text of form of the \"Reserve your table\" section"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:629
-msgid "The label of the button"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:659
-msgid "The text for a reservation"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:689
-msgid "The second  text for a reservation"
-msgstr ""
-
-#: inc/Redux/sections/--typography.php:719
-msgid "The phone number for a reservation"
-msgstr ""
+msgstr "Опции темы"
 
 #: inc/Redux/sections/archive-bakery.php:9
 msgid "Archive Bakery Page"
@@ -1410,12 +1061,28 @@ msgstr ""
 msgid "Facebook section"
 msgstr ""
 
+#: inc/Redux/sections/social_networks.php:24
+msgid "Facebook link"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:31
+msgid "Facebook icon"
+msgstr ""
+
 #: inc/Redux/sections/social_networks.php:42
 msgid "Image description for FaceBook icon"
 msgstr ""
 
 #: inc/Redux/sections/social_networks.php:56
 msgid "Instagram section"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:65
+msgid "Instagram link"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:72
+msgid "Instagram icon"
 msgstr ""
 
 #: inc/Redux/sections/social_networks.php:83
@@ -1500,41 +1167,41 @@ msgstr ""
 
 #: inc/functions/general-front.php:29
 msgid "Home"
-msgstr ""
+msgstr "Домашня"
 
 #: inc/functions/general-front.php:30
 msgid "Archive"
-msgstr ""
+msgstr "Архівна"
 
 #: inc/functions/general-front.php:31
 msgid "Search results"
-msgstr ""
+msgstr "Результати пошуку"
 
 #: inc/functions/general-front.php:32
 msgid "Tag"
-msgstr ""
+msgstr "Тег"
 
 #: inc/functions/general-front.php:33
 msgid "Author"
-msgstr ""
+msgstr "Автор"
 
 #: inc/functions/general-front.php:34
 msgid "Error 404"
-msgstr ""
+msgstr "Помилка 404"
 
 #: inc/functions/general-front.php:190
 msgid "Page"
-msgstr ""
+msgstr "Сторінка"
 
 #: index.php:13
 #, php-format
 msgid "Результати пошуку для: %s"
-msgstr ""
+msgstr "Результати пошуку для: %s"
 
 #: template-parts/parts/searchform.php:13
 msgid "Type here..."
-msgstr ""
+msgstr "Додайте тут"
 
 #: template-parts/parts/searchform.php:14
 msgid "search"
-msgstr ""
+msgstr "пошук"

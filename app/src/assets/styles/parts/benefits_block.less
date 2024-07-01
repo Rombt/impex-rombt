@@ -48,12 +48,7 @@
 
       // background-color: rgba(255, 255, 255, 0.3);
       background: rgb(255, 255, 255, 0.3);
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0.8575805322128851) 11%,
-        rgba(255, 255, 255, 0) 72%
-      );
+      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8575805322128851) 11%, rgba(255, 255, 255, 0) 72%);
     }
 
     .wrap-img {
@@ -71,6 +66,7 @@
 .rmbt-benefits-block {
   &__row {
     .row-flex();
+    min-width: @width_container;
   }
 
   &__col {

@@ -309,63 +309,182 @@ Redux::set_section(
 				'position' => 'start',
 			),
 			array(
-				'id' => 'rmbt-benefits-block_section-title',
+				'id' => 'rmbt-benefits-block_section-title_uk',
 				'type' => 'text',
-				'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
+				'title' => esc_html__('Benefits block Section Title on Ukrainian', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_section-title_en',
+				'type' => 'text',
+				'title' => esc_html__('Benefits block Section Title on English', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_section-title_ru',
+				'type' => 'text',
+				'title' => esc_html__('Benefits block Section Title on russian', 'rmbt_impex'),
 				
 			),
 			/*------------------  the start of first article block-----------------*/
 			array(
-				'id' => 'rmbt-benefits-block_article-title-1',
+				'id' => 'rmbt-benefits-block_article-title-1_uk',
 				'type' => 'text',
-				'title' => esc_html__('Title of first article', 'rmbt_impex'),
+				'title' => esc_html__('Title of first article on Ukrainian', 'rmbt_impex'),
 				
 			),
 			array(
-				'id' => 'rmbt-benefits-block_article-text-1',
+				'id' => 'rmbt-benefits-block_article-title-1_en',
+				'type' => 'text',
+				'title' => esc_html__('Title of first article on English', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-title-1_ru',
+				'type' => 'text',
+				'title' => esc_html__('Title of first article on russian', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-1_uk',
 				'type' => 'textarea',
-				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+				'title' => esc_html__('Text of first article on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-1_en',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of first article on English', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-1_ru',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of first article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of first article block -----------------*/
+
 			/*------------------  the start of second article block-----------------*/
 			array(
-				'id' => 'rmbt-benefits-block_article-title-2',
+				'id' => 'rmbt-benefits-block_article-title-2_uk',
 				'type' => 'text',
-				'title' => esc_html__('Title of second article', 'rmbt_impex'),
+				'title' => esc_html__('Title of second article on Ukrainian', 'rmbt_impex'),
 				
 			),
 			array(
-				'id' => 'rmbt-benefits-block_article-text-2',
+				'id' => 'rmbt-benefits-block_article-title-2_en',
+				'type' => 'text',
+				'title' => esc_html__('Title of second article on English', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-title-2_ru',
+				'type' => 'text',
+				'title' => esc_html__('Title of second article on russian', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-2_uk',
 				'type' => 'textarea',
-				'title' => esc_html__('Text of second article', 'rmbt_impex'),
+				'title' => esc_html__('Text of second article on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-2_en',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of second article on English', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-2_ru',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of second article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of second article block -----------------*/
+
+
+
 			/*------------------  the start of third article block-----------------*/
 			array(
-				'id' => 'rmbt-benefits-block_article-title-3',
+				'id' => 'rmbt-benefits-block_article-title-3_uk',
 				'type' => 'text',
-				'title' => esc_html__('Title of third article', 'rmbt_impex'),
+				'title' => esc_html__('Title of third article on Ukrainian', 'rmbt_impex'),
 				
 			),
 			array(
-				'id' => 'rmbt-benefits-block_article-text-3',
+				'id' => 'rmbt-benefits-block_article-title-3_en',
+				'type' => 'text',
+				'title' => esc_html__('Title of third article on English', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-title-3_ru',
+				'type' => 'text',
+				'title' => esc_html__('Title of third article on russian', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-3_uk',
 				'type' => 'textarea',
-				'title' => esc_html__('Text of third article', 'rmbt_impex'),
+				'title' => esc_html__('Text of third article on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-3_en',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of third article on English', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-3_ru',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of third article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of third article block -----------------*/
+
+
+
 			/*------------------  the start of fourth article block-----------------*/
 			array(
-				'id' => 'rmbt-benefits-block_article-title-4',
+				'id' => 'rmbt-benefits-block_article-title-4_uk',
 				'type' => 'text',
-				'title' => esc_html__('Title of fourth article', 'rmbt_impex'),
+				'title' => esc_html__('Title of fourth article on Ukrainian', 'rmbt_impex'),
 				
 			),
 			array(
-				'id' => 'rmbt-benefits-block_article-text-4',
+				'id' => 'rmbt-benefits-block_article-title-4_en',
+				'type' => 'text',
+				'title' => esc_html__('Title of fourth article on English', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-title-4_ru',
+				'type' => 'text',
+				'title' => esc_html__('Title of fourth article on russian', 'rmbt_impex'),
+				
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-4_uk',
 				'type' => 'textarea',
-				'title' => esc_html__('Text of fourth article', 'rmbt_impex'),
+				'title' => esc_html__('Text of fourth article on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-4_en',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of fourth article on English', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-benefits-block_article-text-4_ru',
+				'type' => 'textarea',
+				'title' => esc_html__('Text of fourth article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of fourth article block -----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
 			array(
 				'id' => 'rmbt-benefits-bg-picture_img-id',
 				'type' => 'media',

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rmbt_impex 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2024-07-01 13:35+0300\n"
+"POT-Creation-Date: 2024-07-01 13:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Rombt\n"
@@ -16,183 +16,1512 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. Theme Name of the theme
-msgid "_s"
+#: core-plugin/inc/bakeries_meta_boxes/bakery_meta_boxes.php:13
+msgid "Bakery data"
 msgstr ""
 
-#. Theme URI of the theme
-msgid "https://underscores.me/"
+#: functions.php:62
+msgid "rmbt_Header Navigation"
 msgstr ""
 
-#. Description of the theme
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+#: functions.php:63
+msgid "rmbt_Footer Navigation"
 msgstr ""
 
-#. Author of the theme
-msgid "Automattic"
+#: functions.php:140
+msgid "Sidebar For Blog page"
 msgstr ""
 
-#. Author URI of the theme
-msgid "https://automattic.com/"
+#: functions.php:142 functions.php:153
+msgid "Add widgets here"
 msgstr ""
 
-#: 404.php:18
-msgid "Oops! That page can&rsquo;t be found."
+#: functions.php:151
+msgid "Sidebar For Shop page"
 msgstr ""
 
-#: 404.php:22
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+#: inc/Redux/redux-options.php:30 inc/Redux/redux-options.php:32
+msgid "Опції теми"
 msgstr ""
 
-#: 404.php:31
-msgid "Most Used Categories"
+#: inc/Redux/sections/--404_page.php:9
+msgid "404 page"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:49
-msgid "Try looking in the monthly archives. %1$s"
+#: inc/Redux/sections/--404_page.php:11
+msgid "404 page settings"
 msgstr ""
 
-#. translators: 1: title.
-#: comments.php:35
-msgid "One thought on &ldquo;%1$s&rdquo;"
+#: inc/Redux/sections/--404_page.php:20
+msgid "404 image"
 msgstr ""
 
-#. translators: 1: comment count number, 2: title.
-#: comments.php:41
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:68
-msgid "Comments are closed."
+#: inc/Redux/sections/--about_us_page.php:9
+msgid "About Us Page"
 msgstr ""
 
-#: footer.php:18
-msgid "https://wordpress.org/"
+#: inc/Redux/sections/--about_us_page.php:11
+msgid "About us page settings"
 msgstr ""
 
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:21
-msgid "Proudly powered by %s"
+#: inc/Redux/sections/--about_us_page.php:19
+msgid "About Us Title"
 msgstr ""
 
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:27
-msgid "Theme: %1$s by %2$s."
+#: inc/Redux/sections/--about_us_page.php:20
+msgid "Our History"
 msgstr ""
 
-#: functions.php:53
-msgid "Primary"
+#: inc/Redux/sections/--about_us_page.php:29
+msgid "About Us subtitle"
 msgstr ""
 
-#: functions.php:130
-msgid "Sidebar"
+#: inc/Redux/sections/--about_us_page.php:30
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quam! Dolor dolores veniam natus doloribus ducimus doloremque iure odio dolore a quod! Qui aliquam cumque voluptatum accusamus ipsam numquam repudiandae dicta, ad est iste sit tempore debitis laboriosam exercitationem porro perspiciatis adipisci "
 msgstr ""
 
-#: functions.php:132
-msgid "Add widgets here."
+#: inc/Redux/sections/--about_us_page.php:35
+msgid "Add Link to your video"
 msgstr ""
 
-#: header.php:26
-msgid "Skip to content"
+#: inc/Redux/sections/--about_us_page.php:45
+msgid "Description video"
 msgstr ""
 
-#: header.php:49
-msgid "Primary Menu"
+#: inc/Redux/sections/--about_us_page.php:46
+msgid "Our restaurant video"
 msgstr ""
 
-#. translators: %s: post date.
-#: inc/template-tags.php:30
-msgctxt "post date"
-msgid "Posted on %s"
+#: inc/Redux/sections/--app_buttons.php:9
+msgid "APP buttons"
 msgstr ""
 
-#. translators: %s: post author.
-#: inc/template-tags.php:46
-msgctxt "post author"
-msgid "by %s"
+#: inc/Redux/sections/--app_buttons.php:11
+msgid "APP buttons settings"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:63
-msgid ", "
+#: inc/Redux/sections/--app_buttons.php:20
+msgid "Apple APP Icon"
 msgstr ""
 
-#. translators: 1: list of categories.
-#: inc/template-tags.php:66
-msgid "Posted in %1$s"
+#: inc/Redux/sections/--app_buttons.php:30
+msgid "Linck APP Apple"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:70
-msgctxt "list item separator"
-msgid ", "
+#: inc/Redux/sections/--app_buttons.php:38
+msgid "Google APP icon"
 msgstr ""
 
-#. translators: 1: list of tags.
-#: inc/template-tags.php:73
-msgid "Tagged %1$s"
+#: inc/Redux/sections/--app_buttons.php:48
+msgid "Linck APP Google"
 msgstr ""
 
-#. translators: %s: post title
-#: inc/template-tags.php:83
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+#: inc/Redux/sections/--blog_page.php:8
+msgid "Blog Page"
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:100 template-parts/content-page.php:39
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+#: inc/Redux/sections/--blog_page.php:10
+msgid "Blog page settings"
 msgstr ""
 
-#: inc/woocommerce.php:186
-msgid "View your shopping cart"
+#: inc/Redux/sections/--blog_page.php:18 inc/Redux/sections/--menu_page.php:37
+msgid "Title into Background title image"
 msgstr ""
 
-#. translators: number of items in the mini cart.
-#: inc/woocommerce.php:190
-msgid "%d item"
-msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: %s: search query.
-#: search.php:22
-msgid "Search Results for: %s"
+#: inc/Redux/sections/--blog_page.php:19 inc/Redux/sections/--menu_page.php:38
+msgid "You need the Title into Background title image"
 msgstr ""
 
-#: single.php:23
-msgid "Previous:"
+#: inc/Redux/sections/--blog_page.php:26
+msgid "The Link Share "
 msgstr ""
 
-#: single.php:24
-msgid "Next:"
+#: inc/Redux/sections/--blog_page.php:33
+msgid "Share link icon"
 msgstr ""
 
-#: template-parts/content-none.php:14
-msgid "Nothing Found"
+#: inc/Redux/sections/--blog_page.php:44
+#: inc/Redux/sections/social_networks.php:65
+msgid "Instagram link"
 msgstr ""
 
-#. translators: 1: link to WP admin new post page.
-#: template-parts/content-none.php:24
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: inc/Redux/sections/--blog_page.php:51
+#: inc/Redux/sections/social_networks.php:72
+msgid "Instagram icon"
 msgstr ""
 
-#: template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+#: inc/Redux/sections/--blog_page.php:62
+#: inc/Redux/sections/social_networks.php:24
+msgid "Facebook link"
 msgstr ""
 
-#: template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+#: inc/Redux/sections/--blog_page.php:69
+#: inc/Redux/sections/social_networks.php:31
+msgid "Facebook icon"
 msgstr ""
 
-#: template-parts/content-page.php:25 template-parts/content.php:53
-msgid "Pages:"
+#: inc/Redux/sections/--blog_page.php:80
+msgid "Twitter link"
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:40
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: inc/Redux/sections/--blog_page.php:87
+msgid "Twitter icon"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:99 inc/Redux/sections/--blog_page.php:112
+msgid "If post does`t have thumbnail"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:100
+msgid "For a large size thumbnail"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:113
+msgid "For a small size thumbnail"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:124
+msgid "Button title"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:125
+msgid "read more"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:131
+msgid "The Like  Icon"
+msgstr ""
+
+#: inc/Redux/sections/--blog_page.php:142
+msgid "The Active Like  Icon"
+msgstr ""
+
+#: inc/Redux/sections/--copyright.php:9
+msgid "Copyright settings"
+msgstr ""
+
+#: inc/Redux/sections/--copyright.php:10
+msgid "Add a description of your copyright ownership here"
+msgstr ""
+
+#: inc/Redux/sections/--copyright.php:22
+msgid "Copyright"
+msgstr ""
+
+#: inc/Redux/sections/--copyright.php:23
+msgid "2024 Cool RestaurantWebsite based for Luxury RestaurAnt"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:9
+msgid "Header settings"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:11
+msgid "Settings header site"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:20
+msgid "Site logo"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:31
+msgid "Background title image"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:42
+msgid "Search icon"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:50
+msgid "Icon cart"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:58
+msgid "Icon button book"
+msgstr ""
+
+#: inc/Redux/sections/--header.php:68
+msgid "Location for modal drop-down menu"
+msgstr ""
+
+#: inc/Redux/sections/--menu_page.php:9
+msgid "Menu Page"
+msgstr ""
+
+#: inc/Redux/sections/--menu_page.php:11
+msgid "Menu page settings"
+msgstr ""
+
+#: inc/Redux/sections/--menu_page.php:19
+msgid "Title of Menu page"
+msgstr ""
+
+#: inc/Redux/sections/--menu_page.php:20
+msgid "Menu Grid View"
+msgstr ""
+
+#: inc/Redux/sections/--menu_page.php:25
+msgid "Posts Per Page Grid"
+msgstr ""
+
+#: inc/Redux/sections/--menu_page.php:31
+msgid "Posts Per Page List"
+msgstr ""
+
+#: inc/Redux/sections/--search_page.php:9
+msgid "Search Page"
+msgstr ""
+
+#: inc/Redux/sections/--search_page.php:18
+msgid "Search Page Title"
+msgstr ""
+
+#: inc/Redux/sections/--search_page.php:19
+msgid "Search Results"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:10
+msgid "Home Page"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:12
+msgid "Typography settings"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:20
+msgid "\"Dish\" Section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:27
+msgid "Title"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:58
+msgid "Subtitle 1"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:89
+msgid "Subtitle 2"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:157
+msgid "\"About Us\" Section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:164
+msgid "Read revie 1 typography"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:194
+msgid "Read revie 2 typography"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:224
+msgid "call us 1 typography"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:254
+msgid "call us 2 typography"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:284
+msgid "Phone number typography"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:314
+msgid "Title of \"About\" section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:344
+msgid "Text of \"About\" section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:374
+msgid "Button of \"About\" section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:413
+msgid "\"Today\" Section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:457
+msgid "\"Clients\" Section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:464
+msgid "Clients Section Title"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:494
+msgid "Clients Section Text"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:524
+msgid "Client Name"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:562
+msgid "\"Reserve your table\" Section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:569
+msgid "Title of Section \"Reserve your table\""
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:599
+msgid "Text of form of the \"Reserve your table\" section"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:629
+msgid "The label of the button"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:659
+msgid "The text for a reservation"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:689
+msgid "The second  text for a reservation"
+msgstr ""
+
+#: inc/Redux/sections/--typography.php:719
+msgid "The phone number for a reservation"
+msgstr ""
+
+#: inc/Redux/sections/archive-bakery.php:9
+msgid "Archive Bakery Page"
+msgstr ""
+
+#: inc/Redux/sections/archive-bakery.php:11
+msgid "Archive Bakery page settings"
+msgstr ""
+
+#: inc/Redux/sections/archive-bakery.php:21
+msgid "Title of Archive Bakery Page"
+msgstr ""
+
+#: inc/Redux/sections/archive-bakery.php:22
+msgid "Вироби"
+msgstr ""
+
+#: inc/Redux/sections/archive-bakery.php:27
+msgid "Archive Bakery Page Description"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:10
+msgid "Contacts settings"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:11
+msgid "Contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:19
+msgid "Enter Your Address"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:26
+msgid "First Manager contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:33
+msgid "Add first manager name "
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:38
+msgid "Add first manager phone number"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:43
+msgid "Add first manager email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:57
+msgid "Second  Manager contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:63
+msgid "Add second manager name"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:68
+msgid "Add second manager phone number"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:73
+msgid "Add second manager email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:87
+msgid "Third  Manager contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:93
+msgid "Add third manager name"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:98
+msgid "Add third manager phone number"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:103
+msgid "AAdd third manager email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:117
+msgid "Fourth  Manager contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:123
+msgid "Add fourth manager name"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:128
+msgid "Add fourth manager phone number"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:133
+msgid "Add fourth manager email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:148
+msgid "Fifth  Manager contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:154
+msgid "Add fifth manager name"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:159
+msgid "Add fifth manager phone number"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:164
+msgid "Add fifth manager email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:179
+msgid "Sixth  Manager contacts"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:185
+msgid "Add sixth manager name"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:190
+msgid "Add sixth manager phone number"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:195
+msgid "Add sixth manager email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:209
+msgid "Email 1"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:210 inc/Redux/sections/contacts.php:236
+#: inc/Redux/sections/contacts.php:262 inc/Redux/sections/contacts.php:288
+msgid "Enter email and set his name"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:217
+msgid "Add name of your first email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:222
+msgid "Add your first email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:235
+msgid "Email 2"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:243
+msgid "Add name of your second email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:248
+msgid "Add your second email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:261
+msgid "Email 3"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:269
+msgid "Add name of your third email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:274
+msgid "Add your third email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:287
+msgid "Email 4"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:295
+msgid "Add name of your fourth email"
+msgstr ""
+
+#: inc/Redux/sections/contacts.php:300
+msgid "Add your fourth email"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:10
+msgid "Equipment Categories Page"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:12
+msgid "Equipment categories page settings"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:22
+#: inc/Redux/sections/equipment_categories_group.php:21
+msgid "Title of Equipment Categories Page"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:23
+#: inc/Redux/sections/equipment_categories_group.php:22
+msgid "Equipments"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:28
+msgid "Ovens Section Text"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:37
+msgid "Ovens Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:45
+msgid "Title of ovens article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:46
+#: inc/Redux/sections/equipment-categories.php:68
+msgid "ovens"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:51
+msgid "Text of ovens article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:57
+msgid "Picture of ovens article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:67
+msgid "Image description of ovens article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:83
+msgid "Dropping Machines Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:91
+msgid "Title of Dropping Machines  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:92
+msgid "Dropping Machines "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:97
+msgid "Text of Dropping Machines article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:103
+msgid "Picture of Dropping Machines article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:113
+msgid "Image Description Of Dropping Machines  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:114
+msgid "dropping machines image"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:129
+msgid "Enrobing Machine Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:137
+msgid "Title of Enrobing Machine  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:138
+msgid "Enrobing Machine "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:143
+msgid "Text of Enrobing Machine"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:149
+msgid "Picture of Enrobing Machine article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:159
+msgid "Image Description Of Enrobing Machine  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:160
+#: inc/Redux/sections/equipment-categories.php:206
+#: inc/Redux/sections/equipment-categories.php:253
+#: inc/Redux/sections/equipment-categories.php:301
+#: inc/Redux/sections/equipment-categories.php:349
+#: inc/Redux/sections/equipment-categories.php:395
+#: inc/Redux/sections/equipment-categories.php:441
+#: inc/Redux/sections/equipment-categories.php:487
+#: inc/Redux/sections/equipment-categories.php:533
+#: inc/Redux/sections/equipment-categories.php:579
+#: inc/Redux/sections/equipment-categories.php:625
+#: inc/Redux/sections/equipment-categories.php:671
+#: inc/Redux/sections/equipment-categories.php:717
+#: inc/Redux/sections/equipment-categories.php:763
+#: inc/Redux/sections/equipment-categories.php:809
+#: inc/Redux/sections/equipment-categories.php:855
+#: inc/Redux/sections/equipment-categories.php:901
+msgid "enrobing machine image"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:175
+msgid "Electric Proofer Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:183
+msgid "Title of Electric Proofer  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:184
+msgid "Electric Proofer "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:189
+msgid "Text of Electric Proofer"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:195
+msgid "Picture of Electric Proofer article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:205
+msgid "Image Description Of Electric Proofer  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:222
+msgid "Planetary Mixers Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:230
+msgid "Title of Planetary Mixers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:231
+msgid "Planetary Mixers "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:236
+msgid "Text of Planetary Mixers"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:242
+msgid "Picture of Planetary Mixers article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:252
+msgid "Image Description Of Planetary Mixers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:270
+msgid "Dough Dividers Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:278
+msgid "Title of Dough Dividers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:279
+msgid "Dough Dividers "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:284
+msgid "Text of Dough Dividers"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:290
+msgid "Picture of Dough Dividers article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:300
+msgid "Image Description Of Dough Dividers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:318
+msgid "Dough Rounders Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:326
+msgid "Title of Dough Rounders  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:327
+msgid "Dough Rounders "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:332
+msgid "Text of Dough Rounders"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:338
+msgid "Picture of Dough Rounders article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:348
+msgid "Image Description Of Dough Rounders  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:364
+msgid "Dough Mixers Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:372
+msgid "Title of Dough Mixers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:373
+msgid "Dough Mixers "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:378
+msgid "Text of Dough Mixers"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:384
+msgid "Picture of Dough Mixers article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:394
+msgid "Image Description Of Dough Mixers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:410
+msgid "Moulding Machine Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:418
+msgid "Title of Moulding Machine  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:419
+msgid "Moulding Machine "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:424
+msgid "Text of Moulding Machine"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:430
+msgid "Picture of Moulding Machine article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:440
+msgid "Image Description Of Moulding Machine  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:456
+msgid "Dough Sheeting Machines Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:464
+msgid "Title of Dough Sheeting Machines  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:465
+msgid "Dough Sheeting Machines "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:470
+msgid "Text of Dough Sheeting Machines"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:476
+msgid "Picture of Dough Sheeting Machines article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:486
+msgid "Image Description Of Dough Sheeting Machines  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:502
+msgid "Confectionery Dispensers Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:510
+msgid "Title of Confectionery Dispensers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:511
+msgid "Confectionery Dispensers "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:516
+msgid "Text of Confectionery Dispensers"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:522
+msgid "Picture of Confectionery Dispensers article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:532
+msgid "Image Description Of Confectionery Dispensers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:548
+msgid "Slicing Machines Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:556
+msgid "Title of Slicing Machines  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:557
+msgid "Slicing Machines "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:562
+msgid "Text of Slicing Machines"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:568
+msgid "Picture of Slicing Machines article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:578
+msgid "Image Description Of Slicing Machines  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:594
+msgid "Cooking Boilers Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:602
+msgid "Title of Cooking Boilers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:603
+msgid "Cooking Boilers "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:608
+msgid "Text of Cooking Boilers"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:614
+msgid "Picture of Cooking Boilers article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:624
+msgid "Image Description Of Cooking Boilers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:640
+msgid "Dispensers Water Mixers Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:648
+msgid "Title of Dispensers Water Mixers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:649
+msgid "Dispensers Water Mixers "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:654
+msgid "Text of Dispensers Water Mixers"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:660
+msgid "Picture of Dispensers Water Mixers article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:670
+msgid "Image Description Of Dispensers Water Mixers  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:686
+msgid "Packaging Equipment Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:694
+msgid "Title of Packaging Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:695
+msgid "Packaging Equipment "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:700
+msgid "Text of Packaging Equipment"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:706
+msgid "Picture of Packaging Equipment article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:716
+msgid "Image Description Of Packaging Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:732
+msgid "Spare Parts Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:740
+msgid "Title of Spare Parts  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:741
+msgid "Spare Parts "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:746
+msgid "Text of Spare Parts"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:752
+msgid "Picture of Spare Parts article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:762
+msgid "Image Description Of Spare Parts  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:778
+msgid "Supporting Equipment Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:786
+msgid "Title of Supporting Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:787
+msgid "Supporting Equipment "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:792
+msgid "Text of Supporting Equipment"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:798
+msgid "Picture of Supporting Equipment article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:808
+msgid "Image Description Of Supporting Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:824
+msgid "Pizza Production Equipment Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:832
+msgid "Title of Pizza Production Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:833
+msgid "Pizza Production Equipment "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:838
+msgid "Text of Pizza Production Equipment"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:844
+msgid "Picture of Pizza Production Equipment article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:854
+msgid "Image Description Of Pizza Production Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:870
+msgid "Reconditioned Equipment Section"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:878
+msgid "Title of Reconditioned Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:879
+msgid "Reconditioned Equipment "
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:884
+msgid "Text of Reconditioned Equipment"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:890
+msgid "Picture of Reconditioned Equipment article"
+msgstr ""
+
+#: inc/Redux/sections/equipment-categories.php:900
+msgid "Image Description Of Reconditioned Equipment  Article"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:9
+msgid "Equipment Categories Group Page"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:11
+msgid "Equipment Categories Group Page Settings"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:27
+msgid "Equipment Categories Group Page Text"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:44
+#: inc/Redux/sections/equipment_categories_group.php:75
+msgid "****** section"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:53
+#: inc/Redux/sections/equipment_categories_group.php:84
+msgid "Enter Categories Ids"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:55
+#: inc/Redux/sections/equipment_categories_group.php:86
+msgid "******"
+msgstr ""
+
+#: inc/Redux/sections/equipment_categories_group.php:56
+#: inc/Redux/sections/equipment_categories_group.php:87
+msgid "------"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:10
+msgid "Front page"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:12
+msgid "Front page settings"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:22
+msgid "This picture will show if main picture is absent"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:32
+msgid "Description for picture than is absent"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:38
+msgid "Title of News Block"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:39
+msgid "Останні новини"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:46
+msgid "Title Section"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:53 inc/Redux/sections/front_page.php:461
+msgid "Add/Edit Gallery on the main screen "
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:58 inc/Redux/sections/front_page.php:64
+#: inc/Redux/sections/front_page.php:125 inc/Redux/sections/front_page.php:136
+msgid "Front page title"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:70
+msgid "Front page subtitle"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:71
+msgid "Завжди надійний постачальник!"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:76
+msgid "Title of Main Screen Button"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:77
+msgid "Зв`язатись з нами"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:82
+msgid "Link for button"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:83
+msgid "#"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:89
+msgid "Picture for Background"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:107
+msgid "Introduction Section"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:114
+msgid "Introduction Section title"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:115
+msgid "Запрошуємо до нас"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:120
+msgid "Introduction Section Text"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:126
+msgid "Виробляємо"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:131
+msgid "Introduction First Block Text"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:137
+msgid "Ремонтуємо"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:143
+msgid "Introduction Second Block Text"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:150
+msgid "Picture for Introduction Block"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:160
+msgid "Description of introduction image"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:174
+msgid "Best Sellers"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:182
+msgid "Best Sellers Section title"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:185
+msgid "Хіти продажу"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:190
+msgid "best-sellers Section Text"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:197
+msgid "Best Sellers of Goods number one"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:200
+msgid "Ротаційна піч Impex Rotor (на пелетах)"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:206
+msgid "Picture of Best Sellers of Goods number one"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:216 inc/Redux/sections/front_page.php:252
+#: inc/Redux/sections/front_page.php:286
+msgid "Description of image"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:221 inc/Redux/sections/front_page.php:257
+#: inc/Redux/sections/front_page.php:291
+msgid "Link To Page Goods"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:231
+msgid "Best Sellers of Goods number two"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:234
+msgid "Відсадочна машина Impex Drop-600"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:241
+msgid "Picture of Best Sellers of Goods number two"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:266
+msgid "Best Sellers of Goods number three"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:269
+msgid "Глазурувальна машина Impex EM-300"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:276
+msgid "Picture of Best Sellers of Goods number three"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:307
+msgid "Benefit section"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:314
+msgid "benefits-block Section Title"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:321 inc/Redux/sections/front_page.php:406
+#: inc/Redux/sections/front_page.php:419 inc/Redux/sections/front_page.php:432
+msgid "Title of first article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:327 inc/Redux/sections/front_page.php:412
+#: inc/Redux/sections/front_page.php:425 inc/Redux/sections/front_page.php:438
+msgid "Text of first article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:334
+msgid "Title of second article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:340
+msgid "Text of second article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:347
+msgid "Title of third article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:353
+msgid "Text of third article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:360
+msgid "Title of fourth article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:366
+msgid "Text of fourth article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:373
+msgid "Picture for benefits-bg-picture article"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:383
+msgid "Image description for benefits-bg-picture"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:398
+msgid "Facts Block Section"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:407
+msgid "партнерів"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:420
+msgid "проектів"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:433
+msgid "співробітників"
+msgstr ""
+
+#: inc/Redux/sections/front_page.php:453
+msgid "Clients Portfolio Section"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:10
+msgid "Search block"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:12
+msgid "Search block settings"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:21
+#: inc/Redux/sections/search_block.php:27
+msgid "Title of Search first card"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:22
+msgid "Пошук по обладнанню"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:28
+#: inc/Redux/sections/search_block.php:63
+msgid "Дивитися"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:33
+#: inc/Redux/sections/search_block.php:68
+msgid "Link for Search first card"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:39
+#: inc/Redux/sections/search_block.php:74
+msgid "Picture for search-card article"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:49
+#: inc/Redux/sections/search_block.php:84
+msgid "Image description for search-card"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:50
+msgid "search-card-1"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:56
+#: inc/Redux/sections/search_block.php:62
+msgid "Title of Search second card"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:57
+msgid "Пошук по виробам"
+msgstr ""
+
+#: inc/Redux/sections/search_block.php:85
+msgid "search-card-2"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:8
+msgid "Social Networks Settings"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:17
+msgid "Facebook section"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:42
+msgid "Image description for FaceBook icon"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:56
+msgid "Instagram section"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:83
+msgid "Image description for instagram icon"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:96
+msgid "Youtube section"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:104
+msgid "Youtube link"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:111
+msgid "Youtube icon"
+msgstr ""
+
+#: inc/Redux/sections/social_networks.php:121
+msgid "Image description for youtube icon"
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:912
+#: inc/functions/class-tgm-plugin-activation.php:2618
+#: inc/functions/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:1019
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:1019
+#: inc/functions/class-tgm-plugin-activation.php:1022
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:1022
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:3594
+#: inc/functions/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:3594
+#: inc/functions/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: inc/functions/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/functions/general-front.php:29
+msgid "Home"
+msgstr ""
+
+#: inc/functions/general-front.php:30
+msgid "Archive"
+msgstr ""
+
+#: inc/functions/general-front.php:31
+msgid "Search results"
+msgstr ""
+
+#: inc/functions/general-front.php:32
+msgid "Tag"
+msgstr ""
+
+#: inc/functions/general-front.php:33
+msgid "Author"
+msgstr ""
+
+#: inc/functions/general-front.php:34
+msgid "Error 404"
+msgstr ""
+
+#: inc/functions/general-front.php:190
+msgid "Page"
+msgstr ""
+
+#: index.php:13
+#, php-format
+msgid "Результати пошуку для: %s"
+msgstr ""
+
+#: template-parts/parts/searchform.php:13
+msgid "Type here..."
+msgstr ""
+
+#: template-parts/parts/searchform.php:14
+msgid "search"
 msgstr ""
