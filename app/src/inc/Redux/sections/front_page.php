@@ -176,16 +176,44 @@ Redux::set_section(
 				'position' => 'start',
 			),
 			array(
-				'id' => 'best-sellers_section-title',
+				'id' => 'best-sellers_section-title_uk',
 				'type' => 'text',
 				'title' => esc_html__(
-					'Best Sellers Section title',
+					'Best Sellers Section title on Ukrainian',
 					'rmbt_impex'
 				),
 				'default' => esc_html__('Хіти продажу', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'best-sellers_section_text',
+				'id' => 'best-sellers_section-title_en',
+				'type' => 'text',
+				'title' => esc_html__(
+					'Best Sellers Section title on English',
+					'rmbt_impex'
+				),
+				'default' => esc_html__('Хіти продажу', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'best-sellers_section-title_ru',
+				'type' => 'text',
+				'title' => esc_html__(
+					'Best Sellers Section title on russian',
+					'rmbt_impex'
+				),
+				'default' => esc_html__('Хіти продажу', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'best-sellers_section_text_uk',
+				'type' => 'textarea',
+				'title' => esc_html__('best-sellers Section Text', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'best-sellers_section_text_en',
+				'type' => 'textarea',
+				'title' => esc_html__('best-sellers Section Text', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'best-sellers_section_text_ru',
 				'type' => 'textarea',
 				'title' => esc_html__('best-sellers Section Text', 'rmbt_impex'),
 			),
@@ -473,18 +501,6 @@ Redux::set_section(
 				'title' => esc_html__('Text of fourth article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of fourth article block -----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
 			array(
 				'id' => 'rmbt-benefits-bg-picture_img-id',
 				'type' => 'media',

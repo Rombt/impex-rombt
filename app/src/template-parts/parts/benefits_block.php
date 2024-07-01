@@ -1,6 +1,5 @@
 <?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
 
-
 <div class="wrapper-section">
    <div class="rmbt-full-width benefits-block-full-width">
       <div class="rmbt-benefits-bg-picture">
