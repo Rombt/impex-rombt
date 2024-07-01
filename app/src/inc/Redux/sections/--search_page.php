@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
 Redux::set_section(
    $opt_name,
    array(
-      'title'            => esc_html__('Search Page', 'restaurant-site'),
+      'title'            => esc_html__('Search Page', 'rmbt_impex'),
       'id'               => 'search-page',
       'customizer_width' => '450',
       'subsection' => true,
@@ -15,8 +15,8 @@ Redux::set_section(
          array(
             'id'       => 'search-page_title',
             'type'     => 'text',
-            'title'    => esc_html__('Search Page Title', 'restaurant-site'),
-            'default'  => esc_html__('Search Results','restaurant-site'),
+            'title'    => esc_html__('Search Page Title', 'rmbt_impex'),
+            'default'  => esc_html__('Search Results','rmbt_impex'),
          ),
       ),
    )

@@ -6,9 +6,9 @@ defined('ABSPATH') || exit;
 Redux::set_section(
    $opt_name,
    array(
-      'title'            => esc_html__('APP buttons', 'restaurant-site'),
+      'title'            => esc_html__('APP buttons', 'rmbt_impex'),
       'id'               => 'settings_app-buttons',
-      'desc'             => esc_html__('APP buttons settings', 'restaurant-site'),
+      'desc'             => esc_html__('APP buttons settings', 'rmbt_impex'),
       'customizer_width' => '450',
       'subsections' => true,
       // 'icon'             => 'el el-home',
@@ -17,7 +17,7 @@ Redux::set_section(
             'id'           => 'icon-app-apple',
             'type'         => 'media',
             'url'          => true,
-            'title'        => esc_html__('Apple APP Icon', 'restaurant-site'),
+            'title'        => esc_html__('Apple APP Icon', 'rmbt_impex'),
             'compiler'     => 'true',
             'preview_size' => 'full',
             'default' =>   array(
@@ -27,7 +27,7 @@ Redux::set_section(
          array(
             'id'       => 'linck-app-apple',
             'type'     => 'text',
-            'title'    => esc_html__('Linck APP Apple', 'restaurant-site'),
+            'title'    => esc_html__('Linck APP Apple', 'rmbt_impex'),
             'default'  => esc_url('#'),
          ),
 
@@ -35,7 +35,7 @@ Redux::set_section(
             'id'           => 'icon-app-google',
             'type'         => 'media',
             'url'          => true,
-            'title'        => esc_html__('Google APP icon', 'restaurant-site'),
+            'title'        => esc_html__('Google APP icon', 'rmbt_impex'),
             'compiler'     => 'true',
             'preview_size' => 'full',
             'default' =>   array(
@@ -45,7 +45,7 @@ Redux::set_section(
          array(
             'id'       => 'linck-app-google',
             'type'     => 'text',
-            'title'    => esc_html__('Linck APP Google', 'restaurant-site'),
+            'title'    => esc_html__('Linck APP Google', 'rmbt_impex'),
             'default'  => esc_url('#'),
          ),
 

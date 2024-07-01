@@ -7,9 +7,9 @@ defined( 'ABSPATH' ) || exit;
 Redux::set_section(
 	$opt_name,
 	array(
-		'title'  => esc_html__( 'Home Page', 'restaurant-site' ),
+		'title'  => esc_html__( 'Home Page', 'rmbt_impex' ),
       'id'     => 'home_page-typography',
-		'desc'   => esc_html__( 'Typography settings', 'restaurant-site' ),
+		'desc'   => esc_html__( 'Typography settings', 'rmbt_impex' ),
       'customizer_width' => '450',
       'subsection' => true,      
 		'icon'   => 'el el-font',
@@ -17,14 +17,14 @@ Redux::set_section(
          array(
             'id'        => 'dish_typography-accordion-start',
             'type'      => 'accordion',
-            'title'    => esc_html__( '"Dish" Section', 'restaurant-site' ),
+            'title'    => esc_html__( '"Dish" Section', 'rmbt_impex' ),
             'subtitle'  => 'Set Your Typography Settings for the "Dishes" Section',
             'position'  => 'start',    
             ),
 
             array(
                'id'                => 'dish_title-typography',
-               'title'             => esc_html__( 'Title', 'restaurant-site' ),
+               'title'             => esc_html__( 'Title', 'rmbt_impex' ),
                'subtitle'          => 'Set typography for title',
                'type'              => 'typography',
                'google'            => true,
@@ -55,7 +55,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'dish_subtitle_1-typography',
-               'title'             => esc_html__( 'Subtitle 1', 'restaurant-site' ),
+               'title'             => esc_html__( 'Subtitle 1', 'rmbt_impex' ),
                'subtitle'          => 'Set typography for subtitle 1',
                'type'              => 'typography',
                'google'            => true,
@@ -86,7 +86,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'dish_subtitle_2-typography',
-               'title'             => esc_html__( 'Subtitle 2', 'restaurant-site' ),
+               'title'             => esc_html__( 'Subtitle 2', 'rmbt_impex' ),
                'subtitle'          => 'Set typography for subtitle 1',
                'type'              => 'typography',
                'google'            => true,
@@ -154,14 +154,14 @@ Redux::set_section(
          array(
             'id'        => 'about-typography-accordion-start',
             'type'      => 'accordion',
-            'title'    => esc_html__( '"About Us" Section', 'restaurant-site' ),
+            'title'    => esc_html__( '"About Us" Section', 'rmbt_impex' ),
             'subtitle'  => 'Set Your Typography Settings for the "About Us" Section',
             'position'  => 'start',    
             ),
 
             array(
                'id'                => 'read_revie_1-typography',
-               'title'             => esc_html__( 'Read revie 1 typography', 'restaurant-site' ),
+               'title'             => esc_html__( 'Read revie 1 typography', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -191,7 +191,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'read_revie_2-typography',
-               'title'             => esc_html__( 'Read revie 2 typography', 'restaurant-site' ),
+               'title'             => esc_html__( 'Read revie 2 typography', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -221,7 +221,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'call_us_1-typography',
-               'title'             => esc_html__( 'call us 1 typography', 'restaurant-site' ),
+               'title'             => esc_html__( 'call us 1 typography', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -251,7 +251,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'call_us_2-typography',
-               'title'             => esc_html__( 'call us 2 typography', 'restaurant-site' ),
+               'title'             => esc_html__( 'call us 2 typography', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -281,7 +281,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'phone_number-typography',
-               'title'             => esc_html__( 'Phone number typography', 'restaurant-site' ),
+               'title'             => esc_html__( 'Phone number typography', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -311,7 +311,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'title_about-typography',
-               'title'  => esc_html__( 'Title of "About" section', 'restaurant-site' ),
+               'title'  => esc_html__( 'Title of "About" section', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -341,7 +341,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'text_about-typography',
-               'title'  => esc_html__( 'Text of "About" section', 'restaurant-site' ),
+               'title'  => esc_html__( 'Text of "About" section', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -371,7 +371,7 @@ Redux::set_section(
             ),
             array(
                'id'                => 'button_about-typography',
-               'title'  => esc_html__( 'Button of "About" section', 'restaurant-site' ),
+               'title'  => esc_html__( 'Button of "About" section', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -410,7 +410,7 @@ Redux::set_section(
          array(
             'id'        => 'today-typography-accordion-start',
             'type'      => 'accordion',
-            'title'    => esc_html__( '"Today" Section', 'restaurant-site' ),
+            'title'    => esc_html__( '"Today" Section', 'rmbt_impex' ),
             'subtitle'  => 'Set Your Typography Settings for the "Today" Section',
             'position'  => 'start',    
             ),
@@ -454,14 +454,14 @@ Redux::set_section(
          array(
             'id'        => 'clients_section-accordion-start',
             'type'      => 'accordion',
-            'title'    => esc_html__( '"Clients" Section', 'restaurant-site' ),
+            'title'    => esc_html__( '"Clients" Section', 'rmbt_impex' ),
             'subtitle'  => 'Set Your Typography Settings for the "Clients" Section ',
             'position'  => 'start',    
             ),
 
             array(
                   'id'                => 'clients_section_title-typography',
-                  'title'  => esc_html__( 'Clients Section Title', 'restaurant-site' ),
+                  'title'  => esc_html__( 'Clients Section Title', 'rmbt_impex' ),
                   'type'              => 'typography',
                   'google'            => true,
                   'font_family_clear' => false,
@@ -491,7 +491,7 @@ Redux::set_section(
                ),         
             array(
                   'id'                => 'clients_section_text-typography',
-                  'title'  => esc_html__( 'Clients Section Text', 'restaurant-site' ),
+                  'title'  => esc_html__( 'Clients Section Text', 'rmbt_impex' ),
                   'type'              => 'typography',
                   'google'            => true,
                   'font_family_clear' => false,
@@ -521,7 +521,7 @@ Redux::set_section(
                ),      
             array(
                'id'                => 'client_name-typography',
-               'title'  => esc_html__( 'Client Name', 'restaurant-site' ),
+               'title'  => esc_html__( 'Client Name', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -559,14 +559,14 @@ Redux::set_section(
          array(
             'id'        => 'reserve_section_section-accordion-start',
             'type'      => 'accordion',
-            'title'    => esc_html__( '"Reserve your table" Section', 'restaurant-site' ),
+            'title'    => esc_html__( '"Reserve your table" Section', 'rmbt_impex' ),
             'subtitle'  => 'Set Your Typography Settings for the "Clients" Section ',
             'position'  => 'start',    
             ),
 
             array(
                   'id'                => 'reserve_section_title-typography',
-                  'title'  => esc_html__( 'Title of Section "Reserve your table"', 'restaurant-site' ),
+                  'title'  => esc_html__( 'Title of Section "Reserve your table"', 'rmbt_impex' ),
                   'type'              => 'typography',
                   'google'            => true,
                   'font_family_clear' => false,
@@ -596,7 +596,7 @@ Redux::set_section(
                ),         
             array(
                   'id'                => 'reserve_section_form-typography',
-                  'title'  => esc_html__( 'Text of form of the "Reserve your table" section', 'restaurant-site' ),
+                  'title'  => esc_html__( 'Text of form of the "Reserve your table" section', 'rmbt_impex' ),
                   'type'              => 'typography',
                   'google'            => true,
                   'font_family_clear' => false,
@@ -626,7 +626,7 @@ Redux::set_section(
                ),      
             array(
                'id'                => 'button_label-typography',
-               'title'  => esc_html__( 'The label of the button', 'restaurant-site' ),
+               'title'  => esc_html__( 'The label of the button', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -656,7 +656,7 @@ Redux::set_section(
             ),     
             array(
                'id'                => 'reservation_text-typography',
-               'title'  => esc_html__( 'The text for a reservation', 'restaurant-site' ),
+               'title'  => esc_html__( 'The text for a reservation', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -686,7 +686,7 @@ Redux::set_section(
             ),     
             array(
                'id'                => 'reservation_text_2-typography',
-               'title'  => esc_html__( 'The second  text for a reservation', 'restaurant-site' ),
+               'title'  => esc_html__( 'The second  text for a reservation', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,
@@ -716,7 +716,7 @@ Redux::set_section(
             ),    
             array(
                'id'                => 'reservation_phone_number-typography',
-               'title'  => esc_html__( 'The phone number for a reservation', 'restaurant-site' ),
+               'title'  => esc_html__( 'The phone number for a reservation', 'rmbt_impex' ),
                'type'              => 'typography',
                'google'            => true,
                'font_family_clear' => false,

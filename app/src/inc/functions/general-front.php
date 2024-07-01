@@ -26,12 +26,12 @@ function rmbt_custom_WPquery($rmbt_post_type, $rmbt_posts_per_page, $rmbt_curren
 function rmbt_get_breadcrumbs()
 {
 
-	$text['home'] = esc_html__('Home', 'restaurant-site');
-	$text['category'] = esc_html__('Archive', 'restaurant-site') . ' "%s"';
-	$text['search'] = esc_html__('Search results', 'restaurant-site') . ' "%s"';
-	$text['tag'] = esc_html__('Tag', 'restaurant-site') . ' "%s"';
-	$text['author'] = esc_html__('Author', 'restaurant-site') . ' %s';
-	$text['404'] = esc_html__('Error 404', 'restaurant-site');
+	$text['home'] = esc_html__('Home', 'rmbt_impex');
+	$text['category'] = esc_html__('Archive', 'rmbt_impex') . ' "%s"';
+	$text['search'] = esc_html__('Search results', 'rmbt_impex') . ' "%s"';
+	$text['tag'] = esc_html__('Tag', 'rmbt_impex') . ' "%s"';
+	$text['author'] = esc_html__('Author', 'rmbt_impex') . ' %s';
+	$text['404'] = esc_html__('Error 404', 'rmbt_impex');
 
 	$show_current = 1;
 	$show_on_home = 0;
@@ -62,7 +62,7 @@ function rmbt_get_breadcrumbs()
 		}
 
 		if (get_option('page_for_posts') && is_home()) {
-			echo '<nav class="breadcrumbs"><a href="' . esc_url($home_link) . '">' . esc_attr($text['home']) . '</a>' . rmbt_wp_kses($delimiter) . ' ' . __('Blog', 'restaurant-site') . '</nav>';
+			echo '<nav class="breadcrumbs"><a href="' . esc_url($home_link) . '">' . esc_attr($text['home']) . '</a>' . rmbt_wp_kses($delimiter) . ' ' . __('Blog', 'rmbt_impex') . '</nav>';
 		}
 	} else {
 
@@ -187,7 +187,7 @@ function rmbt_get_breadcrumbs()
 			if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) {
 				echo ' (';
 			}
-			echo rmbt_wp_kses($delimiter) . esc_html__('Page', 'restaurant-site') . ' ' . get_query_var('paged');
+			echo rmbt_wp_kses($delimiter) . esc_html__('Page', 'rmbt_impex') . ' ' . get_query_var('paged');
 			if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) {
 				echo ')';
 			}
@@ -391,9 +391,9 @@ function rmbt_get_redux_field($id_field, $kses = false)
 	global $rmbt_impex_options;
 
 	if ($kses) {
-		return class_exists('ReduxFramework') ? wp_kses($rmbt_impex_options[$id_field], 'post') : "";
+		return class_exists('ReduxFramework') ? __(wp_kses($rmbt_impex_options[$id_field], 'post'), 'rmbt_impex') : "";
 	}
-	return class_exists('ReduxFramework') ? esc_html__($rmbt_impex_options[$id_field]) : "";
+	return class_exists('ReduxFramework') ? esc_html__($rmbt_impex_options[$id_field], 'rmbt_impex') : "";
 }
 
 function rmbt_phone_number_clear_redux($phone_number)
