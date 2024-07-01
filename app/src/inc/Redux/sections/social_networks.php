@@ -40,7 +40,7 @@ Redux::set_section(
 				'id' => 'rmbt-social-networks-fb_img-alt',
 				'type' => 'text',
 				'title' => esc_html__('Image description for FaceBook icon', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 
 
@@ -81,7 +81,7 @@ Redux::set_section(
 				'id' => 'rmbt-social-networks_instagram_img-alt',
 				'type' => 'text',
 				'title' => esc_html__('Image description for instagram icon', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 
 			array(
@@ -119,7 +119,7 @@ Redux::set_section(
 				'id' => 'rmbt-social-networks-youtube_img-alt',
 				'type' => 'text',
 				'title' => esc_html__('Image description for youtube icon', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 
 			array(

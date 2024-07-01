@@ -312,14 +312,14 @@ Redux::set_section(
 				'id' => 'rmbt-benefits-block_section-title',
 				'type' => 'text',
 				'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 			/*------------------  the start of first article block-----------------*/
 			array(
 				'id' => 'rmbt-benefits-block_article-title-1',
 				'type' => 'text',
 				'title' => esc_html__('Title of first article', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-1',
@@ -332,7 +332,7 @@ Redux::set_section(
 				'id' => 'rmbt-benefits-block_article-title-2',
 				'type' => 'text',
 				'title' => esc_html__('Title of second article', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-2',
@@ -345,7 +345,7 @@ Redux::set_section(
 				'id' => 'rmbt-benefits-block_article-title-3',
 				'type' => 'text',
 				'title' => esc_html__('Title of third article', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-3',
@@ -358,7 +358,7 @@ Redux::set_section(
 				'id' => 'rmbt-benefits-block_article-title-4',
 				'type' => 'text',
 				'title' => esc_html__('Title of fourth article', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 			array(
 				'id' => 'rmbt-benefits-block_article-text-4',
@@ -381,7 +381,7 @@ Redux::set_section(
 				'id' => 'rmbt-benefits-bg-picture_img-alt',
 				'type' => 'text',
 				'title' => esc_html__('Image description for benefits-bg-picture', 'rmbt_impex'),
-				'default' => esc_html__('', 'rmbt_impex'),
+				
 			),
 			array(
 				'id' => 'benefits-block_end',
@@ -493,14 +493,14 @@ Redux::set_section(
 			// 	'id' => 'rmbt-benefits-block_section-title',
 			// 	'type' => 'text',
 			// 	'title' => esc_html__('benefits-block Section Title', 'rmbt_impex'),
-			// 	'default' => esc_html__('', 'rmbt_impex'),
+			// 	
 			// ),
 			// /*------------------  the start of first article block-----------------*/
 			// array(
 			// 	'id' => 'rmbt-benefits-block_article-title-1',
 			// 	'type' => 'text',
 			// 	'title' => esc_html__('Title of first article', 'rmbt_impex'),
-			// 	'default' => esc_html__('', 'rmbt_impex'),
+			// 	
 			// ),
 			// array(
 			// 	'id' => 'rmbt-benefits-block_article-text',

@@ -27,9 +27,9 @@ $args = array(
 	// Show the sections below the admin menu item or not.
 	'allow_sub_menu' => false,
 	// The text to appear in the admin menu.
-	'menu_title' => esc_html__('Опции темы', 'rmbt_impex'),
+	'menu_title' => esc_html__('Опції теми', 'rmbt_impex'),
 	// The text to appear on the page title.
-	'page_title' => esc_html__('Опции темы', 'rmbt_impex'),
+	'page_title' => esc_html__('Опції теми', 'rmbt_impex'),
 	// Disable to create your own Google fonts loader.
 	'disable_google_fonts_link' => false,
 	// Show the panel pages on the admin bar.
