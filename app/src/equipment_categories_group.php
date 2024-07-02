@@ -8,6 +8,7 @@
 
 <?php
 global $wpdb;
+$locale = explode('_', pll_current_language('locale'))[0];
 
 $table_name = $wpdb->prefix . 'rmbt_categories_group';
 $arr_groups = [];
@@ -31,8 +32,9 @@ foreach ($results as $row) {
    <div class="wrapper-section">
       <div class="rmbt-full-width rmbt-equipment-categories-full-width">
          <section class="rmbt-container rmbt-equipment-categories">
-            <?php get_template_part('template-parts/components/redux_title', 'page', ['title' => 'equipCatPage-equipment-categories_page-title']); ?>
-            <div class="rmbt-equipment-categories__text"><?php echo rmbt_get_redux_field('equipCatPage-equipment-categories_page-text') ?></div>
+            <?php get_template_part('template-parts/components/redux_title', 'page', ['title' => 'rmbt-equipment-categories-group_page-title_'. $locale]); ?>
+            <div class="rmbt-equipment-categories__text">
+               <?php echo rmbt_get_redux_field('rmbt-equipment-categories-group_page-text_'. $locale) ?></div>
             <div class="rmbt-equipment-categories__row">
                <?php foreach ($arr_groups as $group) {
                   get_template_part('template-parts/components/equipment_categories_card', null, [
