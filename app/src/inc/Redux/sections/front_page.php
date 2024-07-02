@@ -539,12 +539,22 @@ Redux::set_section(
 				'id' => 'rmbt-facts-block_article-title-1',
 				'type' => 'text',
 				'title' => esc_html__('Title of first article', 'rmbt_impex'),
-				'default' => esc_html__('партнерів', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'rmbt-facts-block_article-text-1_uk',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article  on Ukrain', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-facts-block_article-text-1',
+				'id' => 'rmbt-facts-block_article-text-1_en',
 				'type' => 'text',
-				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+				'title' => esc_html__('Text of first article on English', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-1_ru',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of first article block -----------------*/
 			/*------------------  the start of first article block-----------------*/
@@ -555,9 +565,19 @@ Redux::set_section(
 				'default' => esc_html__('проектів', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-facts-block_article-text-2',
+				'id' => 'rmbt-facts-block_article-text-2_uk',
 				'type' => 'text',
-				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+				'title' => esc_html__('Text of first article on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-2_en',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article on England', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-2_ru',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of first article block -----------------*/
 			/*------------------  the start of first article block-----------------*/
@@ -568,9 +588,19 @@ Redux::set_section(
 				'default' => esc_html__('співробітників', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'rmbt-facts-block_article-text-3',
+				'id' => 'rmbt-facts-block_article-text-3_uk',
 				'type' => 'text',
-				'title' => esc_html__('Text of first article', 'rmbt_impex'),
+				'title' => esc_html__('Text of first article on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-3_en',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article on England', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-facts-block_article-text-3_ru',
+				'type' => 'text',
+				'title' => esc_html__('Text of first article on russian', 'rmbt_impex'),
 			),
 			/*------------------  the end of first article block -----------------*/
 			array(
