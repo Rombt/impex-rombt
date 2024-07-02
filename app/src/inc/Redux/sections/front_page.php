@@ -33,10 +33,19 @@ Redux::set_section(
 			),
 
 			array(
-				'id' => 'rmbt-news-block_section-title',
+				'id' => 'rmbt-news-block_section-title_uk',
 				'type' => 'text',
-				'title' => esc_html__('Title of News Block', 'rmbt_impex'),
-				'default' => esc_html__('Останні новини', 'rmbt_impex'),
+				'title' => esc_html__('Title of News Block on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-news-block_section-title_en',
+				'type' => 'text',
+				'title' => esc_html__('Title of News Block on England', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-news-block_section-title_ru',
+				'type' => 'text',
+				'title' => esc_html__('Title of News Block on russian', 'rmbt_impex'),
 			),
 
 			/*------------------ main_slider_screen accordion ------------------*/
@@ -53,28 +62,64 @@ Redux::set_section(
 				'title' => esc_html__('Add/Edit Gallery on the main screen ', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'front_page_title',
+				'id' => 'front_page_title_uk',
 				'type' => 'text',
-				'title' => esc_html__('Front page title', 'rmbt_impex'),
-				'default' => __(wp_kses('Український виробник', 'post'), 'rmbt_impex'),
+				'title' => esc_html__('Front page title on Ukrainian', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'front_page_subtitle',
+				'id' => 'front_page_title_en',
 				'type' => 'text',
-				'title' => esc_html__('Front page title', 'rmbt_impex'),
-				'default' => __(wp_kses('хлібопекарського і кондитерського обладнання', 'post'), 'rmbt_impex'),
+				'title' => esc_html__('Front page title on England', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'front_page_slogan',
+				'id' => 'front_page_title_ru',
 				'type' => 'text',
-				'title' => esc_html__('Front page subtitle', 'rmbt_impex'),
-				'default' => esc_html__('Завжди надійний постачальник!', 'rmbt_impex'),
+				'title' => esc_html__('Front page title on russian', 'rmbt_impex'),
 			),
 			array(
-				'id' => 'button_title',
+				'id' => 'front_page_subtitle_uk',
 				'type' => 'text',
-				'title' => esc_html__('Title of Main Screen Button', 'rmbt_impex'),
-				'default' => esc_html__('Зв`язатись з нами', 'rmbt_impex'),
+				'title' => esc_html__('Front page subtitle on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_subtitle_en',
+				'type' => 'text',
+				'title' => esc_html__('Front page subtitle on England', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_subtitle_ru',
+				'type' => 'text',
+				'title' => esc_html__('Front page subtitle on russian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_slogan_uk',
+				'type' => 'text',
+				'title' => esc_html__('Front page slogan on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_slogan_en',
+				'type' => 'text',
+				'title' => esc_html__('Front page slogan on England', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'front_page_slogan_ru',
+				'type' => 'text',
+				'title' => esc_html__('Front page slogan on russian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'button_title_uk',
+				'type' => 'text',
+				'title' => esc_html__('Title of Main Screen Button on Ukrainian', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'button_title_en',
+				'type' => 'text',
+				'title' => esc_html__('Title of Main Screen Button on England', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'button_title_ru',
+				'type' => 'text',
+				'title' => esc_html__('Title of Main Screen Button on russian', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'button_href',
