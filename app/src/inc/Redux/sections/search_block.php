@@ -16,16 +16,34 @@ Redux::set_section(
       'fields' => array(
 
          array(
-            'id' => 'search-card-1_title',
+            'id' => 'search-card-1_title_uk',
             'type' => 'text',
-            'title' => esc_html__('Title of Search first card', 'rmbt_impex'),
-            'default' => esc_html__('Пошук по обладнанню', 'rmbt_impex'),
+            'title' => esc_html__('Title of Search first card on Ukrainian', 'rmbt_impex'),
          ),
          array(
-            'id' => 'search-card-1_text',
+            'id' => 'search-card-1_title_en',
             'type' => 'text',
-            'title' => esc_html__('Title of Search first card', 'rmbt_impex'),
-            'default' => esc_html__('Дивитися', 'rmbt_impex'),
+            'title' => esc_html__('Title of Search first card on England', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-1_title_ru',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search first card on russian', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-1_text_uk',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search first card on Ukrainian', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-1_text_en',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search first card on England', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-1_text_ru',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search first card on russian', 'rmbt_impex'),
          ),
          array(
             'id' => 'search-card-1_link',
@@ -51,15 +69,39 @@ Redux::set_section(
          ),
 
          array(
-            'id' => 'search-card-2_title',
+            'id' => 'search-card-2_title_uk',
             'type' => 'text',
-            'title' => esc_html__('Title of Search second card', 'rmbt_impex'),
+            'title' => esc_html__('Title of Search second card on Ukrainian', 'rmbt_impex'),
             'default' => esc_html__('Пошук по виробам', 'rmbt_impex'),
          ),
          array(
-            'id' => 'search-card-2_text',
+            'id' => 'search-card-2_title_en',
             'type' => 'text',
-            'title' => esc_html__('Title of Search second card', 'rmbt_impex'),
+            'title' => esc_html__('Title of Search second card on England', 'rmbt_impex'),
+            'default' => esc_html__('Пошук по виробам', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-2_title_ru',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search second card on russian', 'rmbt_impex'),
+            'default' => esc_html__('Пошук по виробам', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-2_text_uk',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search second card on Ukrainian', 'rmbt_impex'),
+            'default' => esc_html__('Дивитися', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-2_text_en',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search second card on England', 'rmbt_impex'),
+            'default' => esc_html__('Дивитися', 'rmbt_impex'),
+         ),
+         array(
+            'id' => 'search-card-2_text_ru',
+            'type' => 'text',
+            'title' => esc_html__('Title of Search second card on russian', 'rmbt_impex'),
             'default' => esc_html__('Дивитися', 'rmbt_impex'),
          ),
          array(
