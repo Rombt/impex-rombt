@@ -22,6 +22,7 @@ function categoriesGrouping() {
     /*---------- data ----------*/
     const Data = await getData();
 
+    console.log('Data = ', Data);
     const arr_categories = Data.categories;
 
     const arr_groups = Data.groups;

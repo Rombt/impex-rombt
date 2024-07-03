@@ -2,35 +2,25 @@
 
 
 function get_data_categories() {
-    $current_language = pll_current_language();
+   //  $current_language = pll_current_language();
 
    //  log_in_file(determine_locale());
    //  log_in_file($current_language);
     
-    // Получение категорий для текущего языка
     $args = array(
         'taxonomy' => 'product_cat',
         'hide_empty' => false,
-      //   'lang' => $current_language,
     );
-    $categories = get_categories($args);
+    $categories = get_categories($args);     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    log_in_file($categories);
 
     global $wpdb;
-   //  $table_name = $wpdb->prefix . 'rmbt_categories_group';
     $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
     $groups = []; // Массив для хранения объектов
 
        // Получение групп категорий для текущего языка
       $results = $wpdb->get_results("SELECT * FROM $table_name"); // Получить все записи
-
-   //  $results = $wpdb->get_results(
-   //      $wpdb->prepare(
-   //          "SELECT * FROM $table_name WHERE language_code = %s", 
-   //          $current_language
-   //      )
-   //  );
-
-
 
     foreach ($results as $row) {
         $group = new stdClass(); // Создать новый объект
