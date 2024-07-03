@@ -8,11 +8,19 @@
 
 <?php
 global $wpdb;
-$locale = explode('_', pll_current_language('locale'))[0];
+// $locale = explode('_', pll_current_language('locale'))[0];
+$current_language = pll_current_language();
 
-$table_name = $wpdb->prefix . 'rmbt_categories_group';
+// $table_name = $wpdb->prefix . 'rmbt_categories_group';
+$table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
 $arr_groups = [];
-$results = $wpdb->get_results("SELECT * FROM $table_name");
+// $results = $wpdb->get_results("SELECT * FROM $table_name");
+    $results = $wpdb->get_results(
+        $wpdb->prepare(
+            "SELECT * FROM $table_name WHERE language_code = %s", 
+            $current_language
+        )
+    );
 
 foreach ($results as $row) {
    $group = new stdClass();
@@ -26,6 +34,7 @@ foreach ($results as $row) {
    $arr_groups[] = $group;
 }
 ?>
+
 
 
 <main>

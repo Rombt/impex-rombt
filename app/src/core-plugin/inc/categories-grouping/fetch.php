@@ -1,45 +1,64 @@
 <?php
 
-function get_data_categories()
-{
 
-   $args = array(
-      'taxonomy' => 'product_cat',
-      'hide_empty' => false,
-   );
-   $categories = get_categories($args);
+function get_data_categories() {
+    $current_language = pll_current_language();
+
+   //  log_in_file(determine_locale());
+   //  log_in_file($current_language);
+    
+    // Получение категорий для текущего языка
+    $args = array(
+        'taxonomy' => 'product_cat',
+        'hide_empty' => false,
+      //   'lang' => $current_language,
+    );
+    $categories = get_categories($args);
+
+    global $wpdb;
+   //  $table_name = $wpdb->prefix . 'rmbt_categories_group';
+    $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
+    $groups = []; // Массив для хранения объектов
+
+       // Получение групп категорий для текущего языка
+      $results = $wpdb->get_results("SELECT * FROM $table_name"); // Получить все записи
+
+   //  $results = $wpdb->get_results(
+   //      $wpdb->prepare(
+   //          "SELECT * FROM $table_name WHERE language_code = %s", 
+   //          $current_language
+   //      )
+   //  );
 
 
-   global $wpdb;
 
-   $table_name = $wpdb->prefix . 'rmbt_categories_group';
-   $groups = []; // Массив для хранения объектов
-   $results = $wpdb->get_results("SELECT * FROM $table_name"); // Получить все записи
+    foreach ($results as $row) {
+        $group = new stdClass(); // Создать новый объект
+        $group->id = $row->id;
+        $group->page_id = $row->page_id;
+        $group->name = $row->name;
+        $group->description = $row->description;
+        $group->img_id = $row->img_id;
+        $group->img_url = $row->img_url;
+        $group->categories = json_decode($row->categories); // Преобразовать JSON в массив
+        $group->languageCode = $row->language_code; // Преобразовать JSON в массив
+        $groups[] = $group; // Добавить объект в массив
+    }
 
-   foreach ($results as $row) {
-      $group = new stdClass(); // Создать новый объект
-      $group->id = $row->id;
-      $group->page_id = $row->page_id;
-      $group->name = $row->name;
-      $group->img_id = $row->img_id;
-      $group->img_url = $row->img_url;
-      $group->description = $row->description;
-      $group->categories = json_decode($row->categories); // Преобразовать JSON в массив
-      $groups[] = $group; // Добавить объект в массив
-   }
+    if (count($categories) > 0) {
+        $data = new stdClass();
+        $data->categories = $categories;
+        $data->groups = $groups;
+        wp_send_json_success($data);
+    } else {
+        wp_send_json_error('Product categories are absent');
+    }
 
-   if (count($categories) > 0) {
-      $data = new stdClass();
-      $data->categories = $categories;
-      $data->groups = $groups;
-      wp_send_json_success($data);
-   } else {
-      wp_send_json_error('Product categories are absent');
-   }
-
-   wp_die();
+    wp_die();
 }
+
 add_action('wp_ajax_get_data_categories', 'get_data_categories');
+
 
 
 function get_last_category_id()
@@ -118,16 +137,18 @@ function publish_group()
 
 
    global $wpdb;
-   $table_name = $wpdb->prefix . 'rmbt_categories_group';
+   // $table_name = $wpdb->prefix . 'rmbt_categories_group';
+   $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
 
    $data = array(
-      'page_id' => $group['page_id'],
       'id' => $group['id'],
+      'page_id' => $group['page_id'],
       'name' => $group['name'],
+      'description' => $group['description'],
       'img_id' => $group['img_id'],
       'img_url' => $group['img_url'],
-      'description' => $group['description'],
       'categories' => json_encode($group['categories']), // Преобразовать массив в JSON
+      'language_code' =>$group['languageCode'],
    );
 
    $data['page_id'] = createGroupPage($data);

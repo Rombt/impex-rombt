@@ -20,6 +20,8 @@ export class Group extends Root {
     bodyGroupPGroupDescription: document.createElement('p'),
     bodyGroupInputGroupDescription: document.createElement('textarea'),
     categoriesField: document.createElement('div'),
+
+    languageCode: document.createElement('div'),
   };
 
   constructor() {
@@ -28,6 +30,7 @@ export class Group extends Root {
     this.addClassToBlocks(this.html);
 
     this.html.bodyGroupPGroupName.textContent = 'Enter group name';
+
     this.html.bodyGroupPGroupDescription.textContent = 'Enter group description';
     this.html.publishGroup.textContent = 'publish this group';
     this.html.deleteGroup.textContent = 'delete this group';
@@ -39,6 +42,9 @@ export class Group extends Root {
     this.html.bodyGroupDescription.append(this.html.bodyGroupPGroupDescription);
     this.html.bodyGroupDescription.append(this.html.bodyGroupInputGroupDescription);
     this.html.bodyGroupText.append(this.html.bodyGroupName);
+
+    this.html.bodyGroupText.append(this.html.languageCode);
+
     this.html.bodyGroupText.append(this.html.bodyGroupDescription);
     this.html.controlsGroup.append(this.html.deleteGroup);
     this.html.controlsGroup.append(this.html.publishGroup);
@@ -56,8 +62,9 @@ export class Group extends Root {
   createGroup(data) {
     this.group = this.html.wrapGroup.cloneNode(true);
 
-    if (typeof data === 'number') {
-      this.group.id = data;
+    if (typeof data.lastCategoryIdOnPage === 'number') {
+      this.group.id = data.lastCategoryIdOnPage;
+      this.selectLang(data.arr_languages);
     } else if (typeof data === 'object') {
       this.dataInput(data);
     }
@@ -72,5 +79,19 @@ export class Group extends Root {
     this.group.querySelector('.body-group-img').id = data.img_id;
     this.group.id = data.id;
     this.group.dataset.pageId = data.page_id;
+    this.selectLang(data.languageCode);
+  }
+
+  selectLang(arr_languages) {
+    let str_selects = '<select>';
+    arr_languages.forEach((lang, index) => {
+      if (index == 0) {
+        str_selects += '<option value="' + lang + '" selected >' + lang + '</option>';
+      } else {
+        str_selects += '<option value="' + lang + '">' + lang + '</option>';
+      }
+    });
+    str_selects += '</select>';
+    this.group.querySelector('.language-code').innerHTML = '<p>Select language</p>' + str_selects;
   }
 }

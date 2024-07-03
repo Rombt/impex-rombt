@@ -23,6 +23,7 @@ function categoriesGrouping() {
     const Data = await getData();
 
     const arr_categories = Data.categories;
+
     const arr_groups = Data.groups;
 
     /*---------- structure ----------*/
@@ -63,8 +64,12 @@ function categoriesGrouping() {
 
     arr_groups.forEach(objGroup => {
       let obj_currentGroup = new Group();
-      let currentGroup = obj_currentGroup.createGroup(objGroup);
 
+      let arr_languages = selectLang();
+      arr_languages.unshift(objGroup.languageCode);
+      objGroup.languageCode = [...new Set(arr_languages)];
+
+      let currentGroup = obj_currentGroup.createGroup(objGroup);
       objGroup.categories.forEach(idCat => {
         arr_categories.forEach(obj_Cat => {
           if (obj_Cat.cat_ID == idCat) {
@@ -90,6 +95,8 @@ function categoriesGrouping() {
       let lastCategoryIdOnPage = 0;
 
       if (target === document.querySelector('#add_new_group')) {
+        const arr_languages = selectLang();
+
         fetch(ajaxurl + '?action=get_last_category_id', {
           method: 'POST',
           credentials: 'same-origin',
@@ -113,10 +120,13 @@ function categoriesGrouping() {
                 lastCategoryIdOnPage = lastCategoryIdOnBd++;
               }
             }
+            const groupData = {
+              lastCategoryIdOnPage: lastCategoryIdOnPage,
+              arr_languages: arr_languages,
+            };
             let obj_currentGroup = new Group();
-            let currentGroup = obj_currentGroup.createGroup(lastCategoryIdOnPage);
+            let currentGroup = obj_currentGroup.createGroup(groupData); //------------------------ createGroup
             wrapGroupsCategories.append(currentGroup);
-            // wrapDisplayCategories.style.maxHeight = wrapGroupsCategories.clientHeight + 'px';
           });
       } else if (target.classList.contains('add-to-group')) {
         let activeGroup = document.querySelector('.rmbt-active-group');
@@ -145,15 +155,6 @@ function categoriesGrouping() {
           wpMedia(activeGroup.querySelector('.body-group-img'));
         }
         if (target.classList.contains('publish-group')) {
-          /*
-            let group = {
-                id,
-                name,
-                img_id,
-                description,
-                categories: [],
-            };
-        */
           let group = { nonce: rmbtCategoriesGrouping.rmbtCatGropingNonce };
           group.page_id = activeGroup.dataset.pageId;
           group.id = activeGroup.id;
@@ -161,6 +162,7 @@ function categoriesGrouping() {
           group.description = activeGroup.querySelector('.body-group-input-group-description').value;
           group.img_url = activeGroup.querySelector('.body-group-img').src || '#';
           group.img_id = activeGroup.querySelector('.body-group-img').id || 0;
+          group.languageCode = activeGroup.querySelector('.language-code select').value;
 
           let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
           group.categories = arr_categories.map(cat => {
@@ -221,6 +223,20 @@ function categoriesGrouping() {
     but.classList.remove('add-to-group');
     but.classList.add('remove-from-group');
     but.textContent = '';
+  }
+
+  function selectLang() {
+    let nl_a = document.querySelectorAll('#wp-admin-bar-languages a');
+    return [...nl_a]
+      .map((_a, index) => {
+        if (index == 0) {
+          return new URL(nl_a[0].href).searchParams.get('lang');
+        } else if (index == 1) {
+          return;
+        }
+        return new URL(nl_a[index].href).searchParams.get('lang');
+      })
+      .filter(element => element !== undefined);
   }
 }
 

@@ -1,15 +1,14 @@
 <?php
-
 global $wpdb;
 
-$table_name = $wpdb->prefix . 'rmbt_categories_group';
+// $table_name = $wpdb->prefix . 'rmbt_categories_group';
+$table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
 
 $sql = "SHOW TABLES LIKE '$table_name'";
 $result = $wpdb->get_var($sql);
 if ($result === $table_name) {
    return;
 }
-
 
 $table_structure = array(
    'id' => array(
@@ -38,6 +37,10 @@ $table_structure = array(
    'categories' => array(
       'data_type' => 'JSON',
    ),
+   'language_code' => array( // Добавляем новое поле для кода языка
+      'data_type' => 'VARCHAR(10)',
+      'not_null' => true,
+   ),
 );
 
 // Подготовить SQL-запрос для создания таблицы
@@ -59,3 +62,4 @@ $sql = rtrim($sql, ",\n") . ')';
 
 // Выполнить SQL-запрос с помощью $wpdb
 $wpdb->query($sql);
+?>

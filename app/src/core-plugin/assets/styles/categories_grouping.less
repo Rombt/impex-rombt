@@ -107,10 +107,11 @@
     .wrap-group {
       width: 100%;
       box-sizing: border-box;
-      padding: 20px;
+      padding: 20px 20px 20px 20px;
       border-radius: 10px;
       border: 1px solid #c6c6c7;
       background-color: #ecedf0;
+      position: relative;
 
       .body-group {
         height: auto;
@@ -125,6 +126,7 @@
         .body-group-text {
           flex-grow: 1;
           .body-group-description,
+          .language-code,
           .body-group-name {
             display: flex;
             justify-content: space-between;
@@ -143,6 +145,12 @@
             input {
               flex-basis: 65%;
             }
+          }
+
+          .language-code {
+            margin-bottom: 20px;
+            justify-content: start;
+            column-gap: 75px;
           }
 
           .body-group-description {
@@ -195,9 +203,10 @@
           .body-group-add-img {
             display: block;
             margin: 0 auto;
-            width: 100px;
+            width: 150px;
+            padding: 2px 0px 2px 0px;
 
-            margin-top: 5px;
+            margin-top: 10px;
           }
         }
       }
