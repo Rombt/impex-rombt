@@ -10,7 +10,7 @@ function get_data_categories() {
     );
     $categories = get_categories($args);    
 
-   //  log_in_file($categories);
+    log_in_file($categories);
 
     global $wpdb;
     $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';

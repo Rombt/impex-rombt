@@ -10,18 +10,16 @@ $id_group = isset($_GET['id_group']) ? $_GET['id_group'] : false;
 $group = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id_group))[0];
 $categories = json_decode($group->categories);
 
-// if ($categories == null) {
-// 	# code...
-// }
-
 if ($categories != null && count($categories) > 0) {
 	$args = array(
 		'post_status' => 'publish',
 		'posts_per_page' => -1,
-		'product_category_id' => $categories
+		'product_category_id' => $categories,
 	);
 	$arr_all_products = wc_get_products($args);
 }
+
+
 ?>
 
 

@@ -11,12 +11,7 @@ import './modules/sliders.js';
 // Function to check element visibility
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 }
 
 // Function to start video
@@ -103,4 +98,11 @@ function resizeScreen(e) {
     document.querySelector('.rmbt-bottom-row').prepend(logo);
     document.querySelector('.rmbt-bottom-row').append(contHorizontMenu);
   }
+}
+
+const url = new URL(window.location.href);
+
+// скрыл переключение языков
+if (decodeURIComponent(url.pathname).indexOf('группа-категории') > 0 || decodeURIComponent(url.pathname).indexOf('группа-категорий') > 0) {
+  document.querySelector('.pll-parent-menu-item').style.display = 'none';
 }
