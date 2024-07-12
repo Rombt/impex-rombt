@@ -7,7 +7,7 @@
             <div class="rmbt-footer__col">
                <div class="rmbt-footer__about">
                   <?php if (has_custom_logo()) : ?>
-                     <?php the_custom_logo(); ?>
+                  <?php the_custom_logo(); ?>
                   <?php endif ?>
                   <div class="text">
                      <h3>ІМПЕКСМАШ</h3>
@@ -18,16 +18,16 @@
                </div>
                <div class="rmbt-footer__nav">
                   <?php if (has_nav_menu('footer_nav')) { ?>
-                     <div class="rmbt-cont-vertical-menu">
-                        <div class="menu-icon"><span></span></div>
+                  <div class="rmbt-cont-vertical-menu">
+                     <div class="menu-icon"><span></span></div>
                      <?php wp_nav_menu(
                         array(
                            'theme_location' => 'footer_nav',
                            'container' => 'nav',
                         )
-                     );
-                  } ?>
-                     </div>
+                     );?>
+                  </div>
+                  <?php } ?>
                </div>
                <div class="rmbt-footer__contacts">
                   <div class="text">
