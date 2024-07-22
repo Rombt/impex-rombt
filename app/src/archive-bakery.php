@@ -1,14 +1,19 @@
 <?php get_header(); ?>
+<?php 
+// $current_language = pll_current_language(); 
+$locale = explode('_', pll_current_language('locale'))[0];
+?>
 
 <main>
    <div class="wrapper-section">
       <div class="rmbt-full-width rmbt-equipment-categories-full-width">
          <section class="rmbt-container rmbt-equipment-categories">
-            <?php get_template_part('template-parts/components/title', 'page', ['title' => rmbt_get_redux_field('archive-bakery_page-title', 10)]); ?>
+            <?php get_template_part('template-parts/components/title', 'page', ['title' => rmbt_get_redux_field('archive-bakery_page-title_'. $locale, 10)]); ?>
 
             <?php
-            if (rmbt_get_redux_field('archive-bakery_page-text') !== '') { ?>
-               <div class="rmbt-equipment-categories__text"><?php echo rmbt_get_redux_field('archive-bakery_page-text') ?></div>
+            if (rmbt_get_redux_field('archive-bakery_page-text_'. $locale) !== '') { ?>
+            <div class="rmbt-equipment-categories__text">
+               <?php echo rmbt_get_redux_field('archive-bakery_page-text_'. $locale) ?></div>
             <?php } ?>
 
             <div class="rmbt-equipment-categories__row">
