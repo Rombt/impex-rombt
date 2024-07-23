@@ -68,9 +68,9 @@
                   </ul>
                </div>
                <div class="rmbt-contacts__col">
-                  <form id="contact-feedback-form" action="" method="POST">
+                  <div id="contact-feedback-form" action="" method="POST">
                      <?php echo do_shortcode('[contact-form-7 id="912ba89" title="rmbt страница контактов"]') ?>
-                  </form>
+                  </div>
                   <div class="rmbt-contacts__post-address">
                      <?php echo rmbt_get_redux_field('rmbt-address_'. $locale, 1) ?>
                   </div>
