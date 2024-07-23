@@ -14,9 +14,19 @@ Redux::set_section(
 		// 'icon'             => 'el el-home',
 		'fields' => array(
 			array(
-				'id' => 'rmbt-address',
+				'id' => 'rmbt-address_uk',
+				'type' => 'textarea',
+				'title' => esc_html__('Введіть свою адресу', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-address_en',
 				'type' => 'textarea',
 				'title' => esc_html__('Enter Your Address', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-address_ru',
+				'type' => 'textarea',
+				'title' => esc_html__('Введите свой адрес', 'rmbt_impex'),
 			),
 
 			//First Manager section start -----------------------------------
@@ -28,9 +38,21 @@ Redux::set_section(
 			),
 
 			array(
-				'id' => 'rmbt-manager-1-name',
+				'id' => 'rmbt-manager-1-name_uk',
+				'type' => 'text',
+				'title' => esc_html__('Додайте ім`я першого менеджера', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'rmbt-manager-1-name_en',
 				'type' => 'text',
 				'title' => esc_html__('Add first manager name ', 'rmbt_impex'),
+			),
+
+			array(
+				'id' => 'rmbt-manager-1-name_ru',
+				'type' => 'text',
+				'title' => esc_html__('Добавить имя первого менеджера', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'rmbt-manager-1-phone',
@@ -58,9 +80,19 @@ Redux::set_section(
 				'indent' => true
 			),
 			array(
-				'id' => 'rmbt-manager-2-name',
+				'id' => 'rmbt-manager-2-name_uk',
+				'type' => 'text',
+				'title' => esc_html__('Додайте ім`я другого менеджера', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-2-name_en',
 				'type' => 'text',
 				'title' => esc_html__('Add second manager name', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-2-name_ru',
+				'type' => 'text',
+				'title' => esc_html__('Добавить имя второго менеджера', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'rmbt-manager-2-phone',
@@ -88,9 +120,19 @@ Redux::set_section(
 				'indent' => true
 			),
 			array(
-				'id' => 'rmbt-manager-3-name',
+				'id' => 'rmbt-manager-3-name_uk',
+				'type' => 'text',
+				'title' => esc_html__('Додайте ім`я третього менеджера', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-3-name_en',
 				'type' => 'text',
 				'title' => esc_html__('Add third manager name', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-3-name_ru',
+				'type' => 'text',
+				'title' => esc_html__('Добавить имя третьего менеджера', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'rmbt-manager-3-phone',
@@ -118,9 +160,19 @@ Redux::set_section(
 				'indent' => true
 			),
 			array(
-				'id' => 'rmbt-manager-4-name',
+				'id' => 'rmbt-manager-4-name_uk',
+				'type' => 'text',
+				'title' => esc_html__('Додайте ім`я четвертого менеджера', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-4-name_en',
 				'type' => 'text',
 				'title' => esc_html__('Add fourth manager name', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-4-name_ru',
+				'type' => 'text',
+				'title' => esc_html__('Добавить имя четвёртого менеджера', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'rmbt-manager-4-phone',
@@ -149,9 +201,19 @@ Redux::set_section(
 				'indent' => true
 			),
 			array(
-				'id' => 'rmbt-manager-5-name',
+				'id' => 'rmbt-manager-5-name_uk',
+				'type' => 'text',
+				'title' => esc_html__('Додайте ім`я п`ятого менеджера', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-5-name_en',
 				'type' => 'text',
 				'title' => esc_html__('Add fifth manager name', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-5-name_ru',
+				'type' => 'text',
+				'title' => esc_html__('Добавить имя пятого менеджера', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'rmbt-manager-5-phone',
@@ -180,9 +242,19 @@ Redux::set_section(
 				'indent' => true
 			),
 			array(
-				'id' => 'rmbt-manager-6-name',
+				'id' => 'rmbt-manager-6-name_uk',
+				'type' => 'text',
+				'title' => esc_html__('Додайте ім`я шостого менеджера', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-6-name_en',
 				'type' => 'text',
 				'title' => esc_html__('Add sixth manager name', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-manager-6-name_ru',
+				'type' => 'text',
+				'title' => esc_html__('Добавить имя шестого менеджера', 'rmbt_impex'),
 			),
 			array(
 				'id' => 'rmbt-manager-6-phone',

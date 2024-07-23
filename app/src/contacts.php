@@ -1,7 +1,7 @@
 <?php
 /* Template Name: rmbt Contacts  page */
 ?>
-
+<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
 <?php get_header(); ?>
 <main>
 
@@ -19,14 +19,14 @@
                      <div class="selling-department">
                         <h3>Відділ продажу:</h3>
                         <?php get_template_part('template-parts/components/card', 'contact', [
-                           'name' => 'rmbt-manager-1-name',
+                           'name' => 'rmbt-manager-1-name_'. $locale,
                            'number' => 'rmbt-manager-1-phone',
                            'email' => 'rmbt-manager-1-email',
                            // 'id-img' => 'selling-department_8',
                            'id-img' => 'selling-department_5',
                         ]); ?>
                         <?php get_template_part('template-parts/components/card', 'contact', [
-                           'name' => 'rmbt-manager-2-name',
+                           'name' => 'rmbt-manager-2-name_'. $locale,
                            'number' => 'rmbt-manager-2-phone',
                            'email' => 'rmbt-manager-2-email',
                            // 'id-img' => 'selling-department_8',
@@ -37,20 +37,20 @@
                      <div class="service-department">
                         <h3>Відділ сервісного обслуговування:</h3>
                         <?php get_template_part('template-parts/components/card', 'contact', [
-                           'name' => 'rmbt-manager-4-name',
+                           'name' => 'rmbt-manager-4-name_'. $locale,
                            'number' => 'rmbt-manager-4-phone',
                            'email' => 'rmbt-manager-4-email',
                            'id-img' => 'service-department_3',
                         ]); ?>
                         <?php get_template_part('template-parts/components/card', 'contact', [
-                           'name' => 'rmbt-manager-5-name',
+                           'name' => 'rmbt-manager-5-name_'. $locale,
                            'number' => 'rmbt-manager-5-phone',
                            'email' => 'rmbt-manager-5-email',
                            'id-img' => 'service-department_4',
                         ]); ?>
                      </div>
                      <?php get_template_part('template-parts/components/card', 'contact', [
-                        'name' => 'rmbt-manager-3-name',
+                        'name' => 'rmbt-manager-3-name_'. $locale,
                         'number' => 'rmbt-manager-3-phone',
                         'email' => 'rmbt-manager-3-email',
                         'id-img' => 'phone_2',
