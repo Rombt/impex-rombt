@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
+
 
 <main>
    <div class="wrapper-section">
@@ -6,13 +8,16 @@
          <section class="rmbt-container rmbt-blog">
             <div class="rmbt-blog__row">
 
+
                <div class="rmbt-blog__col">
                   <!-- <header class="page-header "> -->
+
                   <h1 class="page-title">
                      <?php if (is_search()) {
                         printf(esc_html__('Результати пошуку для: %s', 'rmbt_impex'), '<span>' . get_search_query() . '</span>');
                      } else if (is_home() || is_page(['blog', 'Blog'])) {
-                        echo "Новини нашої компанії";
+                        // echo "Новини нашої компанії";
+                        echo rmbt_get_redux_field('rmbt-news-block_section-title_'. $locale); 
                      } else if (is_archive()) {
                         the_archive_title();
                         the_archive_description();

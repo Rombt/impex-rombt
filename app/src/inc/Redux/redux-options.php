@@ -147,6 +147,7 @@ require_once dirname(__FILE__) . '/sections/equipment-categories.php';
 require_once dirname(__FILE__) . '/sections/equipment_categories_group.php';
 require_once dirname(__FILE__) . '/sections/archive-bakery.php';
 require_once dirname(__FILE__) . '/sections/search_block.php';
+require_once dirname(__FILE__) . '/sections/blog_page.php';
 
 
 
