@@ -1,3 +1,4 @@
+<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
 <footer>
    <div class="rmbt-full-width rmbt-full-width-footer">
       <section class="rmbt-container rmbt-footer">
@@ -31,7 +32,7 @@
                </div>
                <div class="rmbt-footer__contacts">
                   <div class="text">
-                     <span><?php echo rmbt_get_redux_field('rmbt-address', 1) ?></span>
+                     <span><?php echo rmbt_get_redux_field('rmbt-address_'. $locale, 1) ?></span>
                      <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-phone'); ?>
                      <?php echo rmbt_redux_field_to_ul('rmbt-manager-3-email', 'mailto'); ?>
                   </div>
