@@ -70,7 +70,7 @@
                      <?php echo do_shortcode('[contact-form-7 id="912ba89" title="rmbt страница контактов"]') ?>
                   </form>
                   <div class="rmbt-contacts__post-address">
-                     <?php echo rmbt_get_redux_field('rmbt-address', 1) ?>
+                     <?php echo rmbt_get_redux_field('rmbt-address_'. $locale, 1) ?>
                   </div>
                </div>
             </div>
