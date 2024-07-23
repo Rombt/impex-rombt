@@ -17,7 +17,8 @@
                <div class="rmbt-contacts__col">
                   <ul class="rmbt-contacts__departments">
                      <div class="selling-department">
-                        <h3>Відділ продажу:</h3>
+                        <!-- <h3>Відділ продажу:</h3> -->
+                        <h3><?php echo rmbt_get_redux_field('rmbt-title-section-1_'. $locale);  ?> </h3>
                         <?php get_template_part('template-parts/components/card', 'contact', [
                            'name' => 'rmbt-manager-1-name_'. $locale,
                            'number' => 'rmbt-manager-1-phone',
@@ -35,7 +36,8 @@
                      </div>
 
                      <div class="service-department">
-                        <h3>Відділ сервісного обслуговування:</h3>
+                        <!-- <h3>Відділ сервісного обслуговування:</h3> -->
+                        <h3><?php echo rmbt_get_redux_field('rmbt-title-section-2_'. $locale);  ?> </h3>
                         <?php get_template_part('template-parts/components/card', 'contact', [
                            'name' => 'rmbt-manager-4-name_'. $locale,
                            'number' => 'rmbt-manager-4-phone',

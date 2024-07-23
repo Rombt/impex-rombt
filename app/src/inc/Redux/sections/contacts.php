@@ -13,6 +13,64 @@ Redux::set_section(
 		// 'subsection' => true,
 		// 'icon'             => 'el el-home',
 		'fields' => array(
+
+
+			array(
+				'id' => 'rmbt-title-section-1-start',
+				'type' => 'section',
+				'title' => esc_html__('First Title Section', 'rmbt_impex'),
+				'indent' => true
+			),
+			array(
+				'id' => 'rmbt-title-section-1_uk',
+				'type' => 'text',
+				'title' => esc_html__('Заголовок першого розділу', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-title-section-1_en',
+				'type' => 'text',
+				'title' => esc_html__('The title of the first section', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-title-section-1_ru',
+				'type' => 'text',
+				'title' => esc_html__('Заголовок первого роздела', 'rmbt_impex'),
+			),
+			array(
+				'id'     => 'rmbt-title-section-1-end',
+				'type'   => 'section',
+				'indent' => false,
+			),
+
+
+			array(
+				'id' => 'rmbt-title-section-2-start',
+				'type' => 'section',
+				'title' => esc_html__('Second Title Section', 'rmbt_impex'),
+				'indent' => true
+			),
+			array(
+				'id' => 'rmbt-title-section-2_uk',
+				'type' => 'text',
+				'title' => esc_html__('Заголовок другого розділу', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-title-section-2_en',
+				'type' => 'text',
+				'title' => esc_html__('The title of the second section', 'rmbt_impex'),
+			),
+			array(
+				'id' => 'rmbt-title-section-2_ru',
+				'type' => 'text',
+				'title' => esc_html__('Заголовок второго роздела', 'rmbt_impex'),
+			),
+			array(
+				'id'     => 'rmbt-title-section-2-end',
+				'type'   => 'section',
+				'indent' => false,
+			),
+
+			
 			array(
 				'id' => 'rmbt-address_uk',
 				'type' => 'textarea',
