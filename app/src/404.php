@@ -21,7 +21,7 @@
                   <div class="rmbt-404-page__text text-content">
                      <h3>Сторінка відсутня</h3>
                   </div>
-                  <?php get_template_part('template-parts/components/button-link', null, ['href' => $contact_page_url, 'title' => rmbt_get_redux_field('button_title')]); ?>
+                  <?php get_template_part('template-parts/components/button-link', null, ['href' => $contact_page_url, 'title' => 'зв`язатися з нами']); ?>
                </div>
             </div>
          </section>

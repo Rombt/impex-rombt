@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-arrow-left_1-dims { width: 800px; height: 800px; }
+ .svg-arrow-left_square_1-dims { width: 800px; height: 800px; }
+ .svg-arrow-right_1-dims { width: 800px; height: 800px; }
+ .svg-arrow-right_square_1-dims { width: 800px; height: 800px; }
+ .svg-badge2_1-dims { width: 800px; height: 800px; }
+ .svg-bread-introduction_5-dims { width: 800px; height: 800px; }
+ .svg-bulb_1-dims { width: 800px; height: 800px; }
+ .svg-chat-bubble_1-dims { width: 800px; height: 800px; }
+ .svg-close_1-dims { width: 800px; height: 800px; }
+ .svg-croisant-introduction_2-dims { width: 800px; height: 800px; }
+ .svg-delivery-van_1-dims { width: 800px; height: 800px; }
+ .svg-email_1-dims { width: 800px; height: 800px; }
+ .svg-emo-smile_1-dims { width: 800px; height: 800px; }
+ .svg-facebook_1-dims { width: 800px; height: 800px; }
+ .svg-file_1-dims { width: 800px; height: 800px; }
+ .svg-files_1-dims { width: 800px; height: 800px; }
+ .svg-folder_1-dims { width: 800px; height: 800px; }
+ .svg-gear-introduction_1-dims { width: 800px; height: 800px; }
+ .svg-gear-introduction_2-dims { width: 800px; height: 800px; }
+ .svg-gear-introduction_3-dims { width: 800px; height: 800px; }
+ .svg-group_1-dims { width: 800px; height: 800px; }
+ .svg-instagram_1-dims { width: 800px; height: 800px; }
+ .svg-instagram_2-dims { width: 40px; height: 40px; }
+ .svg-location_1-dims { width: 800px; height: 800px; }
+ .svg-male_1-dims { width: 800px; height: 800px; }
+ .svg-map-pointer_1-dims { width: 800px; height: 800px; }
+ .svg-mobile_phone_1-dims { width: 800px; height: 800px; }
+ .svg-name_1-dims { width: 800px; height: 800px; }
+ .svg-paper-plane_1-dims { width: 800px; height: 800px; }
+ .svg-partner_1-dims { width: 256px; height: 256px; }
+ .svg-partner_2-dims { width: 256px; height: 256px; }
+ .svg-partner_3-dims { width: 256px; height: 256px; }
+ .svg-partner_4-dims { width: 256px; height: 256px; }
+ .svg-partner_5-dims { width: 256px; height: 256px; }
+ .svg-phone_1-dims { width: 800px; height: 800px; }
+ .svg-phone_2-dims { width: 40px; height: 40px; }
+ .svg-phone_3-dims { width: 800px; height: 800px; }
+ .svg-pin-man-range_1-dims { width: 800px; height: 800px; }
+ .svg-pin-man_1-dims { width: 800px; height: 800px; }
+ .svg-pin_1-dims { width: 800px; height: 800px; }
+ .svg-play-button_1-dims { width: 800px; height: 800px; }
+ .svg-project_1-dims { width: 800px; height: 800px; }
+ .svg-project_2-dims { width: 24px; height: 24px; }
+ .svg-project_4-dims { width: 113.39px; height: 122.88px; }
+ .svg-search_1-dims { width: 800px; height: 800px; }
+ .svg-selling-department_5-dims { width: 800px; height: 800px; }
+ .svg-selling-department_8-dims { width: 800px; height: 800px; }
+ .svg-service-department_1-dims { width: 800px; height: 800px; }
+ .svg-service-department_2-dims { width: 800px; height: 800px; }
+ .svg-service-department_3-dims { width: 800px; height: 800px; }
+ .svg-service-department_4-dims { width: 800px; height: 800px; }
+ .svg-service-department_5-dims { width: 800px; height: 800px; }
+ .svg-staff_1-dims { width: 800px; height: 800px; }
+ .svg-staff_2-dims { width: 800px; height: 800px; }
+ .svg-staff_3-dims { width: 800px; height: 800px; }
+ .svg-staff_4-dims { width: 60px; height: 60px; }
+ .svg-tick_1-dims { width: 800px; height: 800px; }
+ .svg-twitter_1-dims { width: 800px; height: 800px; }
+ .svg-twitter_2-dims { width: 800px; height: 800px; }
+ .svg-worker-cap_1-dims { width: 800px; height: 800px; }
+ .svg-youtube_1-dims { width: 800px; height: 800px; }
+ .svg-youtube_2-dims { width: 40px; height: 40px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="arrow-left_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#arrow-left_1" class="svg-arrow-left_1-dims" alt="arrow-left_1">
+                    </div>
+                    <h2>arrow-left_1, </h2>
+                </li>
+             <li title="arrow-left_square_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#arrow-left_square_1" class="svg-arrow-left_square_1-dims" alt="arrow-left_square_1">
+                    </div>
+                    <h2>arrow-left_square_1, </h2>
+                </li>
+             <li title="arrow-right_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#arrow-right_1" class="svg-arrow-right_1-dims" alt="arrow-right_1">
+                    </div>
+                    <h2>arrow-right_1, </h2>
+                </li>
+             <li title="arrow-right_square_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#arrow-right_square_1" class="svg-arrow-right_square_1-dims" alt="arrow-right_square_1">
+                    </div>
+                    <h2>arrow-right_square_1, </h2>
+                </li>
+             <li title="badge2_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#badge2_1" class="svg-badge2_1-dims" alt="badge2_1">
+                    </div>
+                    <h2>badge2_1, </h2>
+                </li>
+             <li title="bread-introduction_5">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#bread-introduction_5" class="svg-bread-introduction_5-dims" alt="bread-introduction_5">
+                    </div>
+                    <h2>bread-introduction_5, </h2>
+                </li>
+             <li title="bulb_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#bulb_1" class="svg-bulb_1-dims" alt="bulb_1">
+                    </div>
+                    <h2>bulb_1, </h2>
+                </li>
+             <li title="chat-bubble_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#chat-bubble_1" class="svg-chat-bubble_1-dims" alt="chat-bubble_1">
+                    </div>
+                    <h2>chat-bubble_1, </h2>
+                </li>
+             <li title="close_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#close_1" class="svg-close_1-dims" alt="close_1">
+                    </div>
+                    <h2>close_1, </h2>
+                </li>
+             <li title="croisant-introduction_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#croisant-introduction_2" class="svg-croisant-introduction_2-dims" alt="croisant-introduction_2">
+                    </div>
+                    <h2>croisant-introduction_2, </h2>
+                </li>
+             <li title="delivery-van_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#delivery-van_1" class="svg-delivery-van_1-dims" alt="delivery-van_1">
+                    </div>
+                    <h2>delivery-van_1, </h2>
+                </li>
+             <li title="email_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#email_1" class="svg-email_1-dims" alt="email_1">
+                    </div>
+                    <h2>email_1, </h2>
+                </li>
+             <li title="emo-smile_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#emo-smile_1" class="svg-emo-smile_1-dims" alt="emo-smile_1">
+                    </div>
+                    <h2>emo-smile_1, </h2>
+                </li>
+             <li title="facebook_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#facebook_1" class="svg-facebook_1-dims" alt="facebook_1">
+                    </div>
+                    <h2>facebook_1, </h2>
+                </li>
+             <li title="file_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#file_1" class="svg-file_1-dims" alt="file_1">
+                    </div>
+                    <h2>file_1, </h2>
+                </li>
+             <li title="files_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#files_1" class="svg-files_1-dims" alt="files_1">
+                    </div>
+                    <h2>files_1, </h2>
+                </li>
+             <li title="folder_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#folder_1" class="svg-folder_1-dims" alt="folder_1">
+                    </div>
+                    <h2>folder_1, </h2>
+                </li>
+             <li title="gear-introduction_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#gear-introduction_1" class="svg-gear-introduction_1-dims" alt="gear-introduction_1">
+                    </div>
+                    <h2>gear-introduction_1, </h2>
+                </li>
+             <li title="gear-introduction_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#gear-introduction_2" class="svg-gear-introduction_2-dims" alt="gear-introduction_2">
+                    </div>
+                    <h2>gear-introduction_2, </h2>
+                </li>
+             <li title="gear-introduction_3">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#gear-introduction_3" class="svg-gear-introduction_3-dims" alt="gear-introduction_3">
+                    </div>
+                    <h2>gear-introduction_3, </h2>
+                </li>
+             <li title="group_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#group_1" class="svg-group_1-dims" alt="group_1">
+                    </div>
+                    <h2>group_1, </h2>
+                </li>
+             <li title="instagram_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#instagram_1" class="svg-instagram_1-dims" alt="instagram_1">
+                    </div>
+                    <h2>instagram_1, </h2>
+                </li>
+             <li title="instagram_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#instagram_2" class="svg-instagram_2-dims" alt="instagram_2">
+                    </div>
+                    <h2>instagram_2, </h2>
+                </li>
+             <li title="location_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#location_1" class="svg-location_1-dims" alt="location_1">
+                    </div>
+                    <h2>location_1, </h2>
+                </li>
+             <li title="male_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#male_1" class="svg-male_1-dims" alt="male_1">
+                    </div>
+                    <h2>male_1, </h2>
+                </li>
+             <li title="map-pointer_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#map-pointer_1" class="svg-map-pointer_1-dims" alt="map-pointer_1">
+                    </div>
+                    <h2>map-pointer_1, </h2>
+                </li>
+             <li title="mobile_phone_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#mobile_phone_1" class="svg-mobile_phone_1-dims" alt="mobile_phone_1">
+                    </div>
+                    <h2>mobile_phone_1, </h2>
+                </li>
+             <li title="name_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#name_1" class="svg-name_1-dims" alt="name_1">
+                    </div>
+                    <h2>name_1, </h2>
+                </li>
+             <li title="paper-plane_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#paper-plane_1" class="svg-paper-plane_1-dims" alt="paper-plane_1">
+                    </div>
+                    <h2>paper-plane_1, </h2>
+                </li>
+             <li title="partner_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#partner_1" class="svg-partner_1-dims" alt="partner_1">
+                    </div>
+                    <h2>partner_1, </h2>
+                </li>
+             <li title="partner_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#partner_2" class="svg-partner_2-dims" alt="partner_2">
+                    </div>
+                    <h2>partner_2, </h2>
+                </li>
+             <li title="partner_3">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#partner_3" class="svg-partner_3-dims" alt="partner_3">
+                    </div>
+                    <h2>partner_3, </h2>
+                </li>
+             <li title="partner_4">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#partner_4" class="svg-partner_4-dims" alt="partner_4">
+                    </div>
+                    <h2>partner_4, </h2>
+                </li>
+             <li title="partner_5">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#partner_5" class="svg-partner_5-dims" alt="partner_5">
+                    </div>
+                    <h2>partner_5, </h2>
+                </li>
+             <li title="phone_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#phone_1" class="svg-phone_1-dims" alt="phone_1">
+                    </div>
+                    <h2>phone_1, </h2>
+                </li>
+             <li title="phone_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#phone_2" class="svg-phone_2-dims" alt="phone_2">
+                    </div>
+                    <h2>phone_2, </h2>
+                </li>
+             <li title="phone_3">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#phone_3" class="svg-phone_3-dims" alt="phone_3">
+                    </div>
+                    <h2>phone_3, </h2>
+                </li>
+             <li title="pin-man-range_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#pin-man-range_1" class="svg-pin-man-range_1-dims" alt="pin-man-range_1">
+                    </div>
+                    <h2>pin-man-range_1, </h2>
+                </li>
+             <li title="pin-man_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#pin-man_1" class="svg-pin-man_1-dims" alt="pin-man_1">
+                    </div>
+                    <h2>pin-man_1, </h2>
+                </li>
+             <li title="pin_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#pin_1" class="svg-pin_1-dims" alt="pin_1">
+                    </div>
+                    <h2>pin_1, </h2>
+                </li>
+             <li title="play-button_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#play-button_1" class="svg-play-button_1-dims" alt="play-button_1">
+                    </div>
+                    <h2>play-button_1, </h2>
+                </li>
+             <li title="project_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#project_1" class="svg-project_1-dims" alt="project_1">
+                    </div>
+                    <h2>project_1, </h2>
+                </li>
+             <li title="project_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#project_2" class="svg-project_2-dims" alt="project_2">
+                    </div>
+                    <h2>project_2, </h2>
+                </li>
+             <li title="project_4">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#project_4" class="svg-project_4-dims" alt="project_4">
+                    </div>
+                    <h2>project_4, </h2>
+                </li>
+             <li title="search_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#search_1" class="svg-search_1-dims" alt="search_1">
+                    </div>
+                    <h2>search_1, </h2>
+                </li>
+             <li title="selling-department_5">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#selling-department_5" class="svg-selling-department_5-dims" alt="selling-department_5">
+                    </div>
+                    <h2>selling-department_5, </h2>
+                </li>
+             <li title="selling-department_8">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#selling-department_8" class="svg-selling-department_8-dims" alt="selling-department_8">
+                    </div>
+                    <h2>selling-department_8, </h2>
+                </li>
+             <li title="service-department_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#service-department_1" class="svg-service-department_1-dims" alt="service-department_1">
+                    </div>
+                    <h2>service-department_1, </h2>
+                </li>
+             <li title="service-department_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#service-department_2" class="svg-service-department_2-dims" alt="service-department_2">
+                    </div>
+                    <h2>service-department_2, </h2>
+                </li>
+             <li title="service-department_3">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#service-department_3" class="svg-service-department_3-dims" alt="service-department_3">
+                    </div>
+                    <h2>service-department_3, </h2>
+                </li>
+             <li title="service-department_4">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#service-department_4" class="svg-service-department_4-dims" alt="service-department_4">
+                    </div>
+                    <h2>service-department_4, </h2>
+                </li>
+             <li title="service-department_5">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#service-department_5" class="svg-service-department_5-dims" alt="service-department_5">
+                    </div>
+                    <h2>service-department_5, </h2>
+                </li>
+             <li title="staff_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#staff_1" class="svg-staff_1-dims" alt="staff_1">
+                    </div>
+                    <h2>staff_1, </h2>
+                </li>
+             <li title="staff_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#staff_2" class="svg-staff_2-dims" alt="staff_2">
+                    </div>
+                    <h2>staff_2, </h2>
+                </li>
+             <li title="staff_3">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#staff_3" class="svg-staff_3-dims" alt="staff_3">
+                    </div>
+                    <h2>staff_3, </h2>
+                </li>
+             <li title="staff_4">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#staff_4" class="svg-staff_4-dims" alt="staff_4">
+                    </div>
+                    <h2>staff_4, </h2>
+                </li>
+             <li title="tick_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#tick_1" class="svg-tick_1-dims" alt="tick_1">
+                    </div>
+                    <h2>tick_1, </h2>
+                </li>
+             <li title="twitter_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#twitter_1" class="svg-twitter_1-dims" alt="twitter_1">
+                    </div>
+                    <h2>twitter_1, </h2>
+                </li>
+             <li title="twitter_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#twitter_2" class="svg-twitter_2-dims" alt="twitter_2">
+                    </div>
+                    <h2>twitter_2, </h2>
+                </li>
+             <li title="worker-cap_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#worker-cap_1" class="svg-worker-cap_1-dims" alt="worker-cap_1">
+                    </div>
+                    <h2>worker-cap_1, </h2>
+                </li>
+             <li title="youtube_1">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#youtube_1" class="svg-youtube_1-dims" alt="youtube_1">
+                    </div>
+                    <h2>youtube_1, </h2>
+                </li>
+             <li title="youtube_2">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#youtube_2" class="svg-youtube_2-dims" alt="youtube_2">
+                    </div>
+                    <h2>youtube_2, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Wed, 12 Jun 2024 07:57:26 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
