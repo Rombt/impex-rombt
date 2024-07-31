@@ -190,10 +190,17 @@ export const path = {
   },
 
   get ftp() {
+    // return {
+    //  for infinityfree.com
+    //   html: `htdocs`,
+    //   php: `htdocs/wp-content/themes/${this.ThemeName}`,
+    //   plug: `htdocs/wp-content/plugins/${prodPluginName}`,
+    // };
     return {
-      html: `htdocs`,
-      php: `htdocs/wp-content/themes/${this.ThemeName}`,
-      plug: `htdocs/wp-content/plugins/${prodPluginName}`,
+      // for hostpro.ua
+      html: ``,
+      php: `wp-content/themes/${this.ThemeName}`,
+      plug: `wp-content/plugins/${prodPluginName}`,
     };
   },
 
