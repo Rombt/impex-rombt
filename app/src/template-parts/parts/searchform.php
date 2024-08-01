@@ -13,8 +13,8 @@
             <form class="rmbt-search-modal__form" role="search" method="get"
                action="<?php echo esc_url(site_url()); ?>">
                <input type="search" value="<?php echo get_search_query(); ?>" name="s" id="s"
-                  placeholder="<?php esc_html_e('Type here...', 'rmbt_impex') ?>" />
-               <input type="submit" class="rmbt-impex-button" value="<?php esc_html_e('search', 'rmbt_impex') ?>" />
+                  placeholder="<?php esc_html_e('Введіть текст...', 'rmbt_impex') ?>" />
+               <input type="submit" class="rmbt-impex-button" value="<?php esc_html_e('пошук', 'rmbt_impex') ?>" />
             </form>
          </div>
       </div>

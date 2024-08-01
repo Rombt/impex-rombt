@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rmbt_impex 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2024-08-01 12:20+0300\n"
-"PO-Revision-Date: 2024-08-01 13:17+0300\n"
+"POT-Creation-Date: 2024-08-01 14:54+0300\n"
+"PO-Revision-Date: 2024-08-01 14:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: Rombt\n"
 "Language: ru\n"
@@ -1534,9 +1534,15 @@ msgid "Пошук по сайту"
 msgstr "Поиск по сайту"
 
 #: template-parts/parts/searchform.php:16
-msgid "Type here..."
+msgid "Введіть текст..."
 msgstr "Введите текст..."
 
 #: template-parts/parts/searchform.php:17
-msgid "search"
+msgid "пошук"
 msgstr "поиск"
+
+#~ msgid "Type here..."
+#~ msgstr "Введите текст..."
+
+#~ msgid "search"
+#~ msgstr "поиск"
