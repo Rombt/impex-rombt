@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rmbt_impex 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2024-08-01 11:38+0300\n"
-"PO-Revision-Date: 2024-08-01 12:20+0300\n"
+"POT-Creation-Date: 2024-08-01 12:20+0300\n"
+"PO-Revision-Date: 2024-08-01 13:17+0300\n"
 "Last-Translator: \n"
 "Language-Team: Rombt\n"
 "Language: ru\n"
@@ -1523,6 +1523,8 @@ msgstr ""
 msgid "Результати пошуку для: %s"
 msgstr "Результати поиска для: %s"
 
+#: template-parts/components/card_news_blocks.php:15
+#: template-parts/components/card_news_strings.php:10
 #: template-parts/components/footer_card.php:3
 msgid "докладніше"
 msgstr "подробнее"
