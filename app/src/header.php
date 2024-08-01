@@ -55,7 +55,7 @@
                            xlink:href="<?php echo get_template_directory_uri() ?>/assets/img/icons/sprite.svg#phone_3">
                         </use>
                      </svg>
-                     <span>Відділ продажу:</span>
+                     <span><?php esc_html_e('Відділ продажу','rmbt_impex') ?>:</span>
                      <?php echo rmbt_redux_field_to_ul('rmbt-manager-1-phone', 'tel', '', ','); ?>
                      <?php echo rmbt_redux_field_to_ul('rmbt-manager-2-phone'); ?>
                   </div>
@@ -66,11 +66,11 @@
                         </use>
                      </svg>
                      <div class="rmbt-spare-parts-department">
-                        <span><?php echo rmbt_get_redux_field('rmbt-manager-5-name') ?>:</span>
+                        <span><?php esc_html_e('Відділ запасних частин','rmbt_impex') ?>:</span>
                         <?php echo rmbt_redux_field_to_ul('rmbt-manager-5-phone', 'tel', '', ','); ?>
                      </div>
                      <div class="rmbt-service-department">
-                        <span><?php echo rmbt_get_redux_field('rmbt-manager-4-name') ?>:</span>
+                        <span><?php esc_html_e('Технічна підтримка','rmbt_impex') ?>:</span>
                         <?php echo rmbt_redux_field_to_ul('rmbt-manager-4-phone'); ?>
                      </div>
                   </div>

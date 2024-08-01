@@ -96,11 +96,11 @@ function rmbt_impex_register_required_plugins()
 			// If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 		),
 
-		// array(
-		// 	'name' => 'Advanced Custom Fields',
-		// 	'slug' => 'advanced-custom-fields',
-		// 	'required' => true,
-		// ),
+		array(
+			'name' => 'Polylang',
+			'slug' => 'polylang',
+			'required' => true,
+		),
 
 		array(
 			'name' => 'Redux Framework',

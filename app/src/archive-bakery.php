@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <?php 
-// $current_language = pll_current_language(); 
-$locale = explode('_', pll_current_language('locale'))[0];
+if ( function_exists('pll_current_language') ) {
+   $locale = explode('_', pll_current_language('locale'))[0];
+}
 ?>
 
 <main>

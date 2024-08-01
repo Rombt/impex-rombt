@@ -1,4 +1,9 @@
-<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
+<?php 
+if ( function_exists('pll_current_language') ) {
+   $locale = explode('_', pll_current_language('locale'))[0]; 
+}
+
+?>
 <footer>
    <div class="rmbt-full-width rmbt-full-width-footer">
       <section class="rmbt-container rmbt-footer">
@@ -12,7 +17,7 @@
                   <?php endif ?>
                   <div class="text">
                      <h3>ІМПЕКСМАШ</h3>
-                     <span>Український виробник хлібопекарського і кондитерського обладнання</span>
+                     <span><?php esc_html_e('Український виробник хлібопекарського і кондитерського обладнання','rmbt_impex') ?></span>
                   </div>
                   <?php get_template_part('template-parts/components/social_networks'); ?>
 

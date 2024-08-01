@@ -172,7 +172,14 @@ export const path = {
     const path = {
       src: {
         html: [`${this.src.html}/for_test.txt`, `${this.src.html}/*.txt`, `${this.src.php}/assets/styles/libs/**/*.*`, `${this.src.php}/assets/js/libs/**/*.*`],
-        php: [`${this.src.php}/README.md`, `${this.src.php}/style.css`, `${this.src.php}/screenshot.png`, `${this.src.php}/assets/styles/libs/**/*.*`, `${this.src.php}/assets/js/libs/**/*.*`],
+        php: [
+          `${this.src.php}/README.md`,
+          `${this.src.php}/style.css`,
+          `${this.src.php}/screenshot.png`,
+          `${this.src.php}/assets/styles/libs/**/*.*`,
+          `${this.src.php}/assets/js/libs/**/*.*`,
+          `${this.src.php}/languages/**/*.*`,
+        ],
         plug: [
           `${this.src.php}/${this.srcPluginName}/README.md`,
           `${this.src.php}/${this.srcPluginName}/inc/gutenberg/blocks/**/*.css`,

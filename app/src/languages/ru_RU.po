@@ -3,10 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rmbt_impex 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2024-08-01 10:16+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-08-01 11:38+0300\n"
+"PO-Revision-Date: 2024-08-01 11:38+0300\n"
+"Last-Translator: \n"
 "Language-Team: Rombt\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +20,10 @@ msgstr ""
 #: core-plugin/inc/bakeries_meta_boxes/bakery_meta_boxes.php:13
 msgid "Bakery data"
 msgstr ""
+
+#: footer.php:20
+msgid "Український виробник хлібопекарського і кондитерського обладнання"
+msgstr "Украинский производитель хлебопекарного и кондитерского оборудования"
 
 #: functions.php:62
 msgid "rmbt_Header Navigation"
@@ -42,19 +47,19 @@ msgstr ""
 
 #: header.php:58
 msgid "Відділ продажу"
-msgstr ""
+msgstr "Отдел продаж"
 
 #: header.php:69
 msgid "Відділ запасних частин"
-msgstr ""
+msgstr "Отдел запасных частей"
 
 #: header.php:73
 msgid "Технічна підтримка"
-msgstr ""
+msgstr "Техническая поддержка"
 
 #: inc/Redux/redux-options.php:30 inc/Redux/redux-options.php:32
 msgid "Опції теми"
-msgstr ""
+msgstr "Опции темы"
 
 #: inc/Redux/sections/archive-bakery.php:9
 msgid "Archive Bakery Page"
@@ -70,7 +75,7 @@ msgstr ""
 
 #: inc/Redux/sections/archive-bakery.php:22
 msgid "Вироби"
-msgstr ""
+msgstr "Изделия"
 
 #: inc/Redux/sections/archive-bakery.php:28
 msgid "Title of Archive Bakery Page"
@@ -114,7 +119,7 @@ msgstr ""
 
 #: inc/Redux/sections/blog_page.php:22
 msgid "Новини нашої компанії"
-msgstr ""
+msgstr "Новости нашей компании"
 
 #: inc/Redux/sections/blog_page.php:27 inc/Redux/sections/front_page.php:43
 msgid "Title of News Block on England"
@@ -174,7 +179,7 @@ msgstr ""
 
 #: inc/Redux/sections/contacts.php:77
 msgid "Введіть свою адресу"
-msgstr ""
+msgstr "Введите свой адрес"
 
 #: inc/Redux/sections/contacts.php:82
 msgid "Enter Your Address"
@@ -190,7 +195,7 @@ msgstr ""
 
 #: inc/Redux/sections/contacts.php:101
 msgid "Додайте ім`я першого менеджера"
-msgstr ""
+msgstr "Добавить имя первого менеджера"
 
 #: inc/Redux/sections/contacts.php:107
 msgid "Add first manager name "
@@ -214,7 +219,7 @@ msgstr ""
 
 #: inc/Redux/sections/contacts.php:143
 msgid "Додайте ім`я другого менеджера"
-msgstr ""
+msgstr "Добавить имя второго менеджера"
 
 #: inc/Redux/sections/contacts.php:148
 msgid "Add second manager name"
@@ -1351,7 +1356,7 @@ msgstr ""
 #: inc/Redux/sections/search_block.php:81
 #: inc/Redux/sections/search_block.php:87
 msgid "Пошук по виробам"
-msgstr ""
+msgstr "Поиск по изделиям"
 
 #: inc/Redux/sections/search_block.php:80
 #: inc/Redux/sections/search_block.php:98
@@ -1436,16 +1441,22 @@ msgid "Return to the Dashboard"
 msgstr ""
 
 #: inc/functions/class-tgm-plugin-activation.php:1019
-msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
 msgstr ""
 
 #: inc/functions/class-tgm-plugin-activation.php:1019
 #: inc/functions/class-tgm-plugin-activation.php:1022
-msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
 msgstr ""
 
 #: inc/functions/class-tgm-plugin-activation.php:1022
-msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
 msgstr ""
 
 #: inc/functions/class-tgm-plugin-activation.php:2618
@@ -1489,7 +1500,7 @@ msgstr ""
 
 #: inc/functions/general-front.php:31
 msgid "Search results"
-msgstr ""
+msgstr "Результаты поиска"
 
 #: inc/functions/general-front.php:32
 msgid "Tag"
@@ -1507,15 +1518,23 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: index.php:17
+#: index.php:19
 #, php-format
 msgid "Результати пошуку для: %s"
-msgstr ""
+msgstr "Результати поиска для: %s"
 
-#: template-parts/parts/searchform.php:13
+#: template-parts/components/footer_card.php:3
+msgid "докладніше"
+msgstr "подробнее"
+
+#: template-parts/parts/searchform.php:11
+msgid "Пошук по сайту"
+msgstr "Поиск по сайту"
+
+#: template-parts/parts/searchform.php:16
 msgid "Type here..."
-msgstr ""
+msgstr "Введите текст..."
 
-#: template-parts/parts/searchform.php:14
+#: template-parts/parts/searchform.php:17
 msgid "search"
-msgstr ""
+msgstr "поиск"

@@ -1,4 +1,6 @@
-<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
+<?php if ( function_exists('pll_current_language') ) {
+$locale = explode('_', pll_current_language('locale'))[0]; 
+}?>
 <div class="wrapper-section">
    <div class="rmbt-full-width rmbt-news-block-full-width">
       <section class="rmbt-container rmbt-news-block">

@@ -17,17 +17,6 @@ function get_data_categories() {
     $groups = []; // Массив для хранения объектов
 
     $results = $wpdb->get_results("SELECT * FROM $table_name"); // Получить все записи
-    
-    // Получение групп категорий для текущего языка 
-   //  $current_language = pll_current_language(); // в админке язык всегда один и тот же, на фронте раб норм
-   // $results = $wpdb->get_results(
-   //       $wpdb->prepare(
-   //          "SELECT * FROM $table_name WHERE language_code = %s", 
-   //          $current_language
-   //       )
-   //    );
-
-
 
     foreach ($results as $row) {
         $group = new stdClass(); // Создать новый объект

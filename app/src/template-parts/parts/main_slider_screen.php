@@ -1,6 +1,8 @@
 <?php
 global $rmbt_impex_options;
-$locale = explode('_', pll_current_language('locale'))[0];
+if ( function_exists('pll_current_language') ) {
+         $locale = explode('_', pll_current_language('locale'))[0]; 
+      }
 if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
    $arr_main_slider_screen_gallery = explode(",", $rmbt_impex_options['main_slider_screen-gallery']);
 }

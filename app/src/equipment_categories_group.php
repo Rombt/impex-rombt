@@ -8,8 +8,10 @@
 
 <?php
 global $wpdb;
-// $locale = explode('_', pll_current_language('locale'))[0];
-$current_language = pll_current_language();
+
+if ( function_exists('pll_current_language') ) {
+   $current_language = pll_current_language();
+}
 
 $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
 $arr_groups = [];

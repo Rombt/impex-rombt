@@ -1,4 +1,6 @@
-      <?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
+      <?php if ( function_exists('pll_current_language') ) {
+         $locale = explode('_', pll_current_language('locale'))[0]; 
+      }?>
       <section class="rmbt-search-block-3">
          <div class="rmbt-search-block-3__row">
             <div class="rmbt-search-block-3__col">

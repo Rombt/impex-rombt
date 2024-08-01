@@ -1,7 +1,13 @@
 <?php
 /* Template Name: rmbt Contacts  page */
 ?>
-<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
+<?php 
+if ( function_exists('pll_current_language') ) {
+   $locale = explode('_', pll_current_language('locale'))[0]; 
+}
+
+
+?>
 <?php get_header(); ?>
 <main>
 

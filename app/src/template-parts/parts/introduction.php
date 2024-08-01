@@ -1,4 +1,6 @@
-<?php $locale = explode('_', pll_current_language('locale'))[0]; ?>
+<?php if ( function_exists('pll_current_language') ) {
+   $locale = explode('_', pll_current_language('locale'))[0]; 
+}?>
 <div class="wrapper-section">
    <div class="rmbt-full-width">
       <section class="rmbt-container rmbt-introduction">
@@ -11,15 +13,15 @@
                   </p>
                </div>
                <?php get_template_part('template-parts/components/card', 'benefit', [
-                  'title' => rmbt_get_redux_field('introduction_first_block-title_'. $locale),
-                  'text' => rmbt_get_redux_field('introduction_first_block-text_'. $locale),
-                  'id-img' => 'gear-introduction_1',
-               ]); ?>
+            'title' => rmbt_get_redux_field('introduction_first_block-title_'. $locale),
+            'text' => rmbt_get_redux_field('introduction_first_block-text_'. $locale),
+            'id-img' => 'gear-introduction_1',
+         ]); ?>
                <?php get_template_part('template-parts/components/card', 'benefit', [
-                  'title' => rmbt_get_redux_field('introduction_second_block-title_'. $locale),
-                  'text' => rmbt_get_redux_field('introduction_second_block-text_'. $locale),
-                  'id-img' => 'bread-introduction_5',
-               ]); ?>
+            'title' => rmbt_get_redux_field('introduction_second_block-title_'. $locale),
+            'text' => rmbt_get_redux_field('introduction_second_block-text_'. $locale),
+            'id-img' => 'bread-introduction_5',
+         ]); ?>
 
 
             </ul>
