@@ -103,6 +103,6 @@ function resizeScreen(e) {
 const url = new URL(window.location.href);
 
 // скрыл переключение языков
-if (decodeURIComponent(url.pathname).indexOf('группа-категории') > 0 || decodeURIComponent(url.pathname).indexOf('группа-категорий') > 0) {
+if (decodeURIComponent(url.pathname).indexOf('category-group') > 0) {
   document.querySelector('.pll-parent-menu-item').style.display = 'none';
 }
