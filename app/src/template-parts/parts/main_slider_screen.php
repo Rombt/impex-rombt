@@ -8,7 +8,14 @@ if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
 }
 
 if (rmbt_get_redux_field('button_href') === '' || rmbt_get_redux_field('button_href') === '#') {
-   $contact_page_url = get_permalink('11702');
+   
+   if ($locale == 'uk') {
+      $contact_page_url = get_permalink('11702');
+   }elseif ($locale == 'ru') {
+      $contact_page_url = get_permalink('12023');
+   }elseif ($locale == 'en') {
+      $contact_page_url = get_permalink('12018');
+   }
 } else {
    $contact_page_url = rmbt_get_redux_field('button_href');
 }

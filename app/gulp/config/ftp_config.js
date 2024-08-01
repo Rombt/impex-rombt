@@ -7,7 +7,7 @@
 
 export let configFTP = {
   host: '194.28.87.142', // address of FTP server
-  user: 'rombt@impex-test.com.ua', // user name
+  user: 'rombt@test2.impexmash.com', // user name
   password: 'Rom343714',
   parallel: 5, // количество одновременных потоков
 };
