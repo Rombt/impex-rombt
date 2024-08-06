@@ -18,7 +18,6 @@
                      <?php if (is_search()) {
                         printf(esc_html__('Результати пошуку для: %s', 'rmbt_impex'), '<span>' . get_search_query() . '</span>');
                      } else if (is_home() || is_page(['blog', 'Blog'])) {
-                        // echo "Новини нашої компанії";
                         echo rmbt_get_redux_field('rmbt-news-block_section-title_'. $locale); 
                      } else if (is_archive()) {
                         the_archive_title();
