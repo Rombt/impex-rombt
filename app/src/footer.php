@@ -16,7 +16,7 @@ if ( function_exists('pll_current_language') ) {
                   <?php the_custom_logo(); ?>
                   <?php endif ?>
                   <div class="text">
-                     <h3>ІМПЕКСМАШ</h3>
+                     <h3><?php esc_html_e('ІМПЕКСМАШ','rmbt_impex') ?></h3>
                      <span><?php esc_html_e('Український виробник хлібопекарського і кондитерського обладнання','rmbt_impex') ?></span>
                   </div>
                   <?php get_template_part('template-parts/components/social_networks'); ?>
