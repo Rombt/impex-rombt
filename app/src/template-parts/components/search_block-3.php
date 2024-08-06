@@ -11,14 +11,14 @@
                   'text' => rmbt_get_redux_field('search-card-1_text_'. $locale, 1),
                   'tag-img' => rmbt_redux_img('rmbt-search-card_img-id-1', 1),
                   'link_read_more_href' =>
-                  rmbt_get_redux_field('search-card-1_link', 1),
+                  rmbt_get_redux_field('search-card-1_link_'. $locale, 1),
                ]);
                get_template_part('template-parts/components/card', 'search_3', [
                   'title' => rmbt_get_redux_field('search-card-2_title_'. $locale, 1),
                   'text' => rmbt_get_redux_field('search-card-2_text_'. $locale, 1),
                   'tag-img' => rmbt_redux_img('rmbt-search-card_img-id-2', 1),
                   'link_read_more_href' =>
-                  rmbt_get_redux_field('search-card-2_link', 1),
+                  rmbt_get_redux_field('search-card-2_link_'. $locale, 1),
                ]);
 
 
