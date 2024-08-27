@@ -42,12 +42,16 @@
   .site-title {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    transform: translate(-50%, 0%);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: max-content;
     z-index: 2;
+
+    height: 370px;
+    .adaptive-prop(height, 370, 130);
 
     &__title {
       font-family: Montserrat;

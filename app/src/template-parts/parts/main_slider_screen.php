@@ -1,23 +1,23 @@
 <?php
 global $rmbt_impex_options;
-if ( function_exists('pll_current_language') ) {
-         $locale = explode('_', pll_current_language('locale'))[0]; 
-      }
-if (isset($rmbt_impex_options['main_slider_screen-gallery'])) {
-   $arr_main_slider_screen_gallery = explode(",", $rmbt_impex_options['main_slider_screen-gallery']);
+if ( function_exists( 'pll_current_language' ) ) {
+	$locale = explode( '_', pll_current_language( 'locale' ) )[0];
+}
+if ( isset( $rmbt_impex_options['main_slider_screen-gallery'] ) ) {
+	$arr_main_slider_screen_gallery = explode( ",", $rmbt_impex_options['main_slider_screen-gallery'] );
 }
 
-if (rmbt_get_redux_field('button_href') === '' || rmbt_get_redux_field('button_href') === '#') {
-   
-   if ($locale == 'uk') {
-      $contact_page_url = get_permalink('11702');
-   }elseif ($locale == 'ru') {
-      $contact_page_url = get_permalink('12023');
-   }elseif ($locale == 'en') {
-      $contact_page_url = get_permalink('12018');
-   }
+if ( rmbt_get_redux_field( 'button_href' ) === '' || rmbt_get_redux_field( 'button_href' ) === '#' ) {
+
+	if ( $locale == 'uk' ) {
+		$contact_page_url = get_permalink( '11702' );
+	} elseif ( $locale == 'ru' ) {
+		$contact_page_url = get_permalink( '12023' );
+	} elseif ( $locale == 'en' ) {
+		$contact_page_url = get_permalink( '12018' );
+	}
 } else {
-   $contact_page_url = rmbt_get_redux_field('button_href');
+	$contact_page_url = rmbt_get_redux_field( 'button_href' );
 }
 
 ?>
@@ -27,13 +27,13 @@ if (rmbt_get_redux_field('button_href') === '' || rmbt_get_redux_field('button_h
    <div class="main-slider-screen rmbt-full-width">
 
       <div class="site-title">
-         <div class="site-title__slogan"> <?php echo rmbt_get_redux_field('front_page_slogan_'. $locale) ?> </div>
+         <!-- <div class="site-title__slogan"> <?php echo rmbt_get_redux_field( 'front_page_slogan_' . $locale ) ?> </div> -->
          <div class="site-title__title">
-            <h1><?php echo rmbt_get_redux_field('front_page_title_'. $locale, 1)?></h1>
-            <p> <?php echo rmbt_get_redux_field('front_page_subtitle_'. $locale) ?> </p>
+            <h1><?php echo rmbt_get_redux_field( 'front_page_title_' . $locale, 1 ) ?></h1>
+            <p> <?php echo rmbt_get_redux_field( 'front_page_subtitle_' . $locale ) ?> </p>
          </div>
-         <?php get_template_part('template-parts/components/button-link', null, ['href' => $contact_page_url, 'title' => rmbt_get_redux_field('button_title_'. $locale)]);
-         ?>
+         <?php get_template_part( 'template-parts/components/button-link', null, [ 'href' => $contact_page_url, 'title' => rmbt_get_redux_field( 'button_title_' . $locale ) ] );
+			?>
       </div>
 
       <div class="main-slider-screen__video">
@@ -46,5 +46,5 @@ if (rmbt_get_redux_field('button_href') === '' || rmbt_get_redux_field('button_h
 
 
    </div>
-   <?php get_template_part('template-parts/components/search_block', '3'); ?>
+   <?php get_template_part( 'template-parts/components/search_block', '3' ); ?>
 </div>
