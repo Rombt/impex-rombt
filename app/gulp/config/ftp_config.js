@@ -5,9 +5,16 @@
 //   parallel: 5, // количество одновременных потоков
 // };
 
+// export let configFTP = {
+//   host: '194.28.87.142', // address of FTP server
+//   user: 'rombt@test2.impexmash.com', // user name
+//   password: 'Rom343714',
+//   parallel: 5, // количество одновременных потоков
+// };
+
 export let configFTP = {
-  host: '194.28.87.142', // address of FTP server
-  user: 'rombt@test2.impexmash.com', // user name
+  host: '194.28.87.142',
+  user: 'rombt@impexmash.com',
   password: 'Rom343714',
-  parallel: 5, // количество одновременных потоков
+  parallel: 5,
 };
