@@ -74,7 +74,7 @@ if (window.innerWidth <= 767) {
   }
 } else if (window.innerWidth > 767) {
   document.querySelector('.rmbt-bottom-row').prepend(logo);
-  document.querySelector('.rmbt-bottom-row').append(contHorizontMenu);
+  document.querySelector('.row-header-menu').append(contHorizontMenu);
 }
 
 window.addEventListener('resize', resizeScreen);

@@ -26,16 +26,9 @@ if ( rmbt_get_redux_field( 'button_href' ) === '' || rmbt_get_redux_field( 'butt
 <div class="wrapper-section wrapper-section-main-slider-screen">
 	<div class="main-slider-screen rmbt-full-width">
 
-		<div class="site-title">
-			<!-- <div class="site-title__slogan"> <?php echo rmbt_get_redux_field( 'front_page_slogan_' . $locale ) ?> </div> -->
-			<!-- <div class="site-title__title">
-				<h1><?php echo rmbt_get_redux_field( 'front_page_title_' . $locale, 1 ) ?></h1>
-				<p> <?php echo rmbt_get_redux_field( 'front_page_subtitle_' . $locale ) ?> </p>
-			</div> -->
-			<?php get_template_part( 'template-parts/components/button-link', null, [ 'href' => $contact_page_url, 'title' => rmbt_get_redux_field( 'button_title_' . $locale ) ] );
-			?>
-		</div>
 
+		<?php get_template_part( 'template-parts/components/button-link', null, [ 'href' => $contact_page_url, 'title' => rmbt_get_redux_field( 'button_title_' . $locale ) ] );
+		?>
 		<div class="main-slider-screen__video">
 			<iframe frameborder="0" allowfullscreen=""
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
