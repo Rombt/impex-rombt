@@ -5,7 +5,7 @@
   .rmbt-phones-for-mobile {
     display: none;
 
-    .to(650px,{
+    .to(680px,{
     display: block;
       position: absolute;
       left: 50%;
@@ -123,10 +123,10 @@
 
   .to(767px,{
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 120px;
   });
 
-  .to(650px,{
+  .to(680px,{
     position: relative;
     height: 40px;
   });
@@ -183,7 +183,7 @@
     text-decoration: none;
   }
 
-  .to(650px,{
+  .to(680px,{
   svg {
     display: none;
   }
@@ -324,8 +324,13 @@
   }
 
   &__logo {
-    // justify-content: space-around;
     column-gap: 50px;
+
+    .to(767px,{
+      justify-content: center;
+    
+    });
+
     .cont-horizont-menu {
       .size(9);
       .shift-left(1);
@@ -356,8 +361,8 @@
         p {
           // font-family: 'RubikBubbles';
           font-family: 'MarckScript';
-          // .adaptive-prop(font-size, 30, 12);
-          font-size: 30px;
+          // font-size: 36px;
+          .adaptive-prop(font-size, 36, 12);
           font-weight: 300;
           // color: #ffffff;
           color: @color_logo_background;
@@ -365,9 +370,10 @@
           margin: 0px 0px 0px 0px;
         }
         h1 {
-          font-family: 'AmaticSC';
-          // .adaptive-prop(font-size, 60, 24);
-          font-size: 60px;
+          // font-family: 'AmaticSC';
+          // font-family: 'RubikBubbles';
+          font-family: 'Roboto';
+          .adaptive-prop(font-size, 60, 24);
           font-weight: 900;
           color: @color_logo_text_green;
           margin: 0px 0px 0px 0px;

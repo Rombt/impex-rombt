@@ -62,6 +62,7 @@ if (contactForm) {
 if (window.innerWidth <= 767) {
   document.querySelector('.rmbt-top-row').prepend(logo);
   document.querySelector('.rmbt-top-row').append(contHorizontMenu);
+  document.querySelector('.rmbt-bottom-row__menu').style.display = 'none';
   if (window.innerWidth < 670) {
     if (buttonSubmitContactFeedbackForm) {
       contactForm.querySelector('.rmbt-contacts-feedback-form__input-wrap').append(buttonSubmitContactFeedbackForm);
@@ -74,7 +75,8 @@ if (window.innerWidth <= 767) {
   }
 } else if (window.innerWidth > 767) {
   document.querySelector('.rmbt-bottom-row').prepend(logo);
-  document.querySelector('.row-header-menu').append(contHorizontMenu);
+  document.querySelector('.rmbt-bottom-row__menu').append(contHorizontMenu);
+  document.querySelector('.rmbt-bottom-row__menu').style.display = 'flex';
 }
 
 window.addEventListener('resize', resizeScreen);
@@ -82,6 +84,7 @@ function resizeScreen(e) {
   if (window.innerWidth <= 767) {
     document.querySelector('.rmbt-top-row').prepend(logo);
     document.querySelector('.rmbt-top-row').append(contHorizontMenu);
+    document.querySelector('.rmbt-bottom-row__menu').style.display = 'none';
 
     contactForm.querySelector('.rmbt-contacts-feedback-form').append(buttonSubmitContactFeedbackForm);
     if (window.innerWidth < 670) {
@@ -96,7 +99,8 @@ function resizeScreen(e) {
     }
   } else if (window.innerWidth > 767) {
     document.querySelector('.rmbt-bottom-row').prepend(logo);
-    document.querySelector('.rmbt-bottom-row').append(contHorizontMenu);
+    document.querySelector('.rmbt-bottom-row__menu').append(contHorizontMenu);
+    document.querySelector('.rmbt-bottom-row__menu').style.display = 'flex';
   }
 }
 
