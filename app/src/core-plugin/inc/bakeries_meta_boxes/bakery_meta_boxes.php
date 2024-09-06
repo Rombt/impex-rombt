@@ -40,7 +40,9 @@ function rmbt_save_meta_box_bakeries( $post_id, $post ) {
 	 *		сохранение данных метополей разрешено только с той страницы язык которой установлен главным в Polylang
 	 */
 
-	if ( pll_current_language() !== pll_default_language() ) {
+
+
+	if ( pll_get_post_language( $post_id ) !== pll_default_language() ) {
 		return $post_id;
 	}
 

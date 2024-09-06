@@ -51,7 +51,7 @@ function bakeriesMetaBoxes() {
     };
     Helper.addClassToBlocks(html);
 
-    html.massageLang.innerHTML = `For saved changes switch on <span>${data.defaultLanguage}</span> language`;
+    html.massageLang.innerHTML = `Сохранение изменений разрешено только на <span>${data.defaultLanguage}</span> версии этой страницы`;
 
     arrCards.forEach(card => {
       let exit = false;
