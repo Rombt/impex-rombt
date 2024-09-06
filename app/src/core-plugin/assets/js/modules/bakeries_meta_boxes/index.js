@@ -38,6 +38,7 @@ function bakeriesMetaBoxes() {
       iconSearchEquipment: document.createElement('img'),
 
       mainWrapListEquipmentsDist: document.createElement('div'),
+      massageLang: document.createElement('div'),
       listEquipmentsDist: document.createElement('ul'),
 
       hiddenInputCardsIds: document.createElement('input'),
@@ -49,6 +50,8 @@ function bakeriesMetaBoxes() {
       imgTechnologicalCard: document.createElement('img'),
     };
     Helper.addClassToBlocks(html);
+
+    html.massageLang.innerHTML = `For saved changes switch on <span>${data.defaultLanguage}</span> language`;
 
     arrCards.forEach(card => {
       let exit = false;
@@ -97,6 +100,7 @@ function bakeriesMetaBoxes() {
     html.listEquipmentsDist.append(html.hiddenInputCardsIds);
     html.listEquipmentsDist.append(html.hiddenInputTechnologicalCardId);
     html.listEquipmentsDist.append(html.hiddenInputNonce);
+    html.mainWrapListEquipmentsDist.append(html.massageLang);
     html.mainWrapListEquipmentsDist.append(html.listEquipmentsDist);
 
     html.iconSearchEquipment.src = `${rmbtBakery.rmbtPluginUrl}/impex-rombt-core/assets/img/icons/search.png`;
@@ -148,12 +152,7 @@ function bakeriesMetaBoxes() {
       }
     });
 
-    liveSearch(
-      html.mainWrapListEquipmentsSrc,
-      'li.card-equipment',
-      '.wrap-equipment-name>h4',
-      '.input-search-equipment'
-    );
+    liveSearch(html.mainWrapListEquipmentsSrc, 'li.card-equipment', '.wrap-equipment-name>h4', '.input-search-equipment');
 
     function delImgTechnologicalCard() {
       html.imgTechnologicalCard.remove();
