@@ -13,7 +13,8 @@
 
   .to(480px,{
   left: 50%;
-  transform: translate(-50%,00%);
+  // bottom: -100px;
+  transform: translate(-50%,0%);
   });
 
   &__row {
@@ -40,8 +41,8 @@
 
   // width: 200px;
   // height: 80px;
-  .adaptive-prop(width, 200, 70);
-  .adaptive-prop(height, 80, 30);
+  .adaptive-prop(width, 200, 120);
+  .adaptive-prop(height, 80, 80);
 
   transition: all 0.5s ease-out;
 
@@ -81,10 +82,8 @@
       margin: 0px 0px 0px 0px;
 
       font-family: Montserrat;
-      // font-size: 16px;
-      // font-weight: 500;
 
-      .adaptive-prop(font-size, 16, 7);
+      .adaptive-prop(font-size, 16, 11);
 
       color: #c4c4c4;
       text-transform: uppercase;
