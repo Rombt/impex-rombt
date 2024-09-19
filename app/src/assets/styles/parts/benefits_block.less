@@ -46,9 +46,13 @@
       height: 100%;
       z-index: 1;
 
-      // background-color: rgba(255, 255, 255, 0.3);
       background: rgb(255, 255, 255, 0.3);
       background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8575805322128851) 11%, rgba(255, 255, 255, 0) 72%);
+
+      .to(900px,{
+      
+        background-color: #fff;
+      });
     }
 
     .wrap-img {
@@ -67,6 +71,10 @@
   &__row {
     .row-flex();
     min-width: @width_container;
+
+    .to(1140px,{
+      min-width: unset;
+    });
   }
 
   &__col {

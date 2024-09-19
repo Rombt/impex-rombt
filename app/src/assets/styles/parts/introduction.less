@@ -124,3 +124,65 @@
     }
   }
 }
+
+.rmbt-introduction-str {
+  .rmbt-introduction__row {
+    // min-height: unset;
+    flex-wrap: nowrap;
+
+    .to(1024px,{
+    flex-direction: column;
+    });
+
+    .rmbt-introduction__img-col {
+      position: relative;
+
+      // .adaptive-prop(width, 705, 300);
+      // .adaptive-prop(height, 400, 300);
+
+      .to(1024px,{
+        .adaptive-prop(width, 705, 290);
+        .adaptive-prop(height, 400, 290);
+        margin: 0 auto;
+    
+    });
+
+      .to(700px,{
+      left: 0;
+      top: 0;
+      transform: translate(0, -0);
+      // width: 100%;
+      // height: 400px;
+
+      &::after{
+        display: none;
+      }
+    });
+    }
+  }
+
+  .rmbt-introduction__articles-col {
+    .size(10);
+    display: block;
+    height: min-content;
+  }
+
+  .rmbt-benefit-article {
+    max-width: none;
+    width: 100%;
+    height: min-content;
+
+    margin-bottom: 30px;
+
+    .rmbt-benefit-article__wrap-content {
+    }
+
+    .rmbt-benefit-article__title {
+      text-align: left;
+    }
+
+    .rmbt-benefit-article__body {
+      text-align: left;
+    }
+  }
+}

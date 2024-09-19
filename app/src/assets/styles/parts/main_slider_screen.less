@@ -42,12 +42,16 @@
   .site-title {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    transform: translate(-50%, 0%);
     display: flex;
     flex-direction: column;
     width: max-content;
     z-index: 2;
+    .adaptive-prop(height, 370, 130);
+
+    // top: 86%;
+    // justify-content: space-between;
 
     &__title {
       font-family: Montserrat;
@@ -105,22 +109,38 @@
         background-color: @color_logo_background;
       }
     }
+  }
 
-    .rmbt-impex-button {
-      align-self: center;
-      .adaptive-prop(width, 220, 110);
-      .adaptive-prop(height, 50, 20);
-      .adaptive-prop(font-size,16, 9);
+  .rmbt-impex-button {
+    position: static;
+    left: 0;
+    .adaptive-prop(bottom, 0, 0);
+    transform: translate(0, 0);
 
-      .to(768px,{
+    align-self: center;
+    .adaptive-prop(width, 220, 110);
+    .adaptive-prop(height, 50, 35);
+    .adaptive-prop(font-size,16, 9);
+
+    .to(768px,{
         font-weight: 500;
       });
-      .to(480px,{
+    .to(480px,{
         font-weight: 400;
       });
 
-      cursor: pointer;
-      .adaptive-prop(margin-top, 30, -10);
-    }
+    cursor: pointer;
+    .adaptive-prop(margin-top, 30, -10);
+  }
+
+  .rmbt-impex-button {
+    position: absolute;
+    left: 50%;
+    .adaptive-prop(bottom, 15, 0);
+    transform: translate(-50%, -50%);
+
+    .to(420px,{
+      bottom:100px;
+      });
   }
 }

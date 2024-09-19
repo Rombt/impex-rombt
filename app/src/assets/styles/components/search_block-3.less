@@ -1,15 +1,20 @@
 .rmbt-search-block-3 {
   position: absolute;
   z-index: 1;
-  width: max-content;
   box-sizing: border-box;
 
-  .adaptive-prop(right, 30, 10);
+  width: 95%;
+
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  // .adaptive-prop(right, 30, 10);
   .adaptive-prop(bottom, 30, 5);
 
   .to(480px,{
   left: 50%;
-  transform: translate(-50%,00%);
+  // bottom: -100px;
+  transform: translate(-50%,0%);
   });
 
   &__row {
@@ -17,6 +22,7 @@
 
   &__col {
     display: flex;
+    justify-content: space-between;
     .adaptive-prop(column-gap, 30, 10);
 
     .to(480px,{
@@ -35,8 +41,8 @@
 
   // width: 200px;
   // height: 80px;
-  .adaptive-prop(width, 200, 70);
-  .adaptive-prop(height, 80, 30);
+  .adaptive-prop(width, 200, 120);
+  .adaptive-prop(height, 80, 80);
 
   transition: all 0.5s ease-out;
 
@@ -64,8 +70,7 @@
     height: 95%;
     padding: 10px 50px 10px 15px;
     background-color: transparent;
-    box-shadow: 0 -2px 0 3px darken(rgb(90, 95, 89), 10%) inset, 0 5px 5px rgba(darken(rgb(90, 95, 89), 40%), 0.17),
-      0 15px rgba(#fff, 0.25) inset;
+    box-shadow: 0 -2px 0 3px darken(rgb(90, 95, 89), 10%) inset, 0 5px 5px rgba(darken(rgb(90, 95, 89), 40%), 0.17), 0 15px rgba(#fff, 0.25) inset;
 
     h3 {
       display: block;
@@ -77,10 +82,8 @@
       margin: 0px 0px 0px 0px;
 
       font-family: Montserrat;
-      // font-size: 16px;
-      // font-weight: 500;
 
-      .adaptive-prop(font-size, 16, 7);
+      .adaptive-prop(font-size, 16, 11);
 
       color: #c4c4c4;
       text-transform: uppercase;
