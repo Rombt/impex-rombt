@@ -34,28 +34,32 @@ foreach ( $results as $row ) {
 	$group->categories = json_decode( $row->categories );
 	$arr_groups[] = $group;
 }
+
+usort( $arr_groups, function ($a, $b) {
+	if ( $a->sorting_number == 0 ) {
+		return 1;
+	}
+	if ( $b->sorting_number == 0 ) {
+		return -1;
+	}
+	return $a->sorting_number - $b->sorting_number;
+
+} );
+
+
 ?>
 
 
-<div class="test-block">
-   <?php
-	echo "<pre>";
-	print_r( $arr_groups );
-	echo "</pre>";
-	?>
-</div>
-
-
 <main>
-   <div class="wrapper-section">
-      <div class="rmbt-full-width rmbt-equipment-categories-full-width">
-         <section class="rmbt-container rmbt-equipment-categories">
-            <?php get_template_part( 'template-parts/components/redux_title', 'page', [ 'title' => 'rmbt-equipment-categories-group_page-title_' . $locale ] ); ?>
-            <div class="rmbt-equipment-categories__text">
-               <?php echo rmbt_get_redux_field( 'rmbt-equipment-categories-group_page-text_' . $locale ) ?>
-            </div>
-            <div class="rmbt-equipment-categories__row">
-               <?php foreach ( $arr_groups as $group ) {
+	<div class="wrapper-section">
+		<div class="rmbt-full-width rmbt-equipment-categories-full-width">
+			<section class="rmbt-container rmbt-equipment-categories">
+				<?php get_template_part( 'template-parts/components/redux_title', 'page', [ 'title' => 'rmbt-equipment-categories-group_page-title_' . $locale ] ); ?>
+				<div class="rmbt-equipment-categories__text">
+					<?php echo rmbt_get_redux_field( 'rmbt-equipment-categories-group_page-text_' . $locale ) ?>
+				</div>
+				<div class="rmbt-equipment-categories__row">
+					<?php foreach ( $arr_groups as $group ) {
 						get_template_part( 'template-parts/components/equipment_categories_card', null, [ 
 							'src' => get_permalink( $group->page_id ) . '?id_group=' . $group->id,
 							'title' => $group->name,
@@ -64,10 +68,10 @@ foreach ( $results as $row ) {
 							'alt-img' => $group->name,
 						] );
 					} ?>
-            </div>
-         </section>
-      </div>
-   </div>
+				</div>
+			</section>
+		</div>
+	</div>
 </main>
 
 
