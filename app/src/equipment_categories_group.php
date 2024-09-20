@@ -9,55 +9,66 @@
 <?php
 global $wpdb;
 
-if ( function_exists('pll_current_language') ) {
-   $current_language = pll_current_language();
+if ( function_exists( 'pll_current_language' ) ) {
+	$current_language = pll_current_language();
 }
 
 $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
 $arr_groups = [];
-    $results = $wpdb->get_results(
-        $wpdb->prepare(
-            "SELECT * FROM $table_name WHERE language_code = %s", 
-            $current_language
-        )
-    );
+$results = $wpdb->get_results(
+	$wpdb->prepare(
+		"SELECT * FROM $table_name WHERE language_code = %s",
+		$current_language
+	)
+);
 
-foreach ($results as $row) {
-   $group = new stdClass();
-   $group->id = $row->id;
-   $group->page_id = $row->page_id;
-   $group->name = $row->name;
-   $group->img_id = $row->img_id;
-   $group->img_url = $row->img_url;
-   $group->description = $row->description;
-   $group->categories = json_decode($row->categories);
-   $arr_groups[] = $group;
+foreach ( $results as $row ) {
+	$group = new stdClass();
+	$group->id = $row->id;
+	$group->page_id = $row->page_id;
+	$group->name = $row->name;
+	$group->img_id = $row->img_id;
+	$group->img_url = $row->img_url;
+	$group->description = $row->description;
+	$group->sorting_number = $row->sorting_number;
+	$group->categories = json_decode( $row->categories );
+	$arr_groups[] = $group;
 }
 ?>
 
 
+<div class="test-block">
+	<?php
+	echo "<pre>";
+	print_r( $arr_groups );
+	echo "</pre>";
+	?>
+</div>
+
 
 <main>
-   <div class="wrapper-section">
-      <div class="rmbt-full-width rmbt-equipment-categories-full-width">
-         <section class="rmbt-container rmbt-equipment-categories">
-            <?php get_template_part('template-parts/components/redux_title', 'page', ['title' => 'rmbt-equipment-categories-group_page-title_'. $locale]); ?>
-            <div class="rmbt-equipment-categories__text">
-               <?php echo rmbt_get_redux_field('rmbt-equipment-categories-group_page-text_'. $locale) ?></div>
-            <div class="rmbt-equipment-categories__row">
-               <?php foreach ($arr_groups as $group) {
-                  get_template_part('template-parts/components/equipment_categories_card', null, [
-                     'src' => get_permalink($group->page_id) . '?id_group=' . $group->id,
-                     'title' => $group->name,
-                     'text' => $group->description,
-                     'id-img' => $group->img_id,
-                     'alt-img' => $group->name,
-                  ]);
-               } ?>
-            </div>
-         </section>
-      </div>
-   </div>
+	<div class="wrapper-section">
+		<div class="rmbt-full-width rmbt-equipment-categories-full-width">
+			<section class="rmbt-container rmbt-equipment-categories">
+				<?php get_template_part( 'template-parts/components/redux_title', 'page', [ 'title' => 'rmbt-equipment-categories-group_page-title_' . $locale ] ); ?>
+				<div class="rmbt-equipment-categories__text">
+					++++++++++
+					<?php echo rmbt_get_redux_field( 'rmbt-equipment-categories-group_page-text_' . $locale ) ?>
+				</div>
+				<div class="rmbt-equipment-categories__row">
+					<?php foreach ( $arr_groups as $group ) {
+						get_template_part( 'template-parts/components/equipment_categories_card', null, [ 
+							'src' => get_permalink( $group->page_id ) . '?id_group=' . $group->id,
+							'title' => $group->name,
+							'text' => $group->description,
+							'id-img' => $group->img_id,
+							'alt-img' => $group->name,
+						] );
+					} ?>
+				</div>
+			</section>
+		</div>
+	</div>
 </main>
 
 
