@@ -7,6 +7,19 @@ $table_name = $wpdb->prefix . 'rmbt_categories_group_lang';
 $sql = "SHOW TABLES LIKE '$table_name'";
 $result = $wpdb->get_var( $sql );
 
+
+
+// $column_check = $wpdb->get_results( "SHOW COLUMNS FROM $table_name LIKE 'sorting_number'" );
+
+// if ( empty( $column_check ) ) {
+// 	// Если столбец отсутствует, добавляем его
+// 	$alter_sql = "ALTER TABLE $table_name ADD `sorting_number` INT NULL DEFAULT 0";
+// 	$wpdb->query( $alter_sql );
+// }
+
+
+
+
 if ( $result === $table_name ) {
 	return;
 }
