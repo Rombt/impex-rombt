@@ -22,9 +22,7 @@ function categoriesGrouping() {
     /*---------- data ----------*/
     const Data = await getData();
 
-    console.log('Data = ', Data);
     const arr_categories = Data.categories;
-
     const arr_groups = Data.groups;
 
     /*---------- structure ----------*/
@@ -164,7 +162,7 @@ function categoriesGrouping() {
           group.img_url = activeGroup.querySelector('.body-group-img').src || '#';
           group.img_id = activeGroup.querySelector('.body-group-img').id || 0;
           group.languageCode = activeGroup.querySelector('.language-code select').value;
-
+          group.sortingNumber = activeGroup.querySelector('.input-sorting-number').value;
           let arr_categories = [...activeGroup.querySelectorAll('.wrap-category')];
           group.categories = arr_categories.map(cat => {
             return +cat.id;

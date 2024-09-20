@@ -135,6 +135,7 @@ function publish_group() {
 		'img_url' => $group['img_url'],
 		'categories' => json_encode( $group['categories'] ), // Преобразовать массив в JSON
 		'language_code' => $group['languageCode'],
+		'sorting_number' => $group['sortingNumber'],
 	);
 
 	$data['page_id'] = createGroupPage( $data );
