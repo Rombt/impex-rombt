@@ -125,6 +125,8 @@
         display: flex;
         .body-group-text {
           flex-grow: 1;
+
+          .sorting-number,
           .body-group-description,
           .language-code,
           .body-group-name {
@@ -147,10 +149,19 @@
             }
           }
 
+          .sorting-number,
           .language-code {
             margin-bottom: 20px;
             justify-content: start;
             column-gap: 75px;
+          }
+
+          .sorting-number {
+            column-gap: 30px;
+
+            .input-sorting-number {
+              width: 50px;
+            }
           }
 
           .body-group-description {

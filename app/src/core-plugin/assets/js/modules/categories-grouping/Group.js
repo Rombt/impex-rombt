@@ -22,6 +22,8 @@ export class Group extends Root {
     categoriesField: document.createElement('div'),
 
     languageCode: document.createElement('div'),
+
+    sortingNumber: document.createElement('div'),
   };
 
   constructor() {
@@ -45,6 +47,8 @@ export class Group extends Root {
 
     this.html.bodyGroupText.append(this.html.languageCode);
 
+    this.html.bodyGroupText.append(this.html.sortingNumber);
+
     this.html.bodyGroupText.append(this.html.bodyGroupDescription);
     this.html.controlsGroup.append(this.html.deleteGroup);
     this.html.controlsGroup.append(this.html.publishGroup);
@@ -65,6 +69,7 @@ export class Group extends Root {
     if (typeof data.lastCategoryIdOnPage === 'number') {
       this.group.id = data.lastCategoryIdOnPage;
       this.selectLang(data.arr_languages);
+      this.sortingNumber(data.sortingNumber);
     } else if (typeof data === 'object') {
       this.dataInput(data);
     }
@@ -80,6 +85,7 @@ export class Group extends Root {
     this.group.id = data.id;
     this.group.dataset.pageId = data.page_id;
     this.selectLang(data.languageCode);
+    this.sortingNumber(data.sortingNumber);
   }
 
   selectLang(arr_languages) {
@@ -93,5 +99,14 @@ export class Group extends Root {
     });
     str_selects += '</select>';
     this.group.querySelector('.language-code').innerHTML = '<p>Select language</p>' + str_selects;
+  }
+
+  sortingNumber(sortingNumber) {
+    let wrapSortingNumber = `
+    <p>Input sorting number<p>
+    <input class ='input-sorting-number'>
+    `;
+
+    this.group.querySelector('.sorting-number').innerHTML = wrapSortingNumber;
   }
 }
