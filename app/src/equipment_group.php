@@ -11,11 +11,21 @@ $group = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE id
 $categories = json_decode( $group->categories );
 
 if ( $categories != null && count( $categories ) > 0 ) {
+	// $args = array(
+	// 	'post_status' => 'publish',
+	// 	'posts_per_page' => -1,
+	// 	'product_category_id' => $categories,
+	// );
+
 	$args = array(
 		'post_status' => 'publish',
 		'posts_per_page' => -1,
 		'product_category_id' => $categories,
+		'orderby' => 'meta_value_num',  // сортировка по числовому значению метаполя
+		'meta_key' => '_price',          // метаполе, в котором хранится цена товара
+		'order' => 'DESC',             // ASC — по возрастанию, для убывания можно использовать 'DESC'
 	);
+
 	$arr_all_products = wc_get_products( $args );
 }
 
