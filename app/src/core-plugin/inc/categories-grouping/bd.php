@@ -17,8 +17,6 @@ if ( empty( $column_check ) ) {
 }
 
 
-
-
 if ( $result === $table_name ) {
 	return;
 }
