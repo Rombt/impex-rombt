@@ -27,14 +27,14 @@ if ( $categories != null && count( $categories ) > 0 ) {
 
 
 <main>
-	<div class="wrapper-section">
-		<div class="rmbt-full-width rmbt-equipment-categories-full-width">
-			<section class="rmbt-container rmbt-equipment-categories">
-				<?php get_template_part( 'template-parts/components/title', 'page', [ 'title' => $group->name ] ); ?>
-				<div class="rmbt-equipment-categories__text"><?php echo $group->description ?></div>
-				<div class="rmbt-equipment-categories__row">
+   <div class="wrapper-section">
+      <div class="rmbt-full-width rmbt-equipment-categories-full-width">
+         <section class="rmbt-container rmbt-equipment-categories">
+            <?php get_template_part( 'template-parts/components/title', 'page', [ 'title' => $group->name ] ); ?>
+            <div class="rmbt-equipment-categories__text"><?php echo $group->description ?></div>
+            <div class="rmbt-equipment-categories__row">
 
-					<?php
+               <?php
 					if ( count( $arr_all_products ) > 0 ) {
 						foreach ( $arr_all_products as $product ) {
 
@@ -49,10 +49,10 @@ if ( $categories != null && count( $categories ) > 0 ) {
 					}
 					?>
 
-				</div>
-			</section>
-		</div>
-	</div>
+            </div>
+         </section>
+      </div>
+   </div>
 </main>
 
 
