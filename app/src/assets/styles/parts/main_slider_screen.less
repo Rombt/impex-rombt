@@ -112,35 +112,24 @@
   }
 
   .rmbt-impex-button {
-    position: static;
-    left: 0;
-    .adaptive-prop(bottom, 0, 0);
-    transform: translate(0, 0);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
 
     align-self: center;
     .adaptive-prop(width, 220, 110);
     .adaptive-prop(height, 50, 35);
     .adaptive-prop(font-size,16, 9);
+    .adaptive-prop(margin-top, 30, -10);
+    .adaptive-prop(bottom, 15, 0);
 
     .to(768px,{
         font-weight: 500;
       });
     .to(480px,{
-        font-weight: 400;
-      });
-
-    cursor: pointer;
-    .adaptive-prop(margin-top, 30, -10);
-  }
-
-  .rmbt-impex-button {
-    position: absolute;
-    left: 50%;
-    .adaptive-prop(bottom, 15, 0);
-    transform: translate(-50%, -50%);
-
-    .to(420px,{
-      bottom:100px;
-      });
+      display: none;
+    });
   }
 }
